@@ -10,9 +10,15 @@ interface BaseStatsEditorProps {
 }
 
 export default function BaseStatsEditor({ baseStats, setBaseStats, characterStats, characterLevel }: BaseStatsEditorProps) {
+  // Calculate training cap: 200 for levels 1-40, level*5 for 41+
+  const getTrainingCap = (): number => {
+    return characterLevel <= 40 ? 200 : characterLevel * 5;
+  };
+
   const handleStatChange = (stat: keyof BaseStats, value: string) => {
     const numValue = Number.parseInt(value, 10);
-    if (!Number.isNaN(numValue) && numValue >= 0 && numValue <= 9999) {
+    const trainingCap = getTrainingCap();
+    if (!Number.isNaN(numValue) && numValue >= 0 && numValue <= trainingCap) {
       setBaseStats({ [stat]: numValue });
     }
   };
@@ -53,6 +59,7 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
         {statNames.map(({ key, display }) => {
           const finalValue = calculateFinalStat(baseStats[key], display);
           const maxValue = calculateMaxStat(baseStats[key]);
+          const trainingCap = getTrainingCap();
           const equipBonus = characterStats.stats.get(display);
           const hasBonus = finalValue !== baseStats[key];
           
@@ -75,7 +82,7 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
                 <input
                   type="number"
                   min="0"
-                  max="9999"
+                  max={trainingCap}
                   value={baseStats[key]}
                   onChange={(e) => handleStatChange(key, e.target.value)}
                   className={styles.statInput}
@@ -94,7 +101,7 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
               </div>
               
               <div className={styles.statBreakdown}>
-                <div>Base: {baseStats[key]} | Max: {maxValue}</div>
+                <div>Base: {baseStats[key]} | Training Cap: {trainingCap} | Max with items: {maxValue}</div>
                 {equipBonus && (equipBonus.flat !== 0 || equipBonus.percent !== 0) && (
                   <div>
                     From items: 

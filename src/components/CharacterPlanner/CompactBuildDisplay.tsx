@@ -1,29 +1,26 @@
 import React, { useMemo } from 'react';
+import LZString from 'lz-string';
 import styles from './CompactBuildDisplay.module.css';
 import ItemSlot from './ItemSlot';
 import { ItemSlotType, EquippedItem, BaseStats, CharacterStats } from './useCharacterState';
 import { calculateItemStats } from '../Item';
 
 /**
- * Unicode-safe base64 encoding
- * Handles special characters, emojis, and international characters
+ * Decompress string from URL (LZ compression)
  */
-function safeBase64Encode(str: string): string {
-  // Convert string to UTF-8 bytes, then to base64
-  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
-    return String.fromCharCode(Number.parseInt(p1, 16));
-  }));
+function decompressFromUrl(str: string): string | null {
+  try {
+    return LZString.decompressFromEncodedURIComponent(str);
+  } catch (error) {
+    return null;
+  }
 }
 
 /**
- * Unicode-safe base64 decoding
- * Handles special characters, emojis, and international characters
+ * Compress and encode string for URL
  */
-function safeBase64Decode(str: string): string {
-  // Decode from base64 to UTF-8 bytes, then to string
-  return decodeURIComponent(Array.prototype.map.call(atob(str), (c: string) => {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
+function compressForUrl(str: string): string {
+  return LZString.compressToEncodedURIComponent(str);
 }
 
 interface CompactBuildDisplayProps {
@@ -315,12 +312,21 @@ function calculateCharacterStats(
   totalDamageMin += damageFromStrength;
   totalDamageMax += damageFromStrength;
 
+  // Calculate final constitution value (base + flat bonuses + percentage bonuses), capped at max
+  const constitutionStat = combinedStats.get('Constitution') || { flat: 0, percent: 0 };
+  const constitutionPercentBonus = Math.round(baseStats.constitution * (constitutionStat.percent / 100));
+  const uncappedConstitution = baseStats.constitution + constitutionStat.flat + constitutionPercentBonus;
+  const maxConstitution = baseStats.constitution + Math.floor(baseStats.constitution / 2) + characterLevel;
+  const finalConstitution = Math.min(uncappedConstitution, maxConstitution);
+
   // Calculate health
-  const constitution = combinedStats.get('Constitution')?.flat || 0;
-  const healthFromLevel = characterLevel * 5;
-  const healthFromConstitution = constitution * 5;
+  const healthFromLevel = characterLevel * 25;
+  const healthFromConstitution = (finalConstitution * 25) - 50;
   const healthFromItems = totalHealth;
   totalHealth = healthFromLevel + healthFromConstitution + healthFromItems;
+  
+  // Calculate health regeneration per hour
+  const healthRegenPerHour = (characterLevel * 2) + (finalConstitution * 2);
 
   return {
     totalArmor,
@@ -358,7 +364,7 @@ function calculateCharacterStats(
     healthFromLevel,
     healthFromConstitution,
     healthFromItems,
-    healthRegenPerHour: 0,
+    healthRegenPerHour,
   };
 }
 
@@ -385,14 +391,20 @@ function decodeBuildData(
 
     if (statsString) {
       try {
-        const decoded = safeBase64Decode(statsString);
-        baseStats = JSON.parse(decoded);
+        const decoded = decompressFromUrl(statsString);
+        if (decoded) {
+          baseStats = JSON.parse(decoded);
+        }
       } catch (e) {
         console.error('Failed to decode stats:', e);
       }
     }
 
-    const decoded = safeBase64Decode(buildString);
+    const decoded = decompressFromUrl(buildString);
+    if (!decoded) {
+      console.error('Failed to decode build string');
+      return null;
+    }
     const data = JSON.parse(decoded);
 
     const items = new Map<ItemSlotType, EquippedItem>();
@@ -437,14 +449,20 @@ function loadBuildFromUrl(): { items: Map<ItemSlotType, EquippedItem>; level: nu
 
     if (statsParam) {
       try {
-        const decoded = safeBase64Decode(statsParam);
-        baseStats = JSON.parse(decoded);
+        const decoded = decompressFromUrl(statsParam);
+        if (decoded) {
+          baseStats = JSON.parse(decoded);
+        }
       } catch (e) {
         console.error('Failed to load stats from URL:', e);
       }
     }
 
-    const decoded = safeBase64Decode(buildData);
+    const decoded = decompressFromUrl(buildData);
+    if (!decoded) {
+      console.error('Failed to decode build data from URL');
+      return null;
+    }
     const data = JSON.parse(decoded);
 
     const items = new Map<ItemSlotType, EquippedItem>();
@@ -535,9 +553,9 @@ export default function CompactBuildDisplay({
     });
 
     const json = JSON.stringify(itemsObj);
-    const encoded = safeBase64Encode(json);
+    const encoded = compressForUrl(json);
     const statsJson = JSON.stringify(buildData.baseStats);
-    const statsEncoded = safeBase64Encode(statsJson);
+    const statsEncoded = compressForUrl(statsJson);
 
     // Build query string manually to ensure proper encoding
     const queryParams = new URLSearchParams();
@@ -639,18 +657,21 @@ export default function CompactBuildDisplay({
                   </span>
                 </div>
                 
-                {stats.totalHealth > 0 && (
-                  <div className={styles.statRow}>
-                    <span className={styles.statLabel}>Health:</span>
-                    <span className={styles.statValue}>{stats.totalHealth}</span>
-                  </div>
-                )}
+                <div className={styles.statRow}>
+                  <span className={styles.statLabel}>Health:</span>
+                  <span className={styles.statValue}>
+                    {stats.totalHealth}
+                    <div className={styles.statBreakdown}>
+                      (Lvl: {stats.healthFromLevel} + Con: {stats.healthFromConstitution > 0 ? '+' : ''}{stats.healthFromConstitution}{stats.healthFromItems !== 0 ? ` + Items: ${stats.healthFromItems > 0 ? '+' : ''}${stats.healthFromItems}` : ''})
+                    </div>
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* Character Attributes */}
             <div className={styles.statsColumn}>
-              <h4 className={styles.statsTitle}>Base Stats</h4>
+              <h4 className={styles.statsTitle}>Training:</h4>
               
               <div className={styles.statsGrid}>
                 {['Strength', 'Dexterity', 'Agility', 'Constitution', 'Charisma', 'Intelligence'].map(statName => {

@@ -3,7 +3,7 @@
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: var(--ifm-global-shadow-lw);
-  max-width: 700px;
+  max-width: 1000px;
   margin: 1.5rem auto;
 }
 
@@ -28,9 +28,10 @@
 
 .content {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* Character Doll Section */
@@ -73,7 +74,6 @@
 .statsSection {
   flex: 1;
   min-width: 0;
-  width: 100%;
 }
 
 .statsContainer {
@@ -112,7 +112,7 @@
 .statRow {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0.4rem 0.6rem;
   background-color: var(--ifm-color-emphasis-100);
   border-radius: 4px;
@@ -122,12 +122,23 @@
 .statLabel {
   font-weight: 500;
   color: var(--ifm-color-emphasis-800);
+  padding-top: 0.1rem;
 }
 
 .statValue {
   font-weight: 600;
   color: var(--ifm-color-primary);
   font-family: 'Monaco', 'Courier New', monospace;
+  text-align: right;
+  display: inline-block;
+}
+
+.statBreakdown {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .plannerLink {
@@ -164,6 +175,11 @@
 @media (max-width: 768px) {
   .compactBuildDisplay {
     padding: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
   }
 
   .characterDoll {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LZString from 'lz-string';
 import styles from './CharacterPlanner.module.css';
 import CharacterDoll from './CharacterDoll';
 import StatsDisplay from './StatsDisplay';
@@ -9,19 +10,23 @@ import PlayerName from './PlayerName';
 import { useCharacterState, ItemSlotType } from './useCharacterState';
 
 /**
- * Unicode-safe base64 encoding
- * Handles special characters, emojis, and international characters
+ * Compress and encode string for URL
+ * Uses LZ compression to dramatically reduce URL size
  */
-function safeBase64Encode(str: string): string {
-  // Convert string to UTF-8 bytes, then to base64
-  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
-    return String.fromCharCode(Number.parseInt(p1, 16));
-  }));
+function compressForUrl(str: string): string {
+  return LZString.compressToEncodedURIComponent(str);
 }
 
 /**
- * Unicode-safe base64 decoding
- * Handles special characters, emojis, and international characters
+ * Decompress and decode string from URL
+ */
+function decompressFromUrl(str: string): string | null {
+  return LZString.decompressFromEncodedURIComponent(str);
+}
+
+/**
+ * Legacy: Unicode-safe base64 decoding for backward compatibility
+ * Use decompressFromUrl for new builds
  */
 function safeBase64Decode(str: string): string {
   // Decode from base64 to UTF-8 bytes, then to string
@@ -78,17 +83,20 @@ export default function CharacterPlanner() {
       });
 
       const json = JSON.stringify(itemsObj);
-      console.log('handleShare: Encoding build JSON, length:', json.length);
-      const encoded = safeBase64Encode(json);
+      console.log('handleShare: Original JSON length:', json.length);
+      const encoded = compressForUrl(json);
+      console.log('handleShare: Compressed length:', encoded.length, 'Compression ratio:', ((1 - encoded.length / json.length) * 100).toFixed(1) + '%');
+      
       const statsJson = JSON.stringify(baseStats);
-      console.log('handleShare: Encoding stats JSON:', statsJson);
-      const statsEncoded = safeBase64Encode(statsJson);
+      const statsEncoded = compressForUrl(statsJson);
 
       const url = new URL(globalThis.window.location.href);
       url.searchParams.set('build', encoded);
       url.searchParams.set('level', characterLevel.toString());
       url.searchParams.set('stats', statsEncoded);
       const shareableUrl = url.toString();
+
+      console.log('handleShare: Final URL length:', shareableUrl.length);
 
       if (navigator.clipboard) {
         await navigator.clipboard.writeText(shareableUrl);
@@ -107,9 +115,9 @@ export default function CharacterPlanner() {
         itemsObj[slot] = item;
       });
       const json = JSON.stringify(itemsObj);
-      const encoded = safeBase64Encode(json);
+      const encoded = compressForUrl(json);
       const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = safeBase64Encode(statsJson);
+      const statsEncoded = compressForUrl(statsJson);
       const url = new URL(globalThis.window.location.href);
       url.searchParams.set('build', encoded);
       url.searchParams.set('level', characterLevel.toString());
@@ -126,12 +134,14 @@ export default function CharacterPlanner() {
       });
 
       const json = JSON.stringify(itemsObj);
-      const encoded = safeBase64Encode(json);
+      const encoded = compressForUrl(json);
       const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = safeBase64Encode(statsJson);
+      const statsEncoded = compressForUrl(statsJson);
 
       // Build query string without the base URL
       const queryString = `build=${encoded}&level=${characterLevel}&stats=${statsEncoded}`;
+
+      console.log('handleShareString: Query string length:', queryString.length);
 
       if (navigator.clipboard) {
         await navigator.clipboard.writeText(queryString);
@@ -146,9 +156,9 @@ export default function CharacterPlanner() {
         itemsObj[slot] = item;
       });
       const json = JSON.stringify(itemsObj);
-      const encoded = safeBase64Encode(json);
+      const encoded = compressForUrl(json);
       const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = safeBase64Encode(statsJson);
+      const statsEncoded = compressForUrl(statsJson);
       const queryString = `build=${encoded}&level=${characterLevel}&stats=${statsEncoded}`;
       prompt('Copy this query string:', queryString);
     }

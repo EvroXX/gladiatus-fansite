@@ -1,26 +1,25 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import LZString from 'lz-string';
 import { BaseItem, PrefixSuffix, ItemRarity, calculateItemStats } from '../Item';
 
 /**
- * Unicode-safe base64 encoding
- * Handles special characters, emojis, and international characters
+ * Compress and encode string for URL
+ * Uses LZ compression to dramatically reduce URL size
  */
-function safeBase64Encode(str: string): string {
-  // Convert string to UTF-8 bytes, then to base64
-  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
-    return String.fromCharCode(Number.parseInt(p1, 16));
-  }));
+function compressForUrl(str: string): string {
+  return LZString.compressToEncodedURIComponent(str);
 }
 
 /**
- * Unicode-safe base64 decoding
- * Handles special characters, emojis, and international characters
+ * Decompress string from URL (LZ compression)
  */
-function safeBase64Decode(str: string): string {
-  // Decode from base64 to UTF-8 bytes, then to string
-  return decodeURIComponent(Array.prototype.map.call(atob(str), (c: string) => {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
+function decompressFromUrl(str: string): string | null {
+  try {
+    return LZString.decompressFromEncodedURIComponent(str);
+  } catch (error) {
+    console.error('Failed to decompress:', error);
+    return null;
+  }
 }
 
 export type ItemSlotType = 'helmet' | 'amulet' | 'chest' | 'gloves' | 'mainHand' | 'offHand' | 'shoes' | 'ring1' | 'ring2';
@@ -203,9 +202,11 @@ export function useCharacterState(): CharacterState {
 
       if (statsParam) {
         try {
-          const decoded = safeBase64Decode(statsParam);
-          const stats = JSON.parse(decoded);
-          setBaseStatsState(stats);
+          const decoded = decompressFromUrl(statsParam);
+          if (decoded) {
+            const stats = JSON.parse(decoded);
+            setBaseStatsState(stats);
+          }
         } catch (e) {
           console.error('Failed to load stats from URL:', e);
         }
@@ -215,17 +216,23 @@ export function useCharacterState(): CharacterState {
       const identityParam = params.get('identity');
       if (identityParam) {
         try {
-          const decoded = safeBase64Decode(identityParam);
-          const identity = JSON.parse(decoded);
-          setCharacterIdentity(identity);
+          const decoded = decompressFromUrl(identityParam);
+          if (decoded) {
+            const identity = JSON.parse(decoded);
+            setCharacterIdentity(identity);
+          }
         } catch (e) {
           console.error('Failed to load character identity from URL:', e);
         }
       }
       
       if (buildData) {
-        // Decode base64 and parse JSON
-        const decoded = safeBase64Decode(buildData);
+        // Decode and parse JSON (LZ compressed)
+        const decoded = decompressFromUrl(buildData);
+        if (!decoded) {
+          console.error('Failed to decode build data from URL');
+          return;
+        }
         const data = JSON.parse(decoded);
         
         const newItems = new Map<ItemSlotType, EquippedItem>();
@@ -273,7 +280,8 @@ export function useCharacterState(): CharacterState {
       if (equippedItems.size > 0) {
         const json = JSON.stringify(itemsObj);
         console.log('Encoding items JSON, length:', json.length);
-        const encoded = safeBase64Encode(json);
+        const encoded = compressForUrl(json);
+        console.log('Compressed length:', encoded.length, 'Compression ratio:', ((1 - encoded.length / json.length) * 100).toFixed(1) + '%');
         url.searchParams.set('build', encoded);
       } else {
         url.searchParams.delete('build');
@@ -285,12 +293,12 @@ export function useCharacterState(): CharacterState {
       // Add base stats
       const statsJson = JSON.stringify(baseStats);
       console.log('Encoding stats JSON:', statsJson);
-      const statsEncoded = safeBase64Encode(statsJson);
+      const statsEncoded = compressForUrl(statsJson);
       url.searchParams.set('stats', statsEncoded);
       
       // Add character identity (name, title, costume/image)
       const identityJson = JSON.stringify(characterIdentity);
-      const identityEncoded = safeBase64Encode(identityJson);
+      const identityEncoded = compressForUrl(identityJson);
       url.searchParams.set('identity', identityEncoded);
       
       globalThis.window.history.replaceState({}, '', url.toString());
@@ -341,7 +349,18 @@ export function useCharacterState(): CharacterState {
    * Update base stats (partial update supported)
    */
   const setBaseStats = (newStats: Partial<BaseStats>) => {
-    setBaseStatsState(prev => ({ ...prev, ...newStats }));
+    // Calculate training cap based on character level
+    const trainingCap = characterLevel <= 40 ? 200 : characterLevel * 5;
+    
+    // Cap each stat at the training limit
+    const cappedStats: Partial<BaseStats> = {};
+    for (const [key, value] of Object.entries(newStats)) {
+      if (typeof value === 'number') {
+        cappedStats[key as keyof BaseStats] = Math.min(value, trainingCap);
+      }
+    }
+    
+    setBaseStatsState(prev => ({ ...prev, ...cappedStats }));
   };
 
   /**
