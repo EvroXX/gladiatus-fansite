@@ -27,7 +27,7 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 
 ## Events – March 2026
 
-### 0:00:00 01.03.2026 - 23:59:59 04.03.2026
+### 01.03.2026 0:00:00  - 04.03.2026 23:59:59
 
 - 200% dungeon XP
 - 200% arena XP
@@ -35,50 +35,50 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 - 50% more expedition points
 - 50% more dungeon points
 
-### 0:00:00 06.03.2026 - 23:59:59 07.03.2026
+### 06.03.2026 0:00:00  - 07.03.2026 23:59:59
 
 - 100% Pantheon quest gold, experience, grace, honor
 - -50% cooldown for quests
 - 50% more expedition points
 
-### 0:00:00 08.03.2026 - 23:59:59 10.03.2026
+### 08.03.2026 0:00:00 - 10.03.2026 23:59:59
 
 - 30% chance of finding an item
 - 25% forging success
 - -10% forge duration
 - 10% chance of a resource / scroll
 
-### 0:00:00 12.03.2026 - 23:59:59 14.03.2026
+### 12.03.2026 0:00:00 - 14.03.2026 23:59:59
 
 - The chance to obtain additional loot on expeditions and in dungeons is increased by 20%
 - 25% faster regeneration of dungeon points
 - 25% more dungeon points
 
-### 0:00:00 16.03.2026 - 23:59:59 17.03.2026
+### 16.03.2026 0:00:00 - 17.03.2026 23:59:59
 
 - -25% training costs
 
-### 0:00:00 19.03.2026 - 23:59:59 20.03.2026
+### 19.03.2026 0:00:00 - 20.03.2026 23:59:59
 
 - 20% forge helper drop chance
 
-### 0:00:00 22.03.2026 - 23:59:59 24.03.2026
+### 22.03.2026 0:00:00 - 24.03.2026 23:59:59
 
 - 20% gold loot on expeditions
 - No durability loss
 
-### 0:00:00 26.03.2026 - 23:59:59 28.03.2026
+### 26.03.2026 0:00:00 - 28.03.2026 23:59:59
 
 - 10% chance of finding an item
 - -20% ruby costs for auction house
 - -15% training costs
 - 20% gold loot on expeditions
 
-### 0:00:00 30.03.2026 - 23:59:59 31.03.2026
+### 30.03.2026 0:00:00 - 31.03.2026 23:59:59
 
 - -50% Forging time (and smelting)
 
-### New Servers
+## New Servers
 
 New servers arrive on Friday 06 February 2026. Reported list is:
 
@@ -146,12 +146,17 @@ Also there will be a Happy Day Event
 
 ## To Do List
 
-- Find what the formula for materials is when prefix and suffix are mixed together
+- Find what the formula for materials is when prefix and suffix are mixed together. So far we hardcode them through a file that has all possible variations. Taken from [gladiatus-tools](https://gitlab.com/gladiatus-tools-ng/website/-/raw/master/src/data/prefixes_suffixes_recipes.json?ref_type=heads "gladiatus tools")
 - Make Expeditions come from data files and not just plain text
 - Character planner partial costumes do not render well
 - Find what the formula is for gold, durability and conditiong is when prefix/suffix or both are applied to an item
 
 ## Latest website news
+
+### 25.02.2026
+
+- Planner is now fully functional. The only thing left is to find a way to know if an item is conditioned or not when importing a profile
+- Item planner now shows materials needed for crafting
 
 ### 18.02.2026
 
