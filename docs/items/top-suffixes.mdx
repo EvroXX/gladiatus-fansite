@@ -1,0 +1,98 @@
+---
+title: Top Suffixes
+sidebar_label: Top Suffixes
+slug: /items/top-suffixes
+sidebar_position: 4
+---
+
+import ItemAffixList from '@site/src/components/ItemAffixList';
+import suffixes from '@site/static/data/items/suffixes.json';
+
+export const topSuffixNames = [
+  'of Gloom',
+  'of the Inferno',
+  'of the Dragon',
+  'of Aggression',
+  'of Elimination',
+  'of Earth',
+  'of Delicacy',
+];
+
+export const topSuffixes = topSuffixNames
+  .map((name) => suffixes.find((suffix) => suffix.name === name))
+  .filter(Boolean);
+
+export const getPercent = (item, stat) => item?.stats?.[stat]?.percent ?? 0;
+export const getFlat = (item, stat) => item?.stats?.[stat]?.flat ?? 0;
+
+export const topByPercent = (items, stat, minPercent) =>
+  items
+    .filter((item) => getPercent(item, stat) >= minPercent)
+    .sort((a, b) => getPercent(b, stat) - getPercent(a, stat) || (b.level ?? 0) - (a.level ?? 0))
+    .slice(0, 5);
+
+export const topIntelligenceOrHealing = suffixes
+  .filter((item) => getPercent(item, 'intelligence') >= 30 || getFlat(item, 'healing') > 0 || getPercent(item, 'healing') > 0)
+  .sort(
+    (a, b) =>
+      getPercent(b, 'intelligence') - getPercent(a, 'intelligence') ||
+      (getFlat(b, 'healing') + getPercent(b, 'healing')) - (getFlat(a, 'healing') + getPercent(a, 'healing')) ||
+      (b.level ?? 0) - (a.level ?? 0)
+  )
+  .slice(0, 5);
+
+export const topDamageCriticalCombos = suffixes
+  .filter(
+    (item) =>
+      getFlat(item, 'damage') > 0 &&
+      (getFlat(item, 'critical_attack_value') > 0 ||
+        getPercent(item, 'critical_attack_value') > 0 ||
+        getFlat(item, 'critical_healing_value') > 0 ||
+        getPercent(item, 'critical_healing_value') > 0)
+  )
+  .sort(
+    (a, b) =>
+      getFlat(b, 'damage') - getFlat(a, 'damage') ||
+      (getFlat(b, 'critical_attack_value') +
+        getPercent(b, 'critical_attack_value') +
+        getFlat(b, 'critical_healing_value') +
+        getPercent(b, 'critical_healing_value')) -
+        (getFlat(a, 'critical_attack_value') +
+          getPercent(a, 'critical_attack_value') +
+          getFlat(a, 'critical_healing_value') +
+          getPercent(a, 'critical_healing_value')) ||
+      (b.level ?? 0) - (a.level ?? 0)
+  )
+  .slice(0, 5);
+
+## Top 10 suffixes of all
+
+<ItemAffixList items={topSuffixes} type="suffix" showFilters={false} />
+
+## Top Strength suffixes (Strength +25% or more)
+
+<ItemAffixList items={topByPercent(suffixes, 'strength', 25)} type="suffix" showFilters={false} />
+
+## Top Dexterity suffixes (Dexterity +10% or more)
+
+<ItemAffixList items={topByPercent(suffixes, 'dexterity', 10)} type="suffix" showFilters={false} />
+
+## Top Agility suffixes (Agility +20% or more)
+
+<ItemAffixList items={topByPercent(suffixes, 'agility', 20)} type="suffix" showFilters={false} />
+
+## Top Constitution suffixes (Constitution +15% or more)
+
+<ItemAffixList items={topByPercent(suffixes, 'constitution', 15)} type="suffix" showFilters={false} />
+
+## Top Charisma suffixes (Charisma +20% or more)
+
+<ItemAffixList items={topByPercent(suffixes, 'charisma', 20)} type="suffix" showFilters={false} />
+
+## Top Intelligence suffixes (Intelligence +30% and or Healing)
+
+<ItemAffixList items={topIntelligenceOrHealing} type="suffix" showFilters={false} />
+
+## All Damage suffixes (+Damage/Critical combos)
+
+<ItemAffixList items={topDamageCriticalCombos} type="suffix" showFilters={false} />

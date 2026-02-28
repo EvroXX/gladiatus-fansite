@@ -13,7 +13,7 @@ function slugify(value) {
     : '';
 }
 
-export default function ItemAffixList({ items, type = 'prefix' }) {
+export default function ItemAffixList({ items, type = 'prefix', showFilters = true }) {
   const [search, setSearch] = useState('');
   const [statFilter, setStatFilter] = useState(''); // e.g., "Armor >= 600"
   const [statFilterValue, setStatFilterValue] = useState(''); // number
@@ -74,58 +74,62 @@ export default function ItemAffixList({ items, type = 'prefix' }) {
 
   return (
     <div>
-      {/* Search input */}
-      <input
-        type="text"
-        placeholder="Search by name..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-        style={{ marginBottom: '8px', padding: '6px', borderRadius: '4px', width: '180px' }}
-      />
+      {showFilters && (
+        <>
+          {/* Search input */}
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            style={{ marginBottom: '8px', padding: '6px', borderRadius: '4px', width: '180px' }}
+          />
 
-      {/* Stat filter */}
-      <div style={{ marginBottom: '12px' }}>
-        <select
-          value={statFilter}
-          onChange={e => setStatFilter(e.target.value)}
-          style={{ marginRight: '4px', padding: '4px' }}
-        >
-          <option value="">-- Filter stat --</option>
-          {allStats.map(stat => (
-            <option key={stat} value={stat}>
-              {stat.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-            </option>
-          ))}
-        </select>
-        <input
-          type="number"
-          placeholder="Min value"
-          value={statFilterValue}
-          onChange={e => setStatFilterValue(e.target.value)}
-          style={{ width: '80px', padding: '4px' }}
-        />
-      </div>
+          {/* Stat filter */}
+          <div style={{ marginBottom: '12px' }}>
+            <select
+              value={statFilter}
+              onChange={e => setStatFilter(e.target.value)}
+              style={{ marginRight: '4px', padding: '4px' }}
+            >
+              <option value="">-- Filter stat --</option>
+              {allStats.map(stat => (
+                <option key={stat} value={stat}>
+                  {stat.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                </option>
+              ))}
+            </select>
+            <input
+              type="number"
+              placeholder="Min value"
+              value={statFilterValue}
+              onChange={e => setStatFilterValue(e.target.value)}
+              style={{ width: '80px', padding: '4px' }}
+            />
+          </div>
 
-      {/* Paragraph showing number of filtered items */}
-      <p style={{ marginBottom: '12px', fontStyle: 'italic', color: '#000000' }}>
-        Showing {filteredItems.length} item{filteredItems.length !== 1 ? 's' : ''}
-      </p>
+          {/* Paragraph showing number of filtered items */}
+          <p style={{ marginBottom: '12px', fontStyle: 'italic', color: '#000000' }}>
+            Showing {filteredItems.length} item{filteredItems.length !== 1 ? 's' : ''}
+          </p>
 
-      <div style={{ marginBottom: '12px', display: 'flex', gap: '8px' }}>
-        <select value={sortKey} onChange={e => setSortKey(e.target.value)} style={{ padding: '4px' }}>
-          <option value="">-- Sort by --</option>
-          <option value="name">Name</option>
-          <option value="level">Level</option>
-          <option value="gold">Gold</option>
-        </select>
+          <div style={{ marginBottom: '12px', display: 'flex', gap: '8px' }}>
+            <select value={sortKey} onChange={e => setSortKey(e.target.value)} style={{ padding: '4px' }}>
+              <option value="">-- Sort by --</option>
+              <option value="name">Name</option>
+              <option value="level">Level</option>
+              <option value="gold">Gold</option>
+            </select>
 
-        <button
-          onClick={() => setSortOrder(prev => (prev === 'asc' ? 'desc' : 'asc'))}
-          style={{ padding: '4px 8px' }}
-        >
-          {sortOrder === 'asc' ? 'Asc' : 'Desc'}
-        </button>
-      </div>
+            <button
+              onClick={() => setSortOrder(prev => (prev === 'asc' ? 'desc' : 'asc'))}
+              style={{ padding: '4px 8px' }}
+            >
+              {sortOrder === 'asc' ? 'Asc' : 'Desc'}
+            </button>
+          </div>
+        </>
+      )}
 
       {/* Tooltip grid */}
       <div
@@ -135,7 +139,7 @@ export default function ItemAffixList({ items, type = 'prefix' }) {
           gap: '12px',
         }}
       >
-        {sortedItems.map((item, index) => (
+        {(showFilters ? sortedItems : filteredItems).map((item, index) => (
           <div
             key={index}
             style={{

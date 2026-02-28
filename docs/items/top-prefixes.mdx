@@ -1,0 +1,118 @@
+---
+title: Top Prefixes
+sidebar_label: Top Prefixes
+slug: /items/top-prefixes
+sidebar_position: 2
+---
+
+import ItemAffixList from '@site/src/components/ItemAffixList';
+import prefixes from '@site/static/data/items/prefixes.json';
+
+export const topPrefixGroups = [
+	{
+		title: 'Top Low level prefixes',
+		names: ['Calódiens', 'Sugos', 'Uróthiens', 'Rayols'],
+	},
+	{
+		title: 'Top Mid level prefixes',
+		names: ['Gonaks', 'Beasthammers', 'Zeindras', 'Kerrannas', 'Adendathiels', 'Ashitills', 'Táliths', 'Trafans'],
+	},
+	{
+		title: 'Top High level prefixes',
+		names: ['Ichorus', 'Marcus', 'Lucius', 'Mateus', 'Gaius', 'Antonius', 'Vergilius', 'Titanius'],
+	},
+	{
+		title: 'Top Ultra high level prefixes',
+		names: ['Sebastianus`', 'Gratius', 'Gaias', 'Tiberius'],
+	},
+];
+
+export const getPrefixesByNames = (names) =>
+	names.map((name) => prefixes.find((prefix) => prefix.name === name)).filter(Boolean);
+
+export const getPercent = (item, stat) => item?.stats?.[stat]?.percent ?? 0;
+export const getFlat = (item, stat) => item?.stats?.[stat]?.flat ?? 0;
+
+export const topByPercent = (items, stat, minPercent) =>
+	items
+		.filter((item) => getPercent(item, stat) >= minPercent)
+		.sort((a, b) => getPercent(b, stat) - getPercent(a, stat) || (b.level ?? 0) - (a.level ?? 0))
+		.slice(0, 5);
+
+export const topIntelligenceOrHealing = prefixes
+	.filter((item) => getPercent(item, 'intelligence') >= 30 || getFlat(item, 'healing') > 0 || getPercent(item, 'healing') > 0)
+	.sort(
+		(a, b) =>
+			getPercent(b, 'intelligence') - getPercent(a, 'intelligence') ||
+			(getFlat(b, 'healing') + getPercent(b, 'healing')) - (getFlat(a, 'healing') + getPercent(a, 'healing')) ||
+			(b.level ?? 0) - (a.level ?? 0)
+	)
+	.slice(0, 5);
+
+export const topDamageCriticalCombos = prefixes
+	.filter(
+		(item) =>
+			getFlat(item, 'damage') > 0 &&
+			(getFlat(item, 'critical_attack_value') > 0 ||
+				getPercent(item, 'critical_attack_value') > 0 ||
+				getFlat(item, 'critical_healing_value') > 0 ||
+				getPercent(item, 'critical_healing_value') > 0)
+	)
+	.sort(
+		(a, b) =>
+			getFlat(b, 'damage') - getFlat(a, 'damage') ||
+			(getFlat(b, 'critical_attack_value') +
+				getPercent(b, 'critical_attack_value') +
+				getFlat(b, 'critical_healing_value') +
+				getPercent(b, 'critical_healing_value')) -
+				(getFlat(a, 'critical_attack_value') +
+					getPercent(a, 'critical_attack_value') +
+					getFlat(a, 'critical_healing_value') +
+					getPercent(a, 'critical_healing_value')) ||
+			(b.level ?? 0) - (a.level ?? 0)
+	)
+	.slice(0, 5);
+
+## Top Low level prefixes
+
+<ItemAffixList items={getPrefixesByNames(topPrefixGroups[0].names)} type="prefix" showFilters={false} />
+
+## Top Mid level prefixes
+
+<ItemAffixList items={getPrefixesByNames(topPrefixGroups[1].names)} type="prefix" showFilters={false} />
+
+## Top High level prefixes
+
+<ItemAffixList items={getPrefixesByNames(topPrefixGroups[2].names)} type="prefix" showFilters={false} />
+
+## Top Ultra high level prefixes
+
+<ItemAffixList items={getPrefixesByNames(topPrefixGroups[3].names)} type="prefix" showFilters={false} />
+
+## Top Strength prefixes (Strength +25% or more)
+
+<ItemAffixList items={topByPercent(prefixes, 'strength', 25)} type="prefix" showFilters={false} />
+
+## Top Dexterity prefixes (Dexterity +10% or more)
+
+<ItemAffixList items={topByPercent(prefixes, 'dexterity', 10)} type="prefix" showFilters={false} />
+
+## Top Agility prefixes (Agility +20% or more)
+
+<ItemAffixList items={topByPercent(prefixes, 'agility', 20)} type="prefix" showFilters={false} />
+
+## Top Constitution prefixes (Constitution +15% or more)
+
+<ItemAffixList items={topByPercent(prefixes, 'constitution', 15)} type="prefix" showFilters={false} />
+
+## Top Charisma prefixes (Charisma +20% or more)
+
+<ItemAffixList items={topByPercent(prefixes, 'charisma', 20)} type="prefix" showFilters={false} />
+
+## Top Intelligence prefixes (Intelligence +30% and or Healing)
+
+<ItemAffixList items={topIntelligenceOrHealing} type="prefix" showFilters={false} />
+
+## All Damage prefixes (+Damage/Critical combos)
+
+<ItemAffixList items={topDamageCriticalCombos} type="prefix" showFilters={false} />

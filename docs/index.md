@@ -153,6 +153,10 @@ Also there will be a Happy Day Event
 
 ## Latest website news
 
+### 28.02.2026
+
+- Added 2 new pages, Top Prefixes and Top Suffixes, as requested from fans, these are present in the old site so I restored them
+
 ### 25.02.2026
 
 - Planner is now fully functional. The only thing left is to find a way to know if an item is conditioned or not when importing a profile
