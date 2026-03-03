@@ -5,6 +5,8 @@ redirects:
   - /battle-at-hadrian-s-wall
 ---
 
+<!-- ![Battle at Hadrian's Wall](https://gladiatusfansite.blob.core.windows.net/images/Events/Battle_at_Hadrians_Wall/Hadrians-battle-stone-event-logo.png "Battle at Handrian's Wall") -->
+
 ![Battle at Hadrian's Wall](https://gladiatusfansite.blob.core.windows.net/images/Events/Battle_at_Hadrians_Wall/hadrians-wall-big-poster.png "Battle at Handrian's Wall")
 
 > „Ave Gladiator!
@@ -76,23 +78,41 @@ Ranking is the usual that we've seen from other events. 1 kill = 1 point. There 
 
 There is also a price for having the most points on Wave 1, 2, 3, 4 and Total. As usual the rewards are:
 
-**Wave 1** - ![Most points against Opponent 1](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_1.png "Most points against Opponent 1") Most points against Opponent 1 - High quality Grindstone. At levels above 100 there is a high chance the grindstone will be **Orange** and after 112 level - **Red**
+### Wave 1
+
+![Most points against Opponent 1 (Tribal Warrior)](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_1.png "Most points against Opponent 1 (Tribal Warrior)") 
+
+Most points against Opponent 1 (Tribal Warrior) - High quality Grindstone. At levels above 100 there is a high chance the grindstone will be **Orange** and after 112 level - **Red**
 
 ![1st opponent event prize](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_1st_reward.png "1st opponent event prize")
 
 Here is an example of a Grindstone - [click](https://gladiatusfansite.blob.core.windows.net/images/Events/Grindstone_reward.png "Red Grindstone").
 
-**Wave 2** - ![Most points against opponent 2](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_2.png "Most points against opponent 2") Most points against opponent 2 - All favor with gods is fully replenished
+### Wave 2
+
+![Most points against opponent 2 (Tribal Fighter)](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_2.png "Most points against opponent 2 (Tribal Fighter)")
+
+Most points against opponent 2 (Tribal Fighter) - All favor with gods is fully replenished
 
 ![2nd opponent event prize](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_2nd_reward.png "2nd opponent event prize")
 
-**Wave 3** - ![Most points against opponent 3](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_3.png "Most points against opponent 3") Most points against opponent 3 - Buff for **6 days** after the event is over which grants: **100% more winner's bonus in all arenas** as well as a **10% attribute increase** (str,dex etc)
+### Wave 3
 
-**Wave 4** ![Most points against opponent 4](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_4.png "Most points against opponent 4") - Most points against opponent 4 - **113000**![111,111 Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "111,111 Gold") (increases with your character level)
+![Most points against opponent 3 (Butcher)](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_3.png "Most points against opponent 3 (Butcher)")
 
- - ![Most points against opponent 4](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_4.png "Most points against opponent 4") - Most points against opponent 4 - **113000**![111,111 Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "111,111 Gold") (increases with your character level)[4th opponent event prize](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_4th_reward.png "4th opponent event prize")
+Most points against opponent 3 (Butcher) - Buff for **6 days** after the event is over which grants: **100% more winner's bonus in all arenas** as well as a **10% attribute increase** (str,dex etc)
 
-**Total** - ![Most points in the entire event](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_gold.png "Most points in the entire event") - Most points in the entire event - Title: **Champion of Britannia**
+### Wave 4
+
+![Most points against the Boss (Cruithne)](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_4.png "Most points against the Boss (Cruithne)")
+
+Most points against opponent 4 - **113000**![111,111 Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "111,111 Gold") (increases with your character level)
+
+![4th opponent event prize](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_4th_reward.png "4th opponent event prize")
+
+### Overall Winner
+
+![Most points in the entire event](https://gladiatusfansite.blob.core.windows.net/images/Events/reward_gold.png "Most points in the entire event") - Most points in the entire event - Title: **Champion of Britannia**
 
 ![Champion of Britannia](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_boss_reward_Hadrian.png "Champion of Britannia")
 
