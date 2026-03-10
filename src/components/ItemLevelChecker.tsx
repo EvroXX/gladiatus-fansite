@@ -57,14 +57,13 @@ const STAT_OPTIONS: { value: string; label: string }[] = [
   { value: 'charisma:percent',     label: 'Charisma %' },
   { value: 'intelligence:flat',    label: 'Intelligence' },
   { value: 'intelligence:percent', label: 'Intelligence %' },
-  { value: 'critical_hit:flat',    label: 'Critical Hit' },
-  { value: 'critical_hit:percent', label: 'Critical Hit %' },
-  { value: 'double_hit:flat',      label: 'Double Hit' },
-  { value: 'double_hit:percent',   label: 'Double Hit %' },
-  { value: 'block_chance:flat',    label: 'Block Chance' },
-  { value: 'block_chance:percent', label: 'Block Chance %' },
-  { value: 'healing:flat',         label: 'Healing' },
-  { value: 'healing:percent',      label: 'Healing %' },
+  { value: 'critical_attack_value:flat',    label: 'Critical Attack Value' },
+  { value: 'block_value:flat',    label: 'Block Value' },
+  { value: 'hardening_value:flat',    label: 'Hardening Value' },
+  { value: 'health:flat',      label: 'Health' },
+  { value: 'healing:flat',         label: 'Healing Value' },
+  { value: 'critical_healing_value:flat',    label: 'Critical Healing Value' },
+  { value: 'threat:flat', label: 'Threat' }
 ];
 
 const ITEMS_PER_PAGE = 60;
@@ -264,6 +263,7 @@ export default function ItemLevelChecker() {
   const [characterLevel, setCharacterLevel] = useState<number>(1);
   const [selectedSlot, setSelectedSlot]     = useState<ItemType>('weapons');
   const [selectedRarity, setSelectedRarity] = useState<ItemRarity>('green');
+  const [conditioned, setConditioned]       = useState<boolean>(false);
   const [selectedPrefix, setSelectedPrefix] = useState<string>('');
   const [selectedSuffix, setSelectedSuffix] = useState<string>('');
   const [nameFilter, setNameFilter]         = useState<string>('');
@@ -437,6 +437,30 @@ export default function ItemLevelChecker() {
           </select>
         </div>
 
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', paddingBottom: '2px' }}>
+          <input
+            id="ilc-conditioned"
+            type="checkbox"
+            checked={conditioned}
+            onChange={(e) => setConditioned(e.target.checked)}
+            style={{ cursor: 'pointer', width: '16px', height: '16px' }}
+          />
+          <label htmlFor="ilc-conditioned" style={{ fontWeight: 'bold', cursor: 'pointer' }}>
+            Conditioned
+          </label>
+        </div>
+      </div>
+
+      {/* ── Row 2: prefix / suffix / name search ── */}
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '16px',
+          marginBottom: '12px',
+          alignItems: 'flex-end',
+        }}
+      >
         <div style={{ minWidth: '220px' }}>
           <SearchableSelect
             id="ilc-prefix"
@@ -479,7 +503,7 @@ export default function ItemLevelChecker() {
         </div>
       </div>
 
-      {/* ── Row 2: stat filter + sort ── */}
+      {/* ── Row 3: stat filter + sort ── */}
       <div
         style={{
           display: 'flex',
@@ -547,7 +571,7 @@ export default function ItemLevelChecker() {
       </div>
 
       {/* ── Summary ── */}
-      <p style={{ color: 'var(--ifm-color-emphasis-700)', marginBottom: '16px' }}>
+      <p style={{ color: 'var(--ifm-font-color-base)', marginBottom: '16px' }}>
         <strong>{processedCombos.length.toLocaleString()}</strong>
         {allCombos.length !== processedCombos.length && (
           <> of {allCombos.length.toLocaleString()}</>
@@ -584,6 +608,7 @@ export default function ItemLevelChecker() {
                   prefix={combo.prefix}
                   suffix={combo.suffix}
                   rarity={combo.prefix ?? combo.suffix ? selectedRarity : 'common'}
+                  conditioned={conditioned}
                   characterLevel={characterLevel}
                 />
                 <div
@@ -597,7 +622,7 @@ export default function ItemLevelChecker() {
                 >
                   {fullName}
                 </div>
-                <div style={{ fontSize: '10px', color: '#9b9b9b' }}>
+                <div style={{ fontSize: '10px', color: 'var(--ifm-font-color-base)' }}>
                   Lv.{combo.finalLevel}
                 </div>
                 {sortBy !== 'level' && statValue !== 0 && (
