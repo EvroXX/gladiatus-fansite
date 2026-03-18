@@ -94,7 +94,14 @@ Don't be fooled by the levels. Stats are important. Here is a comparison of Dis 
 
 ![Farewell Underworld](https://gladiatusfansite.blob.core.windows.net/images/Underworld/Farewell_Underworld.png "Farewell Underworld")
 
+- Once you finish the Underworld run, you have a cooldown from re-entering
+  - 1x Server Speed - 4 days
+  - 2x Server Speed - 2 days
+  - 4x Server Speed - 30 hours?
+  - 5x Server Speed - 20 hours?
+
 ## The Rewards
 
 Underworld costumes! Here is a link to them:
 
+[Underworld Costumes](/costumes/underworld-costumes)

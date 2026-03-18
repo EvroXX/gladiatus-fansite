@@ -3,6 +3,15 @@ title: Underworld Costumes
 slug: /costumes/underworld-costumes
 ---
 
+## Costume Lengths
+
+The Underworld costumes are not permanent, they are timed. The following lengths per server speed:
+
+- Server Speed 1 - 2 Days
+- Server Speed 2 - 1 Day
+- Server Speed 4 - 12 hours
+- Server Speed 5 - 6 hours
+
 ## Normal Costume
 
 This costume is the reward from completing Underworld normal. Read more about it here [Underworld Normal](/underworld/underworld-normal "Underworld Normal")
@@ -15,7 +24,7 @@ This costume is the reward from completing Underworld normal. Read more about it
 - **Bonus 2:** Activating the costume restores the expedition points to full. Make sure to spend them all and activate the costume on 0.
 - **Bonus 3:** It increases the expedition points regeneration 3 times. This means that if your expedition points regenerate with 1 every 45 min (with Centurio), with Dis Pater Normal costume you will regenerate 1 expedition point every 15 minutes
 - **Bonus 4 & 5:** Doubles the gold in expeditions. This can be further boosted with Mercury's Blessing pact. Also the item % drop chance becomes 100% so every kill = an item.
- 
+
 ![Mercury's Blessing bonus](https://gladiatusfansite.blob.core.windows.net/images/Underworld/Mercurys_Blessing.png "Mercury's Blessing bonus")
 
 - **Bonus 6:** No durability or conditioning loss in expedition. This is good news as this amount of expedition you will be doing will damage your equipment and you will have to repair frequently

@@ -6208,5 +6208,38 @@
         },
         "materials": {},
         "id": 999999
+    },
+    {
+        "name": "of Daredevilry",
+        "level": 107,
+        "gold": 0,
+        "stats": {
+            "armour": {
+                "flat": 120,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 13
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 13
+            },
+            "healing": {
+                "flat": 59,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 62,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 64,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999998
     }
 ]
