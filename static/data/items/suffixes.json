@@ -6837,5 +6837,158 @@
         },
         "materials": {},
         "id": 999976
+    },
+    {
+        "name": "of the Older",
+        "level": 85,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999975
+    },
+    {
+        "name": "of Impermanence",
+        "level": 85,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999974
+    },
+    {
+        "name": "of Challenge",
+        "level": 85,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999973
+    },
+    {
+        "name": "of Ruthlessness",
+        "level": 90,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999972
+    },
+    {
+        "name": "of Corruption",
+        "level": 90,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999971
+    },
+    {
+        "name": "of Deference",
+        "level": 92,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999970
+    },
+    {
+        "name": "of Shade",
+        "level": 95,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999969
+    },
+    {
+        "name": "of Vengeance",
+        "level": 95,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999968
+    },
+    {
+        "name": "of Purification",
+        "level": 95,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999967
+    },
+    {
+        "name": "of Unyielding",
+        "level": 97,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999966
+    },
+    {
+        "name": "of Daredevilly",
+        "level": 107,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999965
+    },
+    {
+        "name": "of Broken Oaths",
+        "level": 108,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999964
+    },
+    {
+        "name": "of Ramparts",
+        "level": 112,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999963
+    },
+    {
+        "name": "of Absolution",
+        "level": 115,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999962
+    },
+    {
+        "name": "of Exultation",
+        "level": 117,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999961
+    },
+    {
+        "name": "of Resolve",
+        "level": 127,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999960
+    },
+    {
+        "name": "of Ascendency",
+        "level": 130,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 999959
     }
 ]

@@ -5249,5 +5249,428 @@
         },
         "materials": {},
         "id": 9998
+    },
+    {
+        "name": "Timotius",
+        "level": 155,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9997
+    },
+    {
+        "name": "Elegarius",
+        "level": 155,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9996
+    },
+    {
+        "name": "Darius",
+        "level": 155,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9995
+    },
+    {
+        "name": "Cassius",
+        "level": 155,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9994
+    },
+    {
+        "name": "Varus",
+        "level": 157,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9993
+    },
+    {
+        "name": "Horatius",
+        "level": 158,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9992
+    },
+    {
+        "name": "Plinius",
+        "level": 159,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9991
+    },
+    {
+        "name": "Zenobius",
+        "level": 160,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9990
+    },
+    {
+        "name": "Nicodemus",
+        "level": 160,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9989
+    },
+    {
+        "name": "Crispinus",
+        "level": 160,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9988
+    },
+    {
+        "name": "Caelius",
+        "level": 160,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9987
+    },
+    {
+        "name": "Florentinus",
+        "level": 162,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9986
+    },
+    {
+        "name": "Honoratus",
+        "level": 163,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9985
+    },
+    {
+        "name": "Secundus",
+        "level": 165,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9984
+    },
+    {
+        "name": "Proculus",
+        "level": 165,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9983
+    },
+    {
+        "name": "Peregrinus",
+        "level": 165,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9982
+    },
+    {
+        "name": "Marinus",
+        "level": 165,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9981
+    },
+    {
+        "name": "Victorinus",
+        "level": 167,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9980
+    },
+    {
+        "name": "Nonius",
+        "level": 168,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9979
+    },
+    {
+        "name": "Galerius",
+        "level": 168,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9978
+    },
+    {
+        "name": "Cornelius",
+        "level": 170,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9977
+    },
+    {
+        "name": "Acrobas",
+        "level": 170,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9976
+    },
+    {
+        "name": "Flavius",
+        "level": 172,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9975
+    },
+    {
+        "name": "Claudius",
+        "level": 173,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9974
+    },
+    {
+        "name": "Taurus",
+        "level": 175,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9973
+    },
+    {
+        "name": "Iunius",
+        "level": 177,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9972
+    },
+    {
+        "name": "Herestia's",
+        "level": 178,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9971
+    },
+    {
+        "name": "Saturninus",
+        "level": 180,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9970
+    },
+    {
+        "name": "Baurus",
+        "level": 182,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9969
+    },
+    {
+        "name": "Atticus",
+        "level": 183,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9968
+    },
+    {
+        "name": "Severus",
+        "level": 185,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9967
+    },
+    {
+        "name": "Julius",
+        "level": 187,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9966
+    },
+    {
+        "name": "Trajenus",
+        "level": 188,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9965
+    },
+    {
+        "name": "Laelius",
+        "level": 190,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9964
+    },
+    {
+        "name": "Scripio's",
+        "level": 192,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9963
+    },
+    {
+        "name": "Aurius",
+        "level": 193,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9962
+    },
+    {
+        "name": "Calpurnicus",
+        "level": 195,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9961
+    },
+    {
+        "name": "Tacitus",
+        "level": 197,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9960
+    },
+    {
+        "name": "Maximus",
+        "level": 198,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9959
+    },
+    {
+        "name": "Helvius",
+        "level": 198,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9958
+    },
+    {
+        "name": "Aemilius",
+        "level": 200,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9957
+    },
+    {
+        "name": "Fabius",
+        "level": 202,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9956
+    },
+    {
+        "name": "Astarius",
+        "level": 203,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9955
+    },
+    {
+        "name": "Valcarus",
+        "level": 209,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9954
+    },
+    {
+        "name": "Primus",
+        "level": 210,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9953
+    },
+    {
+        "name": "Acilius",
+        "level": 212,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9952
+    },
+    {
+        "name": "Aequitanius",
+        "level": 227,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9951
     }
 ]
