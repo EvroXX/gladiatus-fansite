@@ -5219,5 +5219,35 @@
         },
         "materials": {},
         "id": 9999
+    },
+    {
+        "name": "Timotius`",
+        "level": 165,
+        "new": true,
+        "gold": 582853,
+        "stats": {
+            "damage": {
+                "flat": 22,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1041,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 41
+            },
+            "healing": {
+                "flat": 258,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 9998
     }
 ]

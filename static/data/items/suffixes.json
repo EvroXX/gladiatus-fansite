@@ -6541,7 +6541,7 @@
         "id": 999987
     },
     {
-        "name": "of Elder",
+        "name": "of the Elder",
         "level": 85,
         "gold": 0,
         "new": true,
@@ -6565,5 +6565,173 @@
         },
         "materials": {},
         "id": 999986
+    },
+    {
+        "name": "of the Arena",
+        "level": 100,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "healing": {
+                "flat": 349,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 58,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999985
+    },
+    {
+        "name": "of Threat",
+        "level": 105,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 708,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 30,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 39,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 17,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999984
+    },
+    {
+        "name": "of Prudence",
+        "level": 103,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": -5,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 683,
+                "percent": 0
+            },
+            "health": {
+                "flat": 80,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 37,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 26
+            },
+            "blocking_value": {
+                "flat": 59,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999983
+    },
+    {
+        "name": "of the Eclipse",
+        "level": 94,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "health": {
+                "flat": 38,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 25,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 120,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 74,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 59,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999982
+    },
+    {
+        "name": "of Fortune",
+        "level": 98,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 615,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 28,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 18,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 39,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 41,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999981
+    },
+    {
+        "name": "of Jubilation",
+        "level": 117,
+        "gold": 491981,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 7,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 480,
+                "percent": 0
+            },
+            "health": {
+                "flat": 75,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 43,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 22
+            }
+        },
+        "materials": {},
+        "id": 999980
     }
 ]

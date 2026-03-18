@@ -372,7 +372,7 @@ export function calculateItemStats(
   // Define stat order as in-game: Damage first, then Armor (for weapons), then Strength, Dexterity, Agility, Constitution, Charisma, Intelligence, then others
   const statOrder = ['damage', 'armour', 'strength', 'dexterity', 'agility', 'constitution', 'charisma', 'intelligence', 
                      'critical_hit', 'double_hit', 'avoid_critical_hit', 'avoid_double_hit', 
-                     'block_chance', 'healing'];
+                     'block_chance', 'healing', 'critical_healing_value'];
   
   // Sort stats by predefined order
   const sortedStats = Object.entries(statsMap)
@@ -397,8 +397,12 @@ export function calculateItemStats(
       return 0;
     });
   
+  const statNameOverrides: Record<string, string> = {
+    hardening_value: 'hardening value',
+  };
+
   sortedStats.forEach(([name, value]) => {
-    const formattedName = name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const formattedName = statNameOverrides[name] ?? name.replaceAll('_', ' ').replace(/^\w/, l => l.toUpperCase());
     
     // Add both flat and percent for this stat, keeping them together
     if (value.flat !== 0 && value.percent !== 0) {

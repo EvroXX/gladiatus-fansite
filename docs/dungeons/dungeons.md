@@ -406,18 +406,22 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 ---
 
 **Name of the dungeon:** [Madness in the Fog](/dungeons/britannia-dungeons/madness-in-the-fog "Madness in the Fog")  
-**Name of the Boss:** Unknown  
+**Name of the Boss:** Glashtyn  
 **Level:** ???-???  
 **Required Level for the area:** 195  
 **Location:** Britannia – The Ford – Normal
 
+![Glashtyn](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/madness-in-the-fog/glashtyn.jpg)
+
 ---
 
 **Name of the dungeon:** [Ashes of War](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War")  
-**Name of the Boss:** Unknown  
+**Name of the Boss:** Daruven  
 **Level:** ???-???  
 **Required Level for the area:** 210  
 **Location:** Britannia – Camulodunum – Normal
+
+![Daruven](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/ashes-of-war/daruven.jpg)
 
 ---
 
