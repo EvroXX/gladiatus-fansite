@@ -6303,7 +6303,7 @@
             }
         },
         "materials": {},
-        "id": 999996
+        "id": 317
     },
     {
         "name": "of Legend",
@@ -6852,61 +6852,216 @@
         "level": 85,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": -1,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 547,
+                "percent": 0
+            },
+            "health": {
+                "flat": 62,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 33,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 24
+            },
+            "blocking_value": {
+                "flat": 61,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999974
+        "id": 298
     },
     {
         "name": "of Challenge",
         "level": 85,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 283,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 17
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 14
+            },
+            "healing": {
+                "flat": 215,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 63,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999973
+        "id": 294
     },
     {
         "name": "of Ruthlessness",
         "level": 90,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": -2,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 575,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 33,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 25
+            },
+            "critical_healing_value": {
+                "flat": 38,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999972
+        "id": 305
     },
     {
         "name": "of Corruption",
         "level": 90,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 80,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 95,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 72,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 59,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999971
+        "id": 302
     },
     {
         "name": "of Deference",
         "level": 92,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 600,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 27,
+                "percent": 0
+            },
+            "health": {
+                "flat": 79,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 18,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 41,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999970
+        "id": 306
     },
     {
         "name": "of Shade",
         "level": 95,
-        "gold": 0,
+        "gold": 384645,
         "new": true,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 0,
+                "percent": 20
+            },
+            "dexterity": {
+                "flat": 32,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 28,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 73,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 38,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 130,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 999969
     },
     {
         "name": "of Vengeance",
         "level": 95,
-        "gold": 0,
+        "gold": 2514899,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": -2,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 564,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 34,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 26
+            },
+            "healing": {
+                "flat": 58,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 82,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 999968
     },
@@ -6915,16 +7070,50 @@
         "level": 95,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 80,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 160,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 48,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999967
+        "id": 309
     },
     {
         "name": "of Unyielding",
         "level": 97,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 140,
+                "percent": 0
+            },
+            "health": {
+                "flat": 723,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 23
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 19
+            },
+            "healing": {
+                "flat": 58,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 999966
     },
@@ -6951,9 +7140,30 @@
         "level": 115,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 756,
+                "percent": 0
+            },
+            "health": {
+                "flat": 85,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 33,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 39,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 19,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999962
+        "id": 325
     },
     {
         "name": "of Exultation",
@@ -6967,9 +7177,30 @@
     {
         "name": "of Resolve",
         "level": 127,
-        "gold": 0,
+        "gold": 396877,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": -6,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 828,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 51,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 29
+            },
+            "blocking_value": {
+                "flat": 61,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 999960
     },
@@ -6978,8 +7209,115 @@
         "level": 130,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 85,
+                "percent": 0
+            },
+            "health": {
+                "flat": 1025,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 39
+            },
+            "critical_healing_value": {
+                "flat": 61,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999959
+        "id": 332
+    },
+    {
+        "name": "of Danger",
+        "level": 122,
+        "gold": 354497,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 56,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 37,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 317,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 65,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 80,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999958
+    },
+    {
+        "name": "of Hazard",
+        "level": 132,
+        "gold": 333645,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 56,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 37,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 312,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 65,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 80,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999957
+    },
+    {
+        "name": "of Menace",
+        "level": 122,
+        "gold": 485761,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 745,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 38,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 39,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 20,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 38,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 999956
     }
 ]

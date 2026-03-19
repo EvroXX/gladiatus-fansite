@@ -14,9 +14,6 @@ const path = require('path');
 
 const DATA_DIR = path.join(__dirname, 'static', 'data', 'items');
 
-function formatGold(value) {
-  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-}
 
 function formatStats(stats) {
   const parts = [];
@@ -45,7 +42,6 @@ function buildTable(items, label) {
     <td>${item.name}</td>
     <td>${item.level}</td>
     <td>${statsHtml}</td>
-    <td>${formatGold(item.gold)}</td>
   </tr>`;
   }).join('\n');
 
@@ -56,7 +52,6 @@ function buildTable(items, label) {
       <th>Name</th>
       <th>Level</th>
       <th>Stats</th>
-      <th>Gold Value</th>
     </tr>
   </thead>
   <tbody>
