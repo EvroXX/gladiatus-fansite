@@ -261,6 +261,7 @@ function buildPageItems(totalPages: number, currentPage: number): PageItem[] {
 
 export default function LootExplorer() {
   const [characterLevel, setCharacterLevel] = useState<number>(1);
+  const [levelInputValue, setLevelInputValue] = useState<string>('1');
   const [selectedSlot, setSelectedSlot]     = useState<ItemType>('weapons');
   const [selectedRarity, setSelectedRarity] = useState<ItemRarity>('green');
   const [conditioned, setConditioned]       = useState<boolean>(false);
@@ -390,11 +391,20 @@ export default function LootExplorer() {
             id="ilc-level"
             type="number"
             min={1}
-            max={300}
-            value={characterLevel}
+            max={999}
+            value={levelInputValue}
             onChange={(e) => {
+              setLevelInputValue(e.target.value);
               const v = Number.parseInt(e.target.value, 10);
-              setCharacterLevel(Number.isNaN(v) ? 1 : Math.max(1, v));
+              if (!Number.isNaN(v) && v >= 1) {
+                setCharacterLevel(v);
+                resetPage();
+              }
+            }}
+            onBlur={() => {
+              const clamped = Math.min(999, Math.max(1, characterLevel));
+              setCharacterLevel(clamped);
+              setLevelInputValue(String(clamped));
               resetPage();
             }}
             style={{ ...inputStyle, width: '100px' }}
