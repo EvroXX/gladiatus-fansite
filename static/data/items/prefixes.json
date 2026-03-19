@@ -5533,13 +5533,42 @@
         "id": 9975
     },
     {
-        "name": "Claudius",
+        "name": "Claudius`",
         "level": 173,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 28,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1158,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 46
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": -5
+            },
+            "agility": {
+                "flat": 19,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": -6,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 287,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9974
+        "id": 212
     },
     {
         "name": "Taurus",
@@ -5663,9 +5692,38 @@
         "level": 197,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 30,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 978,
+                "percent": 0
+            },
+            "health": {
+                "flat": 442,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 30
+            },
+            "agility": {
+                "flat": 0,
+                "percent": 15
+            },
+            "block_value": {
+                "flat": 58,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 132,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9960
+        "id": 226
     },
     {
         "name": "Maximus",
@@ -5690,18 +5748,72 @@
         "level": 200,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 34,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 80,
+                "percent": 0
+            },
+            "health": {
+                "flat": 938,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -12
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 50
+            },
+            "blocking_value": {
+                "flat": 60,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 82,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9957
+        "id": 229
     },
     {
-        "name": "Fabius",
+        "name": "Fabius`",
         "level": 202,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 33,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1479,
+                "percent": 0
+            },
+            "health": {
+                "flat": 50,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": -24,
+                "percent": 50
+            },
+            "healing": {
+                "flat": 364,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9956
+        "id": 230
     },
     {
         "name": "Astarius",
@@ -5722,13 +5834,38 @@
         "id": 9954
     },
     {
-        "name": "Primus",
+        "name": "Primus`",
         "level": 210,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 31,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1380,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 47
+            },
+            "agility": {
+                "flat": 19,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": -6,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 415,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9953
+        "id": 234
     },
     {
         "name": "Acilius",
@@ -5756,5 +5893,85 @@
         "stats": {},
         "materials": {},
         "id": 9950
+    },
+    {
+        "name": "Augustus`",
+        "level": 220,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 37,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 40,
+                "percent": 0
+            },
+            "health": {
+                "flat": 853,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 47
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 14
+            },
+            "healing": {
+                "flat": 50,
+                "percent": 0
+            },
+            "blocking_value": {
+                "flat": 63,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 40,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 238
+    },
+    {
+        "name": "Gratianus`",
+        "level": 207,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 34,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1496,
+                "percent": 0
+            },
+            "health": {
+                "flat": 140,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 48
+            },
+            "healing": {
+                "flat": 399,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 40,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 233
     }
 ]
