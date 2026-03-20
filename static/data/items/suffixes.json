@@ -7131,9 +7131,38 @@
         "level": 112,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 695,
+                "percent": 0
+            },
+            "health": {
+                "flat": 82,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 35,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": -8,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 75,
+                "percent": 0
+            },
+            "critical_attack_value": {
+                "flat": 19,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 110,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999963
+        "id": 324
     },
     {
         "name": "of Absolution",
