@@ -6208,7 +6208,7 @@
             }
         },
         "materials": {},
-        "id": 999999
+        "id": 310
     },
     {
         "name": "of Daredevilry",
@@ -6242,7 +6242,7 @@
             }
         },
         "materials": {},
-        "id": 999998
+        "id": 321
     },
     {
         "name": "of Bravery",
@@ -6273,7 +6273,7 @@
             "Essence of Reaction": 20,
             "Phial of Charisma": 20
         },
-        "id": 999997
+        "id": 304
     },
     {
         "name": "of Awe",
@@ -6333,7 +6333,7 @@
             }
         },
         "materials": {},
-        "id": 999995
+        "id": 300
     },
     {
         "name": "of Heroism",
@@ -6390,7 +6390,7 @@
             }
         },
         "materials": {},
-        "id": 999993
+        "id": 295
     },
     {
         "name": "of the Saviour",
@@ -6412,7 +6412,7 @@
             }
         },
         "materials": {},
-        "id": 999992
+        "id": 303
     },
     {
         "name": "of Arbitration",
@@ -6430,7 +6430,7 @@
             }
         },
         "materials": {},
-        "id": 999991
+        "id": 296
     },
     {
         "name": "of the Fallen",
@@ -6460,7 +6460,7 @@
             }
         },
         "materials": {},
-        "id": 999990
+        "id": 301
     },
     {
         "name": "of Reason",
@@ -6486,7 +6486,7 @@
             }
         },
         "materials": {},
-        "id": 999989
+        "id": 311
     },
     {
         "name": "of Distance",
@@ -6512,7 +6512,7 @@
             }
         },
         "materials": {},
-        "id": 999988
+        "id": 307
     },
     {
         "name": "of Destiny",
@@ -6538,7 +6538,7 @@
             }
         },
         "materials": {},
-        "id": 999987
+        "id": 318
     },
     {
         "name": "of the Elder",
@@ -6564,7 +6564,7 @@
             }
         },
         "materials": {},
-        "id": 999986
+        "id": 297
     },
     {
         "name": "of the Arena",
@@ -6582,7 +6582,7 @@
             }
         },
         "materials": {},
-        "id": 999985
+        "id": 316
     },
     {
         "name": "of Threat",
@@ -6608,7 +6608,7 @@
             }
         },
         "materials": {},
-        "id": 999984
+        "id": 320
     },
     {
         "name": "of Prudence",
@@ -6672,7 +6672,7 @@
             }
         },
         "materials": {},
-        "id": 999982
+        "id": 308
     },
     {
         "name": "of Fortune",
@@ -6702,7 +6702,7 @@
             }
         },
         "materials": {},
-        "id": 999981
+        "id": 315
     },
     {
         "name": "of Jubilation",
@@ -6758,7 +6758,7 @@
             }
         },
         "materials": {},
-        "id": 999979
+        "id": 327
     },
     {
         "name": "of Force",
@@ -6814,7 +6814,7 @@
             }
         },
         "materials": {},
-        "id": 999977
+        "id": 323
     },
     {
         "name": "of Bloodletting",
@@ -6836,7 +6836,7 @@
             }
         },
         "materials": {},
-        "id": 999976
+        "id": 299
     },
     {
         "name": "of the Older",
@@ -7029,7 +7029,7 @@
             }
         },
         "materials": {},
-        "id": 999969
+        "id": 312
     },
     {
         "name": "of Vengeance",
@@ -7063,7 +7063,7 @@
             }
         },
         "materials": {},
-        "id": 999968
+        "id": 313
     },
     {
         "name": "of Purification",
@@ -7122,9 +7122,26 @@
         "level": 108,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "health": {
+                "flat": 41,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 31,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 300,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 62,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 999964
+        "id": 322
     },
     {
         "name": "of Ramparts",
@@ -7317,7 +7334,7 @@
             }
         },
         "materials": {},
-        "id": 999957
+        "id": 333
     },
     {
         "name": "of Menace",
@@ -7347,6 +7364,6 @@
             }
         },
         "materials": {},
-        "id": 999956
+        "id": 328
     }
 ]
