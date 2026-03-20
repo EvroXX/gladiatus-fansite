@@ -38,10 +38,12 @@ function buildTable(items, label) {
 
   const rows = items.map(item => {
     const statsHtml = formatStats(item.stats);
+    const idDisplay = item.id > 999 ? 'Unknown' : item.id;
     return `  <tr>
     <td>${item.name}</td>
     <td>${item.level}</td>
     <td>${statsHtml}</td>
+    <td>${idDisplay}</td>
   </tr>`;
   }).join('\n');
 
@@ -52,6 +54,7 @@ function buildTable(items, label) {
       <th>Name</th>
       <th>Level</th>
       <th>Stats</th>
+      <th>ID</th>
     </tr>
   </thead>
   <tbody>

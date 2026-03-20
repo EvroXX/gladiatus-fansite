@@ -340,6 +340,15 @@
         "id": 116
     },
     {
+        "name": "Aquilius",
+        "level": 232,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9949
+    },
+    {
         "name": "Arpagius`",
         "level": 114,
         "gold": 0,
@@ -720,6 +729,15 @@
             "Sulphur": 9
         },
         "id": 98
+    },
+    {
+        "name": "Bassianus",
+        "level": 217,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9948
     },
     {
         "name": "Beasthammers",
@@ -1403,6 +1421,15 @@
         "id": 4
     },
     {
+        "name": "Domitius",
+        "level": 222,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9947
+    },
+    {
         "name": "Doomeniks",
         "level": 68,
         "gold": 0,
@@ -1571,6 +1598,40 @@
             "Scale": 5
         },
         "id": 52
+    },
+    {
+        "name": "Faustus`",
+        "level": 215,
+        "gold": 0,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 35,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1615,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": -35
+            },
+            "agility": {
+                "flat": 18,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 426,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 220,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 236
     },
     {
         "name": "Fernabasts",
@@ -3000,6 +3061,15 @@
         "id": 86
     },
     {
+        "name": "Melior's",
+        "level": 225,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9945
+    },
+    {
         "name": "Mercurialis`",
         "level": 109,
         "gold": 0,
@@ -3639,6 +3709,15 @@
             "Sulphur": 3
         },
         "id": 94
+    },
+    {
+        "name": "Quietus",
+        "level": 230,
+        "gold": 0,
+        "new": true,
+        "stats": {},
+        "materials": {},
+        "id": 9944
     },
     {
         "name": "Quintas",
@@ -5222,7 +5301,7 @@
     },
     {
         "name": "Timotius`",
-        "level": 165,
+        "level": 155,
         "new": true,
         "gold": 582853,
         "stats": {
@@ -5248,14 +5327,27 @@
             }
         },
         "materials": {},
-        "id": 9998
+        "id": 189
     },
     {
         "name": "Elegarius",
         "level": 155,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 279,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 65,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9996
     },
@@ -5298,7 +5390,36 @@
         "level": 155,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "health": {
+                "flat": 669,
+                "percent": 0
+            },
+            "strength": {
+                "flat": -4,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 9
+            },
+            "agility": {
+                "flat": 0,
+                "percent": -35
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 8
+            },
+            "intelligence": {
+                "flat": 55,
+                "percent": 25
+            },
+            "healing": {
+                "flat": 140,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9994
     },
@@ -5307,7 +5428,32 @@
         "level": 157,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 22,
+                "percent": 0
+            },
+            "health": {
+                "flat": 656,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 9
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 21
+            },
+            "block_value": {
+                "flat": 43,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 45,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9993
     },
@@ -5316,7 +5462,28 @@
         "level": 158,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 32,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 19,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 13,
+                "percent": 20
+            },
+            "critical_healing_value": {
+                "flat": 59,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 45,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9992
     },
@@ -5334,7 +5501,32 @@
         "level": 160,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 17,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 34,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 11,
+                "percent": 9
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": -10,
+                "percent": 10
+            },
+            "intelligence": {
+                "flat": 31,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9990
     },
@@ -5377,7 +5569,24 @@
         "level": 160,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "health": {
+                "flat": 685,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 8
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 11
+            },
+            "intelligence": {
+                "flat": 58,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9988
     },
@@ -5386,7 +5595,28 @@
         "level": 160,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 220,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -30
+            },
+            "intelligence": {
+                "flat": 54,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 279,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 63,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9987
     },
@@ -5429,7 +5659,28 @@
         "level": 163,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 34,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 19,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 14,
+                "percent": 38
+            },
+            "critical_healing_value": {
+                "flat": 64,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 47,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9985
     },
@@ -5456,25 +5707,88 @@
         "level": 165,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "health": {
+                "flat": 695,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 6
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 10
+            },
+            "intelligence": {
+                "flat": 62,
+                "percent": 16
+            }
+        },
         "materials": {},
         "id": 9983
     },
     {
-        "name": "Peregrinus",
+        "name": "Peregrinus`",
         "level": 165,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 18,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 821,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 44
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -12
+            },
+            "healing": {
+                "flat": 287,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9982
+        "id": 203
     },
     {
         "name": "Marinus",
         "level": 165,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 26,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 34,
+                "percent": 19
+            },
+            "dexterity": {
+                "flat": 11,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 10
+            },
+            "intelligence": {
+                "flat": 64,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9981
     },
@@ -5483,7 +5797,32 @@
         "level": 167,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 25,
+                "percent": 0
+            },
+            "health": {
+                "flat": 650,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -5
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 45
+            },
+            "block_value": {
+                "flat": 49,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 47,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9980
     },
@@ -5492,7 +5831,40 @@
         "level": 168,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 37,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 19,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -25
+            },
+            "charisma": {
+                "flat": 15,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 44
+            },
+            "healing": {
+                "flat": 180,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 71,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 47,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9979
     },
@@ -5501,7 +5873,20 @@
         "level": 168,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "intelligence": {
+                "flat": 60,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 301,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 220,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9978
     },
@@ -5510,7 +5895,24 @@
         "level": 170,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "agility": {
+                "flat": 19,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": -8,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 312,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 71,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9977
     },
@@ -5519,7 +5921,36 @@
         "level": 170,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 28,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 35,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 5,
+                "percent": 8
+            },
+            "agility": {
+                "flat": 21,
+                "percent": -21
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 18
+            },
+            "intelligence": {
+                "flat": 68,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 90,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9976
     },
@@ -5528,7 +5959,36 @@
         "level": 172,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 20,
+                "percent": 0
+            },
+            "health": {
+                "flat": 691,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 10
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 49
+            },
+            "healing": {
+                "flat": 50,
+                "percent": 0
+            },
+            "block_value": {
+                "flat": 47,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 42,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9975
     },
@@ -5575,7 +6035,36 @@
         "level": 175,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 28,
+                "percent": 0
+            },
+            "health": {
+                "flat": 715,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": -35
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 48
+            },
+            "healing": {
+                "flat": 140,
+                "percent": 0
+            },
+            "block_value": {
+                "flat": 51,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 45,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9973
     },
@@ -5584,25 +6073,108 @@
         "level": 177,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 220,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 36,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 14,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": -30
+            },
+            "critical_healing_value": {
+                "flat": 71,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 43,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9972
     },
     {
-        "name": "Herestia's",
+        "name": "Herestia`s",
         "level": 178,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 26,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1187,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": -5
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": -5
+            },
+            "intelligence": {
+                "flat": 20,
+                "percent": 50
+            },
+            "healing": {
+                "flat": 326,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9971
+        "id": 215
     },
     {
         "name": "Saturninus",
         "level": 180,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 28,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 30,
+                "percent": 0
+            },
+            "health": {
+                "flat": 812,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 49
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 11
+            },
+            "block_value": {
+                "flat": 53,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 137,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9970
     },
@@ -5611,16 +6183,66 @@
         "level": 182,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 29,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 1227,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 47
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 327,
+                "percent": 0
+            }
+        },
         "materials": {},
-        "id": 9969
+        "id": 217
     },
     {
         "name": "Atticus`",
         "level": 183,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 27,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 30,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 35,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 10,
+                "percent": 28
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 12
+            },
+            "intelligence": {
+                "flat": 68,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9968
     },
@@ -5629,7 +6251,36 @@
         "level": 185,
         "gold": 0,
         "new": true,
-        "stats": {},
+        "stats": {
+            "armour": {
+                "flat": 140,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 39,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 12,
+                "percent": 47
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": -25
+            },
+            "critical_healing_value": {
+                "flat": 84,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 42,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9967
     },
