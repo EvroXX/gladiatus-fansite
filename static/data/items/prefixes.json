@@ -6869,6 +6869,27 @@
         "id": 238
     },
     {
+        "name": "Lepidus`",
+        "level": 159,
+        "new": true,
+        "stats": {
+            "constitution": {
+                "flat": 57,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 21,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 274,
+                "percent": 0
+            }
+        },
+        "materials": {},
+        "id": 9910
+    },
+    {
         "name": "Gratianus`",
         "level": 207,
         "new": true,
