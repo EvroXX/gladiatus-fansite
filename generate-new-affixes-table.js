@@ -31,6 +31,13 @@ function formatStats(stats) {
   return parts.join('<br>');
 }
 
+function formatMaterials(materials) {
+  if (!materials || Object.keys(materials).length === 0) return '';
+  return Object.entries(materials)
+    .map(([mat, qty]) => `${mat} x${qty}`)
+    .join('<br>');
+}
+
 function buildTable(items, label) {
   if (items.length === 0) {
     return `<p>No new ${label} found.</p>`;
@@ -38,11 +45,13 @@ function buildTable(items, label) {
 
   const rows = items.map(item => {
     const statsHtml = formatStats(item.stats);
+    const materialsHtml = formatMaterials(item.materials);
     const idDisplay = item.id > 999 ? 'Unknown' : item.id;
     return `  <tr>
     <td>${item.name}</td>
     <td>${item.level}</td>
     <td>${statsHtml}</td>
+    <td>${materialsHtml}</td>
     <td>${idDisplay}</td>
   </tr>`;
   }).join('\n');
@@ -54,6 +63,7 @@ function buildTable(items, label) {
       <th>Name</th>
       <th>Level</th>
       <th>Stats</th>
+      <th>Materials</th>
       <th>ID</th>
     </tr>
   </thead>

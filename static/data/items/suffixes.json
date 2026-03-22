@@ -36,35 +36,60 @@
         "id": 104,
         "name": "+5",
         "level": 5,
-        "stats": {},
+        "stats": {
+            "constitution": {
+                "flat": 2,
+                "percent": 0
+            }
+        },
         "materials": {}
     },
     {
         "id": 105,
         "name": "+6",
         "level": 6,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 2,
+                "percent": 0
+            }
+        },
         "materials": {}
     },
     {
         "id": 106,
         "name": "+7",
         "level": 7,
-        "stats": {},
+        "stats": {
+            "dexterity": {
+                "flat": 2,
+                "percent": 0
+            }
+        },
         "materials": {}
     },
     {
         "id": 107,
         "name": "+8",
         "level": 8,
-        "stats": {},
+        "stats": {
+            "agility": {
+                "flat": 2,
+                "percent": 0
+            }
+        },
         "materials": {}
     },
     {
         "id": 108,
         "name": "+9",
         "level": 9,
-        "stats": {},
+        "stats": {
+            "charisma": {
+                "flat": 2,
+                "percent": 0
+            }
+        },
         "materials": {}
     },
     {
@@ -6009,7 +6034,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Druid's Potion": 57,
+            "Glyph of the Grove": 6
+        },
         "id": 321
     },
     {
@@ -6036,9 +6064,8 @@
         },
         "materials": {
             "Hellstone": 2,
-            "Totem of Healing": 20,
-            "Essence of Reaction": 20,
-            "Phial of Charisma": 20
+            "Raven Feather": 5,
+            "Jet": 45
         },
         "id": 304
     },
@@ -6097,7 +6124,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 35,
+            "Moon Rune": 16
+        },
         "id": 300
     },
     {
@@ -6126,7 +6156,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 11,
+            "Raven Feather": 39,
+            "Moon Rune": 23
+        },
         "id": 999994
     },
     {
@@ -6172,7 +6206,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 7,
+            "Raven Feather": 5,
+            "Jet": 35,
+            "Moon Rune": 6
+        },
         "id": 303
     },
     {
@@ -6293,7 +6332,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Hellstone": 4,
+            "Bark": 54,
+            "Glyph of the Grove": 3
+        },
         "id": 318
     },
     {
@@ -6318,7 +6361,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Cerberus' Pelt": 7,
+            "Bark": 7,
+            "Moon Rune": 36
+        },
         "id": 297
     },
     {
@@ -6360,7 +6407,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 10,
+            "Raven Feather": 10,
+            "Moon Rune": 37,
+            "Glyph of the Grove": 5
+        },
         "id": 320
     },
     {
@@ -6393,7 +6445,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Moon Rune": 7,
+            "Glyph of the Grove": 54
+        },
         "id": 319
     },
     {
@@ -6422,7 +6477,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Raven Feather": 23,
+            "Jet": 20,
+            "Moon Rune": 11
+        },
         "id": 308
     },
     {
@@ -6455,7 +6514,7 @@
         "id": 315
     },
     {
-        "name": "of Jubilation",
+        "name": "of Exultation",
         "level": 117,
         "new": true,
         "stats": {
@@ -6480,7 +6539,13 @@
                 "percent": 22
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 22,
+            "Raven Feather": 11,
+            "Druid's Potion": 12,
+            "Moon Rune": 12,
+            "Glyph of the Grove": 12
+        },
         "id": 999980
     },
     {
@@ -6534,7 +6599,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Raven Feather": 3,
+            "Druid's Potion": 71,
+            "Glyph of the Grove": 3
+        },
         "id": 999978
     },
     {
@@ -6584,14 +6653,6 @@
         "id": 299
     },
     {
-        "name": "of the Older",
-        "level": 85,
-        "new": true,
-        "stats": {},
-        "materials": {},
-        "id": 999975
-    },
-    {
         "name": "of Impermanence",
         "level": 85,
         "new": true,
@@ -6621,7 +6682,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Raven Feather": 9,
+            "Moon Rune": 41
+        },
         "id": 298
     },
     {
@@ -6650,7 +6714,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Waters of Oblivion": 5,
+            "Bark": 31,
+            "Raven Feather": 7,
+            "Moon Rune": 8
+        },
         "id": 294
     },
     {
@@ -6733,7 +6802,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Raven Feather": 17,
+            "Moon Rune": 37
+        },
         "id": 306
     },
     {
@@ -6766,7 +6838,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Jet": 39,
+            "Moon Rune": 7
+        },
         "id": 312
     },
     {
@@ -6874,7 +6949,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Bark": 10,
+            "Raven Feather": 18,
+            "Glyph of the Grove": 35
+        },
         "id": 322
     },
     {
@@ -6944,14 +7023,6 @@
         "id": 325
     },
     {
-        "name": "of Exultation",
-        "level": 117,
-        "new": true,
-        "stats": {},
-        "materials": {},
-        "id": 999961
-    },
-    {
         "name": "of Resolve",
         "level": 127,
         "new": true,
@@ -7006,37 +7077,8 @@
         "id": 332
     },
     {
-        "name": "of Danger",
-        "level": 122,
-        "new": true,
-        "stats": {
-            "armour": {
-                "flat": 56,
-                "percent": 0
-            },
-            "dexterity": {
-                "flat": 37,
-                "percent": 0
-            },
-            "healing": {
-                "flat": 317,
-                "percent": 0
-            },
-            "critical_healing_value": {
-                "flat": 65,
-                "percent": 0
-            },
-            "threat": {
-                "flat": 80,
-                "percent": 0
-            }
-        },
-        "materials": {},
-        "id": 999958
-    },
-    {
         "name": "of Hazard",
-        "level": 132,
+        "level": 122,
         "new": true,
         "stats": {
             "armour": {
@@ -7060,7 +7102,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Jet": 23,
+            "Druid's Potion": 24,
+            "Glyph of the Grove": 25
+        },
         "id": 333
     },
     {
@@ -7089,7 +7135,79 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Druid's Potion": 62,
+            "Moon Rune": 7,
+            "Glyph of the Grove": 3
+        },
         "id": 328
+    },
+    {
+        "name": "of Jubilation",
+        "level": 117,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 7,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 480,
+                "percent": 0
+            },
+            "health": {
+                "flat": 75,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 43,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 22
+            }
+        },
+        "materials": {
+            "Bark": 22,
+            "Raven Feather": 11,
+            "Druid's Potion": 12,
+            "Moon Rune": 12,
+            "Glyph of the Grove": 12
+        },
+        "id": 999979
+    },
+    {
+        "name": "of Danger",
+        "level": 132,
+        "new": true,
+        "stats": {
+            "armour": {
+                "flat": 56,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 37,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 312,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 65,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 80,
+                "percent": 0
+            }
+        },
+        "materials": {
+            "Jet": 23,
+            "Druid's Potion": 24,
+            "Glyph of the Grove": 25
+        },
+        "id": 999977
     }
 ]

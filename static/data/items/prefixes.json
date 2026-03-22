@@ -335,7 +335,40 @@
         "name": "Aquilius",
         "level": 232,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 37,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 200,
+                "percent": 0
+            },
+            "health": {
+                "flat": 948,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 14
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 44
+            },
+            "healing": {
+                "flat": 89,
+                "percent": 0
+            },
+            "block_value": {
+                "flat": 67,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 90,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9949
     },
@@ -718,7 +751,24 @@
         "name": "Bassianus",
         "level": 217,
         "new": true,
-        "stats": {},
+        "stats": {
+            "health": {
+                "flat": 891,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 5
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 13
+            },
+            "intelligence": {
+                "flat": 89,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9948
     },
@@ -2978,7 +3028,24 @@
         "name": "Melior's",
         "level": 225,
         "new": true,
-        "stats": {},
+        "stats": {
+            "constitution": {
+                "flat": 25,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 55,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 55,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 426,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9945
     },
@@ -3614,7 +3681,20 @@
         "name": "Quietus",
         "level": 230,
         "new": true,
-        "stats": {},
+        "stats": {
+            "intelligence": {
+                "flat": 95,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 451,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 104,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9944
     },
@@ -5178,7 +5258,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Sugilite": 49,
+            "Resin": 5,
+            "Boar Tusk": 3,
+            "Tin Ore": 19
+        },
         "id": 189
     },
     {
@@ -5199,12 +5284,18 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Almandin": 5,
+            "Soul Essence": 17,
+            "Resin": 32,
+            "Boar Tusk": 17,
+            "Mead": 20
+        },
         "id": 9996
     },
     {
         "name": "Darius`",
-        "level": 162,
+        "level": 155,
         "new": true,
         "stats": {
             "damage": {
@@ -5216,7 +5307,7 @@
                 "percent": 0
             },
             "dexterity": {
-                "flat": 13,
+                "flat": 11,
                 "percent": 19
             },
             "agility": {
@@ -5269,7 +5360,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Soul Essence": 5,
+            "Typhon Leather": 13,
+            "Resin": 15,
+            "Lead Ore": 58
+        },
         "id": 9994
     },
     {
@@ -5302,7 +5398,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Sphinx Feather": 5,
+            "Resin": 6,
+            "Mead": 58,
+            "Tin Ore": 22
+        },
         "id": 9993
     },
     {
@@ -5331,15 +5432,38 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Almandin": 2,
+            "Tin Ore": 45,
+            "Lead Ore": 45
+        },
         "id": 9992
     },
     {
         "name": "Plinius",
         "level": 159,
         "new": true,
-        "stats": {},
-        "materials": {},
+        "stats": {
+            "constitution": {
+                "flat": 57,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 21,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 274,
+                "percent": 0
+            }
+        },
+        "materials": {
+            "Almandin": 5,
+            "Hydra Scale": 16,
+            "Sphinx Feather": 4,
+            "Sugilite": 48,
+            "Tin Ore": 1
+        },
         "id": 9991
     },
     {
@@ -5372,7 +5496,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Soul Essence": 9,
+            "Typhon Leather": 23,
+            "Boar Tusk": 48,
+            "Lead Ore": 15
+        },
         "id": 9990
     },
     {
@@ -5430,7 +5559,10 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Boar Tusk": 70,
+            "Mead": 24
+        },
         "id": 9988
     },
     {
@@ -5563,7 +5695,14 @@
                 "percent": 16
             }
         },
-        "materials": {},
+        "materials": {
+            "Soul Essence": 3,
+            "Sphinx Feather": 3,
+            "Sugilite": 4,
+            "Boar Tusk": 14,
+            "Mead": 13,
+            "Tin Ore": 60
+        },
         "id": 9983
     },
     {
@@ -5592,7 +5731,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Almandin": 4,
+            "Hydra Scale": 14,
+            "Sugilite": 11,
+            "Tin Ore": 67
+        },
         "id": 203
     },
     {
@@ -5625,7 +5769,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Sphinx Feather": 1,
+            "Typhon Leather": 8,
+            "Resin": 82,
+            "Mead": 6
+        },
         "id": 9981
     },
     {
@@ -5658,7 +5807,11 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Soul Essence": 11,
+            "Sugilite": 21,
+            "Lead Ore": 65
+        },
         "id": 9980
     },
     {
@@ -5720,7 +5873,12 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Resin": 7,
+            "Boar Tusk": 18,
+            "Mead": 69,
+            "Tin Ore": 4
+        },
         "id": 9978
     },
     {
@@ -5819,7 +5977,14 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Hydra Scale": 39,
+            "Sphinx Feather": 4,
+            "Sugilite": 11,
+            "Mead": 38,
+            "Tin Ore": 5,
+            "Lead Ore": 5
+        },
         "id": 9975
     },
     {
@@ -6110,7 +6275,36 @@
         "name": "Julius`",
         "level": 187,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 8,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 482,
+                "percent": 0
+            },
+            "health": {
+                "flat": 40,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": -10
+            },
+            "agility": {
+                "flat": -21,
+                "percent": -12
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 50
+            },
+            "healing": {
+                "flat": 252,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9966
     },
@@ -6118,7 +6312,36 @@
         "name": "Trajenus",
         "level": 188,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 29,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 50,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 39,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 9,
+                "percent": 27
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 11
+            },
+            "intelligence": {
+                "flat": 72,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9965
     },
@@ -6126,23 +6349,104 @@
         "name": "Laelius",
         "level": 190,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 32,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 50,
+                "percent": 0
+            },
+            "health": {
+                "flat": 801,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 12
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": 40
+            },
+            "block_value": {
+                "flat": 59,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 97,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9964
     },
     {
-        "name": "Scripio's",
+        "name": "Scipio's",
         "level": 192,
         "new": true,
-        "stats": {},
-        "materials": {},
+        "stats": {
+            "armour": {
+                "flat": 240,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 12,
+                "percent": 28
+            },
+            "critical_healing_value": {
+                "flat": 82,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 97,
+                "percent": 0
+            }
+        },
+        "materials": {
+            "Resin": 20,
+            "Blood Garnet": 27,
+            "Mead": 50,
+            "Tin Ore": 9,
+            "Lead Ore": 6
+        },
         "id": 9963
     },
     {
         "name": "Aurius",
         "level": 193,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 30,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 340,
+                "percent": 0
+            },
+            "agility": {
+                "flat": 21,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": 35
+            },
+            "healing": {
+                "flat": 328,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 30,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9962
     },
@@ -6150,7 +6454,28 @@
         "name": "Calpurnicus",
         "level": 195,
         "new": true,
-        "stats": {},
+        "stats": {
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": -9
+            },
+            "healing": {
+                "flat": 367,
+                "percent": 0
+            },
+            "critical_healing_value": {
+                "flat": 88,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 60,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9961
     },
@@ -6188,14 +6513,29 @@
                 "percent": 0
             }
         },
-        "materials": {},
+        "materials": {
+            "Sphinx Feather": 6,
+            "Resin": 11,
+            "Boar Tusk": 7,
+            "Blood Garnet": 61,
+            "Mead": 30
+        },
         "id": 226
     },
     {
         "name": "Maximus",
         "level": 198,
         "new": true,
-        "stats": {},
+        "stats": {
+            "strength": {
+                "flat": 81,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": -6,
+                "percent": -12
+            }
+        },
         "materials": {},
         "id": 9959
     },
@@ -6203,7 +6543,32 @@
         "name": "Helvius",
         "level": 198,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 32,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 726,
+                "percent": 0
+            },
+            "health": {
+                "flat": 40,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": 38
+            },
+            "agility": {
+                "flat": 41,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 348,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9958
     },
@@ -6281,7 +6646,32 @@
         "name": "Astarius",
         "level": 203,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 32,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 40,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 44,
+                "percent": 13
+            },
+            "dexterity": {
+                "flat": 8,
+                "percent": 26
+            },
+            "agility": {
+                "flat": 20,
+                "percent": 0
+            },
+            "intelligence": {
+                "flat": 79,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9955
     },
@@ -6289,7 +6679,40 @@
         "name": "Valcarus",
         "level": 209,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 31,
+                "percent": 0
+            },
+            "armour": {
+                "flat": 61,
+                "percent": 0
+            },
+            "health": {
+                "flat": 897,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 48
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 13
+            },
+            "healing": {
+                "flat": 50,
+                "percent": 0
+            },
+            "block_value": {
+                "flat": 61,
+                "percent": 0
+            },
+            "threat": {
+                "flat": 70,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9954
     },
@@ -6330,7 +6753,36 @@
         "name": "Acilius",
         "level": 212,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 33,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 44,
+                "percent": 0
+            },
+            "dexterity": {
+                "flat": 6,
+                "percent": 6
+            },
+            "agility": {
+                "flat": 18,
+                "percent": 0
+            },
+            "constitution": {
+                "flat": 0,
+                "percent": 13
+            },
+            "charisma": {
+                "flat": 0,
+                "percent": -34
+            },
+            "intelligence": {
+                "flat": 87,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9952
     },
@@ -6338,7 +6790,32 @@
         "name": "Aequitanius",
         "level": 227,
         "new": true,
-        "stats": {},
+        "stats": {
+            "damage": {
+                "flat": 34,
+                "percent": 0
+            },
+            "health": {
+                "flat": 50,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 0,
+                "percent": 50
+            },
+            "dexterity": {
+                "flat": 0,
+                "percent": -6
+            },
+            "agility": {
+                "flat": 18,
+                "percent": 0
+            },
+            "healing": {
+                "flat": 538,
+                "percent": 0
+            }
+        },
         "materials": {},
         "id": 9951
     },
@@ -6427,5 +6904,42 @@
         },
         "materials": {},
         "id": 233
+    },
+    {
+        "name": "Egnatius`",
+        "level": 250,
+        "new": true,
+        "stats": {
+            "damage": {
+                "flat": 45,
+                "percent": 0
+            },
+            "strength": {
+                "flat": 35,
+                "percent": 22
+            },
+            "agility": {
+                "flat": 33,
+                "percent": 0
+            },
+            "charisma": {
+                "flat": 25,
+                "percent": 31
+            },
+            "intelligence": {
+                "flat": 0,
+                "percent": -11
+            }
+        },
+        "materials": {
+            "Wood": 2,
+            "Hydra Scale": 35,
+            "Sugilite": 23,
+            "Boar Tusk": 13,
+            "Blood Garnet": 53,
+            "Tin Ore": 9,
+            "Lead Ore": 7
+        },
+        "id": 9950
     }
 ]
