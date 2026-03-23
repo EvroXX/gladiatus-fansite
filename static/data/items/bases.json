@@ -33,6 +33,7 @@
     "level": 1,
     "damageMin": 1,
     "damageMax": 4,
+    "damageMinOffset": -1,
     "durability": 1419,
     "conditioning": 355,
     "gold": 15,

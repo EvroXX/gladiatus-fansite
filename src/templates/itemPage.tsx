@@ -9,7 +9,7 @@ import { calcAffixGoldRange, formatGoldDots } from '@site/src/utils/affixGold';
 
 const slugify = (value?: string) =>
   typeof value === 'string'
-    ? value.toLowerCase().replace(/\s+/g, '-')
+    ? value.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')
     : '';
 
 export default function ItemPage() {

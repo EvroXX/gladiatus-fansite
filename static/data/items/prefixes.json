@@ -6016,7 +6016,7 @@
     "id": 9970
   },
   {
-    "name": "Baurus",
+    "name": "Baurus`",
     "level": 182,
     "new": true,
     "stats": {
@@ -6079,7 +6079,7 @@
       }
     },
     "materials": {},
-    "id": 9968
+    "id": 218
   },
   {
     "name": "Severus",
@@ -6193,7 +6193,7 @@
     "id": 9965
   },
   {
-    "name": "Laelius",
+    "name": "Laelius`",
     "level": 190,
     "new": true,
     "stats": {
@@ -6227,7 +6227,7 @@
       }
     },
     "materials": {},
-    "id": 9964
+    "id": 222
   },
   {
     "name": "Scipio's",
@@ -6265,7 +6265,7 @@
     "id": 9963
   },
   {
-    "name": "Aurius",
+    "name": "Aurius`",
     "level": 193,
     "new": true,
     "stats": {
@@ -6295,7 +6295,7 @@
       }
     },
     "materials": {},
-    "id": 9962
+    "id": 224
   },
   {
     "name": "Calpurnicus",
@@ -6770,12 +6770,37 @@
     "id": 238
   },
   {
-    "name": "Domitius",
+    "name": "Domitius`",
     "level": 222,
     "new": true,
-    "stats": {},
+    "stats": {
+      "damage": {
+        "flat": 34,
+        "percent": 0
+      },
+      "armour": {
+        "flat": 1637,
+        "percent": 0
+      },
+      "agility": {
+        "flat": 18,
+        "percent": 0
+      },
+      "intelligence": {
+        "flat": 0,
+        "percent": 47
+      },
+      "healing": {
+        "flat": 407,
+        "percent": 0
+      },
+      "threat": {
+        "flat": 50,
+        "percent": 0
+      }
+    },
     "materials": {},
-    "id": 9947
+    "id": 239
   },
   {
     "name": "Melior's",
@@ -6983,7 +7008,7 @@
   },
   {
     "name": "Egnatius`",
-    "level": 250,
+    "level": 240,
     "new": true,
     "stats": {
       "damage": {
@@ -7018,11 +7043,53 @@
     "id": 9950
   },
   {
-    "name": "Unknown",
-    "level": 252,
+    "name": "Alvius`",
+    "level": 242,
     "new": true,
-    "stats": {},
-    "materials": {},
+    "stats": {
+      "damage": {
+        "flat": 38,
+        "percent": 0
+      },
+      "armour": {
+        "flat": 414,
+        "percent": 0
+      },
+      "health": {
+        "flat": 993,
+        "percent": 0
+      },
+      "dexterity": {
+        "flat": 0,
+        "percent": 33
+      },
+      "agility": {
+        "flat": 0,
+        "percent": 11
+      },
+      "constitution": {
+        "flat": 0,
+        "percent": 16
+      },
+      "healing": {
+        "flat": 80,
+        "percent": 0
+      },
+      "block_value": {
+        "flat": 70,
+        "percent": 0
+      },
+      "threat": {
+        "flat": 110,
+        "percent": 0
+      }
+    },
+    "materials": {
+      "Suguilite": 15,
+      "Blood Garnet": 92,
+      "Tin Ore": 17,
+      "Lead Ore": 18
+    },
     "id": 9949
   }
 ]

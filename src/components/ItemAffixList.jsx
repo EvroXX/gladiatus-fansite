@@ -5,7 +5,7 @@ import { calcAffixGoldBase, calcAffixGoldRange, formatGoldDots } from '@site/src
 // Helper: slugify item name
 function slugify(value) {
   return typeof value === 'string'
-    ? value.toLowerCase().replace(/\s+/g, '-')
+    ? value.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')
     : '';
 }
 

@@ -83,7 +83,7 @@ const config: Config = {
 
           const slugify = (value?: string) =>
             typeof value === 'string'
-              ? value.toLowerCase().replace(/\s+/g, '-')
+              ? value.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')
               : '';
 
           for (const item of prefixes) {

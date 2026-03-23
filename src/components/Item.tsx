@@ -17,6 +17,7 @@ export interface BaseItem {
   damageScrollMultiplier?: number; // Weapon-specific multiplier for flat damage bonuses (e.g., 4 for short dagger)
   damageMinConstant?: number; // Weapon-specific constant for min damage formula (e.g., 8 for short dagger)
   damageMaxConstant?: number; // Weapon-specific constant for max damage formula (e.g., 20 for short dagger)
+  damageMinOffset?: number; // Per-weapon adjustment to base min damage before rarity scaling (e.g., -1 for short dagger)
   armour?: number | null;
   durability: number | null;
   conditioning: number | null;
@@ -211,7 +212,7 @@ export function calculateItemStats(
       // Min damage formula: ROUNDUP((baseMin + (levelMultiplier - 1 + FLOOR((levelMultiplier-1)/5)) - 1) + 2*damageFromScroll) + 1
       // Then multiply by rarity
       const levelScaling = levelMultiplier - 1 + Math.floor((levelMultiplier - 1) / 5);
-      const baseMinDamage = Math.ceil((baseItem.damageMin + (levelScaling - 1)) + 2 * damageFromScroll) + 1;
+      const baseMinDamage = Math.ceil((baseItem.damageMin + (levelScaling - 1)) + 2 * damageFromScroll) + 1 + (baseItem.damageMinOffset || 0);
       finalMinDamage = Math.floor(baseMinDamage * rarityMultiplier);
       
       // Max damage formula: (rarityMultiplier*FLOOR(levelMultiplier/2) + 2*FLOOR((levelMultiplier-1)/2) + baseMax) + 2*damageFromScroll
@@ -221,7 +222,7 @@ export function calculateItemStats(
     } else {
       // No prefix/suffix: use base damage from JSON and apply rarity multiplier
       const multiplier = getDamageMultiplier();
-      finalMinDamage = Math.floor(baseItem.damageMin * multiplier);
+      finalMinDamage = Math.max(1, Math.floor(baseItem.damageMin * multiplier) + (baseItem.damageMinOffset || 0));
       finalMaxDamage = Math.floor(baseItem.damageMax * multiplier);
     }
     
