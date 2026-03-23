@@ -5,7 +5,7 @@ import forgingGoodsData from '@site/static/data/items/forging-goods.json';
 export interface ForgingGood {
   name: string;
   type: 'material' | 'ore' | 'flask' | 'gemstone' | 'monster_part' | 'rune';
-  image: string;
+  spriteId: string;
 }
 
 export type ForgingGoodRarity = 'common' | 'green' | 'blue' | 'purple' | 'orange' | 'red';
@@ -27,11 +27,7 @@ const ForgingGoodComponent: React.FC<ForgingGoodProps> = ({ name, rarity = 'comm
 
   return (
     <div className={styles.wrapper}>
-      <img
-        src={forgingGood.image}
-        alt={forgingGood.name}
-        className={styles.icon}
-      />
+      <div className={`item-i-${forgingGood.spriteId} ${styles.icon}`} />
       <div className={styles.tooltip}>
         <div className={`${styles.title} ${styles[rarity]}`}>
           {forgingGood.name}

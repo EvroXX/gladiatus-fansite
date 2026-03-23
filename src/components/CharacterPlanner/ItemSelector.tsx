@@ -165,7 +165,7 @@ export default function ItemSelector({ slotType, characterLevel, currentItem, on
                   onKeyDown={(e) => e.key === 'Enter' && setSelectedBase(item)}
                   tabIndex={0}
                 >
-                  <img src={item.image} alt={item.name} className={styles.itemImage} />
+                  <div className={`item-i-${item.id} ${styles.itemImage}`} />
                   <div className={styles.itemInfo}>
                     <div className={styles.itemName}>{item.name}</div>
                     <div className={styles.itemLevel}>Level {item.level}</div>

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@site/src/css/ItemTooltip.module.css';
 
 export interface BaseItem {
+  id?: string;
   name: string;
   type: 'weapons' | 'shields' | 'armour' | 'helmets' | 'gloves' | 'shoes' | 'rings' | 'amulets';
   level: number | null;
@@ -11,7 +12,6 @@ export interface BaseItem {
   durability: number | null;
   conditioning: number | null;
   gold: number | null;
-  image: string;
   materials: Record<string, number>;
 }
 
@@ -90,7 +90,7 @@ export default function BaseItemTooltip({
 
   return (
     <span className={styles.wrapper}>
-      <img src={item.image} className={styles.icon} alt={fullName} />
+      <div className={`item-i-${item.id} ${styles.icon}`} />
 
       <span className={styles.tooltip}>
         <div className={`${styles.title} ${styles[rarity]}`}>

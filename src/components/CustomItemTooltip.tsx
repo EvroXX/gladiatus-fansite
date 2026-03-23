@@ -4,7 +4,7 @@ import styles from '@site/src/css/ItemTooltip.module.css';
 type Props = {
   name: string;
   rarity: 'common' | 'green' | 'blue' | 'purple' | 'orange' | 'red';
-  image: string;
+  spriteClass: string;
   level?: number;
   damage?: string;
   stats?: string[];
@@ -15,7 +15,7 @@ type Props = {
 export default function CustomItemTooltip({
   name,
   rarity,
-  image,
+  spriteClass,
   level,
   damage,
   stats = [],
@@ -24,7 +24,7 @@ export default function CustomItemTooltip({
 }: Props) {
   return (
     <span className={styles.wrapper}>
-      <img src={image} className={styles.icon} alt={name} />
+      <div className={`${spriteClass} ${styles.icon}`} />
 
       <span className={styles.tooltip}>
         <div className={`${styles.title} ${styles[rarity]}`}>

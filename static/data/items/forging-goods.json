@@ -1,1559 +1,1644 @@
 [
-    {
-        "name": "Adrenaline",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Adrenaline.png",
-        "description": "A rare material used in few mid-level prefixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Werebear",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 25,
-                "mob": "Soulless",
-                "location": "Cave Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Man Eater",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Berserker",
-                "location": "Barbarian Village"
-            }
-        ],
-        "id": 40
-    },
-    {
-        "name": "Almandin",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Almandin.png",
-        "description": "A very rare ore that is connected in some way to the Underworld.",
-        "scarcity": "Very rare",
-        "id": 54
-    },
-    {
-        "name": "Amber",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Amber.png",
-        "description": "A common material in mid-level suffixes.",
-        "scarcity": "Common/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Vandal Warrior",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Seth Priest",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Nachzehrer",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Tribal Warrior",
-                "location": "Bridge"
-            }
-        ],
-        "id": 23
-    },
-    {
-        "name": "Amethyst",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Amethyst.png",
-        "description": "An important material used in variety of mid-high level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Lemures",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Tribal Magician",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 45,
-                "mob": "Jarl",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Sidr",
-                "location": "Teuton Camp"
-            }
-        ],
-        "id": 22
-    },
-    {
-        "name": "Antidote",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Antidote.png",
-        "description": "Used in low-mid level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Teuton Lord",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Bandit Chief",
-                "location": "Bandit Camp"
-            },
-            {
-                "percentage": 25,
-                "mob": "Ancient",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Giant Scorpion",
-                "location": "Bridge"
-            }
-        ],
-        "id": 39
-    },
-    {
-        "name": "Aquamarine",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Aquamarine.png",
-        "description": "Used in mid-level suffixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Giant Water Snake",
-                "location": "Lost Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Tax Collector",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Seth Priest",
-                "location": "Bridge"
-            }
-        ],
-        "id": 24
-    },
-    {
-        "name": "Bone Splinter",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Bone_Splinter.png",
-        "description": "Used a lot in low-mid level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Skeleton Warrior",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Alphawolf",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 45,
-                "mob": "Assassin",
-                "location": "Pirate Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Bone Golem",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Skeleton Berserker",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Bone Shaman",
-                "location": "Bridge"
-            }
-        ],
-        "id": 6
-    },
-    {
-        "name": "Bronze",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Bronze.png",
-        "description": "A common ore used in some high level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Legionnaire",
-                "location": "Cave Temple"
-            },
-            {
-                "percentage": 45,
-                "mob": "Spy",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 45,
-                "mob": "Demon Elephant",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 25,
-                "mob": "Teuton Hero",
-                "location": "Teuton Camp"
-            }
-        ],
-        "id": 46
-    },
-    {
-        "name": "Bull's Horn",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Bulls_Horn.png",
-        "description": "Used in a lot of mid-high level prefixes in fairly low quantities so could be hard to get sometimes as smelting quantities are not huge.",
-        "scarcity": "Medium/Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Seth High Priest",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 45,
-                "mob": "Minotaur Chief",
-                "location": "Ancient Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Infernal Springbok",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Minotaur",
-                "location": "Ancient Temple"
-            }
-        ],
-        "id": 11
-    },
-    {
-        "name": "Cerberus' Pelt",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Cerberus_Pelt.png",
-        "description": "Rare Underworld material used in high level suffixes(?).",
-        "scarcity": "Very rare",
-        "id": 55
-    },
-    {
-        "name": "Claw",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Claw.png",
-        "description": "Rare material that drops primarily from mobs and does not act in any known prefixes or suffixes yet.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Mokele Mbembe",
-                "location": "Lost Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Cheetah",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 25,
-                "mob": "Werebear",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 25,
-                "mob": "Minotaur Chief",
-                "location": "Ancient Temple"
-            }
-        ],
-        "id": 8
-    },
-    {
-        "name": "Copper",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Copper.png",
-        "description": "A rare building block type of material. Save them as they are really rare.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 5,
-                "mob": "Any mob",
-                "location": "Anywhere"
-            }
-        ],
-        "id": 2
-    },
-    {
-        "name": "Cotton Wool",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Cotton_Wool.png",
-        "description": "A material mainly used in low level suffixes in the range of 10-16 level.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Elusive Recruit",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Undead Holder",
-                "location": "Lost Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Barbarian",
-                "location": "Barbarian Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Fled Slave",
-                "location": "Pirate Harbour"
-            }
-        ],
-        "id": 14
-    },
-    {
-        "name": "Crystal",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Crystal.png",
-        "description": "A common ore that is used in a number of important high level prefixes but is very limited in occurrences before character level 90.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Sabre-Tooth Tiger",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Shaman",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 45,
-                "mob": "Sidr",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 25,
-                "mob": "High Shaman",
-                "location": "Cliff Jumper"
-            }
-        ],
-        "id": 45
-    },
-    {
-        "name": "Cuprit",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Cuprit.png",
-        "description": "A rare ore that is used in high level suffixes.",
-        "scarcity": "Very rare",
-        "id": 56
-    },
-    {
-        "name": "Diamond",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Diamond.png",
-        "description": "A gemstone used in some mid-level suffixes with +Damage.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Stone Golem",
-                "location": "Mine"
-            },
-            {
-                "percentage": 45,
-                "mob": "Centurion",
-                "location": "Cave Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Dragon",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Bandit Chief",
-                "location": "Bandit Camp"
-            }
-        ],
-        "id": 28
-    },
-    {
-        "name": "Dragon Scale",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Dragon_Scale.png",
-        "description": "Used in high level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Dragon",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Seth High Priest",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 25,
-                "mob": "Barbarian Chief",
-                "location": "Barbarian Village"
-            }
-        ],
-        "id": 10
-    },
-    {
-        "name": "Earth Mark",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Earth_Mark.png",
-        "description": "A common rune used in low level suffixes.",
-        "scarcity": "Common/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Minotaur",
-                "location": "Ancient Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Swamp Spirit",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 25,
-                "mob": "Assassin",
-                "location": "Pirate Harbour"
-            }
-        ],
-        "id": 31
-    },
-    {
-        "name": "Emerald",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Emerald.png",
-        "description": "A common gemstone used in high level prefixes with healing.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Ritualist",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Caravan Guard",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 25,
-                "mob": "Elite Guard",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 25,
-                "mob": "Stone Golem",
-                "location": "Mine"
-            }
-        ],
-        "id": 27
-    },
-    {
-        "name": "Essence of Reaction",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Essence_of_Reaction.png",
-        "description": "Used in some mid-high level suffixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Barbarian",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Assassinator",
-                "location": "Bandit Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Myrmidon",
-                "location": "Cave Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Sabre-Tooth Tiger",
-                "location": "Koman Mountains"
-            }
-        ],
-        "id": 43
-    },
-    {
-        "name": "Fang",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Fang.png",
-        "description": "Used a lot in low-mid level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Wolf Pack",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Elephant",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 25,
-                "mob": "Cerberus",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Giant Wild Boar",
-                "location": "The green forest"
-            }
-        ],
-        "id": 9
-    },
-    {
-        "name": "Flintstone",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Flintstone.png",
-        "description": "A rune that is used in few mid-level prefixes mostly known for being main material for Táliths.",
-        "scarcity": "Common/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Dracolich",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Demon Lion",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 45,
-                "mob": "Fire Dancer",
-                "location": "Blood Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Fire Demon",
-                "location": "Blood Cave"
-            }
-        ],
-        "id": 35
-    },
-    {
-        "name": "Fur",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Fur.png",
-        "description": "A common material used in various low level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Wild Boar",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 45,
-                "mob": "Cerberus",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Wererat",
-                "location": "Ancient Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Alphawolf",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Werewolf",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Captain",
-                "location": "Pirate Harbour"
-            }
-        ],
-        "id": 5
-    },
-    {
-        "name": "Garnet",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Garnet.png",
-        "description": "A common gemstone used in mid-high level prefixes with healing.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Necromancer Princess",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Hun",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Ritualist",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Renegade Soldier",
-                "location": "Bandit Camp"
-            }
-        ],
-        "id": 26
-    },
-    {
-        "name": "Gauze Strip",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Gauze_Strip.png",
-        "description": "Used in low level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Renegade Mercenary",
-                "location": "Bandit Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Fled Slave",
-                "location": "Pirate Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Demon Lion",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 25,
-                "mob": "Skeleton Warrior",
-                "location": "Vandal Village"
-            }
-        ],
-        "id": 16
-    },
-    {
-        "name": "Gold Ore",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Gold_Ore.png",
-        "description": "A rare ore found in mid-high level prefixes but in small quantities.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Teuton Hero",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Daug",
-                "location": "Mine"
-            },
-            {
-                "percentage": 45,
-                "mob": "Slave Merchant",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 25,
-                "mob": "Caravan Guard",
-                "location": "Caravan"
-            }
-        ],
-        "id": 50
-    },
-    {
-        "name": "Hellstone",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Hellstone.png",
-        "description": "A rare ore used in high level suffixes.",
-        "scarcity": "Very rare",
-        "id": 57
-    },
-    {
-        "name": "Hemp",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Hemp.png",
-        "description": "A material used in low level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Renegade Soldier",
-                "location": "Bandit Camp"
-            },
-            {
-                "percentage": 45,
-                "mob": "Corrupt Soldier",
-                "location": "Pirate Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Legionnaire",
-                "location": "Cave Temple"
-            }
-        ],
-        "id": 15
-    },
-    {
-        "name": "Hydra Scale",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Hydra_Scale.png",
-        "description": "Rare Underworld material used in high level prefixes.",
-        "scarcity": "Medium at high levels, Very rare at low-mid levels",
-        "id": 58
-    },
-    {
-        "name": "Iron",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Iron.png",
-        "description": "A rare building block type of material. Save them as they are really rare.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 5,
-                "mob": "Any mob",
-                "location": "Anywhere"
-            }
-        ],
-        "id": 4
-    },
-    {
-        "name": "Jasper",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Jasper.png",
-        "description": "Jasper is a rare gemstone used in high level suffixes.",
-        "scarcity": "Rare",
-        "id": 59
-    },
-    {
-        "name": "Jute Patch",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Jute_Patch.png",
-        "description": "Used in low-mid level prefixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Giant Wild Boar",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 45,
-                "mob": "Medusa",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Wild Boar",
-                "location": "Wolf Cave"
-            }
-        ],
-        "id": 18
-    },
-    {
-        "name": "Lapis Lazuli",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Lapis_Lazuli.png",
-        "description": "A material rarely used in mid-level prefixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Elephant",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 45,
-                "mob": "Undead Holder",
-                "location": "Lost Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Teuton Lord",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 25,
-                "mob": "Barbarian Warrior",
-                "location": "Barbarian Village"
-            }
-        ],
-        "id": 21
-    },
-    {
-        "name": "Leather",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Leather.png",
-        "description": "A rare building block type of material. Save them as they are really rare.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 5,
-                "mob": "Any mob",
-                "location": "Anywhere"
-            }
-        ],
-        "id": 3
-    },
-    {
-        "name": "Linen Strip",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Linen_Strip.png",
-        "description": "Used in low-mid level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Swamp Spirit",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 25,
-                "mob": "Wolf Pack",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Harpy",
-                "location": "Misty Mountains"
-            }
-        ],
-        "id": 17
-    },
-    {
-        "name": "Obsidian",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Obsidian.png",
-        "description": "A rare ore that is used in some mid-high level prefixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "High Shaman",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 45,
-                "mob": "Elite Guard",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 25,
-                "mob": "Dracolich",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Death Knight",
-                "location": "Vandal Village"
-            }
-        ],
-        "id": 47
-    },
-    {
-        "name": "Phial of Charisma",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Phial_of_Charisma.png",
-        "description": "A rare material for some mid-high level suffixes.",
-        "id": 44,
-        "scarcity": "Rare/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Cheetah",
-                "location": "Mesoai-Oasis"
-            },
-            {
-                "percentage": 45,
-                "mob": "Tribal Warrior",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 25,
-                "mob": "Shaman",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 25,
-                "mob": "Centurion",
-                "location": "Cave Temple"
-            }
-        ]
-    },
-    {
-        "name": "Platinum",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Platinum.png",
-        "description": "A somewhat rare ore that is used in defensive mid-level suffixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Lich",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Barbarian",
-                "location": "Barbarian Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Tax Collector",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Slave Merchant",
-                "location": "Caravan"
-            }
-        ],
-        "id": 52
-    },
-    {
-        "name": "Poison Gland",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Poison_Gland.png",
-        "description": "Used in very important suffixes. Hard to get and really valuable and rare material.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Giant Spider",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 45,
-                "mob": "Cobra",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Swamp Lord",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 25,
-                "mob": "Giant Beetle",
-                "location": "Blood Cave"
-            }
-        ],
-        "id": 12
-    },
-    {
-        "name": "Potion of Perception",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Potion_of_Perception.png",
-        "description": "An important material used in various mid-high level prefixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Nachzehrer",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Wererat",
-                "location": "Ancient Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Lemures",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Cursed Antelope",
-                "location": "Cliff Jumper"
-            }
-        ],
-        "id": 42
-    },
-    {
-        "name": "Protection Rune",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Protection_Rune.png",
-        "description": "A rune used in low-mid level suffixes with +Armour.",
-        "scarcity": "Rare/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Blood Wolf",
-                "location": "Blood Cave"
-            },
-            {
-                "percentage": 45,
-                "mob": "Barbarian Warrior",
-                "location": "Barbarian Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Spy",
-                "location": "Caravan"
-            },
-            {
-                "percentage": 25,
-                "mob": "Cultist Guard",
-                "location": "Ancient Temple"
-            }
-        ],
-        "id": 30
-    },
-    {
-        "name": "Quartz",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Quartz2.png",
-        "description": "A somewhat rare ore that is part of several high level suffixes, primarily known for \"of Fire\".",
-        "scarcity": "Rare/Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Bone Golem",
-                "location": "Dragon Remains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Vandal Warrior",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Abomination",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Myrmidon",
-                "location": "Cave Temple"
-            }
-        ],
-        "id": 51
-    },
-    {
-        "name": "Sapphire",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Sapphire.png",
-        "description": "A gemstone used in low level suffixes with healing.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Captain",
-                "location": "Pirate Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Elusive Recruit",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Corrupt Soldier",
-                "location": "Pirate Harbour"
-            }
-        ],
-        "id": 25
-    },
-    {
-        "name": "Scale",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Scale.png",
-        "description": "Used in mid-level prefixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 70,
-                "mob": "Tatzelwurm",
-                "location": "Mine"
-            },
-            {
-                "percentage": 45,
-                "mob": "Crocodile",
-                "location": "Lost Harbour"
-            },
-            {
-                "percentage": 25,
-                "mob": "Lich",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Cobra",
-                "location": "Bridge"
-            }
-        ],
-        "id": 7
-    },
-    {
-        "name": "Scorpion Poison",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Scorpion_Poison.png",
-        "description": "A material commonly used in low level suffixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Infernal Springbok",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Giant Scorpion",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Assassinator",
-                "location": "Bandit Camp"
-            }
-        ],
-        "id": 37
-    },
-    {
-        "name": "Shadow Rune",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Shadow_Rune.png",
-        "description": "A rare rune mostly used in high level suffixes and found in Underworld.",
-        "scarcity": "Rare",
-        "id": 60
-    },
-    {
-        "name": "Silk Thread",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Silk_Thread.png",
-        "description": "Used in mid-level prefixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Barbarian Chief",
-                "location": "Barbarian Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Harpy",
-                "location": "Misty Mountains"
-            },
-            {
-                "percentage": 25,
-                "mob": "Crocodile",
-                "location": "Lost Harbour"
-            }
-        ],
-        "id": 20
-    },
-    {
-        "name": "Silver",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Silver.png",
-        "description": "A rare ore that is precious as it's hard to find but part in small quantities in many useful mid-high level suffixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Guard",
-                "location": "Mine"
-            },
-            {
-                "percentage": 45,
-                "mob": "Dark Fighter",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Werewolf",
-                "location": "Wolf Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Necromancer Princess",
-                "location": "Vandal Village"
-            }
-        ],
-        "id": 48
-    },
-    {
-        "name": "Soul Essence",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Soul_Essence.png",
-        "description": "A material that is used in very high level prefixes.",
-        "scarcity": "Rare",
-        "id": 61
-    },
-    {
-        "name": "Sphinx Feather",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Sphinx_Feather.png",
-        "description": "Rare Underworld material used in high level prefixes.",
-        "scarcity": "Very Rare",
-        "id": 62
-    },
-    {
-        "name": "Stone of Fortune",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Stone_of_Fortune.png",
-        "description": "A rare rune that is used for low-mid level suffixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Man Eater",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 45,
-                "mob": "Berserker",
-                "location": "Barbarian Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Awakened Mummy",
-                "location": "Bridge"
-            }
-        ],
-        "id": 34
-    },
-    {
-        "name": "Storm Rune",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Storm_Rune.png",
-        "description": "An important rune that is part of a lot of good mid-high level prefixes. It's not rare but used a lot so players may always be feeling like they don't have enough.",
-        "scarcity": "Medium/Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Dragon Whelp",
-                "location": "Koman Mountains"
-            },
-            {
-                "percentage": 45,
-                "mob": "Skeleton Berserker",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Daug",
-                "location": "Mine"
-            }
-        ],
-        "id": 36
-    },
-    {
-        "name": "Sugilite",
-        "type": "gemstone",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Sugilite.png",
-        "description": "Sugilite is a rare gemstone used in high level prefixes.",
-        "scarcity": "Very rare",
-        "id": 63
-    },
-    {
-        "name": "Sulphur",
-        "type": "ore",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Sulphur.png",
-        "description": "A common ore that is used in many important mid-high level prefixes.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Death Knight",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Fire Demon",
-                "location": "Blood Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Dark Fighter",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Fire Dancer",
-                "location": "Blood Cave"
-            }
-        ],
-        "id": 49
-    },
-    {
-        "name": "Talisman of Power",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Talisman_of_Power.png",
-        "description": "Used in mid level suffixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Abomination",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 45,
-                "mob": "Tribal Warrior",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Blood Wolf",
-                "location": "Blood Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Renegade Mercenary",
-                "location": "Bandit Camp"
-            }
-        ],
-        "id": 33
-    },
-    {
-        "name": "Tincture of Enlightenment",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Tincture_of_Enlightenment.png",
-        "description": "Used primarily in low-mid level suffixes with healing.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Cursed Antelope",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 45,
-                "mob": "Cultist Guard",
-                "location": "Ancient Temple"
-            },
-            {
-                "percentage": 45,
-                "mob": "Giant Beetle",
-                "location": "Blood Cave"
-            },
-            {
-                "percentage": 25,
-                "mob": "Mokele Mbembe",
-                "location": "Lost Harbour"
-            }
-        ],
-        "id": 41
-    },
-    {
-        "name": "Tincture of Stamina",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Tincture_of_Stamina.png",
-        "description": "Important material used in high level prefixes such as Lucius. Also used to repair Lucius.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Ancient",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Barbarian",
-                "location": "Teuton Camp"
-            },
-            {
-                "percentage": 25,
-                "mob": "Giant Spider",
-                "location": "Cliff Jumper"
-            },
-            {
-                "percentage": 25,
-                "mob": "Demon Elephant",
-                "location": "Mesoai-Oasis"
-            }
-        ],
-        "id": 38
-    },
-    {
-        "name": "Totem of Healing",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Totem_of_Healing.png",
-        "description": "A rune used in mid-high level suffixes with healing.",
-        "scarcity": "Medium/Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Soulless",
-                "location": "Cave Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Guard",
-                "location": "Mine"
-            },
-            {
-                "percentage": 25,
-                "mob": "Jarl",
-                "location": "Vandal Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Spirit Warrior",
-                "location": "Umpokta Tribe"
-            }
-        ],
-        "id": 32
-    },
-    {
-        "name": "Typhon Leather",
-        "type": "monster_part",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Typhon_Leather.png",
-        "description": "Rare Underworld material used in high level prefixes(?).",
-        "scarcity": "Very Rare",
-        "id": 64
-    },
-    {
-        "name": "Velvet",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Velvet.png",
-        "description": "Primarily used in mid-level suffixes.",
-        "scarcity": "Medium",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Bone Shaman",
-                "location": "Bridge"
-            },
-            {
-                "percentage": 25,
-                "mob": "Tribal Magician",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 25,
-                "mob": "Tribal Warrior",
-                "location": "Umpokta Tribe"
-            }
-        ],
-        "id": 19
-    },
-    {
-        "name": "Water Seal",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Water_Seal.png",
-        "description": "A rare rune used in some mid-level prefixes.",
-        "scarcity": "Rare",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Swamp Lord",
-                "location": "The green forest"
-            },
-            {
-                "percentage": 45,
-                "mob": "Spirit Warrior",
-                "location": "Umpokta Tribe"
-            },
-            {
-                "percentage": 25,
-                "mob": "Giant Water Snake",
-                "location": "Lost Harbour"
-            }
-        ],
-        "id": 29
-    },
-    {
-        "name": "Moon Rune",
-        "type": "rune",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/moon_rune.png",
-        "description": "New rune from Battle for Britannia update",
-        "scarcity": "Rare",
-        "drops": [
-            
-        ],
-        "id": 999
-    },
-    {
-        "name": "Waters of Oblivion",
-        "type": "flask",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Waters_of_Oblivion.png",
-        "description": "A rare material used in very high level suffixes but can be smelted in large quantities from certain suffixes.",
-        "scarcity": "Rare",
-        "id": 53
-    },
-    {
-        "name": "Wood",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Wood.png",
-        "description": "A rare building block type of material. Save them as they are really rare.",
-        "scarcity": "Very Rare",
-        "drops": [
-            {
-                "percentage": 5,
-                "mob": "Any mob",
-                "location": "Anywhere"
-            }
-        ],
-        "id": 1
-    },
-    {
-        "name": "Wool",
-        "type": "material",
-        "image": "https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/Wool.png",
-        "description": "Usually required to craft low level prefixes in the range 16-31 level.",
-        "scarcity": "Common",
-        "drops": [
-            {
-                "percentage": 45,
-                "mob": "Awakened Mummy",
-                "location": "Voodoo Temple"
-            },
-            {
-                "percentage": 25,
-                "mob": "Hun",
-                "location": "Cursed Village"
-            },
-            {
-                "percentage": 25,
-                "mob": "Medusa",
-                "location": "Misty Mountains"
-            }
-        ],
-        "id": 13
-    }
+  {
+    "name": "Adrenaline",
+    "type": "flask",
+    "description": "A rare material used in few mid-level prefixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Werebear",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 25,
+        "mob": "Soulless",
+        "location": "Cave Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Man Eater",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Berserker",
+        "location": "Barbarian Village"
+      }
+    ],
+    "id": 40,
+    "spriteId": "18-40"
+  },
+  {
+    "name": "Almandin",
+    "type": "ore",
+    "description": "A very rare ore that is connected in some way to the Underworld.",
+    "scarcity": "Very rare",
+    "id": 54,
+    "spriteId": "18-54"
+  },
+  {
+    "name": "Amber",
+    "type": "gemstone",
+    "description": "A common material in mid-level suffixes.",
+    "scarcity": "Common/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Vandal Warrior",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Seth Priest",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Nachzehrer",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Tribal Warrior",
+        "location": "Bridge"
+      }
+    ],
+    "id": 23,
+    "spriteId": "18-23"
+  },
+  {
+    "name": "Amethyst",
+    "type": "gemstone",
+    "description": "An important material used in variety of mid-high level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Lemures",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Tribal Magician",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 45,
+        "mob": "Jarl",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Sidr",
+        "location": "Teuton Camp"
+      }
+    ],
+    "id": 22,
+    "spriteId": "18-22"
+  },
+  {
+    "name": "Antidote",
+    "type": "flask",
+    "description": "Used in low-mid level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Teuton Lord",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Bandit Chief",
+        "location": "Bandit Camp"
+      },
+      {
+        "percentage": 25,
+        "mob": "Ancient",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Giant Scorpion",
+        "location": "Bridge"
+      }
+    ],
+    "id": 39,
+    "spriteId": "18-39"
+  },
+  {
+    "name": "Aquamarine",
+    "type": "gemstone",
+    "description": "Used in mid-level suffixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Giant Water Snake",
+        "location": "Lost Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Tax Collector",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Seth Priest",
+        "location": "Bridge"
+      }
+    ],
+    "id": 24,
+    "spriteId": "18-24"
+  },
+  {
+    "name": "Bone Splinter",
+    "type": "monster_part",
+    "description": "Used a lot in low-mid level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Skeleton Warrior",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Alphawolf",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 45,
+        "mob": "Assassin",
+        "location": "Pirate Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Bone Golem",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Skeleton Berserker",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Bone Shaman",
+        "location": "Bridge"
+      }
+    ],
+    "id": 6,
+    "spriteId": "18-6"
+  },
+  {
+    "name": "Bronze",
+    "type": "ore",
+    "description": "A common ore used in some high level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Legionnaire",
+        "location": "Cave Temple"
+      },
+      {
+        "percentage": 45,
+        "mob": "Spy",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 45,
+        "mob": "Demon Elephant",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 25,
+        "mob": "Teuton Hero",
+        "location": "Teuton Camp"
+      }
+    ],
+    "id": 46,
+    "spriteId": "18-46"
+  },
+  {
+    "name": "Tin Ore",
+    "type": "ore",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 82,
+    "spriteId": "18-82"
+  },
+  {
+    "name": "Lead Ore",
+    "type": "ore",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 83,
+    "spriteId": "18-83"
+  },
+  {
+    "name": "Bull's Horn",
+    "type": "monster_part",
+    "description": "Used in a lot of mid-high level prefixes in fairly low quantities so could be hard to get sometimes as smelting quantities are not huge.",
+    "scarcity": "Medium/Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Seth High Priest",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 45,
+        "mob": "Minotaur Chief",
+        "location": "Ancient Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Infernal Springbok",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Minotaur",
+        "location": "Ancient Temple"
+      }
+    ],
+    "id": 11,
+    "spriteId": "18-11"
+  },
+  {
+    "name": "Cerberus' Pelt",
+    "type": "monster_part",
+    "description": "Rare Underworld material used in high level suffixes(?).",
+    "scarcity": "Very rare",
+    "id": 55,
+    "spriteId": "18-55"
+  },
+  {
+    "name": "Claw",
+    "type": "monster_part",
+    "description": "Rare material that drops primarily from mobs and does not act in any known prefixes or suffixes yet.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Mokele Mbembe",
+        "location": "Lost Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Cheetah",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 25,
+        "mob": "Werebear",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 25,
+        "mob": "Minotaur Chief",
+        "location": "Ancient Temple"
+      }
+    ],
+    "id": 8,
+    "spriteId": "18-8"
+  },
+  {
+    "name": "Copper",
+    "type": "material",
+    "description": "A rare building block type of material. Save them as they are really rare.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 5,
+        "mob": "Any mob",
+        "location": "Anywhere"
+      }
+    ],
+    "id": 2,
+    "spriteId": "18-2"
+  },
+  {
+    "name": "Cotton Wool",
+    "type": "material",
+    "description": "A material mainly used in low level suffixes in the range of 10-16 level.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Elusive Recruit",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Undead Holder",
+        "location": "Lost Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Barbarian",
+        "location": "Barbarian Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Fled Slave",
+        "location": "Pirate Harbour"
+      }
+    ],
+    "id": 14,
+    "spriteId": "18-14"
+  },
+  {
+    "name": "Crystal",
+    "type": "ore",
+    "description": "A common ore that is used in a number of important high level prefixes but is very limited in occurrences before character level 90.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Sabre-Tooth Tiger",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Shaman",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 45,
+        "mob": "Sidr",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 25,
+        "mob": "High Shaman",
+        "location": "Cliff Jumper"
+      }
+    ],
+    "id": 45,
+    "spriteId": "18-45"
+  },
+  {
+    "name": "Cuprit",
+    "type": "ore",
+    "description": "A rare ore that is used in high level suffixes.",
+    "scarcity": "Very rare",
+    "id": 56,
+    "spriteId": "18-56"
+  },
+  {
+    "name": "Diamond",
+    "type": "gemstone",
+    "description": "A gemstone used in some mid-level suffixes with +Damage.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Stone Golem",
+        "location": "Mine"
+      },
+      {
+        "percentage": 45,
+        "mob": "Centurion",
+        "location": "Cave Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Dragon",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Bandit Chief",
+        "location": "Bandit Camp"
+      }
+    ],
+    "id": 28,
+    "spriteId": "18-28"
+  },
+  {
+    "name": "Dragon Scale",
+    "type": "monster_part",
+    "description": "Used in high level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Dragon",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Seth High Priest",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 25,
+        "mob": "Barbarian Chief",
+        "location": "Barbarian Village"
+      }
+    ],
+    "id": 10,
+    "spriteId": "18-10"
+  },
+  {
+    "name": "Earth Mark",
+    "type": "rune",
+    "description": "A common rune used in low level suffixes.",
+    "scarcity": "Common/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Minotaur",
+        "location": "Ancient Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Swamp Spirit",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 25,
+        "mob": "Assassin",
+        "location": "Pirate Harbour"
+      }
+    ],
+    "id": 31,
+    "spriteId": "18-31"
+  },
+  {
+    "name": "Emerald",
+    "type": "gemstone",
+    "description": "A common gemstone used in high level prefixes with healing.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Ritualist",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Caravan Guard",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 25,
+        "mob": "Elite Guard",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 25,
+        "mob": "Stone Golem",
+        "location": "Mine"
+      }
+    ],
+    "id": 27,
+    "spriteId": "18-27"
+  },
+  {
+    "name": "Essence of Reaction",
+    "type": "flask",
+    "description": "Used in some mid-high level suffixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Barbarian",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Assassinator",
+        "location": "Bandit Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Myrmidon",
+        "location": "Cave Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Sabre-Tooth Tiger",
+        "location": "Koman Mountains"
+      }
+    ],
+    "id": 43,
+    "spriteId": "18-43"
+  },
+  {
+    "name": "Fang",
+    "type": "monster_part",
+    "description": "Used a lot in low-mid level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Wolf Pack",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Elephant",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 25,
+        "mob": "Cerberus",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Giant Wild Boar",
+        "location": "The green forest"
+      }
+    ],
+    "id": 9,
+    "spriteId": "18-9"
+  },
+  {
+    "name": "Flintstone",
+    "type": "rune",
+    "description": "A rune that is used in few mid-level prefixes mostly known for being main material for Táliths.",
+    "scarcity": "Common/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Dracolich",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Demon Lion",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 45,
+        "mob": "Fire Dancer",
+        "location": "Blood Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Fire Demon",
+        "location": "Blood Cave"
+      }
+    ],
+    "id": 35,
+    "spriteId": "18-35"
+  },
+  {
+    "name": "Fur",
+    "type": "monster_part",
+    "description": "A common material used in various low level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Wild Boar",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 45,
+        "mob": "Cerberus",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Wererat",
+        "location": "Ancient Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Alphawolf",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Werewolf",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Captain",
+        "location": "Pirate Harbour"
+      }
+    ],
+    "id": 5,
+    "spriteId": "18-5"
+  },
+  {
+    "name": "Garnet",
+    "type": "gemstone",
+    "description": "A common gemstone used in mid-high level prefixes with healing.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Necromancer Princess",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Hun",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Ritualist",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Renegade Soldier",
+        "location": "Bandit Camp"
+      }
+    ],
+    "id": 26,
+    "spriteId": "18-26"
+  },
+  {
+    "name": "Gauze Strip",
+    "type": "material",
+    "description": "Used in low level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Renegade Mercenary",
+        "location": "Bandit Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Fled Slave",
+        "location": "Pirate Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Demon Lion",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 25,
+        "mob": "Skeleton Warrior",
+        "location": "Vandal Village"
+      }
+    ],
+    "id": 16,
+    "spriteId": "18-16"
+  },
+  {
+    "name": "Gold Ore",
+    "type": "ore",
+    "description": "A rare ore found in mid-high level prefixes but in small quantities.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Teuton Hero",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Daug",
+        "location": "Mine"
+      },
+      {
+        "percentage": 45,
+        "mob": "Slave Merchant",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 25,
+        "mob": "Caravan Guard",
+        "location": "Caravan"
+      }
+    ],
+    "id": 50,
+    "spriteId": "18-50"
+  },
+  {
+    "name": "Hellstone",
+    "type": "ore",
+    "description": "A rare ore used in high level suffixes.",
+    "scarcity": "Very rare",
+    "id": 57,
+    "spriteId": "18-57"
+  },
+  {
+    "name": "Hemp",
+    "type": "material",
+    "description": "A material used in low level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Renegade Soldier",
+        "location": "Bandit Camp"
+      },
+      {
+        "percentage": 45,
+        "mob": "Corrupt Soldier",
+        "location": "Pirate Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Legionnaire",
+        "location": "Cave Temple"
+      }
+    ],
+    "id": 15,
+    "spriteId": "18-15"
+  },
+  {
+    "name": "Hydra Scale",
+    "type": "monster_part",
+    "description": "Rare Underworld material used in high level prefixes.",
+    "scarcity": "Medium at high levels, Very rare at low-mid levels",
+    "id": 58,
+    "spriteId": "18-58"
+  },
+  {
+    "name": "Iron",
+    "type": "material",
+    "description": "A rare building block type of material. Save them as they are really rare.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 5,
+        "mob": "Any mob",
+        "location": "Anywhere"
+      }
+    ],
+    "id": 4,
+    "spriteId": "18-4"
+  },
+  {
+    "name": "Jasper",
+    "type": "gemstone",
+    "description": "Jasper is a rare gemstone used in high level suffixes.",
+    "scarcity": "Rare",
+    "id": 59,
+    "spriteId": "18-59"
+  },
+  {
+    "name": "Jute Patch",
+    "type": "material",
+    "description": "Used in low-mid level prefixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Giant Wild Boar",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 45,
+        "mob": "Medusa",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Wild Boar",
+        "location": "Wolf Cave"
+      }
+    ],
+    "id": 18,
+    "spriteId": "18-18"
+  },
+  {
+    "name": "Lapis Lazuli",
+    "type": "gemstone",
+    "description": "A material rarely used in mid-level prefixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Elephant",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 45,
+        "mob": "Undead Holder",
+        "location": "Lost Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Teuton Lord",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 25,
+        "mob": "Barbarian Warrior",
+        "location": "Barbarian Village"
+      }
+    ],
+    "id": 21,
+    "spriteId": "18-21"
+  },
+  {
+    "name": "Leather",
+    "type": "material",
+    "description": "A rare building block type of material. Save them as they are really rare.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 5,
+        "mob": "Any mob",
+        "location": "Anywhere"
+      }
+    ],
+    "id": 3,
+    "spriteId": "18-3"
+  },
+  {
+    "name": "Linen Strip",
+    "type": "material",
+    "description": "Used in low-mid level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Swamp Spirit",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 25,
+        "mob": "Wolf Pack",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Harpy",
+        "location": "Misty Mountains"
+      }
+    ],
+    "id": 17,
+    "spriteId": "18-17"
+  },
+  {
+    "name": "Obsidian",
+    "type": "ore",
+    "description": "A rare ore that is used in some mid-high level prefixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "High Shaman",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 45,
+        "mob": "Elite Guard",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 25,
+        "mob": "Dracolich",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Death Knight",
+        "location": "Vandal Village"
+      }
+    ],
+    "id": 47,
+    "spriteId": "18-47"
+  },
+  {
+    "name": "Phial of Charisma",
+    "type": "flask",
+    "description": "A rare material for some mid-high level suffixes.",
+    "id": 44,
+    "scarcity": "Rare/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Cheetah",
+        "location": "Mesoai-Oasis"
+      },
+      {
+        "percentage": 45,
+        "mob": "Tribal Warrior",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 25,
+        "mob": "Shaman",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 25,
+        "mob": "Centurion",
+        "location": "Cave Temple"
+      }
+    ],
+    "spriteId": "18-44"
+  },
+  {
+    "name": "Platinum",
+    "type": "ore",
+    "description": "A somewhat rare ore that is used in defensive mid-level suffixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Lich",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Barbarian",
+        "location": "Barbarian Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Tax Collector",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Slave Merchant",
+        "location": "Caravan"
+      }
+    ],
+    "id": 52,
+    "spriteId": "18-52"
+  },
+  {
+    "name": "Poison Gland",
+    "type": "monster_part",
+    "description": "Used in very important suffixes. Hard to get and really valuable and rare material.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Giant Spider",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 45,
+        "mob": "Cobra",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Swamp Lord",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 25,
+        "mob": "Giant Beetle",
+        "location": "Blood Cave"
+      }
+    ],
+    "id": 12,
+    "spriteId": "18-12"
+  },
+  {
+    "name": "Potion of Perception",
+    "type": "flask",
+    "description": "An important material used in various mid-high level prefixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Nachzehrer",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Wererat",
+        "location": "Ancient Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Lemures",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Cursed Antelope",
+        "location": "Cliff Jumper"
+      }
+    ],
+    "id": 42,
+    "spriteId": "18-42"
+  },
+  {
+    "name": "Protection Rune",
+    "type": "rune",
+    "description": "A rune used in low-mid level suffixes with +Armour.",
+    "scarcity": "Rare/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Blood Wolf",
+        "location": "Blood Cave"
+      },
+      {
+        "percentage": 45,
+        "mob": "Barbarian Warrior",
+        "location": "Barbarian Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Spy",
+        "location": "Caravan"
+      },
+      {
+        "percentage": 25,
+        "mob": "Cultist Guard",
+        "location": "Ancient Temple"
+      }
+    ],
+    "id": 30,
+    "spriteId": "18-30"
+  },
+  {
+    "name": "Quartz",
+    "type": "ore",
+    "description": "A somewhat rare ore that is part of several high level suffixes, primarily known for \"of Fire\".",
+    "scarcity": "Rare/Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Bone Golem",
+        "location": "Dragon Remains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Vandal Warrior",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Abomination",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Myrmidon",
+        "location": "Cave Temple"
+      }
+    ],
+    "id": 51,
+    "spriteId": "18-51"
+  },
+  {
+    "name": "Sapphire",
+    "type": "gemstone",
+    "description": "A gemstone used in low level suffixes with healing.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Captain",
+        "location": "Pirate Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Elusive Recruit",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Corrupt Soldier",
+        "location": "Pirate Harbour"
+      }
+    ],
+    "id": 25,
+    "spriteId": "18-25"
+  },
+  {
+    "name": "Scale",
+    "type": "monster_part",
+    "description": "Used in mid-level prefixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 70,
+        "mob": "Tatzelwurm",
+        "location": "Mine"
+      },
+      {
+        "percentage": 45,
+        "mob": "Crocodile",
+        "location": "Lost Harbour"
+      },
+      {
+        "percentage": 25,
+        "mob": "Lich",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Cobra",
+        "location": "Bridge"
+      }
+    ],
+    "id": 7,
+    "spriteId": "18-7"
+  },
+  {
+    "name": "Scorpion Poison",
+    "type": "flask",
+    "description": "A material commonly used in low level suffixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Infernal Springbok",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Giant Scorpion",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Assassinator",
+        "location": "Bandit Camp"
+      }
+    ],
+    "id": 37,
+    "spriteId": "18-37"
+  },
+  {
+    "name": "Shadow Rune",
+    "type": "rune",
+    "description": "A rare rune mostly used in high level suffixes and found in Underworld.",
+    "scarcity": "Rare",
+    "id": 60,
+    "spriteId": "18-60"
+  },
+  {
+    "name": "Silk Thread",
+    "type": "material",
+    "description": "Used in mid-level prefixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Barbarian Chief",
+        "location": "Barbarian Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Harpy",
+        "location": "Misty Mountains"
+      },
+      {
+        "percentage": 25,
+        "mob": "Crocodile",
+        "location": "Lost Harbour"
+      }
+    ],
+    "id": 20,
+    "spriteId": "18-20"
+  },
+  {
+    "name": "Silver",
+    "type": "ore",
+    "description": "A rare ore that is precious as it's hard to find but part in small quantities in many useful mid-high level suffixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Guard",
+        "location": "Mine"
+      },
+      {
+        "percentage": 45,
+        "mob": "Dark Fighter",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Werewolf",
+        "location": "Wolf Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Necromancer Princess",
+        "location": "Vandal Village"
+      }
+    ],
+    "id": 48,
+    "spriteId": "18-48"
+  },
+  {
+    "name": "Soul Essence",
+    "type": "flask",
+    "description": "A material that is used in very high level prefixes.",
+    "scarcity": "Rare",
+    "id": 61,
+    "spriteId": "18-61"
+  },
+  {
+    "name": "Sphinx Feather",
+    "type": "monster_part",
+    "description": "Rare Underworld material used in high level prefixes.",
+    "scarcity": "Very Rare",
+    "id": 62,
+    "spriteId": "18-62"
+  },
+  {
+    "name": "Stone of Fortune",
+    "type": "rune",
+    "description": "A rare rune that is used for low-mid level suffixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Man Eater",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 45,
+        "mob": "Berserker",
+        "location": "Barbarian Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Awakened Mummy",
+        "location": "Bridge"
+      }
+    ],
+    "id": 34,
+    "spriteId": "18-34"
+  },
+  {
+    "name": "Storm Rune",
+    "type": "rune",
+    "description": "An important rune that is part of a lot of good mid-high level prefixes. It's not rare but used a lot so players may always be feeling like they don't have enough.",
+    "scarcity": "Medium/Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Dragon Whelp",
+        "location": "Koman Mountains"
+      },
+      {
+        "percentage": 45,
+        "mob": "Skeleton Berserker",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Daug",
+        "location": "Mine"
+      }
+    ],
+    "id": 36,
+    "spriteId": "18-36"
+  },
+  {
+    "name": "Sugilite",
+    "type": "gemstone",
+    "description": "Sugilite is a rare gemstone used in high level prefixes.",
+    "scarcity": "Very rare",
+    "id": 63,
+    "spriteId": "18-63"
+  },
+  {
+    "name": "Jet",
+    "type": "gemstone",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 76,
+    "spriteId": "18-76"
+  },
+  {
+    "name": "Blood Garnet",
+    "type": "gemstone",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 77,
+    "spriteId": "18-77"
+  },
+  {
+    "name": "Sulphur",
+    "type": "ore",
+    "description": "A common ore that is used in many important mid-high level prefixes.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Death Knight",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Fire Demon",
+        "location": "Blood Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Dark Fighter",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Fire Dancer",
+        "location": "Blood Cave"
+      }
+    ],
+    "id": 49,
+    "spriteId": "18-49"
+  },
+  {
+    "name": "Talisman of Power",
+    "type": "rune",
+    "description": "Used in mid level suffixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Abomination",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 45,
+        "mob": "Tribal Warrior",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Blood Wolf",
+        "location": "Blood Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Renegade Mercenary",
+        "location": "Bandit Camp"
+      }
+    ],
+    "id": 33,
+    "spriteId": "18-33"
+  },
+  {
+    "name": "Tincture of Enlightenment",
+    "type": "flask",
+    "description": "Used primarily in low-mid level suffixes with healing.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Cursed Antelope",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 45,
+        "mob": "Cultist Guard",
+        "location": "Ancient Temple"
+      },
+      {
+        "percentage": 45,
+        "mob": "Giant Beetle",
+        "location": "Blood Cave"
+      },
+      {
+        "percentage": 25,
+        "mob": "Mokele Mbembe",
+        "location": "Lost Harbour"
+      }
+    ],
+    "id": 41,
+    "spriteId": "18-41"
+  },
+  {
+    "name": "Tincture of Stamina",
+    "type": "flask",
+    "description": "Important material used in high level prefixes such as Lucius. Also used to repair Lucius.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Ancient",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Barbarian",
+        "location": "Teuton Camp"
+      },
+      {
+        "percentage": 25,
+        "mob": "Giant Spider",
+        "location": "Cliff Jumper"
+      },
+      {
+        "percentage": 25,
+        "mob": "Demon Elephant",
+        "location": "Mesoai-Oasis"
+      }
+    ],
+    "id": 38,
+    "spriteId": "18-38"
+  },
+  {
+    "name": "Totem of Healing",
+    "type": "rune",
+    "description": "A rune used in mid-high level suffixes with healing.",
+    "scarcity": "Medium/Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Soulless",
+        "location": "Cave Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Guard",
+        "location": "Mine"
+      },
+      {
+        "percentage": 25,
+        "mob": "Jarl",
+        "location": "Vandal Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Spirit Warrior",
+        "location": "Umpokta Tribe"
+      }
+    ],
+    "id": 32,
+    "spriteId": "18-32"
+  },
+  {
+    "name": "Typhon Leather",
+    "type": "monster_part",
+    "description": "Rare Underworld material used in high level prefixes(?).",
+    "scarcity": "Very Rare",
+    "id": 64,
+    "spriteId": "18-64"
+  },
+  {
+    "name": "Boar Tusk",
+    "type": "monster_part",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 74,
+    "spriteId": "18-74"
+  },
+  {
+    "name": "Raven Feather",
+    "type": "monster_part",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 75,
+    "spriteId": "18-75"
+  },
+  {
+    "name": "Velvet",
+    "type": "material",
+    "description": "Primarily used in mid-level suffixes.",
+    "scarcity": "Medium",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Bone Shaman",
+        "location": "Bridge"
+      },
+      {
+        "percentage": 25,
+        "mob": "Tribal Magician",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 25,
+        "mob": "Tribal Warrior",
+        "location": "Umpokta Tribe"
+      }
+    ],
+    "id": 19,
+    "spriteId": "18-19"
+  },
+  {
+    "name": "Water Seal",
+    "type": "rune",
+    "description": "A rare rune used in some mid-level prefixes.",
+    "scarcity": "Rare",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Swamp Lord",
+        "location": "The green forest"
+      },
+      {
+        "percentage": 45,
+        "mob": "Spirit Warrior",
+        "location": "Umpokta Tribe"
+      },
+      {
+        "percentage": 25,
+        "mob": "Giant Water Snake",
+        "location": "Lost Harbour"
+      }
+    ],
+    "id": 29,
+    "spriteId": "18-29"
+  },
+  {
+    "name": "Moon Rune",
+    "type": "rune",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 80,
+    "spriteId": "18-80"
+  },
+  {
+    "name": "Glyph of the Grove",
+    "type": "rune",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 81,
+    "spriteId": "18-81"
+  },
+  {
+    "name": "Waters of Oblivion",
+    "type": "flask",
+    "description": "A rare material used in very high level suffixes but can be smelted in large quantities from certain suffixes.",
+    "scarcity": "Rare",
+    "id": 53,
+    "spriteId": "18-53"
+  },
+  {
+    "name": "Mead",
+    "type": "flask",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 78,
+    "spriteId": "18-78"
+  },
+  {
+    "name": "Druid's Potion",
+    "type": "flask",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 79,
+    "spriteId": "18-79"
+  },
+  {
+    "name": "Wood",
+    "type": "material",
+    "description": "A rare building block type of material. Save them as they are really rare.",
+    "scarcity": "Very Rare",
+    "drops": [
+      {
+        "percentage": 5,
+        "mob": "Any mob",
+        "location": "Anywhere"
+      }
+    ],
+    "id": 1,
+    "spriteId": "18-1"
+  },
+  {
+    "name": "Wool",
+    "type": "material",
+    "description": "Usually required to craft low level prefixes in the range 16-31 level.",
+    "scarcity": "Common",
+    "drops": [
+      {
+        "percentage": 45,
+        "mob": "Awakened Mummy",
+        "location": "Voodoo Temple"
+      },
+      {
+        "percentage": 25,
+        "mob": "Hun",
+        "location": "Cursed Village"
+      },
+      {
+        "percentage": 25,
+        "mob": "Medusa",
+        "location": "Misty Mountains"
+      }
+    ],
+    "id": 13,
+    "spriteId": "18-13"
+  },
+  {
+    "name": "Resin",
+    "type": "material",
+    "description": "Used in the new high level prefixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 72,
+    "spriteId": "18-72"
+  },
+  {
+    "name": "Bark",
+    "type": "material",
+    "description": "Used in the new high level suffixes added in Battle for Britannia update.",
+    "scarcity": "Rare",
+    "id": 73,
+    "spriteId": "18-73"
+  }
 ]

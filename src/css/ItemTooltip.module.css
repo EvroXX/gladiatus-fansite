@@ -6,6 +6,7 @@
 .icon {
   image-rendering: smooth;
   cursor: pointer;
+  display: inline-block;
 }
 
 .tooltip {

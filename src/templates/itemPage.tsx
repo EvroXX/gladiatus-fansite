@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import prefixes from '@site/static/data/items/prefixes.json';
 import suffixes from '@site/static/data/items/suffixes.json';
+import forgingGoods from '@site/static/data/items/forging-goods.json';
 import { calcAffixGoldRange, formatGoldDots } from '@site/src/utils/affixGold';
 
 const slugify = (value?: string) =>
@@ -139,12 +140,10 @@ export default function ItemPage() {
               marginTop: '16px'
             }}>
               {Object.entries(item.materials).map(([material, quantity]) => {
-                // Create a slug for the material image
-                const materialSlug = material.replace(/\s+/g, '_');
-                const imageUrl = `https://gladiatusfansite.blob.core.windows.net/images/Forging/Forging_goods/${materialSlug}.png`;
-                
+                const good = (forgingGoods as { name: string; spriteId: string }[]).find(g => g.name === material);
+
                 return (
-                  <div 
+                  <div
                     key={material}
                     style={{
                       border: '1px solid #333',
@@ -155,16 +154,7 @@ export default function ItemPage() {
                       gap: '12px'
                     }}
                   >
-                    <img 
-                      src={imageUrl}
-                      alt={material}
-                      title={material}
-                      style={{ 
-                        width: '48px', 
-                        height: '48px',
-                        objectFit: 'contain'
-                      }}
-                    />
+                    {good && <div className={`item-i-${good.spriteId}`} title={material} />}
                     <div>
                       <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>
                         {material}

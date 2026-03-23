@@ -21,7 +21,6 @@ export interface BaseItem {
   durability: number | null;
   conditioning: number | null;
   gold: number | null;
-  image: string;
   materials: Record<string, number>;
 }
 
@@ -532,7 +531,7 @@ export default function Item({
 
   return (
     <span className={styles.wrapper}>
-      <img src={resolvedBaseItem.image} className={styles.icon} alt={calculatedStats.name} />
+      <div className={`item-i-${resolvedBaseItem.id} ${styles.icon}`} />
 
       {!hideTooltip && (
         <span className={styles.tooltip}>
