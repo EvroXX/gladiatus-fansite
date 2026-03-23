@@ -226,7 +226,20 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
             </div>
 
             {/* Stats */}
-            {Object.entries(item.stats).map(([stat, values]) => {
+            {(() => {
+              const statOrder = ['damage', 'armour', 'strength', 'dexterity', 'agility', 'constitution', 'charisma', 'intelligence',
+                'critical_hit', 'double_hit', 'avoid_critical_hit', 'avoid_double_hit',
+                'block_chance', 'healing', 'critical_healing_value', 'critical_attack_value', 'hardening_value', 'block_value', 'blocking_value', 'threat'];
+              const sorted = Object.entries(item.stats).sort(([a], [b]) => {
+                const ia = statOrder.indexOf(a);
+                const ib = statOrder.indexOf(b);
+                if (ia !== -1 && ib !== -1) return ia - ib;
+                if (ia !== -1) return -1;
+                if (ib !== -1) return 1;
+                return 0;
+              });
+              return sorted;
+            })().map(([stat, values]) => {
               const lines = [];
               const formatKey = stat
                 .replace(/_/g, ' ')

@@ -499,9 +499,9 @@ export function useCharacterState(): CharacterState {
     
     // Calculate Chance to avoid critical hits: (Resilience * 52 / (level-8)) / 4
     // Protect against division by zero for low levels
-    // Cap at 50% maximum
-    const critAvoidanceChance = characterLevel > 8 
-      ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 50)
+    // Cap at 25% maximum
+    const critAvoidanceChance = characterLevel > 8
+      ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 25)
       : 0;
 
     // Calculate final strength value (base + flat bonuses + percentage bonuses), capped at max

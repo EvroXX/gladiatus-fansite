@@ -228,9 +228,9 @@ function calculateCharacterStats(
   const maxResilience = Math.max(0, Math.floor((24.5 * 4 * (characterLevel - 8) / 52) + 1));
   
   // Calculate Chance to avoid critical hits: (Resilience * 52 / (level-8)) / 4
-  // Cap at 50% maximum
-  const critAvoidanceChance = characterLevel > 8 
-    ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 50)
+  // Cap at 25% maximum
+  const critAvoidanceChance = characterLevel > 8
+    ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 25)
     : 0;
 
   // Calculate final strength value (base + flat bonuses + percentage bonuses), capped at max
