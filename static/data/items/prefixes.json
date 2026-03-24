@@ -6799,7 +6799,14 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+        "Hydra Scale": 15,
+        "Sphinx Feather": 3,
+        "Resin": 44,
+        "Boar Tusk": 6,
+        "Tin Ore": 50,
+        "Lead Ore": 12
+    },
     "id": 239
   },
   {
