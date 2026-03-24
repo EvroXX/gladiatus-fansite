@@ -20,7 +20,7 @@ Level on which you can complete: **250?**
 
 Enemy and boss levels: **264-266**
   
-Minions item level drop: **???-???**
+Minions item level drop: **262-268?**
   
 Boss item level drop: **???-???**
 
@@ -80,6 +80,10 @@ You have 1 of them to defeat
 
 ## Tormented Soul
 
+<div className="player_name_bg">
+  <div className="playername">Tormented Soul</div>
+</div>
+
 ![Tormented Soul](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Germania/Dragon_Remains/lemures.jpg)
 
 ![Tormented Soul stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/tormented-soul-stats.png)
@@ -91,6 +95,10 @@ You have 6 of them to defeat
 ## Jago, Avatar of Antenociticus
 
 Here is the boss
+
+<div className="player_name_bg">
+  <div className="playername">Jago, Avatar of Antenociticus</div>
+</div>
 
 ![Jago, Avatar of Antenociticus](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/jago-avatar-of-antenociticus.png)
 
