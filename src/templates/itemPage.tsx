@@ -140,20 +140,21 @@ export default function ItemPage() {
               marginTop: '16px'
             }}>
               {Object.entries(item.materials).map(([material, quantity]) => {
-                const good = (forgingGoods as { name: string; spriteId: string }[]).find(g => g.name === material);
+                const good = (forgingGoods as { name: string; spriteId: string; type: string }[]).find(g => g.name === material);
 
-                return (
-                  <div
-                    key={material}
-                    style={{
-                      border: '1px solid #333',
-                      borderRadius: '8px',
-                      padding: '12px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px'
-                    }}
-                  >
+                const typeToPath: Record<string, string> = {
+                  flask: 'flasks',
+                  ore: 'ores',
+                  gemstone: 'gemstones',
+                  monster_part: 'monster-parts',
+                  material: 'materials',
+                  rune: 'runes',
+                };
+                const materialSlug = material.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-');
+                const href = good ? `/forging/forging-goods/${typeToPath[good.type]}/${materialSlug}` : undefined;
+
+                const inner = (
+                  <>
                     {good && <div className={`item-i-${good.spriteId}`} title={material} />}
                     <div>
                       <div style={{ fontWeight: 'bold', marginBottom: '4px' }}>
@@ -163,6 +164,27 @@ export default function ItemPage() {
                         Quantity: {quantity}
                       </div>
                     </div>
+                  </>
+                );
+
+                const sharedStyle = {
+                  border: '1px solid #333',
+                  borderRadius: '8px',
+                  padding: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  backgroundColor: '#fff',
+                  color: '#000',
+                };
+
+                return href ? (
+                  <Link key={material} to={href} style={{ ...sharedStyle, textDecoration: 'none' }}>
+                    {inner}
+                  </Link>
+                ) : (
+                  <div key={material} style={sharedStyle}>
+                    {inner}
                   </div>
                 );
               })}

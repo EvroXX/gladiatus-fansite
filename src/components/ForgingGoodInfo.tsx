@@ -125,7 +125,7 @@ const ForgingGoodInfo: React.FC<ForgingGoodInfoProps> = ({
             {prefixes.map((prefix, index) => (
               <a
                 key={index}
-                href={`/items/prefix/${encodeURIComponent(prefix.name.toLowerCase())}`}
+                href={`/items/prefix/${prefix.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')}`}
                 className={styles.affixLink}
                 title={`${prefix.name} (${prefix.quantity} materials)`}
               >
@@ -144,7 +144,7 @@ const ForgingGoodInfo: React.FC<ForgingGoodInfoProps> = ({
             {suffixes.map((suffix, index) => (
               <a
                 key={index}
-                href={`/items/suffix/${encodeURIComponent(suffix.name.toLowerCase())}`}
+                href={`/items/suffix/${suffix.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')}`}
                 className={styles.affixLink}
                 title={`${suffix.name} (${suffix.quantity} materials)`}
               >

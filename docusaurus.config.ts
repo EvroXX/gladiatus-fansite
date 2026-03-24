@@ -1,8 +1,6 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import prefixes from './static/data/items/prefixes.json';
-import suffixes from './static/data/items/suffixes.json';
 
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -72,6 +70,13 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        languages: ['en'],
+        indexBaseUrl: true,
+      },
+    ],
     function itemPagesPlugin() {
       return {
         name: 'item-pages-plugin',
@@ -83,7 +88,7 @@ const config: Config = {
 
           const slugify = (value?: string) =>
             typeof value === 'string'
-              ? value.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')
+              ? value.toLowerCase().replaceAll(/[^a-z0-9\s-]/g, '').replaceAll(/\s+/g, '-')
               : '';
 
           for (const item of prefixes) {
