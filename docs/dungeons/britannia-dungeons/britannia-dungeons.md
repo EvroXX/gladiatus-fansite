@@ -47,7 +47,7 @@ Evil Fairy Queen Clíodhna (Level ??-??)
 
 **Boss:**
 
-Unknown (Level ??-??)
+Athair Nathra (Level ??-??)
 
 ---
 
@@ -59,7 +59,7 @@ Unknown (Level ??-??)
 
 **Boss:**
 
-Unknown (Level ??-??)
+Nennius (Level ??-??)
 
 ---
 
@@ -71,21 +71,7 @@ Unknown (Level ??-??)
 
 **Boss:**
 
-Unknown (Level ??-??)
-
----
-
-## Ashes of War
-
-**Level 112 - [Ashes of War](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War") (Camulodunum)**
-
-<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
-
-**Boss:**
-
-Unknown (Level ??-??)
-
----
+Lugotrix (Level ??-??)
 
 ## Madness in the Fog
 
@@ -96,6 +82,18 @@ Unknown (Level ??-??)
 **Boss:**
 
 Unknown (Level ??-??)
+
+---
+
+## Ashes of War
+
+**Level 210 - [Ashes of War](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War") (Camulodunum)**
+
+<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
+
+**Boss:**
+
+Daruven (Level ??-??)
 
 ---
 
@@ -119,6 +117,6 @@ Unknown (Level ??-??)
 
 **Boss:**
 
-Unknown (Level ??-??)
+Jago, Avatar of Antenociticus (Level ??-??)
 
 ---

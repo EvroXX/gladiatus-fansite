@@ -14,15 +14,15 @@ The Great Ritual is the ninth and last of the new Britannia Dungeons and in the 
 
 Entry level: **250**
 
-Dungeon points to complete: **???-???**
+Dungeon points to complete: **18**
 
 Level on which you can complete: **250?**
 
-Enemy and boss levels: **???-???**  
+Enemy and boss levels: **264-266**
   
-Minions item level drop: **???-???**  
+Minions item level drop: **???-???**
   
-Boss item level drop: **???-???**  
+Boss item level drop: **???-???**
 
 Parent Expedition: [Mona Isle](/expeditions/britannia-expeditions/mona-isle "Mona Isle")
 
@@ -35,3 +35,63 @@ Next Dungeon: **None, this is the last and the highest level dungeon in the game
 ## Description
 
 ## Quests
+
+## Keeper of the Ritual
+
+<div className="player_name_bg">
+  <div className="playername">Keeper of the Ritual</div>
+</div>
+
+![Keeper of the Ritual](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/keeper-of-the-ritual.png)
+
+![Keeper of the Ritual stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/keeper-of-the-ritual-stats.png)
+
+You have 6 of them to defeat
+
+---
+
+## Witch
+
+<div className="player_name_bg">
+  <div className="playername">Witch</div>
+</div>
+
+![Witch](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/witch.png)
+
+![Witch stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/witch-stats.png)
+
+You have 4 of them to defeat
+
+---
+
+## Emaciated Host
+
+<div className="player_name_bg">
+  <div className="playername">Emaciated Host</div>
+</div>
+
+![Emaciated Host](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/emaciated-host.png)
+
+![Emaciated Host stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/emaciated-host-stats.png)
+
+You have 1 of them to defeat
+
+---
+
+## Tormented Soul
+
+![Tormented Soul](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Germania/Dragon_Remains/lemures.jpg)
+
+![Tormented Soul stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/tormented-soul-stats.png)
+
+You have 6 of them to defeat
+
+---
+
+## Jago, Avatar of Antenociticus
+
+Here is the boss
+
+![Jago, Avatar of Antenociticus](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/jago-avatar-of-antenociticus.png)
+
+![Jago, Avatar of Antenociticus stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/jago-avatar-of-antenociticus-stats.png)

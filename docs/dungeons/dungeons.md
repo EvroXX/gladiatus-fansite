@@ -434,7 +434,9 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 ---
 
 **Name of the dungeon:** [The Great Ritual](/dungeons/britannia-dungeons/the-great-ritual "The Great Ritual")  
-**Name of the Boss:** Unknown  
+**Name of the Boss:** Jago, Avatar of Antenociticus  
 **Level:** ???-???  
 **Required Level for the area:** 250  
 **Location:** Britannia – Mona Isle – Normal
+
+![Jago, Avatar of Antenociticus](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/jago-avatar-of-antenociticus.png)
