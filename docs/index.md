@@ -25,6 +25,10 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 
 ## Latest Gladiatus News
 
+### Wild Farm Event 2026
+
+- Sunday, 29.03.2026 at 00:00 (server time) until Saturday, 11.04.2026 at 23:59 (server time). [Wild Farm](/events/wild-farm "Wild Farm")
+
 ### Big March 2026 Update - Britannia Dungeons
 
 - After 10 years of waiting, Britannia dungeons will come to Gladiatus on 18 March 2026 - [Britannia Dungeons](https://forum.gladiatus.gameforge.com/forum/thread/13133-new-update-battle-for-britannia/ "Britannia Dungeons")
@@ -32,13 +36,6 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 ### Battle at Hadrian's Wall event
 
 - 08.03.2026 00:00:00 - 14.03.2026 23:59:59 - The Hadrian's wall event - [Battle at Hadrian's Wall](/events/battle-at-hadrian-s-wall "Battle at Hadrian's Wall")
-
-### New Servers
-
-New servers arrive on Friday 06 February 2026. Reported list is:
-
-- EN/UK: Server 78, speed x4.
-- US: Server 43, speed x2.
 
 ## Events – March 2026
 
@@ -97,65 +94,6 @@ New servers arrive on Friday 06 February 2026. Reported list is:
 
 - -50% Forging time (and smelting)
 
-## Events – February 2026
-
-### New Servers Only — 06.02.2026 00:00 – 08.02.2026 23:59
-
-- +50% expedition points
-- +50% gold loot on expeditions
-- +50% faster regeneration of expedition points
-- −25% training costs
-- +10% chance of finding an item
-- +100% expedition XP
-
-### Old Servers Only — 07.02.2026 00:00 – 08.02.2026 23:59
-
-- No durability loss
-- +50% gold loot on expeditions
-- −25% forging and smelting time
-- +200% dungeon XP
-- +200% arena XP
-- +30% expedition XP
-
-### 09.02.2026 00:00 – 11.02.2026 23:59
-
-- +30% gold loot on expeditions
-- +10% chance of finding an item
-- +50% expedition XP
-
-### 13.02.2026 00:00 – 14.02.2026 23:59
-
-- +20% chance of finding a resource or scroll
-
-### 16.02.2026 00:00 – 17.02.2026 23:59
-
-- −25% training costs
-
-### 19.02.2026 00:00 – 21.02.2026 23:59
-
-- +20% chance to obtain additional loot on expeditions and in dungeons
-- +25% faster regeneration of dungeon points
-- +25% more dungeon points
-
-### 22.02.2026 00:00 – 23.02.2026 23:59
-
-- +50% expedition points
-- +50% faster regeneration of expedition points
-- −50% quest cooldown
-- +50% more dungeon points
-- +10% chance of finding ruby on expeditions
-
-Also there will be a Happy Day Event
-
-+20% more Rubies
-
-### 25.02.2026 00:00 – 27.02.2026 23:59
-
-- +20% chance to obtain additional loot on expeditions and in dungeons
-- −35% guild expansion cost
-- +25% expedition points
-- +25% faster regeneration of expedition points
-
 ## To Do List
 
 - Find what the formula for materials is when prefix and suffix are mixed together. So far we hardcode them through a file that has all possible variations. Taken from [gladiatus-tools](https://gitlab.com/gladiatus-tools-ng/website/-/raw/master/src/data/prefixes_suffixes_recipes.json?ref_type=heads "gladiatus tools")
@@ -164,6 +102,14 @@ Also there will be a Happy Day Event
 - Find what the formula is for gold, durability and conditiong is when prefix/suffix or both are applied to an item
 
 ## Latest website news
+
+### 26.03.2026
+
+- Refreshed the Wild Farm page as the event announced and coming soon
+
+### 24.03.2026
+
+- There has been a huge effort from the community on finding all the new prefixes and suffixes and we finally have them all here
 
 ### 18.03.2026
 

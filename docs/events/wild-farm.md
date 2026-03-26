@@ -5,17 +5,18 @@ redirects:
   - /wild-farm
 ---
 
-# Wild Farm
-
 ![Wild Farm](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/Wild_Farm_bigposter.jpg "Wild Farm")
+
+![Wild Farm](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/Wild_Farm_bigposter_new.jpg "Wild Farm")
 
 ![Wild Farm](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/Wild_Farm_banner.jpg "Wild Farm")
 
-**Event takes place on Easter**
-
 ## Dates
 
+Event takes place on Easter
+
 - 22.03.2018 - 04.04.2018
+- Sunday, 29.03.2026 at 00:00 (server time) until Saturday, 11.04.2026 at 23:59 (server time).
 
 ## Description
 
@@ -26,49 +27,50 @@ Be prepared to to face Bertha and Babe again. They don't know mercy, and they've
 
 **The Roman Empire is awash with a feathered frenzy!**
 
-The weather is gradually warming up across the Empire, and young minds are starting to go a little crazy. During the night, a group of novice gladiators decided to play a prank and let loose the animals on all of the city`s farms. Now it`s up to the experienced warriors to herd these beasts together again. Do you think you have what it takes to stand up to Bertha's rage? Then head out onto the streets and start rounding them all up
+The weather is gradually warming up across the Empire, and young minds are starting to go a little crazy. During the night, a group of novice gladiators decided to play a prank and let loose the animals on all of the city\`s farms. Now it`s up to the experienced warriors to herd these beasts together again. Do you think you have what it takes to stand up to Bertha's rage? Then head out onto the streets and start rounding them all up
 
-## Bertha the Broody Hen
+## Expedition
 
-![Bertha the Broody Hen](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen.jpg "Bertha the Broody Hen")
-
-![Bertha the Broody Hen stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen_stats.png "Bertha the Broody Hen stats")
-
-## Babe the Runaway Sow
-
-![Babe the Runaway Sow](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog.jpg "Babe the Runaway Sow")
-
-![Babe the Runaway Sow stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog_stats.png "Babe the Runaway Sow stats")
-
-## Billy the Grouchy Goat
-
-![Billy the Grouchy Goat](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat.jpg "Billy the Grouchy Goat")
-
-![Billy the Grouchy Goat stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat_stats.png "Billy the Grouchy Goat stats")
-
-## Brutus the Berserker Bull
-
-![Brutus the Berserker Bull](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull.jpg "Brutus the Berserker Bull")![Brutus the Berserker Bull stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull_stats.png "Brutus the Berserker Bull stats")
+| Attribute | Enemy 1 | Enemy 2 | Enemy 3 | Boss |
+|-----------|-----|------|------|-------------|
+| **Name** | <div className="player_name_bg"><div className="playername">Bertha the Broody Hen</div></div> | <div className="player_name_bg"><div className="playername">Babe the Runaway Sow</div></div> | <div className="player_name_bg"><div className="playername">Billy the Grouchy Goat</div></div> | <div className="player_name_bg"><div className="playername">Brutus the Berserker Bull</div></div> |
+| **Image** | ![Bertha the Broody Hen](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen.jpg) | ![Babe the Runaway Sow](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog.jpg) | ![Billy the Grouchy Goat](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Brutus the Berserker Bull](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" alt="Boss Frame" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif "Level") **Level** | Same as Character | Same as Character | Same as Character | Same as Character |
+| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "Gold") **Gold** | Depending on level | Depending on level | Depending on level | Depending on level |
+| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif "Experience") **Experience** | Depending on level | Depending on level | Depending on level | Depending on level |
+| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif "Honour") **Honour** | Depending on level | Depending on level | Depending on level | Depending on level |
+| Stats | ![Bertha the Broody Hen stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen_stats.png) | ![Babe the Runaway Sow stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog_stats.png) | ![Billy the Grouchy Goat stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat_stats.png) | ![Brutus the Berserker Bull stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull_stats.png) |
 
 ## Event Info
 
-- The event is an extra expedition which works just like other event expeditions with 16 ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points") available every day and recharging with new at 0:00 German Time (GMT+1) time
+- The event is an extra expedition which works just like other event expeditions with 16 ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points") available every day and recharging with new at 0:00 local server time
+
 - Any player can recharge for another 16 ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points") for the cost of 15 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies") at any time
+
 - Every opponent costs 1x ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points") and the boss 2x ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points")
-- It's scalable expedition. It means that the opponent's level will scale based on your character level. Levels of opponents are quite high and can be challenging at low levels. On high levels this changes and they don't or barely penetrate the armor and are doing low or 0 damage to the experienced gladiator  
-    
+
+- It's scalable expedition. It means that the opponent's level will scale based on your character level. Levels of opponents are quite high and can be challenging at low levels. On high levels this changes and they don't or barely penetrate the armor and are doing low or 0 damage to the experienced gladiator
     - Opponent 1 Level = Character level +5
     - Opponent 2 Level = Character level + 10
     - Opponent 3 Level = Character level +15
     - Boss Level = Character level +20
+
 - Opponents award extra gold and experience
+
 - Dis Pater Normal and Leveling up does not have any effect on the expedition points
+
 - Dis Pater Normal costume provides 100% item drop from the event expeditions
+
 - Event also is dropping a costume
+
+- Every first attack after midnight adds to the event costume counter. So everyone can get the costume by attacking on the wild farm ONCE a day! You don't have to win, just hit them with all you got. To receive the costume, you have to participate in the event every day. About the costume, read below
+
+- Event mobs drop Golden Rabbits and Easter Eggs, read more below
 
 ## Bubona's Bull Armour
 
-![Bubona's Bull Armour male](https://gladiatusfansite.blob.core.windows.net/images/Costumes/gifs/Bubona_male.gif "Bubona's Bull Armour male")![Bubona's Bull Armour Female](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_Costumes/Bubonas_Bull_Armour_Female.png "Bubona's Bull Armour Female")
+![Bubona's Bull Armour male](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bubona_costume_male.gif "Bubona's Bull Armour male")
+![Bubona's Bull Armour Female](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bubona_costume_female.gif "Bubona's Bull Armour Female")
 
 ![Bubona's Bull Armour stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Event_Costumes/Bubonas_Bull_Armour_stats.png "Bubona's Bull Armour stats")
 
@@ -83,13 +85,13 @@ The weather is gradually warming up across the Empire, and young minds are start
 Check out the [Costumes](/costumes "Costumes") page for extended info on the costume and other costumes
 
 - The costume pieces will have a chance to drop on the first event expedition kill of the day
- 
+
 ![Bubona's Bull Armour piece drop](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/Bubona_drop.png "Bubona's Bull Armour piece drop")
 
 - Costume may not drop every day but if you participate every day of the event you are guaranteed to have it in the end
 - During the event the mobs from the event expedition will start to drop event bunnies
- 
-**Golden Bunny**
+
+## Golden Bunny
 
 ![Golden Bunny](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Golden_Bunny.png "Golden Bunny")
 
@@ -97,57 +99,57 @@ Check out the [Costumes](/costumes "Costumes") page for extended info on the cos
 
 The Golden Bunny will be available during the Wild Farm event and when dragged onto your character picture will award 1 random buff from the Bubona's Bull Armour costume properties for 1 hour. Note however, that the Bunnies will not work if you don't have any piece of the Bubona armour collected. Also, which costume property the Bunny will award relies entirely on the number of discovered set pieces. If you have them all, it will just randomly award one. If it awards you the same buff, it will increase it's duration with another hour (making it 2, 3 and etc)
 
+## Easter Eggs
+
 - During the event all enemies from all sources will start to drop Easter Eggs. Easter eggs are special event food which is low on healing powers but has buffs, just like other [Event items](/items/event-items "Event items")
- 
-    Egg (blue)
+
+### Egg (blue)
 
 ![Easter egg](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_blue.png "Easter egg")
 
 ![Easter egg (blue) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_blue_stats.png "Easter egg (blue) stats")
 
-    Egg (gold)
+### Egg (gold)
 
 ![Easter egg (gold)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_gold.png "Easter egg (gold)")
 
 ![Easter egg (gold) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_gold_stats.png "Easter egg (gold) stats")
 
-    Egg (green)
+### Egg (green)
 
 ![Easter Egg (green)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_green.png "Easter Egg (green)")
 
 ![Easter Egg (green) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_green_stats.png "Easter Egg (green) stats")
 
-    Unknown
+### Unknown Egg
 
 ![Easter egg ()](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_unknown.png "Easter egg ()")
 
-![Easter egg () stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_unknown_stats.png "Easter egg () stats")
-
-    Egg (bronze)
+### Egg (bronze)
 
 ![Easter egg (bronze)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_bronze.png "Easter egg (bronze)")
 
 ![Easter egg (bronze) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_bronze_stats.png "Easter egg (bronze) stats")
 
-    Egg (purple)
+### Egg (purple)
 
 ![Easter egg (purple)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_purple.png "Easter egg (purple)")
 
 ![Easter egg (purple) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_purple_stats.png "Easter egg (purple) stats")
 
-    Egg (red)
+### Egg (red)
 
 ![Easter egg (red)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_red.png "Easter egg (red)")
 
 ![Easter egg (red) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_red_stats.png "Easter egg (red) stats")
 
-    Egg (turquoise)
+### Egg (turquoise)
 
 ![Egg (turquoise)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_turquoise.png "Egg (turquoise)")
 
 ![Egg (turquoise) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_turquoise_stats.png "Egg (turquoise) stats")
 
-    Egg (yellow)
+### Egg (yellow)
 
 ![Easter egg (yellow)](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_yellow.png "Easter egg (yellow)")
 
