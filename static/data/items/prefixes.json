@@ -5202,7 +5202,7 @@
     "id": 9994
   },
   {
-    "name": "Varus",
+    "name": "Varus`",
     "level": 157,
     "new": true,
     "stats": {
@@ -5237,7 +5237,7 @@
       "Mead": 58,
       "Tin Ore": 22
     },
-    "id": 9993
+    "id": 192
   },
   {
     "name": "Horatius",
@@ -5368,7 +5368,7 @@
       }
     },
     "materials": {},
-    "id": 9989
+    "id": 196
   },
   {
     "name": "Crispinus",
@@ -5524,7 +5524,7 @@
     "id": 9984
   },
   {
-    "name": "Proculus",
+    "name": "Proculus`",
     "level": 165,
     "new": true,
     "stats": {
@@ -5553,7 +5553,7 @@
       "Mead": 13,
       "Tin Ore": 60
     },
-    "id": 9983
+    "id": 205
   },
   {
     "name": "Peregrinus`",
@@ -5757,7 +5757,7 @@
     "id": 9977
   },
   {
-    "name": "Acrobas",
+    "name": "Acrobas`",
     "level": 170,
     "new": true,
     "stats": {
@@ -5791,7 +5791,7 @@
       }
     },
     "materials": {},
-    "id": 9976
+    "id": 210
   },
   {
     "name": "Flavius",
@@ -5918,7 +5918,7 @@
     "id": 9973
   },
   {
-    "name": "Iunius",
+    "name": "Junius`",
     "level": 177,
     "new": true,
     "stats": {
@@ -5952,7 +5952,7 @@
       }
     },
     "materials": {},
-    "id": 9972
+    "id": 214
   },
   {
     "name": "Herestia`s",
