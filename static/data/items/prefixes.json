@@ -6569,7 +6569,7 @@
     "id": 233
   },
   {
-    "name": "Valcarus",
+    "name": "Valcarus`",
     "level": 209,
     "new": true,
     "stats": {
@@ -6607,7 +6607,7 @@
       }
     },
     "materials": {},
-    "id": 9954
+    "id": 232
   },
   {
     "name": "Primus`",
@@ -6874,7 +6874,7 @@
       }
     },
     "materials": {},
-    "id": 9951
+    "id": 241
   },
   {
     "name": "Quietus",
@@ -6984,7 +6984,7 @@
       "Tin Ore": 2,
       "Lead Ore": 1
     },
-    "id": 9949
+    "id": 244
   },
   {
     "name": "Mercurius`",

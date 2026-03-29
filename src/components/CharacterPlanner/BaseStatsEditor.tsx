@@ -1,15 +1,26 @@
 import React from 'react';
 import styles from './BaseStatsEditor.module.css';
 import { BaseStats, CharacterStats } from './useCharacterState';
+import { PactId } from './PactDefinitions';
 
 interface BaseStatsEditorProps {
   baseStats: BaseStats;
   setBaseStats: (stats: Partial<BaseStats>) => void;
   characterStats: CharacterStats;
   characterLevel: number;
+  activePacts: Set<PactId>;
 }
 
-export default function BaseStatsEditor({ baseStats, setBaseStats, characterStats, characterLevel }: BaseStatsEditorProps) {
+// Map each stat to the pact that increases its effective cap
+const STAT_PACT: Partial<Record<keyof BaseStats, PactId>> = {
+  strength: 'honour_hero',
+  dexterity: 'honour_armourer',
+  agility: 'sk_assassins',
+  constitution: 'sk_immortals',
+  charisma: 'blessing_venus',
+};
+
+export default function BaseStatsEditor({ baseStats, setBaseStats, characterStats, characterLevel, activePacts }: BaseStatsEditorProps) {
   // Calculate training cap: 200 for levels 1-40, level*5 for 41+
   const getTrainingCap = (): number => {
     return characterLevel <= 40 ? 200 : characterLevel * 5;
@@ -23,23 +34,27 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
     }
   };
 
-  // Calculate final stats including bonuses from equipment
-  const calculateFinalStat = (baseStat: number, statName: string): number => {
-    const equipBonus = characterStats.stats.get(statName);
-    if (!equipBonus) return baseStat;
-    
-    // Apply percentage to base stat only, then add flat bonus
-    const percentBonus = Math.round(baseStat * (equipBonus.percent / 100));
-    const uncappedStat = baseStat + equipBonus.flat + percentBonus;
-    
-    // Cap at maximum stat value
-    const maxStat = calculateMaxStat(baseStat);
-    return Math.min(uncappedStat, maxStat);
+  // Calculate maximum effective stat (natural cap + pact bonus)
+  const calculateMaxStat = (baseStat: number, statKey: keyof BaseStats): number => {
+    const naturalMax = baseStat + Math.floor(baseStat / 2) + characterLevel;
+    const pactId = STAT_PACT[statKey];
+    const pactBonus = pactId && activePacts.has(pactId) ? Math.floor(baseStat / 2) : 0;
+    return naturalMax + pactBonus;
   };
 
-  // Calculate maximum stat: Basic + (Basic/2) + Character Level
-  const calculateMaxStat = (baseStat: number): number => {
-    return baseStat + Math.floor(baseStat / 2) + characterLevel;
+  // Calculate final effective stat including equipment bonuses and pact bonus
+  const calculateFinalStat = (baseStat: number, statName: string, statKey: keyof BaseStats): number => {
+    const equipBonus = characterStats.stats.get(statName);
+    const percentBonus = equipBonus ? Math.round(baseStat * (equipBonus.percent / 100)) : 0;
+    const flatBonus = equipBonus?.flat ?? 0;
+    const uncapped = baseStat + flatBonus + percentBonus;
+
+    const naturalMax = baseStat + Math.floor(baseStat / 2) + characterLevel;
+    const capped = Math.min(uncapped, naturalMax);
+
+    const pactId = STAT_PACT[statKey];
+    const pactBonus = pactId && activePacts.has(pactId) ? Math.floor(baseStat / 2) : 0;
+    return capped + pactBonus;
   };
 
   const statNames: Array<{ key: keyof BaseStats; display: string }> = [
@@ -57,8 +72,8 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
       
       <div className={styles.statsGrid}>
         {statNames.map(({ key, display }) => {
-          const finalValue = calculateFinalStat(baseStats[key], display);
-          const maxValue = calculateMaxStat(baseStats[key]);
+          const finalValue = calculateFinalStat(baseStats[key], display, key);
+          const maxValue = calculateMaxStat(baseStats[key], key);
           const trainingCap = getTrainingCap();
           const equipBonus = characterStats.stats.get(display);
           const hasBonus = finalValue !== baseStats[key];

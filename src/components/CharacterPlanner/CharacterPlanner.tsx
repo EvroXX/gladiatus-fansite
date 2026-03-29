@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import LZString from 'lz-string';
 import styles from './CharacterPlanner.module.css';
 import CharacterDoll from './CharacterDoll';
 import StatsDisplay from './StatsDisplay';
@@ -8,32 +7,7 @@ import BaseStatsEditor from './BaseStatsEditor';
 import ImportProfile from './ImportProfile';
 import PlayerName from './PlayerName';
 import { useCharacterState, ItemSlotType } from './useCharacterState';
-
-/**
- * Compress and encode string for URL
- * Uses LZ compression to dramatically reduce URL size
- */
-function compressForUrl(str: string): string {
-  return LZString.compressToEncodedURIComponent(str);
-}
-
-/**
- * Decompress and decode string from URL
- */
-function decompressFromUrl(str: string): string | null {
-  return LZString.decompressFromEncodedURIComponent(str);
-}
-
-/**
- * Legacy: Unicode-safe base64 decoding for backward compatibility
- * Use decompressFromUrl for new builds
- */
-function safeBase64Decode(str: string): string {
-  // Decode from base64 to UTF-8 bytes, then to string
-  return decodeURIComponent(Array.prototype.map.call(atob(str), (c: string) => {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
-}
+import PactSelector, { ActivePactsBar } from './PactSelector';
 
 /**
  * Main Character Planner Component
@@ -54,6 +28,8 @@ export default function CharacterPlanner() {
     clearAll,
     characterStats,
     importProfile,
+    activePacts,
+    togglePact,
   } = useCharacterState();
 
   const [selectedSlot, setSelectedSlot] = useState<ItemSlotType | null>(null);
@@ -75,91 +51,29 @@ export default function CharacterPlanner() {
   };
 
   const handleShare = async () => {
+    // The URL is always kept up to date by the state effect in useCharacterState
+    const shareableUrl = globalThis.window.location.href;
     try {
-      // Generate URL with current state to ensure it's up-to-date
-      const itemsObj: Record<string, any> = {};
-      equippedItems.forEach((item, slot) => {
-        itemsObj[slot] = item;
-      });
-
-      const json = JSON.stringify(itemsObj);
-      console.log('handleShare: Original JSON length:', json.length);
-      const encoded = compressForUrl(json);
-      console.log('handleShare: Compressed length:', encoded.length, 'Compression ratio:', ((1 - encoded.length / json.length) * 100).toFixed(1) + '%');
-      
-      const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = compressForUrl(statsJson);
-
-      const url = new URL(globalThis.window.location.href);
-      url.searchParams.set('build', encoded);
-      url.searchParams.set('level', characterLevel.toString());
-      url.searchParams.set('stats', statsEncoded);
-      const shareableUrl = url.toString();
-
-      console.log('handleShare: Final URL length:', shareableUrl.length);
-
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(shareableUrl);
-        setShareMessage('Build URL copied to clipboard!');
-        setShowShareDialog(true);
-        setTimeout(() => setShowShareDialog(false), 3000);
-      }
+      await navigator.clipboard.writeText(shareableUrl);
+      setShareMessage('Build URL copied to clipboard!');
+      setShowShareDialog(true);
+      setTimeout(() => setShowShareDialog(false), 3000);
     } catch (error) {
       console.error('Failed to copy URL:', error);
-      if (error instanceof Error) {
-        console.error('Error details:', error.message, error.stack);
-      }
-      // Fallback: show the URL in a prompt
-      const itemsObj: Record<string, any> = {};
-      equippedItems.forEach((item, slot) => {
-        itemsObj[slot] = item;
-      });
-      const json = JSON.stringify(itemsObj);
-      const encoded = compressForUrl(json);
-      const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = compressForUrl(statsJson);
-      const url = new URL(globalThis.window.location.href);
-      url.searchParams.set('build', encoded);
-      url.searchParams.set('level', characterLevel.toString());
-      url.searchParams.set('stats', statsEncoded);
-      prompt('Copy this URL to share your build:', url.toString());
+      prompt('Copy this URL to share your build:', shareableUrl);
     }
   };
 
   const handleShareString = async () => {
+    // Extract just the query string from the current URL
+    const queryString = globalThis.window.location.search.slice(1);
     try {
-      const itemsObj: Record<string, any> = {};
-      equippedItems.forEach((item, slot) => {
-        itemsObj[slot] = item;
-      });
-
-      const json = JSON.stringify(itemsObj);
-      const encoded = compressForUrl(json);
-      const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = compressForUrl(statsJson);
-
-      // Build query string without the base URL
-      const queryString = `build=${encoded}&level=${characterLevel}&stats=${statsEncoded}`;
-
-      console.log('handleShareString: Query string length:', queryString.length);
-
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(queryString);
-        setShareMessage('Query string copied to clipboard!');
-        setShowShareDialog(true);
-        setTimeout(() => setShowShareDialog(false), 3000);
-      }
+      await navigator.clipboard.writeText(queryString);
+      setShareMessage('Query string copied to clipboard!');
+      setShowShareDialog(true);
+      setTimeout(() => setShowShareDialog(false), 3000);
     } catch (error) {
       console.error('Failed to copy query string:', error);
-      const itemsObj: Record<string, any> = {};
-      equippedItems.forEach((item, slot) => {
-        itemsObj[slot] = item;
-      });
-      const json = JSON.stringify(itemsObj);
-      const encoded = compressForUrl(json);
-      const statsJson = JSON.stringify(baseStats);
-      const statsEncoded = compressForUrl(statsJson);
-      const queryString = `build=${encoded}&level=${characterLevel}&stats=${statsEncoded}`;
       prompt('Copy this query string:', queryString);
     }
   };
@@ -265,6 +179,15 @@ export default function CharacterPlanner() {
       </div>
 
       <div className={styles.content}>
+        {/* Active Pacts Display */}
+        <ActivePactsBar
+          activePacts={activePacts}
+          togglePact={togglePact}
+          baseStats={baseStats}
+          characterLevel={characterLevel}
+          baseHealthFromConstitution={characterStats.baseHealthFromConstitution}
+        />
+
         {/* Top Section: Character Identity and Doll */}
         <div className={styles.topSection}>
           <div className={styles.characterIdentity}>
@@ -286,6 +209,15 @@ export default function CharacterPlanner() {
           </div>
         </div>
 
+        {/* Pact Activation */}
+        <PactSelector
+          activePacts={activePacts}
+          togglePact={togglePact}
+          characterLevel={characterLevel}
+          baseStats={baseStats}
+          baseHealthFromConstitution={characterStats.baseHealthFromConstitution}
+        />
+
         {/* Bottom Section: All Stats */}
         <div className={styles.statsSection}>
           <BaseStatsEditor
@@ -293,6 +225,7 @@ export default function CharacterPlanner() {
             setBaseStats={setBaseStats}
             characterStats={characterStats}
             characterLevel={characterLevel}
+            activePacts={activePacts}
           />
           
           <StatsDisplay stats={characterStats} />

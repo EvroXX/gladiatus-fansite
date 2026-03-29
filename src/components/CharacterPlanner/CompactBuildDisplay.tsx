@@ -321,7 +321,8 @@ function calculateCharacterStats(
 
   // Calculate health
   const healthFromLevel = characterLevel * 25;
-  const healthFromConstitution = (finalConstitution * 25) - 50;
+  const baseHealthFromConstitution = (finalConstitution * 25) - 50;
+  const healthFromConstitution = baseHealthFromConstitution;
   const healthFromItems = totalHealth;
   totalHealth = healthFromLevel + healthFromConstitution + healthFromItems;
   
@@ -363,6 +364,7 @@ function calculateCharacterStats(
     damageFromItems: weaponDamageFromEnchants,
     healthFromLevel,
     healthFromConstitution,
+    baseHealthFromConstitution,
     healthFromItems,
     healthRegenPerHour,
   };

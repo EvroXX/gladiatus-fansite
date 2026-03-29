@@ -1,6 +1,11 @@
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import LZString from 'lz-string';
 import { BaseItem, PrefixSuffix, ItemRarity, calculateItemStats } from '../Item';
+import basesData from '@site/static/data/items/bases.json';
+import prefixesData from '@site/static/data/items/prefixes.json';
+import suffixesData from '@site/static/data/items/suffixes.json';
+import upgradesData from '@site/static/data/items/upgrades.json';
+import { PactId, PACTS } from './PactDefinitions';
 
 /**
  * Compress and encode string for URL
@@ -18,6 +23,153 @@ function decompressFromUrl(str: string): string | null {
     return LZString.decompressFromEncodedURIComponent(str);
   } catch (error) {
     console.error('Failed to decompress:', error);
+    return null;
+  }
+}
+
+// Rarity order for compact encoding (index = value stored in URL)
+const RARITIES: ItemRarity[] = ['common', 'green', 'blue', 'purple', 'orange', 'red'];
+
+/**
+ * Serialize a single EquippedItem into a minimal compact form.
+ * Stores only the names of base item, prefix, suffix, and upgrades — the full
+ * objects are looked up from the static data files on decode.
+ */
+function serializeEquippedItem(item: EquippedItem): Record<string, unknown> {
+  const compact: Record<string, unknown> = {
+    n: item.baseItem.name,
+    r: RARITIES.indexOf(item.rarity),
+    c: item.conditioned ? 1 : 0,
+  };
+  if (item.prefix) compact.p = item.prefix.name;
+  if (item.suffix) compact.sf = item.suffix.name;
+  if (item.enchantValue) compact.e = item.enchantValue;
+  if (item.upgrades && item.upgrades.length > 0) {
+    compact.u = item.upgrades.map(u => [u.upgrade.name, u.level]);
+  }
+  return compact;
+}
+
+/**
+ * Deserialize a compact item back into a full EquippedItem by looking up names
+ * in the static data files. Returns null if the base item cannot be found.
+ */
+function deserializeEquippedItem(compact: Record<string, any>): EquippedItem | null {
+  const baseItem = (basesData as BaseItem[]).find(b => b.name === compact.n);
+  if (!baseItem) return null;
+
+  const rarity: ItemRarity = RARITIES[compact.r as number] ?? 'common';
+  const conditioned = compact.c === 1;
+
+  const item: EquippedItem = { baseItem, rarity, conditioned };
+
+  if (compact.p) {
+    item.prefix = (prefixesData as PrefixSuffix[]).find(p => p.name === compact.p);
+  }
+  if (compact.sf) {
+    item.suffix = (suffixesData as PrefixSuffix[]).find(s => s.name === compact.sf);
+  }
+  if (compact.e !== undefined) {
+    item.enchantValue = compact.e;
+  }
+  if (Array.isArray(compact.u)) {
+    item.upgrades = (compact.u as [string, number][]).flatMap(([name, level]) => {
+      const upgrade = (upgradesData as Upgrade[]).find(u => u.name === name);
+      return upgrade ? [{ upgrade, level }] : [];
+    });
+  }
+
+  return item;
+}
+
+/**
+ * Encode all character state into a single compact URL param (v2).
+ * Items are stored as name-references only — full objects are looked up on decode.
+ * Stats use an array instead of named keys. All top-level keys are single chars.
+ */
+function encodeCharacterState(
+  level: number,
+  stats: BaseStats,
+  identity: CharacterIdentity,
+  items: Map<ItemSlotType, EquippedItem>,
+  pacts: Set<PactId>
+): string {
+  const state: Record<string, unknown> = {
+    v: 2,
+    l: level,
+    s: [stats.strength, stats.dexterity, stats.agility, stats.constitution, stats.charisma, stats.intelligence],
+    id: identity,
+  };
+
+  if (items.size > 0) {
+    const compactItems: Record<string, unknown> = {};
+    items.forEach((item, slot) => { compactItems[slot] = serializeEquippedItem(item); });
+    state.b = compactItems;
+  }
+
+  if (pacts.size > 0) {
+    state.pk = [...pacts];
+  }
+
+  return compressForUrl(JSON.stringify(state));
+}
+
+/**
+ * Decode character state from the compact single URL param.
+ * Handles v2 (compact item names) and v1/unversioned (full item objects).
+ */
+function decodeCharacterState(encoded: string, randomName: string): {
+  level: number;
+  baseStats: BaseStats;
+  identity: CharacterIdentity;
+  items: Map<ItemSlotType, EquippedItem>;
+  pacts: Set<PactId>;
+} | null {
+  try {
+    const decoded = decompressFromUrl(encoded);
+    if (!decoded) return null;
+
+    const state = JSON.parse(decoded);
+
+    const baseStats: BaseStats = {
+      strength: state.s?.[0] ?? 5,
+      dexterity: state.s?.[1] ?? 5,
+      agility: state.s?.[2] ?? 5,
+      constitution: state.s?.[3] ?? 5,
+      charisma: state.s?.[4] ?? 5,
+      intelligence: state.s?.[5] ?? 5,
+    };
+
+    const items = new Map<ItemSlotType, EquippedItem>();
+    if (state.b) {
+      const isV2 = state.v === 2;
+      Object.entries(state.b).forEach(([slot, itemData]: [string, any]) => {
+        if (!itemData) return;
+        if (isV2) {
+          const item = deserializeEquippedItem(itemData);
+          if (item) items.set(slot as ItemSlotType, item);
+        } else {
+          // v1: full item objects stored directly
+          items.set(slot as ItemSlotType, itemData as EquippedItem);
+        }
+      });
+    }
+
+    const pacts = new Set<PactId>();
+    if (state.pk && Array.isArray(state.pk)) {
+      (state.pk as string[]).forEach(id => pacts.add(id as PactId));
+    }
+
+    const level = typeof state.l === 'number' && state.l >= 1 && state.l <= 1000 ? state.l : 1;
+
+    return {
+      level,
+      baseStats,
+      identity: state.id ?? { name: randomName, gender: 'male' },
+      items,
+      pacts,
+    };
+  } catch {
     return null;
   }
 }
@@ -102,6 +254,7 @@ export interface CharacterStats {
   // Health breakdown
   healthFromLevel: number;
   healthFromConstitution: number;
+  baseHealthFromConstitution: number;
   healthFromItems: number;
   healthRegenPerHour: number;
 }
@@ -120,6 +273,8 @@ export interface CharacterState {
   characterStats: CharacterStats;
   loadFromUrl: () => void;
   importProfile: (level: number, stats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity) => void;
+  activePacts: Set<PactId>;
+  togglePact: (id: PactId) => void;
 }
 
 /**
@@ -180,22 +335,41 @@ export function useCharacterState(): CharacterState {
     intelligence: 5,
   });
   const isInitialMount = useRef(true);
+  const [activePacts, setActivePacts] = useState<Set<PactId>>(new Set());
 
   /**
-   * Load character build from URL query parameters
+   * Load character build from URL query parameters.
+   * Supports new unified 's' param and legacy separate params for backward compatibility.
    */
   const loadFromUrl = useCallback(() => {
     if (globalThis.window === undefined) return;
 
     try {
       const params = new URLSearchParams(globalThis.window.location.search);
+
+      // New unified format: single 's' param with everything
+      const stateParam = params.get('s');
+      if (stateParam) {
+        const decoded = decodeCharacterState(stateParam, generateRandomRomanName());
+        if (decoded) {
+          setCharacterLevel(decoded.level);
+          setBaseStatsState(decoded.baseStats);
+          setCharacterIdentity(decoded.identity);
+          setEquippedItems(decoded.items);
+          setActivePacts(decoded.pacts);
+          return;
+        }
+      }
+
+      // Legacy format fallback (old URLs with separate params)
       const buildData = params.get('build');
       const levelParam = params.get('level');
       const statsParam = params.get('stats');
-      
+      const identityParam = params.get('identity');
+
       if (levelParam) {
         const level = Number.parseInt(levelParam, 10);
-        if (level >= 1 && level <= 150) {
+        if (level >= 1 && level <= 1000) {
           setCharacterLevel(level);
         }
       }
@@ -204,46 +378,37 @@ export function useCharacterState(): CharacterState {
         try {
           const decoded = decompressFromUrl(statsParam);
           if (decoded) {
-            const stats = JSON.parse(decoded);
-            setBaseStatsState(stats);
+            setBaseStatsState(JSON.parse(decoded));
           }
         } catch (e) {
           console.error('Failed to load stats from URL:', e);
         }
       }
 
-      // Load character identity (name, title, costume)
-      const identityParam = params.get('identity');
       if (identityParam) {
         try {
           const decoded = decompressFromUrl(identityParam);
           if (decoded) {
-            const identity = JSON.parse(decoded);
-            setCharacterIdentity(identity);
+            setCharacterIdentity(JSON.parse(decoded));
           }
         } catch (e) {
           console.error('Failed to load character identity from URL:', e);
         }
       }
-      
+
       if (buildData) {
-        // Decode and parse JSON (LZ compressed)
         const decoded = decompressFromUrl(buildData);
         if (!decoded) {
           console.error('Failed to decode build data from URL');
           return;
         }
         const data = JSON.parse(decoded);
-        
         const newItems = new Map<ItemSlotType, EquippedItem>();
-        
-        // Reconstruct equipped items from serialized data
         Object.entries(data).forEach(([slot, itemData]: [string, any]) => {
           if (itemData) {
             newItems.set(slot as ItemSlotType, itemData);
           }
         });
-        
         setEquippedItems(newItems);
       }
     } catch (error) {
@@ -267,50 +432,22 @@ export function useCharacterState(): CharacterState {
     if (globalThis.window === undefined) return;
 
     try {
-      // Convert Map to plain object for serialization
-      const itemsObj: Record<string, EquippedItem> = {};
-      equippedItems.forEach((item, slot) => {
-        itemsObj[slot] = item;
-      });
-
-      // Update URL without reload
       const url = new URL(globalThis.window.location.href);
-      
-      // Add items if any
-      if (equippedItems.size > 0) {
-        const json = JSON.stringify(itemsObj);
-        console.log('Encoding items JSON, length:', json.length);
-        const encoded = compressForUrl(json);
-        console.log('Compressed length:', encoded.length, 'Compression ratio:', ((1 - encoded.length / json.length) * 100).toFixed(1) + '%');
-        url.searchParams.set('build', encoded);
-      } else {
-        url.searchParams.delete('build');
-      }
-      
-      // Add level
-      url.searchParams.set('level', characterLevel.toString());
-      
-      // Add base stats
-      const statsJson = JSON.stringify(baseStats);
-      console.log('Encoding stats JSON:', statsJson);
-      const statsEncoded = compressForUrl(statsJson);
-      url.searchParams.set('stats', statsEncoded);
-      
-      // Add character identity (name, title, costume/image)
-      const identityJson = JSON.stringify(characterIdentity);
-      const identityEncoded = compressForUrl(identityJson);
-      url.searchParams.set('identity', identityEncoded);
-      
+
+      // Encode everything into a single compact 's' param
+      url.searchParams.set('s', encodeCharacterState(characterLevel, baseStats, characterIdentity, equippedItems, activePacts));
+
+      // Remove legacy params
+      url.searchParams.delete('build');
+      url.searchParams.delete('level');
+      url.searchParams.delete('stats');
+      url.searchParams.delete('identity');
+
       globalThis.window.history.replaceState({}, '', url.toString());
     } catch (error) {
       console.error('Failed to update URL:', error);
-      // Log more details about the error
-      if (error instanceof Error) {
-        console.error('Error message:', error.message);
-        console.error('Error stack:', error.stack);
-      }
     }
-  }, [equippedItems, characterLevel, baseStats, characterIdentity]);
+  }, [equippedItems, characterLevel, baseStats, characterIdentity, activePacts]);
 
   /**
    * Set or update an item in a specific slot
@@ -361,6 +498,23 @@ export function useCharacterState(): CharacterState {
     }
     
     setBaseStatsState(prev => ({ ...prev, ...cappedStats }));
+  };
+
+  const togglePact = (id: PactId) => {
+    const pactDef = PACTS.find(p => p.id === id);
+    if (!pactDef || characterLevel < pactDef.requiredLevel) return;
+    setActivePacts(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        // Only one pact per category may be active at a time
+        PACTS.filter(p => p.category === pactDef.category && p.id !== id)
+          .forEach(p => next.delete(p.id));
+        next.add(id);
+      }
+      return next;
+    });
   };
 
   /**
@@ -485,7 +639,8 @@ export function useCharacterState(): CharacterState {
     const agilityPercentBonus = Math.round(baseStats.agility * (agilityStat.percent / 100));
     const uncappedAgility = baseStats.agility + agilityStat.flat + agilityPercentBonus;
     const maxAgility = baseStats.agility + Math.floor(baseStats.agility / 2) + characterLevel;
-    const finalAgility = Math.min(uncappedAgility, maxAgility);
+    const finalAgility = Math.min(uncappedAgility, maxAgility)
+      + (activePacts.has('sk_assassins') ? Math.floor(baseStats.agility / 2) : 0);
     
     // Calculate Resilience: floor(Agility/10) + hardening_value from items
     const hardeningValueStat = combinedStats.get('hardening value') || { flat: 0, percent: 0 };
@@ -509,7 +664,8 @@ export function useCharacterState(): CharacterState {
     const strengthPercentBonus = Math.round(baseStats.strength * (strengthStat.percent / 100));
     const uncappedStrength = baseStats.strength + strengthStat.flat + strengthPercentBonus;
     const maxStrength = baseStats.strength + Math.floor(baseStats.strength / 2) + characterLevel;
-    const finalStrength = Math.min(uncappedStrength, maxStrength);
+    const finalStrength = Math.min(uncappedStrength, maxStrength)
+      + (activePacts.has('honour_hero') ? Math.floor(baseStats.strength / 2) : 0);
     
     // Calculate Blocking: floor(Strength/10) + block_value from items
     const blockValueStat = combinedStats.get('Block value') || { flat: 0, percent: 0 };
@@ -532,7 +688,8 @@ export function useCharacterState(): CharacterState {
     const dexterityPercentBonus = Math.round(baseStats.dexterity * (dexterityStat.percent / 100));
     const uncappedDexterity = baseStats.dexterity + dexterityStat.flat + dexterityPercentBonus;
     const maxDexterity = baseStats.dexterity + Math.floor(baseStats.dexterity / 2) + characterLevel;
-    const finalDexterity = Math.min(uncappedDexterity, maxDexterity);
+    const finalDexterity = Math.min(uncappedDexterity, maxDexterity)
+      + (activePacts.has('honour_armourer') ? Math.floor(baseStats.dexterity / 2) : 0);
     
     // Calculate Critical Attack: floor(Dexterity/10) + Critical Attack Value from items
     const criticalAttackValueStat = combinedStats.get('Critical attack value') || { flat: 0, percent: 0 };
@@ -546,9 +703,10 @@ export function useCharacterState(): CharacterState {
     
     // Calculate Chance for critical hit: (Critical attack value * 52 / (level-8)) / 5
     // Cap at 50% maximum
-    const criticalHitChance = characterLevel > 8
+    const baseCritChance = characterLevel > 8
       ? Math.min((totalCriticalAttack * 52 / (characterLevel - 8)) / 5, 50)
       : 0;
+    const criticalHitChance = activePacts.has('honour_veteran') ? baseCritChance + 10 : baseCritChance;
     
     // Calculate Chance to hit: Your Dexterity/(Your Dexterity + Enemy Agility) x 100
     // Simulate enemy agility as player's max agility
@@ -559,7 +717,8 @@ export function useCharacterState(): CharacterState {
     const charismaPercentBonus = Math.round(baseStats.charisma * (charismaStat.percent / 100));
     const uncappedCharisma = baseStats.charisma + charismaStat.flat + charismaPercentBonus;
     const maxCharisma = baseStats.charisma + Math.floor(baseStats.charisma / 2) + characterLevel;
-    const finalCharisma = Math.min(uncappedCharisma, maxCharisma);
+    const finalCharisma = Math.min(uncappedCharisma, maxCharisma)
+      + (activePacts.has('blessing_venus') ? Math.floor(baseStats.charisma / 2) : 0);
     
     // Calculate Threat: floor(Charisma/10) + threat from items
     const threatStat = combinedStats.get('Threat') || { flat: 0, percent: 0 };
@@ -586,11 +745,15 @@ export function useCharacterState(): CharacterState {
     const constitutionPercentBonus = Math.round(baseStats.constitution * (constitutionStat.percent / 100));
     const uncappedConstitution = baseStats.constitution + constitutionStat.flat + constitutionPercentBonus;
     const maxConstitution = baseStats.constitution + Math.floor(baseStats.constitution / 2) + characterLevel;
-    const finalConstitution = Math.min(uncappedConstitution, maxConstitution);
+    const finalConstitution = Math.min(uncappedConstitution, maxConstitution)
+      + (activePacts.has('sk_immortals') ? Math.floor(baseStats.constitution / 2) : 0);
     
     // Calculate health components
     const healthFromLevel = characterLevel * 25;
-    const healthFromConstitution = (finalConstitution * 25) - 50;
+    const baseHealthFromConstitution = (finalConstitution * 25) - 50;
+    const healthFromConstitution = activePacts.has('blessing_jupiter')
+      ? Math.floor(baseHealthFromConstitution * 1.5)
+      : baseHealthFromConstitution;
     const healthFromItems = totalHealth;
     const maxHealth = healthFromLevel + healthFromConstitution + healthFromItems;
     
@@ -604,6 +767,12 @@ export function useCharacterState(): CharacterState {
     // Add bonus damage from items, enchants, and strength to total damage
     totalDamageMin += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
     totalDamageMax += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
+
+    if (activePacts.has('honour_berserker')) {
+      const berserkerBonus = Math.max(2, Math.ceil(characterLevel * 0.25));
+      totalDamageMin += berserkerBonus;
+      totalDamageMax += berserkerBonus;
+    }
 
     return {
       totalArmor,
@@ -640,10 +809,11 @@ export function useCharacterState(): CharacterState {
       damageFromItems: bonusDamageFromItems + enchantDamageBonus,
       healthFromLevel,
       healthFromConstitution,
+      baseHealthFromConstitution,
       healthFromItems,
       healthRegenPerHour,
     };
-  }, [equippedItems, baseStats, characterLevel]);
+  }, [equippedItems, baseStats, characterLevel, activePacts]);
 
   return {
     equippedItems,
@@ -659,5 +829,7 @@ export function useCharacterState(): CharacterState {
     characterStats,
     loadFromUrl,
     importProfile,
+    activePacts,
+    togglePact,
   };
 }

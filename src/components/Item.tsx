@@ -4,7 +4,7 @@ import basesData from '@site/static/data/items/bases.json';
 import prefixesData from '@site/static/data/items/prefixes.json';
 import suffixesData from '@site/static/data/items/suffixes.json';
 import type { Upgrade, AppliedUpgrade } from './CharacterPlanner/useCharacterState';
-import { calcAffixGoldBase } from '@site/src/utils/affixGold';
+import { calcAffixGoldBase, COMBINED_AFFIX_MULTIPLIER } from '@site/src/utils/affixGold';
 
 // Base item type from bases.json
 export interface BaseItem {
@@ -419,12 +419,18 @@ export function calculateItemStats(
     }
   });
 
-  // Calculate total gold value
-  const rarityMultiplier = getDamageMultiplier(); // Uses rarity: blue=1.15, purple=1.30, orange=1.50, red=1.75, red+=2.0
-  const baseGold = baseItem.gold ? Math.ceil(baseItem.gold * rarityMultiplier) : 0;
-  const prefixGold = prefix ? calcAffixGoldBase(prefix.level, 'prefix') : 0;
-  const suffixGold = suffix ? calcAffixGoldBase(suffix.level, 'suffix') : 0;
-  const totalGold = baseGold + prefixGold + suffixGold;
+  // Calculate total gold value.
+  // Affix gold scales with each affix's own JSON level (not finalLevel).
+  // When both prefix AND suffix are present, their combined gold is multiplied by COMBINED_AFFIX_MULTIPLIER.
+  // Rarity then multiplies the entire total (base + affixes).
+  const rarityMultiplier = getDamageMultiplier(); // green=1, blue=1.15, purple=1.30, orange=1.50, red=1.75, red+=2.0
+  const rawBaseGold = baseItem.gold ?? 0;
+  const rawPrefixGold = prefix ? calcAffixGoldBase(prefix.level, 'prefix', baseItem.type) : 0;
+  const rawSuffixGold = suffix ? calcAffixGoldBase(suffix.level, 'suffix', baseItem.type) : 0;
+  const rawAffixGold = (prefix && suffix)
+    ? (rawPrefixGold + rawSuffixGold) * COMBINED_AFFIX_MULTIPLIER
+    : (rawPrefixGold + rawSuffixGold);
+  const totalGold = Math.ceil((rawBaseGold + rawAffixGold) * rarityMultiplier);
 
   return {
     name: fullName,
