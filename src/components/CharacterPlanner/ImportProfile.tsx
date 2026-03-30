@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './ImportProfile.module.css';
 import type { BaseItem, PrefixSuffix, ItemRarity } from '../Item';
 import type { ItemSlotType, BaseStats, EquippedItem, CharacterIdentity, Upgrade, AppliedUpgrade } from './useCharacterState';
+import type { PactId } from './PactDefinitions';
 
 // Import data files
 import basesData from '@site/static/data/items/bases.json';
@@ -10,7 +11,7 @@ import suffixesData from '@site/static/data/items/suffixes.json';
 import upgradesData from '@site/static/data/items/upgrades.json';
 
 interface ImportProfileProps {
-  onImport: (level: number, baseStats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity) => void;
+  onImport: (level: number, baseStats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity, pacts?: Set<PactId>) => void;
 }
 
 interface ApiResponse {
@@ -41,6 +42,7 @@ interface ApiResponse {
   damage_min?: number;
   damage_max?: number;
   items: ApiItem[];
+  pacts?: Record<string, boolean>;
 }
 
 interface ApiItem {
@@ -152,6 +154,26 @@ export default function ImportProfile({ onImport }: ImportProfileProps) {
     return (suffixesData as any[]).find(
       s => s.id === suffixId
     ) || null;
+  };
+
+  const mapPacts = (apiPacts: Record<string, boolean>): Set<PactId> => {
+    const pactKeyMap: Record<string, PactId> = {
+      'blessing_of_venus':                        'blessing_venus',
+      'blessing_of_jupiter':                      'blessing_jupiter',
+      'honour_of_the_berserker':                  'honour_berserker',
+      'honour_of_the_armourer':                   'honour_armourer',
+      'honour_of_the_veteran':                    'honour_veteran',
+      'honour_of_the_hero':                       'honour_hero',
+      'secret_knowledege_of_the_assassins':       'sk_assassins',
+      'secret_knowledege_of_the_immortals':       'sk_immortals',
+    };
+    const active = new Set<PactId>();
+    for (const [key, enabled] of Object.entries(apiPacts)) {
+      if (enabled && pactKeyMap[key]) {
+        active.add(pactKeyMap[key]);
+      }
+    }
+    return active;
   };
 
   const mapRarity = (apiRarity: string): ItemRarity => {
@@ -352,8 +374,11 @@ export default function ImportProfile({ onImport }: ImportProfileProps) {
         gender: 'male', // Default for imported characters since we don't get gender from API
       };
 
+      // Map pacts if present
+      const importedPacts = data.pacts ? mapPacts(data.pacts) : undefined;
+
       // Call the import callback
-      onImport(data.level, baseStats, itemsMap, identity);
+      onImport(data.level, baseStats, itemsMap, identity, importedPacts);
       
       setSuccess(true);
       setError(null);

@@ -272,7 +272,7 @@ export interface CharacterState {
   clearAll: () => void;
   characterStats: CharacterStats;
   loadFromUrl: () => void;
-  importProfile: (level: number, stats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity) => void;
+  importProfile: (level: number, stats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity, pacts?: Set<PactId>) => void;
   activePacts: Set<PactId>;
   togglePact: (id: PactId) => void;
 }
@@ -728,11 +728,14 @@ export function useCharacterState(): CharacterState {
   /**
    * Import profile data (bulk import for level, stats, items, and identity)
    */
-  const importProfile = (level: number, stats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity) => {
+  const importProfile = (level: number, stats: BaseStats, items: Map<ItemSlotType, EquippedItem>, identity: CharacterIdentity, pacts?: Set<PactId>) => {
     setCharacterLevel(level);
     setBaseStatsState(stats);
     setEquippedItems(items);
     setCharacterIdentity(identity);
+    if (pacts !== undefined) {
+      setActivePacts(pacts);
+    }
   };
 
   /**
