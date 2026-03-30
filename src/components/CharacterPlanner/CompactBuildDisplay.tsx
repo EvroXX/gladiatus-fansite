@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import LZString from 'lz-string';
 import styles from './CompactBuildDisplay.module.css';
 import ItemSlot from './ItemSlot';
-import { ItemSlotType, EquippedItem, BaseStats, CharacterStats } from './useCharacterState';
+import { ItemSlotType, EquippedItem, BaseStats, CharacterStats, decodeCharacterState } from './useCharacterState';
 import { calculateItemStats } from '../Item';
 
 /**
@@ -482,17 +482,21 @@ function loadBuildFromUrl(): { items: Map<ItemSlotType, EquippedItem>; level: nu
 }
 
 /**
- * Parse query string to extract build parameters
+ * Parse query string to extract build parameters.
+ * Supports new unified 's' param and legacy 'build'/'level'/'stats' params.
  */
-function parseQueryString(query: string): { build?: string; level?: string; stats?: string } | null {
+function parseQueryString(query: string): { s?: string; build?: string; level?: string; stats?: string } | null {
   try {
     const params = new URLSearchParams(query);
+    const s = params.get('s');
+    if (s) return { s };
+
     const build = params.get('build');
     const level = params.get('level');
     const stats = params.get('stats');
-    
+
     if (!build || !level) return null;
-    
+
     return { build, level, stats: stats || undefined };
   } catch (error) {
     console.error('Failed to parse query string:', error);
@@ -520,10 +524,18 @@ export default function CompactBuildDisplay({
     if (queryString) {
       const parsed = parseQueryString(queryString);
       if (parsed) {
-        return decodeBuildData(parsed.build!, parsed.level!, parsed.stats);
+        // New unified 's' param
+        if (parsed.s) {
+          const decoded = decodeCharacterState(parsed.s, '');
+          if (decoded) return { items: decoded.items, level: decoded.level, baseStats: decoded.baseStats };
+        }
+        // Legacy build/level/stats params
+        if (parsed.build && parsed.level) {
+          return decodeBuildData(parsed.build, parsed.level, parsed.stats);
+        }
       }
     }
-    
+
     // Fall back to individual props
     if (buildString && levelProp) {
       const levelStr = typeof levelProp === 'number' ? levelProp.toString() : levelProp;

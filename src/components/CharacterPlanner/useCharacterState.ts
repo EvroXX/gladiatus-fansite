@@ -118,7 +118,7 @@ function encodeCharacterState(
  * Decode character state from the compact single URL param.
  * Handles v2 (compact item names) and v1/unversioned (full item objects).
  */
-function decodeCharacterState(encoded: string, randomName: string): {
+export function decodeCharacterState(encoded: string, randomName: string): {
   level: number;
   baseStats: BaseStats;
   identity: CharacterIdentity;
