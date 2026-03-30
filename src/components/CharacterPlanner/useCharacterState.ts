@@ -87,7 +87,7 @@ function deserializeEquippedItem(compact: Record<string, any>): EquippedItem | n
  * Items are stored as name-references only — full objects are looked up on decode.
  * Stats use an array instead of named keys. All top-level keys are single chars.
  */
-function encodeCharacterState(
+export function encodeCharacterState(
   level: number,
   stats: BaseStats,
   identity: CharacterIdentity,
@@ -292,6 +292,207 @@ function calculateUpgradeBonus(upgrade: Upgrade, level: number): number {
     return Math.ceil(level / 5);
   }
   return 0;
+}
+
+/**
+ * Calculate total character stats from equipped items, base stats, level and active pacts.
+ * Exported so CompactBuildDisplay can reuse the exact same logic.
+ */
+export function calculateCharacterStats(
+  equippedItems: Map<ItemSlotType, EquippedItem>,
+  characterLevel: number,
+  baseStats: BaseStats,
+  activePacts: Set<PactId>
+): CharacterStats {
+  let totalArmor = 0;
+  let totalDamageMin = 0;
+  let totalDamageMax = 0;
+  let totalHealth = 0;
+  let bonusDamageFromItems = 0;
+  let enchantDamageBonus = 0;
+  let enchantArmorBonus = 0;
+  const combinedStats = new Map<string, { flat: number; percent: number }>();
+
+  equippedItems.forEach((equippedItem, slot) => {
+    const itemStats = calculateItemStats(
+      equippedItem.baseItem,
+      equippedItem.rarity,
+      equippedItem.conditioned,
+      equippedItem.prefix,
+      equippedItem.suffix
+    );
+
+    if (itemStats.armour) {
+      totalArmor += itemStats.armour;
+    } else if (itemStats.prefixArmor) {
+      totalArmor += itemStats.prefixArmor;
+    }
+
+    if (equippedItem.enchantValue) {
+      if (slot === 'mainHand') {
+        enchantDamageBonus += equippedItem.enchantValue;
+      } else if (slot === 'helmet' || slot === 'chest' || slot === 'gloves' || slot === 'shoes' || slot === 'offHand') {
+        enchantArmorBonus += equippedItem.enchantValue;
+      }
+    }
+
+    if (equippedItem.upgrades && equippedItem.upgrades.length > 0) {
+      equippedItem.upgrades.forEach(appliedUpgrade => {
+        const bonus = calculateUpgradeBonus(appliedUpgrade.upgrade, appliedUpgrade.level);
+        if (appliedUpgrade.upgrade.stat === 'damage') {
+          enchantDamageBonus += bonus;
+        } else if (appliedUpgrade.upgrade.stat === 'armour') {
+          enchantArmorBonus += bonus;
+        } else {
+          const statName = appliedUpgrade.upgrade.stat.charAt(0).toUpperCase() + appliedUpgrade.upgrade.stat.slice(1);
+          const existing = combinedStats.get(statName) || { flat: 0, percent: 0 };
+          combinedStats.set(statName, { flat: existing.flat + bonus, percent: existing.percent });
+        }
+      });
+    }
+
+    if ((slot === 'mainHand' || slot === 'offHand') && itemStats.damage) {
+      totalDamageMin += itemStats.damage.min;
+      totalDamageMax += itemStats.damage.max;
+    }
+
+    if (slot !== 'mainHand' && itemStats.prefixDamage !== 0) {
+      bonusDamageFromItems += itemStats.prefixDamage;
+    }
+
+    totalHealth += itemStats.prefixHealth;
+
+    itemStats.stats.forEach(stat => {
+      const existing = combinedStats.get(stat.name) || { flat: 0, percent: 0 };
+      combinedStats.set(stat.name, { flat: existing.flat + stat.flat, percent: existing.percent + stat.percent });
+    });
+  });
+
+  const armorFromItems = totalArmor;
+  const armorFromEnchants = enchantArmorBonus;
+  totalArmor += enchantArmorBonus;
+
+  const minAbsorption = Math.ceil((totalArmor / 74) - (totalArmor / 74) / 660 + 1);
+  const minDamageAbsorbed = Math.max(0, minAbsorption);
+  const maxDamageAbsorbed = Math.max(minDamageAbsorbed, Math.floor((totalArmor / 66) + (totalArmor / 660)));
+
+  const agilityStat = combinedStats.get('Agility') || { flat: 0, percent: 0 };
+  const agilityPercentBonus = Math.round(baseStats.agility * (agilityStat.percent / 100));
+  const uncappedAgility = baseStats.agility + agilityStat.flat + agilityPercentBonus;
+  const maxAgility = baseStats.agility + Math.floor(baseStats.agility / 2) + characterLevel;
+  const finalAgility = Math.min(uncappedAgility, maxAgility)
+    + (activePacts.has('sk_assassins') ? Math.floor(baseStats.agility / 2) : 0);
+
+  const hardeningValueStat = combinedStats.get('hardening value') || { flat: 0, percent: 0 };
+  const resilienceFromAgility = Math.floor(finalAgility / 10);
+  const resilienceFromItems = hardeningValueStat.flat;
+  const totalResilience = resilienceFromAgility + resilienceFromItems;
+  const maxResilience = Math.max(0, Math.floor((24.5 * 4 * (characterLevel - 8) / 52) + 1));
+  const critAvoidanceChance = characterLevel > 8
+    ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 25) : 0;
+
+  const strengthStat = combinedStats.get('Strength') || { flat: 0, percent: 0 };
+  const strengthPercentBonus = Math.round(baseStats.strength * (strengthStat.percent / 100));
+  const uncappedStrength = baseStats.strength + strengthStat.flat + strengthPercentBonus;
+  const maxStrength = baseStats.strength + Math.floor(baseStats.strength / 2) + characterLevel;
+  const finalStrength = Math.min(uncappedStrength, maxStrength)
+    + (activePacts.has('honour_hero') ? Math.floor(baseStats.strength / 2) : 0);
+
+  const blockValueStat = combinedStats.get('Block value') || { flat: 0, percent: 0 };
+  const blockingFromStrength = Math.floor(finalStrength / 10);
+  const blockingFromItems = blockValueStat.flat;
+  const totalBlocking = blockingFromStrength + blockingFromItems;
+  const maxBlocking = Math.max(0, Math.floor((49.5 * 6 * (characterLevel - 8) / 52) + 1));
+  const blockChance = characterLevel > 8
+    ? Math.min((totalBlocking * 52 / (characterLevel - 8)) / 6, 50) : 0;
+
+  const dexterityStat = combinedStats.get('Dexterity') || { flat: 0, percent: 0 };
+  const dexterityPercentBonus = Math.round(baseStats.dexterity * (dexterityStat.percent / 100));
+  const uncappedDexterity = baseStats.dexterity + dexterityStat.flat + dexterityPercentBonus;
+  const maxDexterity = baseStats.dexterity + Math.floor(baseStats.dexterity / 2) + characterLevel;
+  const finalDexterity = Math.min(uncappedDexterity, maxDexterity)
+    + (activePacts.has('honour_armourer') ? Math.floor(baseStats.dexterity / 2) : 0);
+
+  const criticalAttackValueStat = combinedStats.get('Critical attack value') || { flat: 0, percent: 0 };
+  const criticalAttackFromDexterity = Math.floor(finalDexterity / 10);
+  const criticalAttackFromItems = criticalAttackValueStat.flat;
+  const totalCriticalAttack = criticalAttackFromDexterity + criticalAttackFromItems;
+  const maxCriticalAttack = Math.max(0, Math.floor((49.5 * 5 * (characterLevel - 8) / 52) + 1));
+  const baseCritChance = characterLevel > 8
+    ? Math.min((totalCriticalAttack * 52 / (characterLevel - 8)) / 5, 50) : 0;
+  const criticalHitChance = activePacts.has('honour_veteran') ? baseCritChance + 10 : baseCritChance;
+
+  const chanceToHit = Math.floor((finalDexterity / (finalDexterity + maxAgility)) * 100);
+
+  const charismaStat = combinedStats.get('Charisma') || { flat: 0, percent: 0 };
+  const charismaPercentBonus = Math.round(baseStats.charisma * (charismaStat.percent / 100));
+  const uncappedCharisma = baseStats.charisma + charismaStat.flat + charismaPercentBonus;
+  const maxCharisma = baseStats.charisma + Math.floor(baseStats.charisma / 2) + characterLevel;
+  const finalCharisma = Math.min(uncappedCharisma, maxCharisma)
+    + (activePacts.has('blessing_venus') ? Math.floor(baseStats.charisma / 2) : 0);
+
+  const threatStat = combinedStats.get('Threat') || { flat: 0, percent: 0 };
+  const threatFromCharisma = Math.floor(finalCharisma / 10);
+  const threatFromItems = threatStat.flat;
+  const totalThreat = threatFromCharisma + threatFromItems;
+
+  const intelligenceStat = combinedStats.get('Intelligence') || { flat: 0, percent: 0 };
+  const intelligencePercentBonus = Math.round(baseStats.intelligence * (intelligenceStat.percent / 100));
+  const uncappedIntelligence = baseStats.intelligence + intelligenceStat.flat + intelligencePercentBonus;
+  const maxIntelligence = baseStats.intelligence + Math.floor(baseStats.intelligence / 2) + characterLevel;
+  const finalIntelligence = Math.min(uncappedIntelligence, maxIntelligence);
+
+  const chanceToDoubleHit = (finalCharisma * finalDexterity * 10) / (maxIntelligence * maxAgility);
+
+  const strengthDamage = Math.floor(finalStrength * 0.1);
+
+  const constitutionStat = combinedStats.get('Constitution') || { flat: 0, percent: 0 };
+  const constitutionPercentBonus = Math.round(baseStats.constitution * (constitutionStat.percent / 100));
+  const uncappedConstitution = baseStats.constitution + constitutionStat.flat + constitutionPercentBonus;
+  const maxConstitution = baseStats.constitution + Math.floor(baseStats.constitution / 2) + characterLevel;
+  const finalConstitution = Math.min(uncappedConstitution, maxConstitution)
+    + (activePacts.has('sk_immortals') ? Math.floor(baseStats.constitution / 2) : 0);
+
+  const healthFromLevel = characterLevel * 25;
+  const baseHealthFromConstitution = (finalConstitution * 25) - 50;
+  const healthFromConstitution = activePacts.has('blessing_jupiter')
+    ? Math.floor(baseHealthFromConstitution * 1.5) : baseHealthFromConstitution;
+  const healthFromItems = totalHealth;
+  const maxHealth = healthFromLevel + healthFromConstitution + healthFromItems;
+  const healthRegenPerHour = (characterLevel * 2) + (finalConstitution * 2);
+
+  const weaponDamageMin = totalDamageMin;
+  const weaponDamageMax = totalDamageMax;
+
+  totalDamageMin += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
+  totalDamageMax += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
+
+  if (activePacts.has('honour_berserker')) {
+    const berserkerBonus = Math.max(2, Math.ceil(characterLevel * 0.25));
+    totalDamageMin += berserkerBonus;
+    totalDamageMax += berserkerBonus;
+  }
+
+  // suppress unused-var lint for finalIntelligence / maxConstitution (used transitively)
+  void finalIntelligence;
+  void maxConstitution;
+
+  return {
+    totalArmor, armorFromItems, armorFromEnchants,
+    minDamageAbsorbed, maxDamageAbsorbed,
+    totalResilience, maxResilience, critAvoidanceChance, resilienceFromAgility, resilienceFromItems,
+    totalBlocking, maxBlocking, blockChance, blockingFromStrength, blockingFromItems,
+    totalThreat, threatFromCharisma, threatFromItems,
+    totalCriticalAttack, maxCriticalAttack, criticalHitChance, criticalAttackFromDexterity, criticalAttackFromItems,
+    chanceToHit, chanceToDoubleHit,
+    totalDamageMin, totalDamageMax,
+    totalHealth: maxHealth,
+    stats: combinedStats,
+    damageFromWeapons: { min: weaponDamageMin, max: weaponDamageMax },
+    damageFromStrength: strengthDamage,
+    damageFromItems: bonusDamageFromItems + enchantDamageBonus,
+    healthFromLevel, healthFromConstitution, baseHealthFromConstitution, healthFromItems, healthRegenPerHour,
+  };
 }
 
 // Roman names for random character generation
@@ -537,283 +738,10 @@ export function useCharacterState(): CharacterState {
   /**
    * Calculate total character stats from all equipped items
    */
-  const characterStats = useMemo((): CharacterStats => {
-    let totalArmor = 0;
-    let totalDamageMin = 0;
-    let totalDamageMax = 0;
-    let totalHealth = 0;
-    let bonusDamageFromItems = 0; // +Damage from non-weapon items
-    let enchantDamageBonus = 0; // +Damage from grindstones
-    let enchantArmorBonus = 0; // +Armor from protective gear
-    const combinedStats = new Map<string, { flat: number; percent: number }>();
-
-    // Process each equipped item
-    equippedItems.forEach((equippedItem, slot) => {
-      const itemStats = calculateItemStats(
-        equippedItem.baseItem,
-        equippedItem.rarity,
-        equippedItem.conditioned,
-        equippedItem.prefix,
-        equippedItem.suffix
-      );
-
-      // Add armor
-      if (itemStats.armour) {
-        totalArmor += itemStats.armour;
-      } else if (itemStats.prefixArmor) {
-        // For items without base armor (rings/amulets), use prefixArmor
-        totalArmor += itemStats.prefixArmor;
-      }
-
-      // Add enchant bonus based on item type (legacy system)
-      if (equippedItem.enchantValue) {
-        if (slot === 'mainHand') {
-          // Grindstone for weapons
-          enchantDamageBonus += equippedItem.enchantValue;
-        } else if (slot === 'helmet' || slot === 'chest' || slot === 'gloves' || slot === 'shoes' || slot === 'offHand') {
-          // Protective gear for armor pieces only (not rings or amulets)
-          enchantArmorBonus += equippedItem.enchantValue;
-        }
-      }
-
-      // Process upgrades (new system: powders, etc.)
-      if (equippedItem.upgrades && equippedItem.upgrades.length > 0) {
-        equippedItem.upgrades.forEach(appliedUpgrade => {
-          const bonus = calculateUpgradeBonus(appliedUpgrade.upgrade, appliedUpgrade.level);
-          
-          if (appliedUpgrade.upgrade.stat === 'damage') {
-            enchantDamageBonus += bonus;
-          } else if (appliedUpgrade.upgrade.stat === 'armour') {
-            enchantArmorBonus += bonus;
-          } else {
-            // Powder stats (strength, dexterity, etc.)
-            const statName = appliedUpgrade.upgrade.stat.charAt(0).toUpperCase() + appliedUpgrade.upgrade.stat.slice(1);
-            const existing = combinedStats.get(statName) || { flat: 0, percent: 0 };
-            combinedStats.set(statName, {
-              flat: existing.flat + bonus,
-              percent: existing.percent,
-            });
-          }
-        });
-      }
-
-      // Add damage (only from weapons in mainHand/offHand)
-      if ((slot === 'mainHand' || slot === 'offHand') && itemStats.damage) {
-        totalDamageMin += itemStats.damage.min;
-        totalDamageMax += itemStats.damage.max;
-      }
-
-      // Add +Damage from non-weapon items (including shields, but not mainHand weapons)
-      if (slot !== 'mainHand' && itemStats.prefixDamage !== 0) {
-        bonusDamageFromItems += itemStats.prefixDamage;
-      }
-
-      // Add health from prefix
-      totalHealth += itemStats.prefixHealth;
-
-      // Combine all stats
-      itemStats.stats.forEach(stat => {
-        const existing = combinedStats.get(stat.name) || { flat: 0, percent: 0 };
-        combinedStats.set(stat.name, {
-          flat: existing.flat + stat.flat,
-          percent: existing.percent + stat.percent,
-        });
-      });
-    });
-
-    // Add enchant bonuses to totals
-    const armorFromItems = totalArmor;
-    const armorFromEnchants = enchantArmorBonus;
-    totalArmor += enchantArmorBonus;
-
-    // Calculate Damage Absorption
-    // Minimal armour absorption = (Armour/74)-(Armour/74)/660+1 [round up], if negative then 0
-    const minAbsorption = Math.ceil((totalArmor / 74) - (totalArmor / 74) / 660 + 1);
-    const minDamageAbsorbed = Math.max(0, minAbsorption);
-    // Maximal armour absorption = (Armour/66)+(Armour/660) [round down]
-    // Ensure max is at least equal to min
-    const maxDamageAbsorbed = Math.max(minDamageAbsorbed, Math.floor((totalArmor / 66) + (totalArmor / 660)));
-
-    // Calculate final agility value (base + flat bonuses + percentage bonuses), capped at max
-    const agilityStat = combinedStats.get('Agility') || { flat: 0, percent: 0 };
-    const agilityPercentBonus = Math.round(baseStats.agility * (agilityStat.percent / 100));
-    const uncappedAgility = baseStats.agility + agilityStat.flat + agilityPercentBonus;
-    const maxAgility = baseStats.agility + Math.floor(baseStats.agility / 2) + characterLevel;
-    const finalAgility = Math.min(uncappedAgility, maxAgility)
-      + (activePacts.has('sk_assassins') ? Math.floor(baseStats.agility / 2) : 0);
-    
-    // Calculate Resilience: floor(Agility/10) + hardening_value from items
-    const hardeningValueStat = combinedStats.get('hardening value') || { flat: 0, percent: 0 };
-    const resilienceFromAgility = Math.floor(finalAgility / 10);
-    const resilienceFromItems = hardeningValueStat.flat;
-    const totalResilience = resilienceFromAgility + resilienceFromItems;
-    
-    // Calculate Maximum Resilience Cap: FLOOR(24.5*4*(level-8)/52)+1
-    // Ensure max is never negative for low-level characters
-    const maxResilience = Math.max(0, Math.floor((24.5 * 4 * (characterLevel - 8) / 52) + 1));
-    
-    // Calculate Chance to avoid critical hits: (Resilience * 52 / (level-8)) / 4
-    // Protect against division by zero for low levels
-    // Cap at 25% maximum
-    const critAvoidanceChance = characterLevel > 8
-      ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 25)
-      : 0;
-
-    // Calculate final strength value (base + flat bonuses + percentage bonuses), capped at max
-    const strengthStat = combinedStats.get('Strength') || { flat: 0, percent: 0 };
-    const strengthPercentBonus = Math.round(baseStats.strength * (strengthStat.percent / 100));
-    const uncappedStrength = baseStats.strength + strengthStat.flat + strengthPercentBonus;
-    const maxStrength = baseStats.strength + Math.floor(baseStats.strength / 2) + characterLevel;
-    const finalStrength = Math.min(uncappedStrength, maxStrength)
-      + (activePacts.has('honour_hero') ? Math.floor(baseStats.strength / 2) : 0);
-    
-    // Calculate Blocking: floor(Strength/10) + block_value from items
-    const blockValueStat = combinedStats.get('Block value') || { flat: 0, percent: 0 };
-    const blockingFromStrength = Math.floor(finalStrength / 10);
-    const blockingFromItems = blockValueStat.flat;
-    const totalBlocking = blockingFromStrength + blockingFromItems;
-    
-    // Calculate Maximum Blocking Cap: FLOOR((49.5*6*(level-8)/52)+1)
-    // Ensure max is never negative for low-level characters
-    const maxBlocking = Math.max(0, Math.floor((49.5 * 6 * (characterLevel - 8) / 52) + 1));
-    
-    // Calculate Chance to block a hit: (Blocking value * 52 / (level-8)) / 6
-    // Cap at 50% maximum
-    const blockChance = characterLevel > 8
-      ? Math.min((totalBlocking * 52 / (characterLevel - 8)) / 6, 50)
-      : 0;
-    
-    // Calculate final dexterity value (base + flat bonuses + percentage bonuses), capped at max
-    const dexterityStat = combinedStats.get('Dexterity') || { flat: 0, percent: 0 };
-    const dexterityPercentBonus = Math.round(baseStats.dexterity * (dexterityStat.percent / 100));
-    const uncappedDexterity = baseStats.dexterity + dexterityStat.flat + dexterityPercentBonus;
-    const maxDexterity = baseStats.dexterity + Math.floor(baseStats.dexterity / 2) + characterLevel;
-    const finalDexterity = Math.min(uncappedDexterity, maxDexterity)
-      + (activePacts.has('honour_armourer') ? Math.floor(baseStats.dexterity / 2) : 0);
-    
-    // Calculate Critical Attack: floor(Dexterity/10) + Critical Attack Value from items
-    const criticalAttackValueStat = combinedStats.get('Critical attack value') || { flat: 0, percent: 0 };
-    const criticalAttackFromDexterity = Math.floor(finalDexterity / 10);
-    const criticalAttackFromItems = criticalAttackValueStat.flat;
-    const totalCriticalAttack = criticalAttackFromDexterity + criticalAttackFromItems;
-    
-    // Calculate Maximum Critical Attack Cap: FLOOR((49.5*5*(level-8)/52)+1)
-    // Ensure max is never negative for low-level characters
-    const maxCriticalAttack = Math.max(0, Math.floor((49.5 * 5 * (characterLevel - 8) / 52) + 1));
-    
-    // Calculate Chance for critical hit: (Critical attack value * 52 / (level-8)) / 5
-    // Cap at 50% maximum
-    const baseCritChance = characterLevel > 8
-      ? Math.min((totalCriticalAttack * 52 / (characterLevel - 8)) / 5, 50)
-      : 0;
-    const criticalHitChance = activePacts.has('honour_veteran') ? baseCritChance + 10 : baseCritChance;
-    
-    // Calculate Chance to hit: Your Dexterity/(Your Dexterity + Enemy Agility) x 100
-    // Simulate enemy agility as player's max agility
-    const chanceToHit = Math.floor((finalDexterity / (finalDexterity + maxAgility)) * 100);
-    
-    // Calculate final charisma value (base + flat bonuses + percentage bonuses), capped at max
-    const charismaStat = combinedStats.get('Charisma') || { flat: 0, percent: 0 };
-    const charismaPercentBonus = Math.round(baseStats.charisma * (charismaStat.percent / 100));
-    const uncappedCharisma = baseStats.charisma + charismaStat.flat + charismaPercentBonus;
-    const maxCharisma = baseStats.charisma + Math.floor(baseStats.charisma / 2) + characterLevel;
-    const finalCharisma = Math.min(uncappedCharisma, maxCharisma)
-      + (activePacts.has('blessing_venus') ? Math.floor(baseStats.charisma / 2) : 0);
-    
-    // Calculate Threat: floor(Charisma/10) + threat from items
-    const threatStat = combinedStats.get('Threat') || { flat: 0, percent: 0 };
-    const threatFromCharisma = Math.floor(finalCharisma / 10);
-    const threatFromItems = threatStat.flat;
-    const totalThreat = threatFromCharisma + threatFromItems;
-    
-    // Calculate final intelligence value (base + flat bonuses + percentage bonuses), capped at max
-    const intelligenceStat = combinedStats.get('Intelligence') || { flat: 0, percent: 0 };
-    const intelligencePercentBonus = Math.round(baseStats.intelligence * (intelligenceStat.percent / 100));
-    const uncappedIntelligence = baseStats.intelligence + intelligenceStat.flat + intelligencePercentBonus;
-    const maxIntelligence = baseStats.intelligence + Math.floor(baseStats.intelligence / 2) + characterLevel;
-    const finalIntelligence = Math.min(uncappedIntelligence, maxIntelligence);
-    
-    // Calculate Chance to double hit: Your Charisma * Your Dexterity / Enemy Intelligence / Enemy Agility * 10
-    // Simulate enemy intelligence as player's max intelligence and enemy agility as player's max agility
-    const chanceToDoubleHit = (finalCharisma * finalDexterity * 10) / (maxIntelligence * maxAgility);
-    
-    // Add 10% of Strength as damage
-    const strengthDamage = Math.floor(finalStrength * 0.1);
-    
-    // Calculate final constitution value (base + flat bonuses + percentage bonuses), capped at max
-    const constitutionStat = combinedStats.get('Constitution') || { flat: 0, percent: 0 };
-    const constitutionPercentBonus = Math.round(baseStats.constitution * (constitutionStat.percent / 100));
-    const uncappedConstitution = baseStats.constitution + constitutionStat.flat + constitutionPercentBonus;
-    const maxConstitution = baseStats.constitution + Math.floor(baseStats.constitution / 2) + characterLevel;
-    const finalConstitution = Math.min(uncappedConstitution, maxConstitution)
-      + (activePacts.has('sk_immortals') ? Math.floor(baseStats.constitution / 2) : 0);
-    
-    // Calculate health components
-    const healthFromLevel = characterLevel * 25;
-    const baseHealthFromConstitution = (finalConstitution * 25) - 50;
-    const healthFromConstitution = activePacts.has('blessing_jupiter')
-      ? Math.floor(baseHealthFromConstitution * 1.5)
-      : baseHealthFromConstitution;
-    const healthFromItems = totalHealth;
-    const maxHealth = healthFromLevel + healthFromConstitution + healthFromItems;
-    
-    // Calculate health regeneration per hour
-    const healthRegenPerHour = (characterLevel * 2) + (finalConstitution * 2);
-    
-    // Store weapon damage before adding bonuses
-    const weaponDamageMin = totalDamageMin;
-    const weaponDamageMax = totalDamageMax;
-    
-    // Add bonus damage from items, enchants, and strength to total damage
-    totalDamageMin += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
-    totalDamageMax += bonusDamageFromItems + enchantDamageBonus + strengthDamage;
-
-    if (activePacts.has('honour_berserker')) {
-      const berserkerBonus = Math.max(2, Math.ceil(characterLevel * 0.25));
-      totalDamageMin += berserkerBonus;
-      totalDamageMax += berserkerBonus;
-    }
-
-    return {
-      totalArmor,
-      armorFromItems,
-      armorFromEnchants,
-      minDamageAbsorbed,
-      maxDamageAbsorbed,
-      totalResilience,
-      maxResilience,
-      critAvoidanceChance,
-      resilienceFromAgility,
-      resilienceFromItems,
-      totalBlocking,
-      maxBlocking,
-      blockChance,
-      blockingFromStrength,
-      blockingFromItems,
-      totalThreat,
-      threatFromCharisma,
-      threatFromItems,
-      totalCriticalAttack,
-      maxCriticalAttack,
-      criticalHitChance,
-      criticalAttackFromDexterity,
-      criticalAttackFromItems,
-      chanceToHit,
-      chanceToDoubleHit,
-      totalDamageMin,
-      totalDamageMax,
-      totalHealth: maxHealth,
-      stats: combinedStats,
-      damageFromWeapons: { min: weaponDamageMin, max: weaponDamageMax },
-      damageFromStrength: strengthDamage,
-      damageFromItems: bonusDamageFromItems + enchantDamageBonus,
-      healthFromLevel,
-      healthFromConstitution,
-      baseHealthFromConstitution,
-      healthFromItems,
-      healthRegenPerHour,
-    };
-  }, [equippedItems, baseStats, characterLevel, activePacts]);
+  const characterStats = useMemo(
+    () => calculateCharacterStats(equippedItems, characterLevel, baseStats, activePacts),
+    [equippedItems, baseStats, characterLevel, activePacts]
+  );
 
   return {
     equippedItems,

@@ -6,7 +6,7 @@
 }
 
 .costumeAnimation {
-  margin-top: 12px;
+  margin-top: 0;
   width: 168px;
   height: 194px;
   background-color: #000000;
@@ -16,7 +16,7 @@
 }
 
 .costumeStatic {
-  margin-top: 12px;
+  margin-top: 0;
   width: 168px;
   height: 194px;
   background-color: #000000;
@@ -57,7 +57,7 @@
 }
 
 .faceImage {
-  margin-top: 12px;
+  margin-top: 0;
   width: 168px;
   height: 194px;
   border: 2px solid #8b7355;
