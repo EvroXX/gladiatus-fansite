@@ -35,7 +35,7 @@ The weather is gradually warming up across the Empire, and young minds are start
 |-----------|-----|------|------|-------------|
 | **Name** | <div className="player_name_bg"><div className="playername">Bertha the Broody Hen</div></div> | <div className="player_name_bg"><div className="playername">Babe the Runaway Sow</div></div> | <div className="player_name_bg"><div className="playername">Billy the Grouchy Goat</div></div> | <div className="player_name_bg"><div className="playername">Brutus the Berserker Bull</div></div> |
 | **Image** | ![Bertha the Broody Hen](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen.jpg) | ![Babe the Runaway Sow](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog.jpg) | ![Billy the Grouchy Goat](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Brutus the Berserker Bull](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" alt="Boss Frame" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
-| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif "Level") **Level** | Same as Character | Same as Character | Same as Character | Same as Character |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif "Level") **Level** | Character level +5 | Character level +10 | Character level +15 | Character level +20 |
 | ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "Gold") **Gold** | Depending on level | Depending on level | Depending on level | Depending on level |
 | ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif "Experience") **Experience** | Depending on level | Depending on level | Depending on level | Depending on level |
 | ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif "Honour") **Honour** | Depending on level | Depending on level | Depending on level | Depending on level |
@@ -51,7 +51,7 @@ The weather is gradually warming up across the Empire, and young minds are start
 
 - It's scalable expedition. It means that the opponent's level will scale based on your character level. Levels of opponents are quite high and can be challenging at low levels. On high levels this changes and they don't or barely penetrate the armor and are doing low or 0 damage to the experienced gladiator
     - Opponent 1 Level = Character level +5
-    - Opponent 2 Level = Character level + 10
+    - Opponent 2 Level = Character level +10
     - Opponent 3 Level = Character level +15
     - Boss Level = Character level +20
 
