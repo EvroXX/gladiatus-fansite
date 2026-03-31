@@ -67,6 +67,8 @@ The weather is gradually warming up across the Empire, and young minds are start
 
 - Event mobs drop Golden Rabbits and Easter Eggs, read more below
 
+- Thorough search constitutes of 25 mins cooldown on the event expedition (Speed 1)
+
 ## Bubona's Bull Armour
 
 ![Bubona's Bull Armour male](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bubona_costume_male.gif "Bubona's Bull Armour male")
@@ -91,17 +93,17 @@ Check out the [Costumes](/costumes "Costumes") page for extended info on the cos
 - Costume may not drop every day but if you participate every day of the event you are guaranteed to have it in the end
 - During the event the mobs from the event expedition will start to drop event bunnies
 
-## Golden Bunny
+### Golden Bunny
 
 ![Golden Bunny](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Golden_Bunny.png "Golden Bunny")
 
 ![Golden Bunny description](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Golden_Bunny_stats.png "Golden Bunny description")
 
-The Golden Bunny will be available during the Wild Farm event and when dragged onto your character picture will award 1 random buff from the Bubona's Bull Armour costume properties for 1 hour. Note however, that the Bunnies will not work if you don't have any piece of the Bubona armour collected. Also, which costume property the Bunny will award relies entirely on the number of discovered set pieces. If you have them all, it will just randomly award one. If it awards you the same buff, it will increase it's duration with another hour (making it 2, 3 and etc)
+Associated with the [Wild Farm](/events/wild-farm "Wild Farm") event. Drag it onto your character picture to activate one of the [Bubona's Bull Armour](/costumes/event-costumes "Bubona's Bull Armour") costume properties (if you have collected any)
 
-## Easter Eggs
+## Easter eggs
 
-- During the event all enemies from all sources will start to drop Easter Eggs. Easter eggs are special event food which is low on healing powers but has buffs, just like other [Event items](/items/event-items "Event items")
+Easter eggs can roll prefixes and suffixes but they don't have any relevance, just like with normal food. However, just like Special food, eggs will give you benefits when you use them. They also have naturally low healing powers.
 
 ### Egg (blue)
 
@@ -121,7 +123,7 @@ The Golden Bunny will be available during the Wild Farm event and when dragged o
 
 ![Easter Egg (green) stats](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_green_stats.png "Easter Egg (green) stats")
 
-### Unknown Egg
+### Unknown egg
 
 ![Easter egg ()](https://gladiatusfansite.blob.core.windows.net/images/Items/img/Event_Items/Easter_egg_unknown.png "Easter egg ()")
 
