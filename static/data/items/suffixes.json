@@ -6001,7 +6001,12 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Jasper": 2,
+      "Bark": 17,
+      "Raven Feather": 28,
+      "Moon Rune": 3
+    },
     "id": 295
   },
   {
@@ -6018,7 +6023,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Cuprit": 2,
+      "Bark": 33,
+      "Raven Feather": 15
+    },
     "id": 296
   },
   {
@@ -6170,7 +6179,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 22,
+      "Raven Feather": 29
+    },
     "id": 299
   },
   {
@@ -6199,7 +6211,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 16,
+      "Raven Feather": 16,
+      "Moon Rune": 20
+    },
     "id": 301
   },
   {
@@ -6312,7 +6328,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Raven Feather": 8,
+      "Jet": 45
+    },
     "id": 302
   },
   {
@@ -6459,7 +6478,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 3,
+      "Moon Rune": 53
+    },
     "id": 311
   },
   {
@@ -6528,7 +6550,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 48,
+      "Raven Feather": 8
+    },
     "id": 313
   },
   {
@@ -6549,7 +6574,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 2,
+      "Jet": 49,
+      "Glyph of the Grove": 5
+    },
     "id": 309
   },
   {
@@ -6578,7 +6607,12 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 5,
+      "Jet": 36,
+      "Moon Rune": 12,
+      "Glyph of the Grove": 4
+    },
     "id": 314
   },
   {
@@ -6607,7 +6641,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 22,
+      "Jet": 19,
+      "Moon Rune": 15
+    },
     "id": 315
   },
   {
@@ -6624,7 +6662,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Jet": 23,
+      "Moon Rune": 36
+    },
     "id": 316
   },
   {
@@ -6653,7 +6694,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 16,
+      "Raven Feather": 19,
+      "Glyph of the Grove": 24
+    },
     "id": 317
   },
   {
@@ -6838,7 +6883,10 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Druid's Potion": 62,
+      "Glyph of the Grove": 3
+    },
     "id": 323
   },
   {
@@ -6875,7 +6923,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Bark": 8,
+      "Druid's Potion": 44,
+      "Glyph of the Grove": 14
+    },
     "id": 324
   },
   {
@@ -6904,7 +6956,12 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Raven Feather": 2,
+      "Druid's Potion": 44,
+      "Moon Rune": 2,
+      "Glyph of the Grove": 21
+    },
     "id": 325
   },
   {
@@ -6964,7 +7021,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Raven Feather": 16,
+      "Druid's Potion": 49,
+      "Glyph of the Grove": 5
+    },
     "id": 327
   },
   {
@@ -7120,7 +7181,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Druid's Potion": 37,
+      "Moon Rune": 17,
+      "Glyph of the Grove": 22
+    },
     "id": 332
   },
   {
