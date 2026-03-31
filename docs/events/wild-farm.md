@@ -29,18 +29,6 @@ Be prepared to to face Bertha and Babe again. They don't know mercy, and they've
 
 The weather is gradually warming up across the Empire, and young minds are starting to go a little crazy. During the night, a group of novice gladiators decided to play a prank and let loose the animals on all of the city\`s farms. Now it`s up to the experienced warriors to herd these beasts together again. Do you think you have what it takes to stand up to Bertha's rage? Then head out onto the streets and start rounding them all up
 
-## Expedition
-
-| Attribute | Enemy 1 | Enemy 2 | Enemy 3 | Boss |
-|-----------|-----|------|------|-------------|
-| **Name** | <div className="player_name_bg"><div className="playername">Bertha the Broody Hen</div></div> | <div className="player_name_bg"><div className="playername">Babe the Runaway Sow</div></div> | <div className="player_name_bg"><div className="playername">Billy the Grouchy Goat</div></div> | <div className="player_name_bg"><div className="playername">Brutus the Berserker Bull</div></div> |
-| **Image** | ![Bertha the Broody Hen](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen.jpg) | ![Babe the Runaway Sow](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog.jpg) | ![Billy the Grouchy Goat](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Brutus the Berserker Bull](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" alt="Boss Frame" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
-| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif "Level") **Level** | Character level +5 | Character level +10 | Character level +15 | Character level +20 |
-| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "Gold") **Gold** | Depending on level | Depending on level | Depending on level | Depending on level |
-| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif "Experience") **Experience** | Depending on level | Depending on level | Depending on level | Depending on level |
-| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif "Honour") **Honour** | Depending on level | Depending on level | Depending on level | Depending on level |
-| Stats | ![Bertha the Broody Hen stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen_stats.png) | ![Babe the Runaway Sow stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog_stats.png) | ![Billy the Grouchy Goat stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat_stats.png) | ![Brutus the Berserker Bull stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull_stats.png) |
-
 ## Event Info
 
 - The event is an extra expedition which works just like other event expeditions with 16 ![Event Expedition points](https://gladiatusfansite.blob.core.windows.net/images/expedition_points2.png "Event Expedition points") available every day and recharging with new at 0:00 local server time
@@ -67,7 +55,19 @@ The weather is gradually warming up across the Empire, and young minds are start
 
 - Event mobs drop Golden Rabbits and Easter Eggs, read more below
 
-- Thorough search constitutes of 25 mins cooldown on the event expedition (Speed 1)
+- Cooldown even on faster servers is 5 mins per attack. Thorough search constitutes of 25 mins cooldown on the event expedition, even on faster servers
+
+## Expedition
+
+| Attribute | Enemy 1 | Enemy 2 | Enemy 3 | Boss |
+|-----------|-----|------|------|-------------|
+| **Name** | <div className="player_name_bg"><div className="playername">Bertha the Broody Hen</div></div> | <div className="player_name_bg"><div className="playername">Babe the Runaway Sow</div></div> | <div className="player_name_bg"><div className="playername">Billy the Grouchy Goat</div></div> | <div className="player_name_bg"><div className="playername">Brutus the Berserker Bull</div></div> |
+| **Image** | ![Bertha the Broody Hen](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen.jpg) | ![Babe the Runaway Sow](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog.jpg) | ![Billy the Grouchy Goat](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Brutus the Berserker Bull](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" alt="Boss Frame" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif "Level") **Level** | Character level +5 | Character level +10 | Character level +15 | Character level +20 |
+| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "Gold") **Gold** | Depending on level | Depending on level | Depending on level | Depending on level |
+| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif "Experience") **Experience** | Depending on level | Depending on level | Depending on level | Depending on level |
+| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif "Honour") **Honour** | Depending on level | Depending on level | Depending on level | Depending on level |
+| Stats | ![Bertha the Broody Hen stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hen_stats.png) | ![Babe the Runaway Sow stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/hog_stats.png) | ![Billy the Grouchy Goat stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/goat_stats.png) | ![Brutus the Berserker Bull stats](https://gladiatusfansite.blob.core.windows.net/images/Events/Wild_Farm/bull_stats.png) |
 
 ## Bubona's Bull Armour
 
