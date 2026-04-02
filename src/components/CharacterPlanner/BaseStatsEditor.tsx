@@ -45,16 +45,14 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
   // Calculate final effective stat including equipment bonuses and pact bonus
   const calculateFinalStat = (baseStat: number, statName: string, statKey: keyof BaseStats): number => {
     const equipBonus = characterStats.stats.get(statName);
-    const percentBonus = equipBonus ? Math.round(baseStat * (equipBonus.percent / 100)) : 0;
+    const percentBonus = equipBonus ? Math.floor(baseStat * (equipBonus.percent / 100)) : 0;
     const flatBonus = equipBonus?.flat ?? 0;
     const uncapped = baseStat + flatBonus + percentBonus;
 
     const naturalMax = baseStat + Math.floor(baseStat / 2) + characterLevel;
-    const capped = Math.min(uncapped, naturalMax);
-
     const pactId = STAT_PACT[statKey];
     const pactBonus = pactId && activePacts.has(pactId) ? Math.floor(baseStat / 2) : 0;
-    return capped + pactBonus;
+    return Math.min(uncapped, naturalMax + pactBonus);
   };
 
   const statNames: Array<{ key: keyof BaseStats; display: string }> = [
@@ -81,7 +79,7 @@ export default function BaseStatsEditor({ baseStats, setBaseStats, characterStat
           // Calculate the actual value from percentage (applied to base stat only)
           let percentValue = 0;
           if (equipBonus && equipBonus.percent !== 0) {
-            percentValue = Math.round(baseStats[key] * (equipBonus.percent / 100));
+            percentValue = Math.floor(baseStats[key] * (equipBonus.percent / 100));
           }
           
           // Calculate total bonus from items

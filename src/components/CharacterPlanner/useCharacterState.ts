@@ -380,8 +380,8 @@ export function calculateCharacterStats(
   const agilityPercentBonus = Math.round(baseStats.agility * (agilityStat.percent / 100));
   const uncappedAgility = baseStats.agility + agilityStat.flat + agilityPercentBonus;
   const maxAgility = baseStats.agility + Math.floor(baseStats.agility / 2) + characterLevel;
-  const finalAgility = Math.min(uncappedAgility, maxAgility)
-    + (activePacts.has('sk_assassins') ? Math.floor(baseStats.agility / 2) : 0);
+  const agilityPactBonus = activePacts.has('sk_assassins') ? Math.floor(baseStats.agility / 2) : 0;
+  const finalAgility = Math.min(uncappedAgility, maxAgility + agilityPactBonus);
 
   const hardeningValueStat = combinedStats.get('hardening value') || { flat: 0, percent: 0 };
   const resilienceFromAgility = Math.floor(finalAgility / 10);
@@ -395,8 +395,8 @@ export function calculateCharacterStats(
   const strengthPercentBonus = Math.round(baseStats.strength * (strengthStat.percent / 100));
   const uncappedStrength = baseStats.strength + strengthStat.flat + strengthPercentBonus;
   const maxStrength = baseStats.strength + Math.floor(baseStats.strength / 2) + characterLevel;
-  const finalStrength = Math.min(uncappedStrength, maxStrength)
-    + (activePacts.has('honour_hero') ? Math.floor(baseStats.strength / 2) : 0);
+  const strengthPactBonus = activePacts.has('honour_hero') ? Math.floor(baseStats.strength / 2) : 0;
+  const finalStrength = Math.min(uncappedStrength, maxStrength + strengthPactBonus);
 
   const blockValueStat = combinedStats.get('Block value') || { flat: 0, percent: 0 };
   const blockingFromStrength = Math.floor(finalStrength / 10);
@@ -410,8 +410,8 @@ export function calculateCharacterStats(
   const dexterityPercentBonus = Math.round(baseStats.dexterity * (dexterityStat.percent / 100));
   const uncappedDexterity = baseStats.dexterity + dexterityStat.flat + dexterityPercentBonus;
   const maxDexterity = baseStats.dexterity + Math.floor(baseStats.dexterity / 2) + characterLevel;
-  const finalDexterity = Math.min(uncappedDexterity, maxDexterity)
-    + (activePacts.has('honour_armourer') ? Math.floor(baseStats.dexterity / 2) : 0);
+  const dexterityPactBonus = activePacts.has('honour_armourer') ? Math.floor(baseStats.dexterity / 2) : 0;
+  const finalDexterity = Math.min(uncappedDexterity, maxDexterity + dexterityPactBonus);
 
   const criticalAttackValueStat = combinedStats.get('Critical attack value') || { flat: 0, percent: 0 };
   const criticalAttackFromDexterity = Math.floor(finalDexterity / 10);
@@ -428,8 +428,8 @@ export function calculateCharacterStats(
   const charismaPercentBonus = Math.round(baseStats.charisma * (charismaStat.percent / 100));
   const uncappedCharisma = baseStats.charisma + charismaStat.flat + charismaPercentBonus;
   const maxCharisma = baseStats.charisma + Math.floor(baseStats.charisma / 2) + characterLevel;
-  const finalCharisma = Math.min(uncappedCharisma, maxCharisma)
-    + (activePacts.has('blessing_venus') ? Math.floor(baseStats.charisma / 2) : 0);
+  const charismaPactBonus = activePacts.has('blessing_venus') ? Math.floor(baseStats.charisma / 2) : 0;
+  const finalCharisma = Math.min(uncappedCharisma, maxCharisma + charismaPactBonus);
 
   const threatStat = combinedStats.get('Threat') || { flat: 0, percent: 0 };
   const threatFromCharisma = Math.floor(finalCharisma / 10);
@@ -450,8 +450,8 @@ export function calculateCharacterStats(
   const constitutionPercentBonus = Math.round(baseStats.constitution * (constitutionStat.percent / 100));
   const uncappedConstitution = baseStats.constitution + constitutionStat.flat + constitutionPercentBonus;
   const maxConstitution = baseStats.constitution + Math.floor(baseStats.constitution / 2) + characterLevel;
-  const finalConstitution = Math.min(uncappedConstitution, maxConstitution)
-    + (activePacts.has('sk_immortals') ? Math.floor(baseStats.constitution / 2) : 0);
+  const constitutionPactBonus = activePacts.has('sk_immortals') ? Math.floor(baseStats.constitution / 2) : 0;
+  const finalConstitution = Math.min(uncappedConstitution, maxConstitution + constitutionPactBonus);
 
   const healthFromLevel = characterLevel * 25;
   const baseHealthFromConstitution = (finalConstitution * 25) - 50;
