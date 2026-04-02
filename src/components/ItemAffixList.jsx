@@ -270,6 +270,7 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
 
             {/* Level */}
             <div style={{ color: '#9b9b9b', marginTop: '4px' }}>Level {item.level}</div>
+            <div style={{ color: '#9b9b9b' }}>Scroll level {item.level + 10}</div>
 
             {/* Gold */}
             {item.level > 0 && (() => {
