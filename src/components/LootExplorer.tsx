@@ -273,9 +273,9 @@ function computeComboDamage(combo: ItemCombo, rarity: ItemRarity, conditioned: b
 type DamageMap = Map<string, { min: number; max: number } | null>;
 
 // Resolves any stat key; damage keys use the pre-built map for O(1) lookup
-function resolveComboStat(combo: ItemCombo, statKey: string, damageMap: DamageMap | null): number {
+function resolveComboStat(combo: ItemCombo, statKey: string, damageMap: DamageMap): number {
   if (statKey === 'minDamage' || statKey === 'maxDamage') {
-    const dmg = damageMap?.get(combo.key) ?? null;
+    const dmg = damageMap.get(combo.key) ?? null;
     return dmg ? (statKey === 'minDamage' ? dmg.min : dmg.max) : 0;
   }
   return getComboStat(combo, statKey);
@@ -379,17 +379,14 @@ export default function LootExplorer() {
     return buildCombos(bases, prefixList, suffixList, characterLevel, maxLevel);
   }, [bases, resolvedPrefix, resolvedSuffix, characterLevel, maxLevel]);
 
-  // Pre-build damage map only when a damage stat is actually selected — computed once, reused by both filter and sort
-  const comboDamageMap = useMemo<DamageMap | null>(() => {
-    const needed = filterStat === 'minDamage' || filterStat === 'maxDamage'
-                || sortBy === 'minDamage'    || sortBy === 'maxDamage';
-    if (!needed) return null;
+  // Pre-build damage map once per allCombos/rarity/conditioning change — O(1) lookup for filter and sort
+  const comboDamageMap = useMemo<DamageMap>(() => {
     const map: DamageMap = new Map();
     for (const combo of allCombos) {
       map.set(combo.key, computeComboDamage(combo, selectedRarity, conditioned));
     }
     return map;
-  }, [allCombos, selectedRarity, conditioned, filterStat, sortBy]);
+  }, [allCombos, selectedRarity, conditioned]);
 
   const processedCombos = useMemo(() => {
     // 1. Name filter

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "21-7",
+    "name": "Mini Pumpkin",
+    "event": "Desert Nightmare",
+    "costume": "Mercurius` Leather Armour",
+    "gold": 13,
+    "rarity": "orange",
+    "level": 1
+  },
+  {
+    "id": "21-5",
+    "name": "Snowball",
+    "event": "Ice Tundra",
+    "costume": "Saturn's Winter Garment",
+    "gold": 13,
+    "rarity": "blue",
+    "level": 1
+  },
+  {
+    "id": "21-4",
+    "name": "Sun Rune",
+    "event": "On the Nile bank",
+    "costume": "Ra's Light Robe's ",
+    "gold": 13,
+    "rarity": "orange",
+    "level": 1
+  },
+  {
+    "id": "21-6",
+    "name": "Golden Bunny",
+    "event": "Wild Farm",
+    "costume": "Bubona`s Bull Armour",
+    "gold": 13,
+    "rarity": "orange",
+    "level": 1
+  }
+]

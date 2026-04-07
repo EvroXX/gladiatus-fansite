@@ -3,6 +3,7 @@ import styles from '@site/src/css/ItemTooltip.module.css';
 import basesData from '@site/static/data/items/bases.json';
 import prefixesData from '@site/static/data/items/prefixes.json';
 import suffixesData from '@site/static/data/items/suffixes.json';
+import eventItemsData from '@site/static/data/items/event-items.json';
 import type { Upgrade, AppliedUpgrade } from './CharacterPlanner/useCharacterState';
 import { calcAffixGoldBase, COMBINED_AFFIX_MULTIPLIER } from '@site/src/utils/affixGold';
 
@@ -23,6 +24,17 @@ export interface BaseItem {
   conditioning: number | null;
   gold: number | null;
   materials: Record<string, number>;
+}
+
+// Event item type from event-items.json — no slot, no combat stats, activated by dragging onto character
+export interface EventItem {
+  id: string;
+  name: string;
+  event: string;
+  costume: string;
+  gold: number;
+  rarity: ItemRarity;
+  level: number;
 }
 
 // Prefix/Suffix will have stats that modify the base item
@@ -53,7 +65,7 @@ export interface CalculatedItemStats {
 }
 
 interface ItemProps {
-  baseItem: string | BaseItem; // Can be item name or item object
+  baseItem: string | BaseItem | EventItem; // Can be item name, base item, or event item
   prefix?: string | PrefixSuffix;
   suffix?: string | PrefixSuffix;
   rarity?: ItemRarity; // Optional override, auto-detected if not provided
@@ -465,10 +477,49 @@ export default function Item({
   characterLevel,
   characterBaseStats,
 }: ItemProps) {
+  // Resolve event item — check by name string or direct object with no 'type' field
+  const resolvedEventItem: EventItem | null = (() => {
+    if (typeof baseItem === 'string') {
+      return (eventItemsData as EventItem[]).find(e => e.name === baseItem) ?? null;
+    }
+    if ('event' in baseItem) return baseItem as EventItem;
+    return null;
+  })();
+
+  if (resolvedEventItem) {
+    const ALL_EVENTS = (eventItemsData as EventItem[]).map(e => e.event).join(', ');
+    return (
+      <span className={styles.wrapper}>
+        <div className={`item-i-${resolvedEventItem.id} ${styles.icon}`} />
+        {!hideTooltip && (
+          <span className={styles.tooltip}>
+            <div className={`${styles.title} ${styles[resolvedEventItem.rarity]}`}>
+              {resolvedEventItem.name}
+            </div>
+            <div className={styles.level}>Level {resolvedEventItem.level}</div>
+            <div>
+              Value {resolvedEventItem.gold.toLocaleString()}{' '}
+              <img
+                src="https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif"
+                alt="Gold"
+              />
+            </div>
+            <div className={styles.level}>
+              Hint: To use an item drag it onto your character picture in the overview.
+            </div>
+            <div className={styles.eventWarning}>
+              Only possible during one of the following events: {ALL_EVENTS}
+            </div>
+          </span>
+        )}
+      </span>
+    );
+  }
+
   // Resolve base item if it's a string
   const resolvedBaseItem: BaseItem | null = typeof baseItem === 'string'
     ? (basesData as BaseItem[]).find(item => item.name === baseItem) || null
-    : baseItem;
+    : baseItem as BaseItem;
 
   if (!resolvedBaseItem) {
     return <span style={{ color: 'red' }}>Item not found: {typeof baseItem === 'string' ? baseItem : 'unknown'}</span>;
