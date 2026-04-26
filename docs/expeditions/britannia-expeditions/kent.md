@@ -6,7 +6,7 @@ keywords: [Expeditions, Gladiatus Expeditions, Britannia Expeditions, Kent]
 tags:
   - expeditions
   - britannia expeditions
-description: Kent Fortress is a high level expedition (starting level 160) in Britannia.
+description: Galerius Senecianus` Diary DCXCIX a.u.c. The camp fell, Cassivellaunus fled! He however managed to send a message to the Kings of Kent, to mobilise them against us. They intend to attack our camp on the coast, hoping to make us retreat. They know the land and its intricacies much better than we do, but if we plan on staying here long term, we have to defeat them...
 image: https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Kent/Opponent_boss.jpg
 ---
 
@@ -14,11 +14,11 @@ Kent Fortress is a high level expedition (starting level 160) in Britannia.
 
 ## Description
 
-Insert
+Galerius Senecianus` Diary: DCXCIX a.u.c. The camp fell, Cassivellaunus fled! He however managed to send a message to the Kings of Kent, to mobilise them against us. They intend to attack our camp on the coast, hoping to make us retreat. They know the land and its intricacies much better than we do, but if we plan on staying here long term, we have to defeat them...
 
 **Entry level:** 160
 
-**Enemy levels:** 
+**Enemy levels:** 171-178?
 
 **Real level to engage:** 160
 
@@ -36,16 +36,16 @@ Insert
 |-----------|---------|---------|---------|------|
 | **Name** | <div className="player_name_bg"><div className="playername">Cingetorix</div></div> | <div className="player_name_bg"><div className="playername">Segovax</div></div> | <div className="player_name_bg"><div className="playername">Carvilius</div></div> | <div className="player_name_bg"><div className="playername">Taximagulus</div></div> |
 | **Image** | ![Cingetorix](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Kent/Opponent_1.jpg) | ![Segovax](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Kent/Opponent_2.jpg) | ![Carvilius](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Kent/Opponent_3.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Taximagulus](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Kent/Opponent_boss.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
-| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 174 | 172 | 177 | 178 |
-| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) **Gold** | 0 | 0 | 0 | 0 |
-| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) **Experience** | 0 | 0 | 0 | 0 |
-| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) **Honour** | 0 | 0 | 0 | 0 |
-| **Strength** | 1496 | 1754 | 849 | 284 |
-| **Dexterity** | 1696 | 1419 | 2212 | 1780 |
-| **Agility** | 1400 | 1505 | 3717 | 2492 |
-| **Constitution** | 1357 | 1995 | 885 | 1246 |
-| **Charisma** | 974 | 2167 | 1239 | 3738 |
-| **Intelligence** | 800 | 997 | 1274 | 1851 |
-| **Armour** | 80347 | 24752 | 42093 | 33738 |
-| **Damage** | 1152-1414 | 1059-1300 | 1499-1839 | 1452-1783 |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 171 | 174 | 178 | 178 |
+| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) **Gold** | 11458 | 10509 | 9900 | 16532 |
+| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) **Experience** | 17 | 20 | 20 | 23 |
+| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) **Honour** | 1439 | 1597 | 1432 | 1596 |
+| **Strength** | 1128 | 1670 | 854 | 356 |
+| **Dexterity** | 1539 | 1435 | 1691 | 1557 |
+| **Agility** | 1376 | 1522 | 1744 | 1993 |
+| **Constitution** | 1231 | 1995 | 890 | 1139 |
+| **Charisma** | 957 | 2192 | 1246 | 2492 |
+| **Intelligence** | 786 | 1009 | 1139 | 1495 |
+| **Armour** | 45303 | 33221 | 42402 | 30070 |
+| **Damage** | 921-1131 | 1018-1249 | 1069-1312 | 1096-1345 |
 | **Item Level Drop** | ??? | ??? | ??? | ??? |

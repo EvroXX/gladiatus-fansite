@@ -6,7 +6,7 @@ keywords: [Expeditions, Gladiatus Expeditions, Britannia Expeditions, Forest For
 tags:
   - expeditions
   - britannia expeditions
-description: Forest Fortress is a high level expedition (starting level 130) in Britannia.
+description: Galerius Senecianus` Diary DCXCIX a.u.c. After the initial skirmishes, these barbaric Britons withdrew to the forest. Caesar pursued them with the intent of running them down and setting up an inland camp. To be honest, I am a little concerned. I heard things on the route here of mystical beings that are roaming and rampaging in the local woods. I pray that these are merely tales to frighten the young... and us Romans.
 image: https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Forest_Fortress/Kalirius.jpg
 ---
 
@@ -14,11 +14,11 @@ Forest Fortress is a high level expedition (starting level 130) in Britannia.
 
 ## Description
 
-Insert
+Galerius Senecianus` Diary: DCXCIX a.u.c. After the initial skirmishes, these barbaric Britons withdrew to the forest. Caesar pursued them with the intent of running them down and setting up an inland camp. To be honest, I am a little concerned. I heard things on the route here of mystical beings that are roaming and rampaging in the local woods. I pray that these are merely tales to frighten the young... and us Romans.
 
 **Entry level:** 130
 
-**Enemy levels:** 
+**Enemy levels:** 140-146?
 
 **Real level to engage:** 130
 
@@ -34,18 +34,18 @@ Insert
 
 | Attribute | Enemy 1 | Enemy 2 | Enemy 3 | Boss |
 |-----------|---------|---------|---------|------|
-| **Name** | <div className="player_name_bg"><div className="playername">Wood Elf</div></div> | <div className="player_name_bg"><div className="playername">Dwarf</div></div> | <div className="player_name_bg"><div className="playername">British Chariot</div></div> | <div className="player_name_bg"><div className="playername">Callirius</div></div> |
+| **Name** | <div className="player_name_bg"><div className="playername">Forest Elf</div></div> | <div className="player_name_bg"><div className="playername">Dwarf</div></div> | <div className="player_name_bg"><div className="playername">British Chariot</div></div> | <div className="player_name_bg"><div className="playername">Callirius</div></div> |
 | **Image** | ![Wood Elf](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Forest_Fortress/Opponent_1.jpg) | ![Dwarf](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Forest_Fortress/Opponent_2.jpg) | ![British Chariot](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Forest_Fortress/Opponent_3.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Callirius](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Forest_Fortress/Kalirius.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
-| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 139 | 139 | 143 | 143 |
-| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) **Gold** | 0 | 0 | 0 | 0 |
-| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) **Experience** | 0 | 0 | 0 | 0 |
-| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) **Honour** | 0 | 0 | 0 | 0 |
-| **Strength** | 887 | 1234 | 603 | 199 |
-| **Dexterity** | 1210 | 833 | 1501 | 1097 |
-| **Agility** | 1117 | 1085 | 2808 | 1844 |
-| **Constitution** | 968 | 1531 | 661 | 990 |
-| **Charisma** | 720 | 1764 | 831 | 2820 |
-| **Intelligence** | 476 | 683 | 895 | 1181 |
-| **Armour** | 50147 | 16506 | 29019 | 23146 |
-| **Damage** | 785-963 | 686-842 | 989-1214 | 972-1193 |
-| **Item Level Drop** | ??? | ??? | ??? | ??? |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 140 | 146 | 144 | 146 |
+| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) **Gold** | 9887 | 11304 | 8248 | 8492 |
+| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) **Experience** | 14 | 17 | 14 | 19 |
+| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) **Honour** | 857 | 892 | 1183 | 984 |
+| **Strength** | 756 | 1314 | 748 | 876 |
+| **Dexterity** | 1050 | 328 | 792 | 912 |
+| **Agility** | 1323 | 204 | 1260 | 1686 |
+| **Constitution** | 840 | 1372 | 777 | 671 |
+| **Charisma** | 1078 | 459 | 1108 | 511 |
+| **Intelligence** | 448 | 262 | 518 | 963 |
+| **Armour** | 12604 | 16506 | 46430 | 30473 |
+| **Damage** | 517-635 | 686-842 | 554-680 | 786-965 |
+| **Item Level Drop** | 146 | ??? | ??? | ??? |

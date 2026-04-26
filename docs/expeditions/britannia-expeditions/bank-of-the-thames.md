@@ -36,67 +36,19 @@ Long waited first expedition in Britannia. It is what you expect. Tougher oppone
 |-----------|---------|---------|---------|------|
 | **Name** | <div className="player_name_bg"><div className="playername">Bibroci</div></div> | <div className="player_name_bg"><div className="playername">Ancalite</div></div> | <div className="player_name_bg"><div className="playername">Cenimagni</div></div> | <div className="player_name_bg"><div className="playername">Cassi</div></div> |
 | **Image** | ![Bibroci](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Bibroci.jpg) | ![Ancalite](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Ancalite.jpg) | ![Cenimagni](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Cenimagni.jpg) | <div style={{position: 'relative', display: 'inline-block'}}>![Cassi](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Cassi.jpg)<img src="https://gladiatusfansite.blob.core.windows.net/images/Expeditions/boss_picture.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none'}} /></div> |
-| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 119 | 120 | 122 | 122 |
+| ![Level](https://gladiatusfansite.blob.core.windows.net/images/icon_level.gif) **Level** | 134 | 136 | 137 | 137 |
 | ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) **Gold** | 6720 | 7440 | 11680 | 14560 |
 | ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) **Experience** | 19 | 22 | 21 | 21 |
 | ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) **Honour** | 866 | 792 | 736 | 620 |
-| **Strength** | 733 | 849 | 413 | 136 |
-| **Dexterity** | 755 | 628 | 1028 | 786 |
-| **Agility** | 681 | 767 | 1883 | 1242 |
-| **Constitution** | 665 | 1038 | 450 | 669 |
-| **Charisma** | 460 | 1214 | 584 | 1983 |
-| **Intelligence** | 292 | 443 | 623 | 793 |
-| **Armour** | 30780 | 11064 | 18730 | 14655 |
-| **Damage** | 510-626 | 481-590 | 672-825 | 652-801 |
+| **Strength** | 402 | 761 | 274 | 794 |
+| **Dexterity** | 770 | 272 | 1027 | 616 |
+| **Agility** | 984 | 476 | 1198 | 1006 |
+| **Constitution** | 616 | 680 | 493 | 794 |
+| **Charisma** | 703 | 1094 | 1102 | 1102 |
+| **Intelligence** | 455 | 108 | 1013 | 493 |
+| **Armour** | 20736 | 29728 | 9740 | 30209 |
+| **Damage** | 412-506 | 670-822 | 548-673 | 443-543 |
 | **Item Level Drop** | 120-133 | 121-134 | 123-134 | 125-139* |
-
----
-
-## Enemies Stats by Attributes
-
-| Opponent | Strength | Dexterity | Agility | Constitution | Charisma | Intelligence | Armour | Damage |
-|----------|----------|-----------|---------|--------------|----------|--------------|--------|--------|
-| Bibroci | 733 | 755 | 681 | 665 | 460 | 292 | 30780 | 510-626 |
-| Ancalite | 849 | 628 | 767 | 1038 | 1214 | 443 | 11064 | 481-590 |
-| Cenimagni | 413 | 1028 | 1883 | 450 | 584 | 623 | 18730 | 672-825 |
-| Cassi | 136 | 786 | 1242 | 669 | 1983 | 793 | 14655 | 652-801 |
-
----
-
-## Analysis
-
-The expedition consists of four enemies with different stats and builds:
-
-1. **Bibroci** - High armour (30780), balanced physical stats
-2. **Ancalite** - Moderate armour (11064), higher charisma and constitution
-3. **Cenimagni** - Mid-range armour (18730), highest agility
-4. **Cassi** - Moderate armour (14655), highest charisma
-
----
-
-## Stats comparison
-
-### Opponents
-
-| | ![Bibroci](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Bibroci.jpg)<br/>Bibroci | ![Ancalite](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Ancalite.jpg)<br/>Ancalite | ![Cenimagni](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Cenimagni.jpg)<br/>Cenimagni | ![Cassi](https://gladiatusfansite.blob.core.windows.net/images/Expeditions/Britannia/Bank_of_the_Thames/Cassi.jpg)<br/>Cassi |
-|---|---|---|---|---|
-| **Averages** | | | | |
-| ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif) Gold | 8737 | 8878 | 9134 | 11242 |
-| ![Experience](https://gladiatusfansite.blob.core.windows.net/images/icon_level_small.gif) Experience | 14.5 | 14.5 | 15.5 | 17.5 |
-| ![Honour](https://gladiatusfansite.blob.core.windows.net/images/icon_honor_small.gif) Honour | 884.5 | 892 | 918.5 | 925.5 |
-| Level | 132 | 134 | 136 | 138 |
-| Item drop % | 13 | 26 | 25 | 42 |
-| Item level* | 126.5 | 127.5 | 128.5 | 129.5 |
-| **Combat stats** | | | | |
-| Strength | 396 | 830.5 | 272 | 800 |
-| Dexterity | 824.5 | 402 | 1088 | 621 |
-| Agility | 969.5 | 469 | 1189.5 | 1014 |
-| Constitution | 660 | 670 | 489 | 800 |
-| Charisma | 692.5 | 1078 | 1094 | 1110.5 |
-| Intelligence | 438.5 | 106.5 | 1006 | 496.5 |
-| Armour | 20867 | 31386 | 9608.5 | 33989 |
-| Damage min | 446.5 | 722 | 544 | 445.5 |
-| Damage max | 548.5 | 886 | 668 | 547 |
 
 ---
 
