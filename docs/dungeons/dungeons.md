@@ -367,7 +367,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [The Corrupted World Tree](/dungeons/britannia-dungeons/the-corrupted-world-tree "The Corrupted World Tree")  
 **Name of the Boss:** Evil Fairy Queen Clíodhna  
-**Level:** ???-???  
+**Level:** 149-151  
 **Required Level for the area:** 135  
 **Location:** Britannia – Forest Fortress – Normal
 
@@ -377,7 +377,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [Marshes of Death](/dungeons/britannia-dungeons/marshes-of-death "Marshes of Death")  
 **Name of the Boss:** Athair Nathra  
-**Level:** ???-???  
+**Level:** 164-166  
 **Required Level for the area:** 150  
 **Location:** Britannia – The Moor – Normal
 
@@ -387,7 +387,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [The Final Bastion](/dungeons/britannia-dungeons/the-final-bastion "The Final Bastion")  
 **Name of the Boss:** Nennius  
-**Level:** ???-???  
+**Level:** 179-181  
 **Required Level for the area:** 165  
 **Location:** Britannia – Camp Cassivellaunus – Normal
 
@@ -397,7 +397,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [Before the Dawn](/dungeons/britannia-dungeons/before-the-dawn "Before the Dawn")  
 **Name of the Boss:** Lugotrix  
-**Level:** ???-???  
+**Level:** 194-196  
 **Required Level for the area:** 180  
 **Location:** Britannia – Kent – Normal
 
@@ -407,7 +407,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [Madness in the Fog](/dungeons/britannia-dungeons/madness-in-the-fog "Madness in the Fog")  
 **Name of the Boss:** Glashtyn  
-**Level:** ???-???  
+**Level:** 209-211  
 **Required Level for the area:** 195  
 **Location:** Britannia – The Ford – Normal
 
@@ -417,7 +417,7 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 
 **Name of the dungeon:** [Ashes of War](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War")  
 **Name of the Boss:** Daruven  
-**Level:** ???-???  
+**Level:** 224-226  
 **Required Level for the area:** 210  
 **Location:** Britannia – Camulodunum – Normal
 
@@ -426,17 +426,19 @@ Hit chance, Double hit, Chance for critical hit, Chance to block a hit, Chance t
 ---
 
 **Name of the dungeon:** [Forest Ambush](/dungeons/britannia-dungeons/forest-ambush "Forest Ambush")  
-**Name of the Boss:** Unknown  
-**Level:** ???-???  
+**Name of the Boss:** Edern & Dwrgi  
+**Level:** 244-246  
 **Required Level for the area:** 230  
-**Location:** Britannia – Cambria – Normal
+**Location:** Britannia – Cambria – Normal  
+
+![Edern & Dwrgi](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/forest-ambush/Edern_and_Dwrgi.jpg)
 
 ---
 
 **Name of the dungeon:** [The Great Ritual](/dungeons/britannia-dungeons/the-great-ritual "The Great Ritual")  
 **Name of the Boss:** Jago, Avatar of Antenociticus  
-**Level:** ???-???  
+**Level:** 264-266  
 **Required Level for the area:** 250  
-**Location:** Britannia – Mona Isle – Normal
+**Location:** Britannia – Mona Isle – Normal  
 
 ![Jago, Avatar of Antenociticus](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/jago-avatar-of-antenociticus.png)

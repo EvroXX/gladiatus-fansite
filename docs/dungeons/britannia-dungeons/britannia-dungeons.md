@@ -31,11 +31,11 @@ Dubnovellaunus (Level 134-136)
 
 **Level 135 - [The Corrupted World Tree](/dungeons/britannia-dungeons/the-corrupted-world-tree "The Corrupted World Tree") (Forest Fortress)**
 
-<!-- [![The Corrupted World Tree](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/With_all_its_might/With_all_its_might_overview.png "The Corrupted World Tree")](/dungeons/britannia-dungeons/with-all-its-might "The Corrupted World Tree") -->
+[![The Corrupted World Tree](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-corrupted-world-tree/the-corrupted-world-tree-thumb.jpg "The Corrupted World Tree")](/dungeons/britannia-dungeons/the-corrupted-world-tree "The Corrupted World Tree")
 
 **Boss:**
 
-Evil Fairy Queen Clíodhna (Level ??-??)
+Evil Fairy Queen Clíodhna (Level 149-151)
 
 ---
 
@@ -43,11 +43,11 @@ Evil Fairy Queen Clíodhna (Level ??-??)
 
 **Level 150 - [Marshes of Death](/dungeons/britannia-dungeons/marshes-of-death "Marshes of Death") (The Moor)**
 
-<!-- [![Marshes of Death](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Viking_Camp/Viking_Camp_Overview.png "Marshes of Death")](/dungeons/britannia-dungeons/viking-camp "Marshes of Death") -->
+[![Marshes of Death](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/marshes-of-death/marshes-of-death-thumb.jpg "Marshes of Death")](/dungeons/britannia-dungeons/marshes-of-death "Marshes of Death")
 
 **Boss:**
 
-Athair Nathra (Level ??-??)
+Athair Nathra (Level 164-166)
 
 ---
 
@@ -55,11 +55,11 @@ Athair Nathra (Level ??-??)
 
 **Level 165 - [The Final Bastion](/dungeons/britannia-dungeons/the-final-bastion "The Final Bastion") (Camp Cassivellaunus)**
 
-<!-- [![The Final Bastion](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Mysterious_Laboratory/Mysterious_Laboratory_Overview.png "The Final Bastion")](/dungeons/britannia-dungeons/mysterious-laboratory "The Final Bastion") -->
+[![The Final Bastion](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-final-bastion/the-final-bation-thumb.jpg "The Final Bastion")](/dungeons/britannia-dungeons/the-final-bastion "The Final Bastion")
 
 **Boss:**
 
-Nennius (Level ??-??)
+Nennius (Level 179-181)
 
 ---
 
@@ -67,21 +67,21 @@ Nennius (Level ??-??)
 
 **Level 180 - [Before the Dawn](/dungeons/britannia-dungeons/before-the-dawn "Before the Dawn") (Kent)**
 
-<!-- [![Before the Dawn](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Before the Dawn/Before the Dawn_Overview.png "Before the Dawn")](/dungeons/britannia-dungeons/Before the Dawn "Before the Dawn") -->
+[![Before the Dawn](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/before-the-dawn/before-the-dawn-thumb.jpg "Before the Dawn")](/dungeons/britannia-dungeons/before-the-dawn "Before the Dawn")
 
 **Boss:**
 
-Lugotrix (Level ??-??)
+Lugotrix (Level 194-196)
 
 ## Madness in the Fog
 
 **Level 195 - [Madness in the Fog](/dungeons/britannia-dungeons/madness-in-the-fog "Madness in the Fog") (The Ford)**
 
-<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
+[![Madness in the Fog](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/madness-in-the-fog/madness-in-the-fog-thumb.jpg "Madness in the Fog")](/dungeons/britannia-dungeons/madness-in-the-fog "Madness in the Fog")
 
 **Boss:**
 
-Unknown (Level ??-??)
+Glashtyn (Level 209-211)
 
 ---
 
@@ -89,11 +89,11 @@ Unknown (Level ??-??)
 
 **Level 210 - [Ashes of War](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War") (Camulodunum)**
 
-<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
+[![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/ashes-of-war/ashes_of_war_thumb.jpg "Ashes of War")](/dungeons/britannia-dungeons/ashes-of-war "Ashes of War")
 
 **Boss:**
 
-Daruven (Level ??-??)
+Daruven (Level 224-226)
 
 ---
 
@@ -101,11 +101,11 @@ Daruven (Level ??-??)
 
 **Level 230 - [Forest Ambush](/dungeons/britannia-dungeons/forest-ambush "Forest Ambush") (Cambria)**
 
-<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
+[![Forest Ambush](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/forest-ambush/forest-ambush-thumb.jpg "Ashes of War")](/dungeons/britannia-dungeons/forest-ambush "Forest Ambush")
 
 **Boss:**
 
-Unknown (Level ??-??)
+Edern & Dwrgi (Level 244-246)
 
 ---
 
@@ -113,10 +113,10 @@ Unknown (Level ??-??)
 
 **Level 250 - [The Great Ritual](/dungeons/britannia-dungeons/the-great-ritual "The Great Ritual") (Mona Isle)**
 
-<!-- [![Ashes of War](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Germania/Late_Revenge/Late_Revenge_Overview.png "Ashes of War")](/dungeons/britannia-dungeons/late-revenge "Ashes of War") -->
+[![The Great Ritual](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/the-great-ritual-thumb.jpg "The Great Ritual")](/dungeons/britannia-dungeons/the-great-ritual "The Great Ritual")
 
 **Boss:**
 
-Jago, Avatar of Antenociticus (Level ??-??)
+Jago, Avatar of Antenociticus (Level 264-266)
 
 ---

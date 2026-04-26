@@ -6,8 +6,8 @@ keywords: [dungeons, Gladiatus Dungeons, Germania Dungeons, The Great Ritual]
 tags:
   - dungeons
   - britannia dungeons
-description: The Great Ritual is the ninth and last of the new Britannia Dungeons and in the game.
-image: https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/britannia-dungeons.jpg
+description: The druids gather to perform their final ritual on a storm-swept coast. The stone circles laid out in the bleak environment make for an ominous sight. This is the final chance to foil their plans, before they can use their dark magic to change the world.
+image: https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/the-great-ritual.jpg
 ---
 
 The Great Ritual is the ninth and last of the new Britannia Dungeons and in the game.
@@ -16,7 +16,7 @@ Entry level: **250**
 
 Dungeon points to complete: **18**
 
-Level on which you can complete: **250?**
+Level on which you can complete: **250**
 
 Enemy and boss levels: **264-266**
   
@@ -34,9 +34,15 @@ Next Dungeon: **None, this is the last and the highest level dungeon in the game
 
 ## Description
 
+The druids gather to perform their final ritual on a storm-swept coast. The stone circles laid out in the bleak environment make for an ominous sight. This is the final chance to foil their plans, before they can use their dark magic to change the world.
+
+![The Great Ritual](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/the-great-ritual.jpg)
+
 ## Quests
 
 ## Keeper of the Ritual
+
+You have 6 of them to defeat
 
 <div className="player_name_bg">
   <div className="playername">Keeper of the Ritual</div>
@@ -46,11 +52,13 @@ Next Dungeon: **None, this is the last and the highest level dungeon in the game
 
 ![Keeper of the Ritual stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/keeper-of-the-ritual-stats.png)
 
-You have 6 of them to defeat
-
 ---
 
+![Phase 1](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/phase1.jpg)
+
 ## Witch
+
+You have 4 of them to defeat
 
 <div className="player_name_bg">
   <div className="playername">Witch</div>
@@ -60,11 +68,13 @@ You have 6 of them to defeat
 
 ![Witch stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/witch-stats.png)
 
-You have 4 of them to defeat
-
 ---
 
+![Phase 2](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/phase2.jpg)
+
 ## Emaciated Host
+
+You have 1 of them to defeat
 
 <div className="player_name_bg">
   <div className="playername">Emaciated Host</div>
@@ -74,11 +84,11 @@ You have 4 of them to defeat
 
 ![Emaciated Host stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/emaciated-host-stats.png)
 
-You have 1 of them to defeat
-
 ---
 
 ## Tormented Soul
+
+You have 6 of them to defeat
 
 <div className="player_name_bg">
   <div className="playername">Tormented Soul</div>
@@ -88,9 +98,9 @@ You have 1 of them to defeat
 
 ![Tormented Soul stats](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/tormented-soul-stats.png)
 
-You have 6 of them to defeat
-
 ---
+
+![Phase 3](https://gladiatusfansite.blob.core.windows.net/images/Dungeons/Britannia/the-great-ritual/phase3.jpg)
 
 ## Jago, Avatar of Antenociticus
 
