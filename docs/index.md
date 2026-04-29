@@ -41,6 +41,67 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 
 ---
 
+## Events – May 2026
+
+### 04.05.2026 0:00:00 - 05.05.2026 23:59:59
+
+- 50% more expedition points
+- 50% faster regeneration of expedition points
+- -50% cooldown for quests
+- 50% more dungeon points
+- 10% chance of finding ruby on expedition
+
+### 07.05.2026 0:00:00 - 08.05.2026 23:59:59
+
+- 10% chance of finding an item
+- -20% ruby costs for auction house
+- -15% training costs
+- 20% gold loot on expeditions
+
+### 10.05.2026 0:00:00 - 11.05.2026 23:59:59
+
+- 30% gold loot on expeditions
+- 10% chance of finding an item
+- 50% expedition XP
+
+### 13.05.2026 0:00:00 - 15.05.2026 23:59:59
+
+- 100% dungeon XP
+- 50% gold loot in dungeons
+- 50% more dungeon points
+- 10% chance of finding an item
+
+### 17.05.2026 0:00:00 - 18.05.2026 23:59:59
+
+- 30% chance of finding an item
+- 25% forging success
+- -10% forge duration
+- 10% chance of a resource / scroll
+
+### 20.05.2026 0:00:00 - 21.05.2026 23:59:59
+
+- 20% gold loot on expeditions
+- 20% gold loot in dungeons
+- No durability loss
+
+### 23.05.2026 0:00:00 - 24.05.2026 23:59:59
+
+- -50% Forging time (and smelting)
+- 15% forging success
+
+### 26.05.2026 0:00:00 - 27.05.2026 23:59:59
+
+- The chance to obtain additional loot on expeditions and in dungeons is increased by 20%
+- 25% more expedition points
+- 25% faster regeneration of expedition points
+- -35% guild expansion cost
+
+### 29.05.2026 0:00:00 - 30.05.2026 23:59:59
+
+- 20% chance of a resource / scroll
+
+---
+
 ## Events – April 2026
 
 ### 02.04.2026 0:00:00 - 04.04.2026 23:59:59
