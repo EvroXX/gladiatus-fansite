@@ -158,6 +158,11 @@ const config: Config = {
           label: 'Character Planner',
         },
         {
+          to: '/item-simulation',
+          position: 'left',
+          label: 'Optimal Build Simulation',
+        },
+        {
           to: '/forge-simulator',
           position: 'left',
           label: 'Forge Simulator',
