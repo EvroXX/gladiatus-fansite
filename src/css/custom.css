@@ -96,17 +96,17 @@ a:hover {
   filter: brightness(1.9);
 }
 
-/* "New" badge on navbar items */
-.navbar-item--new {
+/* Status badges on navbar items */
+.navbar-item--new,
+.navbar-item--beta {
   position: relative;
 }
 
-.navbar-item--new::after {
-  content: 'NEW';
+.navbar-item--new::after,
+.navbar-item--beta::after {
   position: absolute;
   top: 2px;
   right: -4px;
-  background: #b71c1c;
   color: #fff;
   font-size: 8px;
   font-weight: bold;
@@ -115,6 +115,16 @@ a:hover {
   border-radius: 3px;
   line-height: 1.4;
   pointer-events: none;
+}
+
+.navbar-item--new::after {
+  content: 'NEW';
+  background: #b71c1c;
+}
+
+.navbar-item--beta::after {
+  content: 'BETA';
+  background: #1565c0;
 }
 
 /* Keep navbar links clean */
