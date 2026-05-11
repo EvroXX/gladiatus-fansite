@@ -142,30 +142,33 @@ const config: Config = {
           label: 'Calculators',
         },
         {
-          to: '/loot-explorer',
+          type: 'dropdown',
+          label: 'Tools',
           position: 'left',
-          label: 'Loot Explorer',
-          className: 'navbar-item--new',
-        },
-        {
-          to: '/item-planner',
-          position: 'left',
-          label: 'Item Planner',
-        },
-        {
-          to: '/character-planner',
-          position: 'left',
-          label: 'Character Planner',
-        },
-        {
-          to: '/item-simulation',
-          position: 'left',
-          label: 'Optimal Build Simulation',
-        },
-        {
-          to: '/forge-simulator',
-          position: 'left',
-          label: 'Forge Simulator',
+          items: [
+            {
+              to: '/loot-explorer',
+              label: 'Loot Explorer',
+            },
+            {
+              to: '/item-planner',
+              label: 'Item Planner',
+            },
+            {
+              to: '/character-planner',
+              label: 'Character Planner',
+            },
+            {
+              to: '/item-simulation',
+              label: 'Optimal Build Simulation',
+              className: 'navbar-item--new',
+            },
+            {
+              to: '/forge-simulator',
+              label: 'Forge Simulator',
+              className: 'navbar-item--beta',
+            },
+          ],
         },
         {
           href: 'https://gladiatus-api.gamerz-bg.com/',

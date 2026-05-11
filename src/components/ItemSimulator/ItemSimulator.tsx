@@ -1,10 +1,14 @@
-import { useCallback, useEffect, useState } from "react";
+import Link from "@docusaurus/Link";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import BaseStatsEditor from "../CharacterPlanner/BaseStatsEditor";
 import CharacterDoll from "../CharacterPlanner/CharacterDoll";
 import ImportProfile from "../CharacterPlanner/ImportProfile";
 import PactSelector, { ActivePactsBar } from "../CharacterPlanner/PactSelector";
 import StatsDisplay from "../CharacterPlanner/StatsDisplay";
-import { useCharacterState } from "../CharacterPlanner/useCharacterState";
+import {
+  encodeCharacterState,
+  useCharacterState,
+} from "../CharacterPlanner/useCharacterState";
 import type { ItemRarity } from "../Item";
 import styles from "./ItemSimulator.module.css";
 import {
@@ -171,6 +175,23 @@ export default function ItemSimulator() {
   const minConsideredItemLevel = Math.max(1, characterLevel - 30);
 
   const hasResults = equippedItems.size > 0;
+
+  const characterPlannerUrl = useMemo(() => {
+    const encoded = encodeCharacterState(
+      characterLevel,
+      baseStats,
+      characterIdentity,
+      equippedItems,
+      activePacts,
+    );
+    return `/character-planner?s=${encoded}`;
+  }, [
+    characterLevel,
+    baseStats,
+    characterIdentity,
+    equippedItems,
+    activePacts,
+  ]);
 
   return (
     <div className={styles.itemSimulator}>
@@ -384,6 +405,12 @@ export default function ItemSimulator() {
             <button className={styles.shareButton} onClick={handleShare}>
               📋 Share Build
             </button>
+            <Link
+              className={styles.continueButton}
+              to={characterPlannerUrl}
+            >
+              🛡 Continue in Character Planner
+            </Link>
             <button className={styles.clearButton} onClick={clearAll}>
               Clear Results
             </button>
