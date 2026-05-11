@@ -12,7 +12,8 @@ import {
 import type { ItemRarity } from "../Item";
 import styles from "./ItemSimulator.module.css";
 import {
-  getDefaultEnchantValue,
+  getDefaultArmourEnchantValue,
+  getDefaultWeaponEnchantValue,
   getMaxUsableItemLevel,
   runSimulation,
   SimulationWeights,
@@ -91,15 +92,15 @@ export default function ItemSimulator() {
   const maxUsableItemLevel = getMaxUsableItemLevel(characterLevel);
 
   const [weaponEnchant, setWeaponEnchant] = useState(() =>
-    getDefaultEnchantValue(maxUsableItemLevel),
+    getDefaultWeaponEnchantValue(maxUsableItemLevel),
   );
   const [armourEnchant, setArmourEnchant] = useState(() =>
-    getDefaultEnchantValue(maxUsableItemLevel),
+    getDefaultArmourEnchantValue(maxUsableItemLevel),
   );
 
   useEffect(() => {
-    setWeaponEnchant(getDefaultEnchantValue(maxUsableItemLevel));
-    setArmourEnchant(getDefaultEnchantValue(maxUsableItemLevel));
+    setWeaponEnchant(getDefaultWeaponEnchantValue(maxUsableItemLevel));
+    setArmourEnchant(getDefaultArmourEnchantValue(maxUsableItemLevel));
   }, [maxUsableItemLevel]);
 
   const showNotification = (msg: string) => {
