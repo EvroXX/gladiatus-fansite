@@ -5,8 +5,6 @@ redirects:
   - /battle-at-hadrian-s-wall
 ---
 
-<!-- ![Battle at Hadrian's Wall](https://gladiatusfansite.blob.core.windows.net/images/Events/Battle_at_Hadrians_Wall/Hadrians-battle-stone-event-logo.png "Battle at Handrian's Wall") -->
-
 ![Battle at Hadrian's Wall](https://gladiatusfansite.blob.core.windows.net/images/Events/Battle_at_Hadrians_Wall/hadrians-wall-big-poster.png "Battle at Handrian's Wall")
 
 > „Ave Gladiator!

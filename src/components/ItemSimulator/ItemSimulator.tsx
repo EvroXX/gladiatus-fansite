@@ -12,6 +12,8 @@ import {
 import type { ItemRarity } from "../Item";
 import styles from "./ItemSimulator.module.css";
 import {
+  getDefaultEnchantValue,
+  getMaxUsableItemLevel,
   runSimulation,
   SimulationWeights,
   StatToggles,
@@ -86,21 +88,18 @@ export default function ItemSimulator() {
   const [isSimulating, setIsSimulating] = useState(false);
   const [notification, setNotification] = useState("");
 
-  const maxUsableItemLevel =
-    characterLevel >= 33
-      ? characterLevel + 16
-      : Math.ceil(1.25 * characterLevel + 7.75);
+  const maxUsableItemLevel = getMaxUsableItemLevel(characterLevel);
 
   const [weaponEnchant, setWeaponEnchant] = useState(() =>
-    Math.floor(maxUsableItemLevel / 3),
+    getDefaultEnchantValue(maxUsableItemLevel),
   );
   const [armourEnchant, setArmourEnchant] = useState(() =>
-    Math.floor(maxUsableItemLevel * 3),
+    getDefaultEnchantValue(maxUsableItemLevel),
   );
 
   useEffect(() => {
-    setWeaponEnchant(Math.floor(maxUsableItemLevel / 3));
-    setArmourEnchant(Math.floor(maxUsableItemLevel * 3));
+    setWeaponEnchant(getDefaultEnchantValue(maxUsableItemLevel));
+    setArmourEnchant(getDefaultEnchantValue(maxUsableItemLevel));
   }, [maxUsableItemLevel]);
 
   const showNotification = (msg: string) => {
@@ -353,7 +352,10 @@ export default function ItemSimulator() {
         </label>
         <p className={styles.rarityHint}>
           Higher rarity multiplies item stats but is rarer to obtain. Orange is
-          a practical target for most players.
+          a practical target for most players. All candidates are evaluated as{" "}
+          <strong>conditioned</strong> (one tier above the selected rarity in
+          stat strength — e.g. red shows red+ values), so the results represent
+          the theoretical ceiling at that rarity.
         </p>
 
         <div className={styles.enchantRow}>

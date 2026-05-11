@@ -59,10 +59,19 @@ export interface SimulationResult {
   score: number;
 }
 
-function getMaxUsableItemLevel(characterLevel: number): number {
+export function getMaxUsableItemLevel(characterLevel: number): number {
   return characterLevel >= 33
     ? characterLevel + 16
     : Math.ceil(1.25 * characterLevel + 7.75);
+}
+
+/**
+ * Default flat bonus for a grindstone / protective-gear enchant on an item.
+ * In-game formula: ceil(upgradeLevel / 5). The upgrade is assumed to match the
+ * highest usable item level for the character.
+ */
+export function getDefaultEnchantValue(itemLevel: number): number {
+  return Math.ceil(itemLevel / 5);
 }
 
 /**
@@ -223,7 +232,7 @@ export function runSimulation(
   activePacts: Set<PactId>,
   weights: SimulationWeights,
   statToggles: StatToggles,
-  evaluationRarity: ItemRarity = 'orange',
+  evaluationRarity: ItemRarity = 'red',
   weaponEnchantValue?: number,
   armourEnchantValue?: number,
 ): SimulationResult {
@@ -290,9 +299,9 @@ export function runSimulation(
           for (const suffix of topSuffixes) {
             const itemLevel = (base.level ?? 0) + (prefix?.level ?? 0) + (suffix?.level ?? 0);
             const enchantValue = WEAPON_ENCHANT_SLOTS.has(slot)
-              ? (weaponEnchantValue ?? Math.floor(itemLevel / 3))
+              ? (weaponEnchantValue ?? getDefaultEnchantValue(itemLevel))
               : ARMOUR_ENCHANT_SLOTS.has(slot)
-                ? (armourEnchantValue ?? Math.floor(itemLevel * 3))
+                ? (armourEnchantValue ?? getDefaultEnchantValue(itemLevel))
                 : undefined;
 
             // For ring/amulet slots, try each enabled stat powder as a variant
