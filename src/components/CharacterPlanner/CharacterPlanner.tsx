@@ -82,9 +82,9 @@ export default function CharacterPlanner() {
 
   // Calculate item level ranges based on character level
   // Maximum level of item we can equip
-  const maxUsableItemLevel = characterLevel >= 33 
-    ? characterLevel + 16 
-    : Math.ceil(1.25 * characterLevel + 7.75);
+  const maxUsableItemLevel = characterLevel >= 33
+    ? characterLevel + 16
+    : Math.floor(1.25 * characterLevel + 7.75);
   
   // Maximum level seen on the market
   const maxMarketItemLevel = characterLevel >= 36 
