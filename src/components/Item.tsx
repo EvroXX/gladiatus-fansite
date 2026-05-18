@@ -7,6 +7,7 @@ import eventItemsData from '@site/static/data/items/event-items.json';
 import type { Upgrade, AppliedUpgrade } from './CharacterPlanner/useCharacterState';
 import { calcAffixGoldBase, COMBINED_AFFIX_MULTIPLIER } from '@site/src/utils/affixGold';
 import { maxUsableItemLevel } from '@site/src/utils/itemLevelLimits';
+import { getRarityMultiplier } from '@site/src/utils/rarity';
 
 // Base item type from bases.json
 export interface BaseItem {
@@ -147,58 +148,6 @@ export function calculateItemStats(
   // Calculate final level (base + prefix + suffix)
   const finalLevel = (baseItem.level || 0) + (prefix?.level || 0) + (suffix?.level || 0);
 
-  // Get damage multiplier based on rarity and conditioning
-  const getDamageMultiplier = (): number => {
-    // Conditioning bumps item to next tier: green+ = blue, blue+ = purple, etc.
-    // Based on Gameforge formula (actual percentages from game):
-    // Green (Ceres) = 100% base
-    // Blue (Neptune) = 115%
-    // Purple (Mars) = 130%
-    // Orange (Jupiter) = 150%
-    // Red (Olympus) = 175%
-    // Red+ = 200% (2× green)
-    
-    // Determine effective rarity with conditioning
-    let effectiveRarity = rarity;
-    if (conditioned) {
-      switch (rarity) {
-        case 'green':
-          effectiveRarity = 'blue';
-          break;
-        case 'blue':
-          effectiveRarity = 'purple';
-          break;
-        case 'purple':
-          effectiveRarity = 'orange';
-          break;
-        case 'orange':
-          effectiveRarity = 'red';
-          break;
-        // red+ needs special handling below
-      }
-    }
-    
-    switch (effectiveRarity) {
-      case 'common':
-      case 'green':
-        return 1.0; // 100%
-      case 'blue':
-        return 1.15; // 115%
-      case 'purple':
-        return 1.30; // 130%
-      case 'orange':
-        return 1.50; // 150%
-      case 'red':
-        if (conditioned && rarity === 'red') {
-          // Red+ = 200%
-          return 2.0;
-        }
-        return 1.75; // 175%
-      default:
-        return 1.0;
-    }
-  };
-
   // Build full item name
   // Level-only suffixes (IDs 100-108: "+1" through "+9") should not appear in name
   const suffixName = suffix && (suffix as any).id >= 100 && (suffix as any).id <= 108 ? undefined : suffix?.name;
@@ -220,7 +169,7 @@ export function calculateItemStats(
       // Use Gladiatus formula for weapons with prefix/suffix
       // levelMultiplier = prefixLevel + suffixLevel + 1 (weapon base level NOT included)
       const levelMultiplier = (prefix?.level || 0) + (suffix?.level || 0) + 1;
-      const rarityMultiplier = getDamageMultiplier();
+      const rarityMultiplier = getRarityMultiplier(rarity, conditioned);
       
       // Min damage formula: ROUNDUP((baseMin + (levelMultiplier - 1 + FLOOR((levelMultiplier-1)/5)) - 1) + 2*damageFromScroll) + 1
       // Then multiply by rarity
@@ -234,7 +183,7 @@ export function calculateItemStats(
       finalMaxDamage = Math.floor(baseMaxCalc * rarityMultiplier);
     } else {
       // No prefix/suffix: use base damage from JSON and apply rarity multiplier
-      const multiplier = getDamageMultiplier();
+      const multiplier = getRarityMultiplier(rarity, conditioned);
       finalMinDamage = Math.max(1, Math.floor(baseItem.damageMin * multiplier) + (baseItem.damageMinOffset || 0));
       finalMaxDamage = Math.floor(baseItem.damageMax * multiplier);
     }
@@ -253,7 +202,7 @@ export function calculateItemStats(
     
     if (hasPrefixOrSuffix) {
       // Use Gladiatus formula for armor with prefix/suffix
-      const rarityMultiplier = getDamageMultiplier();
+      const rarityMultiplier = getRarityMultiplier(rarity, conditioned);
       const prefixLevel = prefix?.level || 0;
       const suffixLevel = suffix?.level || 0;
       
@@ -304,7 +253,7 @@ export function calculateItemStats(
       }
     } else {
       // No prefix/suffix: use base armor from JSON and apply rarity multiplier
-      const multiplier = getDamageMultiplier();
+      const multiplier = getRarityMultiplier(rarity, conditioned);
       armour = Math.floor(baseItem.armour * multiplier);
     }
   }
@@ -337,7 +286,7 @@ export function calculateItemStats(
   // Flat stats: Math.trunc() to round towards zero (handles both positive and negative)
   // Percentage stats: Round away from zero (Math.sign(x) * Math.round(Math.abs(x)))
   if (prefix || suffix) {
-    const statMultiplier = getDamageMultiplier();
+    const statMultiplier = getRarityMultiplier(rarity, conditioned);
     
     Object.keys(statsMap).forEach(stat => {
       if (statsMap[stat].flat !== 0) {
@@ -436,7 +385,7 @@ export function calculateItemStats(
   // Affix gold scales with each affix's own JSON level (not finalLevel).
   // When both prefix AND suffix are present, their combined gold is multiplied by COMBINED_AFFIX_MULTIPLIER.
   // Rarity then multiplies the entire total (base + affixes).
-  const rarityMultiplier = getDamageMultiplier(); // green=1, blue=1.15, purple=1.30, orange=1.50, red=1.75, red+=2.0
+  const rarityMultiplier = getRarityMultiplier(rarity, conditioned);
   const rawBaseGold = baseItem.gold ?? 0;
   const rawPrefixGold = prefix ? calcAffixGoldBase(prefix.level, 'prefix', baseItem.type) : 0;
   const rawSuffixGold = suffix ? calcAffixGoldBase(suffix.level, 'suffix', baseItem.type) : 0;
