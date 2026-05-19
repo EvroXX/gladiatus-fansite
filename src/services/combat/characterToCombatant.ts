@@ -2,6 +2,7 @@ import type {
   CharacterIdentity,
   CharacterStats,
 } from '@site/src/components/CharacterPlanner/useCharacterState';
+import { resolveCharacterPortrait } from '@site/src/utils/characterFaceImage';
 import type { Combatant } from './types';
 
 export function characterToCombatant(args: {
@@ -12,9 +13,14 @@ export function characterToCombatant(args: {
   const { identity, level, stats } = args;
   return {
     name: identity.name,
-    // costume is the Gladiatus CDN URL of the rendered avatar — used as the
-    // player portrait in the battle report.
-    image: identity.costume,
+    // Use the imported costume URL if available; otherwise fall back to the
+    // level-bucketed default face image. Same logic the Character Planner
+    // uses via PlayerName.tsx — both call into utils/characterFaceImage.
+    image: resolveCharacterPortrait({
+      costume: identity.costume,
+      level,
+      gender: identity.gender,
+    }),
     level,
     hp: stats.totalHealth,
     maxHp: stats.totalHealth,

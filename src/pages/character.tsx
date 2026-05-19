@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import ImportProfile from '@site/src/components/CharacterPlanner/ImportProfile';
 import { useActiveCharacter } from '@site/src/hooks/useActiveCharacter';
+import { resolveCharacterPortrait } from '@site/src/utils/characterFaceImage';
 import styles from '@site/src/css/Character.module.css';
 
 function formatRelative(timestamp: number): string {
@@ -49,15 +50,15 @@ export default function CharacterPage(): React.ReactElement {
                 </div>
                 <div className={styles.meta}>
                   <div className={styles.level}>Level {character.level}</div>
-                  {character.identity.costume && /^https?:\/\//i.test(character.identity.costume) ? (
-                    <img
-                      src={character.identity.costume}
-                      alt="Character costume"
-                      className={styles.costumeImage}
-                    />
-                  ) : character.identity.costume ? (
-                    <div className={styles.level}>{character.identity.costume}</div>
-                  ) : null}
+                  <img
+                    src={resolveCharacterPortrait({
+                      costume: character.identity.costume,
+                      level: character.level,
+                      gender: character.identity.gender,
+                    })}
+                    alt="Character portrait"
+                    className={styles.costumeImage}
+                  />
                   <div className={styles.savedAt}>
                     Imported {formatRelative(character.savedAt)}
                   </div>

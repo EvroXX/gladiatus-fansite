@@ -229,6 +229,7 @@ From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server ti
     - Your character name and level shown in the site header.
     - The Training Calculator auto-fills your base stats so you only type your target levels.
     - Fight any mob in any expedition with your loaded character — full battle simulation with full battle report, just like you are in-game.
+    - Character Planner loads your character by default
 
 ### 26.03.2026
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './PlayerName.module.css';
 import type { CharacterIdentity } from './useCharacterState';
+import { getFaceImageUrl } from '@site/src/utils/characterFaceImage';
 
 interface PlayerNameProps {
   identity: CharacterIdentity;
@@ -8,23 +9,8 @@ interface PlayerNameProps {
   onGenderChange: (gender: 'male' | 'female') => void;
 }
 
-// Map character level to face image level
-function getFaceLevel(level: number): number {
-  if (level < 10) return 1;
-  if (level < 20) return 10;
-  if (level < 30) return 20;
-  if (level < 40) return 30;
-  if (level < 50) return 40;
-  if (level < 60) return 50;
-  if (level < 70) return 60;
-  if (level < 80) return 70;
-  return 80;
-}
-
 export default function PlayerName({ identity, characterLevel, onGenderChange }: PlayerNameProps) {
-  const faceLevel = getFaceLevel(characterLevel);
-  const genderSuffix = identity.gender === 'male' ? 'm' : 'f';
-  const faceImageUrl = `https://s76-en.gladiatus.gameforge.com/cdn/img/faces/gladiator_${faceLevel}_${genderSuffix}.jpg`;
+  const faceImageUrl = getFaceImageUrl(characterLevel, identity.gender);
   
   const isAnimatedCostume = identity.costume?.includes('_complete');
 
