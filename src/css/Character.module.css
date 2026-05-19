@@ -9,13 +9,13 @@
 }
 
 .subtle {
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-font-color-base);
   margin: 8px 0 12px;
   font-size: 14px;
 }
 
 .featureList {
-  color: var(--ifm-color-emphasis-700);
+  color: var(--ifm-font-color-base);
   margin: 0 0 24px;
   padding-left: 20px;
   font-size: 14px;

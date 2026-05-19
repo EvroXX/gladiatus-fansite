@@ -32,7 +32,12 @@ export default function CharacterPage(): React.ReactElement {
             <ul className={styles.featureList}>
               <li>Your character name and level shown in the site header.</li>
               <li>The Training Calculator auto-fills your base stats so you only type your target levels.</li>
-              <li>Fight any mob in any expedition with your loaded character — full battle simulation with round-by-round report and rolled rewards.</li>
+              <li>The Character Planner auto-loads your build by default.</li>
+              <li>
+                <strong>Expedition Simulation:</strong> from any expedition page, attack
+                any mob with your loaded character — full battle simulation with a
+                round-by-round report and rolled rewards.
+              </li>
             </ul>
             <ImportProfile onImport={login} />
             <p className={styles.privacyNote}>
