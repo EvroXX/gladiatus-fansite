@@ -271,6 +271,13 @@ function parseEnemyTable(markdown) {
 
 // ===== Body-meta + frontmatter =====
 
+function stripWrappingQuotes(s) {
+  if (s.length >= 2 && ((s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'")))) {
+    return s.slice(1, -1);
+  }
+  return s;
+}
+
 function parseFrontmatter(markdown) {
   const m = markdown.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/);
   if (!m) throw new Error('parseFrontmatter: no frontmatter block');
@@ -278,9 +285,9 @@ function parseFrontmatter(markdown) {
   const titleMatch = block.match(/^title:\s*(.+)$/m);
   const slugMatch = block.match(/^slug:\s*(.+)$/m);
   const imageMatch = block.match(/^image:\s*(.+)$/m);
-  const title = titleMatch ? titleMatch[1].trim() : null;
-  const slug = slugMatch ? slugMatch[1].trim() : null;
-  const image = imageMatch ? imageMatch[1].trim() : null;
+  const title = titleMatch ? stripWrappingQuotes(titleMatch[1].trim()) : null;
+  const slug = slugMatch ? stripWrappingQuotes(slugMatch[1].trim()) : null;
+  const image = imageMatch ? stripWrappingQuotes(imageMatch[1].trim()) : null;
   if (!title || !slug) {
     throw new Error('parseFrontmatter: missing title or slug');
   }
@@ -501,13 +508,17 @@ function main() {
   function findPrevious(country, slug) {
     if (!previousData || !previousData[country]) return null;
     const newForm = `${COUNTRY_META[country].folder}/${slug}`;
-    const oldForm = `expeditions/${newForm}`;
-    const match = previousData[country].expeditions.find(
-      (e) => e.slug === newForm || e.slug === oldForm
-    );
-    if (!match) return null;
+    // Tolerate historic buggy slug forms with leading slash, expeditions/ prefix,
+    // and/or wrapping quotes (Africa originally shipped with quoted slugs).
+    const candidates = previousData[country].expeditions.filter((e) => {
+      const normalised = stripWrappingQuotes(String(e.slug))
+        .replace(/^\//, '')
+        .replace(/^expeditions\//, '');
+      return normalised === newForm;
+    });
+    if (candidates.length === 0) return null;
     // Normalise the slug to the new form so the output JSON is consistent.
-    return { ...match, slug: newForm };
+    return { ...candidates[0], slug: newForm };
   }
 
   const data = {};
