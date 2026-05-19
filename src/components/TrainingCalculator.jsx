@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useActiveCharacter } from '@site/src/hooks/useActiveCharacter';
+import { decodeCharacterState } from '@site/src/components/CharacterPlanner/useCharacterState';
 
 export default function TrainingCalculator() {
   // initial state
@@ -16,10 +18,55 @@ export default function TrainingCalculator() {
 
   const [stats, setStats] = useState(initialStats);
   const [results, setResults] = useState(null);
+  const [prefilledFrom, setPrefilledFrom] = useState(null); // string | null
+
+  const { character } = useActiveCharacter();
+
+  useEffect(() => {
+    if (!character) return;
+    const isDefaultsFrom = (
+      stats.strengthFrom === 5 && stats.dexterityFrom === 5 &&
+      stats.agilityFrom === 5 && stats.constitutionFrom === 5 &&
+      stats.charismaFrom === 5 && stats.intelligenceFrom === 5
+    );
+    if (!isDefaultsFrom) return;
+
+    try {
+      const decoded = decodeCharacterState(character.encoded, '');
+      const b = decoded.baseStats;
+      setStats(prev => ({
+        ...prev,
+        strengthFrom: b.strength,     strengthTo: b.strength,
+        dexterityFrom: b.dexterity,   dexterityTo: b.dexterity,
+        agilityFrom: b.agility,       agilityTo: b.agility,
+        constitutionFrom: b.constitution, constitutionTo: b.constitution,
+        charismaFrom: b.charisma,     charismaTo: b.charisma,
+        intelligenceFrom: b.intelligence, intelligenceTo: b.intelligence,
+      }));
+      setPrefilledFrom(character.identity.name);
+    } catch (err) {
+      console.warn('[TrainingCalculator] failed to decode active character; skipping prefill:', err);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [character]);
 
   const resetStats = () => {
     setStats(initialStats);
     setResults(null);
+    setPrefilledFrom(null);
+  };
+
+  const clearAutoload = () => {
+    setStats(prev => ({
+      ...prev,
+      strengthFrom: 5,     strengthTo: '',
+      dexterityFrom: 5,    dexterityTo: '',
+      agilityFrom: 5,      agilityTo: '',
+      constitutionFrom: 5, constitutionTo: '',
+      charismaFrom: 5,     charismaTo: '',
+      intelligenceFrom: 5, intelligenceTo: '',
+    }));
+    setPrefilledFrom(null);
   };
 
   const formatNumber = (num) => {
@@ -101,6 +148,20 @@ export default function TrainingCalculator() {
 
   return (
     <div style={{ overflowX: 'auto' }}>
+      {prefilledFrom && (
+        <div style={{
+          marginBottom: 12,
+          padding: '8px 12px',
+          background: 'var(--ifm-color-emphasis-100)',
+          borderLeft: '3px solid #c2a66a',
+          fontSize: 14,
+        }}>
+          Loaded from <strong>{prefilledFrom}</strong>{' '}
+          <a href="#" onClick={(e) => { e.preventDefault(); clearAutoload(); }}>
+            Reset to defaults
+          </a>
+        </div>
+      )}
       {/* Discount Configuration Section */}
       <div style={{ 
         backgroundColor: '#D5C19A', 
@@ -171,8 +232,8 @@ export default function TrainingCalculator() {
         <thead>
           <tr>
             <th>Stat</th>
-            <th>From Level</th>
-            <th>To Level</th>
+            <th>From</th>
+            <th>To</th>
             <th>Base Cost</th>
             <th>Discounted Cost</th>
             <th>Saved</th>
@@ -188,21 +249,23 @@ export default function TrainingCalculator() {
               <tr key={stat}>
                 <td style={{ fontWeight: 'bold' }}>{statName}</td>
                 <td>
-                  <input 
-                    type="text" 
-                    id={`${stat}From`} 
-                    value={stats[`${stat}From`]} 
+                  <input
+                    type="number"
+                    min={1}
+                    id={`${stat}From`}
+                    value={stats[`${stat}From`]}
                     onChange={handleChange}
-                    style={{ width: '80px', padding: '5px' }}
+                    style={{ width: '90px', padding: '5px' }}
                   />
                 </td>
                 <td>
-                  <input 
-                    type="text" 
-                    id={`${stat}To`} 
-                    value={stats[`${stat}To`]} 
+                  <input
+                    type="number"
+                    min={1}
+                    id={`${stat}To`}
+                    value={stats[`${stat}To`]}
                     onChange={handleChange}
-                    style={{ width: '80px', padding: '5px' }}
+                    style={{ width: '90px', padding: '5px' }}
                   />
                 </td>
                 <td>

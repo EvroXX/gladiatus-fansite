@@ -1,0 +1,43 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px;
+  padding: 4px 12px;
+  border: 1px solid #c2a66a;
+  background: linear-gradient(#1a1a1a, #0b0b0b);
+  color: #dcdcdc;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0;
+  line-height: 1.2;
+}
+
+.pill:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.name {
+  max-width: 24ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level {
+  color: #9b9b9b;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .pill {
+    font-size: 12px;
+    padding: 3px 8px;
+    margin: 0 4px;
+  }
+  .name {
+    max-width: 14ch;
+  }
+}

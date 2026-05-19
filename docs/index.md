@@ -27,17 +27,9 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 
 ## Latest Gladiatus News
 
-### Wild Farm Event 2026
+### Rise of the Forgotten
 
-- Sunday, 29.03.2026 at 00:00 (server time) until Saturday, 11.04.2026 at 23:59 (server time). [Wild Farm](/events/wild-farm "Wild Farm")
-
-### Big March 2026 Update - Britannia Dungeons
-
-- After 10 years of waiting, Britannia dungeons will come to Gladiatus on 18 March 2026 - [Britannia Dungeons](https://forum.gladiatus.gameforge.com/forum/thread/13133-new-update-battle-for-britannia/ "Britannia Dungeons")
-
-### Battle at Hadrian's Wall event
-
-- 08.03.2026 00:00:00 - 14.03.2026 23:59:59 - The Hadrian's wall event - [Battle at Hadrian's Wall](/events/battle-at-hadrian-s-wall "Battle at Hadrian's Wall")
+From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server time).
 
 ---
 
@@ -227,6 +219,16 @@ Hey guys. We have a couple of open questions that need answering. Like formulas 
 ---
 
 ## Latest website news
+
+### 19.05.2025
+
+- A lot has been going on, hard to keep track of it here but notable mentions are:
+  - We had our first official contribution to the project - MIcQo contributing nice filters to the Loot Exporer
+  - We had our first full PR and full new feature created by another person (other than me) - arslanbenzer donating us the Optimal Build Simulation
+  - Loading a character profile. This new feature let's you load a profile while browsing the site enabling some key features:
+    - Your character name and level shown in the site header.
+    - The Training Calculator auto-fills your base stats so you only type your target levels.
+    - Fight any mob in any expedition with your loaded character — full battle simulation with full battle report, just like you are in-game.
 
 ### 26.03.2026
 

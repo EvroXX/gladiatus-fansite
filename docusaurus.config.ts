@@ -186,6 +186,10 @@ const config: Config = {
           label: 'About Me',
         },
         {
+          type: 'custom-character-indicator',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/Djongov/gladiatus-fansite',
           label: 'GitHub',
           position: 'right',

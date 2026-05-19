@@ -6,6 +6,11 @@ import prefixesData from '@site/static/data/items/prefixes.json';
 import suffixesData from '@site/static/data/items/suffixes.json';
 import upgradesData from '@site/static/data/items/upgrades.json';
 import { PactId, PACTS } from './PactDefinitions';
+import {
+  critChanceFromAttackValue,
+  blockChanceFromBlockValue,
+  critAvoidChanceFromResilience,
+} from '@site/src/services/combat/chanceFormulas';
 
 /**
  * Compress and encode string for URL
@@ -257,6 +262,15 @@ export interface CharacterStats {
   baseHealthFromConstitution: number;
   healthFromItems: number;
   healthRegenPerHour: number;
+  // Final base stats after items, pacts, and caps applied. Used by the
+  // combat engine to compute hit / double-hit chances against a specific
+  // opponent at fight time.
+  finalStrength: number;
+  finalDexterity: number;
+  finalAgility: number;
+  finalConstitution: number;
+  finalCharisma: number;
+  finalIntelligence: number;
 }
 
 export interface CharacterState {
@@ -388,8 +402,7 @@ export function calculateCharacterStats(
   const resilienceFromItems = hardeningValueStat.flat;
   const totalResilience = resilienceFromAgility + resilienceFromItems;
   const maxResilience = Math.max(0, Math.floor((24.5 * 4 * (characterLevel - 8) / 52) + 1));
-  const critAvoidanceChance = characterLevel > 8
-    ? Math.min((totalResilience * 52 / (characterLevel - 8)) / 4, 25) : 0;
+  const critAvoidanceChance = critAvoidChanceFromResilience(totalResilience, characterLevel);
 
   const strengthStat = combinedStats.get('Strength') || { flat: 0, percent: 0 };
   const strengthPercentBonus = Math.round(baseStats.strength * (strengthStat.percent / 100));
@@ -403,8 +416,7 @@ export function calculateCharacterStats(
   const blockingFromItems = blockValueStat.flat;
   const totalBlocking = blockingFromStrength + blockingFromItems;
   const maxBlocking = Math.max(0, Math.floor((49.5 * 6 * (characterLevel - 8) / 52) + 1));
-  const blockChance = characterLevel > 8
-    ? Math.min((totalBlocking * 52 / (characterLevel - 8)) / 6, 50) : 0;
+  const blockChance = blockChanceFromBlockValue(totalBlocking, characterLevel);
 
   const dexterityStat = combinedStats.get('Dexterity') || { flat: 0, percent: 0 };
   const dexterityPercentBonus = Math.round(baseStats.dexterity * (dexterityStat.percent / 100));
@@ -418,8 +430,7 @@ export function calculateCharacterStats(
   const criticalAttackFromItems = criticalAttackValueStat.flat;
   const totalCriticalAttack = criticalAttackFromDexterity + criticalAttackFromItems;
   const maxCriticalAttack = Math.max(0, Math.floor((49.5 * 5 * (characterLevel - 8) / 52) + 1));
-  const baseCritChance = characterLevel > 8
-    ? Math.min((totalCriticalAttack * 52 / (characterLevel - 8)) / 5, 50) : 0;
+  const baseCritChance = critChanceFromAttackValue(totalCriticalAttack, characterLevel);
   const criticalHitChance = activePacts.has('honour_veteran') ? baseCritChance + 10 : baseCritChance;
 
   const chanceToHit = Math.floor((finalDexterity / (finalDexterity + maxAgility)) * 100);
@@ -473,11 +484,11 @@ export function calculateCharacterStats(
     totalDamageMax += berserkerBonus;
   }
 
-  // suppress unused-var lint for finalIntelligence / maxConstitution (used transitively)
-  void finalIntelligence;
+  // suppress unused-var lint for maxConstitution (used transitively)
   void maxConstitution;
 
   return {
+    finalStrength, finalDexterity, finalAgility, finalConstitution, finalCharisma, finalIntelligence,
     totalArmor, armorFromItems, armorFromEnchants,
     minDamageAbsorbed, maxDamageAbsorbed,
     totalResilience, maxResilience, critAvoidanceChance, resilienceFromAgility, resilienceFromItems,

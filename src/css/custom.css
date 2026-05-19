@@ -185,3 +185,43 @@ text-orange {
   color: orange;
 }
 
+/* Gladiatus in-game button styling. Reusable across the site. */
+.awesome-button {
+  display: inline-block;
+  padding: 2px 6px;
+  vertical-align: middle;
+  color: #453011;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #E9D2A0;
+  border-radius: 5px;
+  background: #390301;
+  background: linear-gradient(to bottom, #C3AB6F, #886933);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #390301;
+  box-shadow: 0 0 0 1px #8E753F;
+  margin-right: 6px;
+}
+
+.awesome-button:disabled,
+.awesome-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.awesome-button:hover:not(:disabled):not([disabled]) {
+  filter: brightness(1.1);
+}
+
+/* Larger, full-width variant — matches Gladiatus's own `awesome-button big`
+   class used for prominent action buttons (e.g. attack confirm dialogs). */
+.awesome-button.big {
+  padding: 8px 14px;
+  font-size: 14px;
+  width: 100%;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+

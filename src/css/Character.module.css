@@ -1,0 +1,97 @@
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.heading {
+  margin: 0 0 12px;
+}
+
+.subtle {
+  color: var(--ifm-color-emphasis-700);
+  margin: 8px 0 12px;
+  font-size: 14px;
+}
+
+.featureList {
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 24px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.featureList li {
+  margin: 4px 0;
+}
+
+.card {
+  border: 1px solid #c2a66a;
+  background: linear-gradient(#1a1a1a, #0b0b0b);
+  color: #dcdcdc;
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.level {
+  color: #9b9b9b;
+  font-size: 14px;
+}
+
+.savedAt {
+  color: #9b9b9b;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.costumeImage {
+  display: block;
+  max-width: 168px;
+  height: auto;
+  border: 1px solid #c2a66a;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  background: #0b0b0b;
+  color: #dcdcdc;
+  border: 1px solid #c2a66a;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #1a1a1a;
+}
+
+.dangerButton {
+  border-color: #cf4040;
+  color: #ff8080;
+}
+
+.privacyNote {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}

@@ -8128,10 +8128,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 11349,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8192,10 +8192,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 11103,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8256,10 +8256,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12295,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": true,
@@ -8320,10 +8320,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 11147,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           }
         ]
       },
@@ -8403,10 +8403,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 10932,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8470,10 +8470,10 @@
               "min": 187,
               "max": 187
             },
-            "life": null,
-            "critRaw": null,
+            "life": 11612,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8534,10 +8534,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 11267,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": true,
@@ -8598,10 +8598,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12535,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           }
         ]
       },
@@ -8681,10 +8681,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12101,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8748,10 +8748,10 @@
               "min": 186,
               "max": 186
             },
-            "life": null,
-            "critRaw": null,
+            "life": 11538,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -8812,10 +8812,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 13494,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": true,
@@ -8879,10 +8879,10 @@
               "min": 197,
               "max": 200
             },
-            "life": null,
-            "critRaw": null,
+            "life": 13694,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           }
         ]
       },
@@ -8962,10 +8962,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12754,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -9026,10 +9026,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12741,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -9090,10 +9090,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 12983,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": true,
@@ -9154,10 +9154,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 13798,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           }
         ]
       },
@@ -9237,10 +9237,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 14195,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -9301,10 +9301,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 13093,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": false,
@@ -9365,10 +9365,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": null,
-            "critRaw": null,
+            "life": 14918,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           },
           {
             "isBoss": true,
@@ -9432,10 +9432,10 @@
               "min": 207,
               "max": 211
             },
-            "life": null,
-            "critRaw": null,
+            "life": 14182,
+            "critRaw": 5,
             "blockRaw": null,
-            "avoidCritRaw": null
+            "avoidCritRaw": 0
           }
         ]
       }

@@ -1,0 +1,234 @@
+/* Container */
+.report {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #2c1f0c;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Report header banner */
+.headerBanner {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px;
+  margin-bottom: 12px;
+  color: #fff;
+  border: 1px solid #8E753F;
+}
+
+.headerWin {
+  background: linear-gradient(to bottom, #4d6d2a, #2f4717);
+}
+
+.headerLoss {
+  background: linear-gradient(to bottom, #8a2a2a, #5e1414);
+}
+
+.headerDraw {
+  background: linear-gradient(to bottom, #6a6a6a, #3a3a3a);
+}
+
+/* VS / fighter block */
+.vsBlock {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.fighterSide {
+  text-align: center;
+}
+
+.fighterStack {
+  /* Width matches the .player_name_bg nameplate (172px) so the image and the
+     badge line up perfectly. */
+  width: 172px;
+  margin: 0 auto;
+}
+
+.fighterImage {
+  width: 168px;
+  height: 194px;
+  margin: 8px auto 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1a1a1a;
+  border: 1px solid #8E753F;
+}
+
+.vsLabel {
+  font-weight: 700;
+  text-align: center;
+  font-size: 24px;
+  color: #4a3818;
+}
+
+/* Stats panels */
+.statsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.statsPanel {
+  background: #d3c08b;
+  border: 1px solid #8E753F;
+  padding: 8px;
+}
+
+.statsPanelMirror {
+  text-align: right;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.statRow:last-child {
+  border-bottom: 0;
+}
+
+.statRowMirror {
+  flex-direction: row-reverse;
+}
+
+.statLabel {
+  color: #2c1f0c;
+}
+
+.statValue {
+  font-weight: 700;
+  color: #2c1f0c;
+}
+
+.statValueBig {
+  font-weight: 700;
+  font-size: 15px;
+  color: #2c1f0c;
+}
+
+/* Reward section */
+.reward {
+  margin-bottom: 12px;
+}
+
+.rewardBody {
+  background: #d3c08b;
+  border: 1px solid #8E753F;
+  padding: 12px 16px;
+}
+
+.rewardLine {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.goldIcon {
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+/* Section header */
+.sectionHeader {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 6px 8px;
+  margin: 12px 0 4px;
+  background: #b59f63;
+  color: #2c1f0c;
+  border: 1px solid #8E753F;
+}
+
+/* Damage statistics table */
+.statsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  background: #d3c08b;
+  border: 1px solid #8E753F;
+}
+
+.statsTable th,
+.statsTable td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+}
+
+.statsTable th {
+  background: #b59f63;
+  font-weight: 700;
+}
+
+/* Battle log table */
+.logTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.logTable th,
+.logTable td {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.roundHeader {
+  background: #B5AB83;
+  color: #2c1f0c;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 10px;
+}
+
+.strikeRow {
+  background: transparent;
+}
+
+.strikeRowDefender {
+  background: #CFC7A3;
+}
+
+.strikeRowResult {
+  text-align: center;
+  width: 55%;
+}
+
+.resultMiss {
+  color: #2c1f0c;
+}
+
+.resultNormal {
+  color: #b71c1c;
+}
+
+.resultBlocked {
+  color: #696969;
+}
+
+.resultCrit {
+  color: #b71c1c;
+  font-weight: 700;
+}
+
+.resultCritBlocked {
+  color: #696969;
+  font-weight: 700;
+}
+
+.deathLine {
+  font-weight: 700;
+  display: block;
+  margin-top: 2px;
+}

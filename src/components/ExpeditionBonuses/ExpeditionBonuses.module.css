@@ -1,0 +1,66 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* Tooltip — matches the consumable / item tooltip style (dark with gold border).
+   Anchored to the RIGHT edge of the icon so the tooltip extends leftward into
+   the table rather than rightward past the table's right edge (which would be
+   clipped by Docusaurus's overflow-x: auto wrapper on the boss column). */
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 38px;
+  right: 0;
+  left: auto;
+  z-index: 10001;
+  text-align: left;
+  background: linear-gradient(#1a1a1a, #0b0b0b);
+  border: 1px solid #c2a66a;
+  padding: 8px 10px;
+  min-width: 220px;
+  max-width: 280px;
+  font-size: 13px;
+  font-weight: bolder;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+
+.wrapper:hover .tooltip {
+  display: block;
+}
+
+.tooltipName {
+  display: block;
+  color: lime;
+  margin-bottom: 4px;
+}
+
+.tooltipDescription {
+  display: block;
+  color: #ffffff;
+  font-weight: normal;
+}

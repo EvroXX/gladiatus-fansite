@@ -6,8 +6,9 @@ import ItemSelector from './ItemSelector';
 import BaseStatsEditor from './BaseStatsEditor';
 import ImportProfile from './ImportProfile';
 import PlayerName from './PlayerName';
-import { useCharacterState, ItemSlotType } from './useCharacterState';
+import { useCharacterState, ItemSlotType, decodeCharacterState } from './useCharacterState';
 import PactSelector, { ActivePactsBar } from './PactSelector';
+import { useActiveCharacter } from '@site/src/hooks/useActiveCharacter';
 import {
   maxUsableItemLevel,
   maxMarketItemLevel,
@@ -37,6 +38,40 @@ export default function CharacterPlanner() {
     activePacts,
     togglePact,
   } = useCharacterState();
+
+  const [prefilledFrom, setPrefilledFrom] = useState<string | null>(null);
+  const { character: activeCharacter } = useActiveCharacter();
+
+  useEffect(() => {
+    if (typeof globalThis.window === 'undefined') return;
+    if (new URLSearchParams(globalThis.window.location.search).get('s')) return;
+    if (!activeCharacter) return;
+
+    const isDefaults = (
+      equippedItems.size === 0 &&
+      baseStats.strength === 5 && baseStats.dexterity === 5 &&
+      baseStats.agility === 5 && baseStats.constitution === 5 &&
+      baseStats.charisma === 5 && baseStats.intelligence === 5 &&
+      characterLevel === 1 &&
+      activePacts.size === 0
+    );
+    if (!isDefaults) return;
+
+    try {
+      const decoded = decodeCharacterState(activeCharacter.encoded, '');
+      if (!decoded) return;
+      importProfile(decoded.level, decoded.baseStats, decoded.items, decoded.identity, decoded.pacts);
+      setPrefilledFrom(activeCharacter.identity.name);
+    } catch (err) {
+      console.warn('[CharacterPlanner] failed to decode active character; skipping auto-load:', err);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeCharacter]);
+
+  const handleClearAndStartFresh = () => {
+    clearAll();
+    setPrefilledFrom(null);
+  };
 
   const [selectedSlot, setSelectedSlot] = useState<ItemSlotType | null>(null);
   const [showShareDialog, setShowShareDialog] = useState(false);
@@ -113,6 +148,21 @@ export default function CharacterPlanner() {
           Click equipment slots to add items.
         </p>
       </div>
+
+      {prefilledFrom && (
+        <div style={{
+          marginBottom: 12,
+          padding: '8px 12px',
+          background: 'var(--ifm-color-emphasis-100)',
+          borderLeft: '3px solid #c2a66a',
+          fontSize: 14,
+        }}>
+          Loaded from <strong>{prefilledFrom}</strong>{' '}
+          <a href="#" onClick={(e) => { e.preventDefault(); handleClearAndStartFresh(); }}>
+            Clear and start fresh
+          </a>
+        </div>
+      )}
 
       {/* Import Profile */}
       <div className={styles.importSection}>

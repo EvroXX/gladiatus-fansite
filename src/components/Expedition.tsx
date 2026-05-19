@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
 import styles from '@site/src/css/Expedition.module.css';
 import expeditionsData from '@site/static/data/expeditions.json';
@@ -8,6 +8,9 @@ import type {
   Enemy,
   Range,
 } from '@site/src/types/expeditions';
+import { useActiveCharacter } from '@site/src/hooks/useActiveCharacter';
+import AttackModal from '@site/src/components/AttackModal/AttackModal';
+import { ExpeditionBonusesCell, type BonusId } from '@site/src/components/ExpeditionBonuses/ExpeditionBonuses';
 
 const CDN_PREFIX = 'https://gladiatusfansite.blob.core.windows.net/images/';
 const BOSS_FRAME_URL = `${CDN_PREFIX}Expeditions/boss_picture.png`;
@@ -95,6 +98,18 @@ function DungeonLine({ label, name, slug }: { label: string; name: string | null
 
 export default function Expedition({ slug }: ExpeditionProps) {
   const exp = findExpedition(slug);
+  const { character: activeCharacter } = useActiveCharacter();
+  const [attackEnemy, setAttackEnemy] = useState<{ enemy: Enemy; bonuses: Set<BonusId> } | null>(null);
+  const [bonusesByEnemy, setBonusesByEnemy] = useState<Record<number, Set<BonusId>>>({});
+
+  const toggleBonus = (enemyIndex: number, bonusId: BonusId) => {
+    setBonusesByEnemy((prev) => {
+      const current = new Set(prev[enemyIndex] ?? new Set<BonusId>());
+      if (current.has(bonusId)) current.delete(bonusId);
+      else current.add(bonusId);
+      return { ...prev, [enemyIndex]: current };
+    });
+  };
   if (!exp) {
     return <span className={styles.error}>Expedition not found: {slug}</span>;
   }
@@ -154,6 +169,48 @@ export default function Expedition({ slug }: ExpeditionProps) {
               <td key={`img-${i}`}><EnemyImage enemy={e} /></td>
             ))}
           </tr>
+          {activeCharacter !== null && (
+            <tr>
+              <AttributeCell label="Bonuses" />
+              {exp.enemies.map((_e, i) => (
+                <td key={`bonus-${i}`}>
+                  <ExpeditionBonusesCell
+                    enemyIndex={i}
+                    activeBonuses={bonusesByEnemy[i] ?? new Set<BonusId>()}
+                    onToggleBonus={toggleBonus}
+                  />
+                </td>
+              ))}
+            </tr>
+          )}
+          {activeCharacter !== null && (
+            <tr>
+              <AttributeCell label="Attack" />
+              {exp.enemies.map((e, i) => (
+                <td key={`atk-${i}`}>
+                  {e.life === null ? (
+                    <button
+                      className="awesome-button big"
+                      disabled
+                      title="No combat data available for this enemy yet."
+                    >
+                      Attack
+                    </button>
+                  ) : (
+                    <button
+                      className="awesome-button big"
+                      onClick={() => setAttackEnemy({
+                        enemy: e,
+                        bonuses: new Set(bonusesByEnemy[i] ?? new Set<BonusId>()),
+                      })}
+                    >
+                      Attack
+                    </button>
+                  )}
+                </td>
+              ))}
+            </tr>
+          )}
           <tr>
             <AttributeCell icon={ICON_LEVEL} label="Level" />
             {exp.enemies.map((e, i) => <td key={`lvl-${i}`}>{formatRange(e.level)}</td>)}
@@ -224,6 +281,14 @@ export default function Expedition({ slug }: ExpeditionProps) {
           </tr>
         </tbody>
       </table>
+      {attackEnemy && activeCharacter && (
+        <AttackModal
+          enemy={attackEnemy.enemy}
+          bonuses={attackEnemy.bonuses}
+          character={activeCharacter}
+          onClose={() => setAttackEnemy(null)}
+        />
+      )}
     </>
   );
 }
