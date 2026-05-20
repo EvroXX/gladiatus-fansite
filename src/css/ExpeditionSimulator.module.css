@@ -1,0 +1,180 @@
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.notice {
+  border: 1px solid #c2a66a;
+  background: var(--ifm-color-emphasis-100);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.notice p {
+  margin: 0 0 12px;
+}
+
+.error {
+  color: var(--ifm-color-danger);
+  padding: 12px 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.playerPanel {
+  border: 1px solid #c2a66a;
+  background: #d3c08b;
+  color: #2c1f0c;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.portrait {
+  display: block;
+  width: 168px;
+  height: auto;
+  border: 1px solid #8E753F;
+}
+
+.statsList {
+  margin: 8px 0 0;
+  width: 100%;
+  font-size: 13px;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.statRow:last-child {
+  border-bottom: 0;
+}
+
+.statRow dt {
+  margin: 0;
+}
+
+.statRow dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.controlsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropdownRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdownRow label {
+  width: 100px;
+  font-weight: 700;
+}
+
+.dropdownRow select {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 14px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border: 1px solid #c2a66a;
+}
+
+.bonusesRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.bonusesLabel {
+  font-weight: 700;
+}
+
+.buttonsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.buttonColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.buttonDescription {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-700);
+  text-align: center;
+}
+
+.sampleSizeRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.sampleSizeRow select {
+  padding: 2px 6px;
+  font-size: 12px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border: 1px solid #c2a66a;
+}
+
+.oddsResult {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.oddsTile {
+  border: 1px solid #c2a66a;
+  background: #d3c08b;
+  padding: 14px 8px;
+  text-align: center;
+}
+
+.oddsLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2c1f0c;
+  margin-bottom: 4px;
+}
+
+.oddsValue {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}

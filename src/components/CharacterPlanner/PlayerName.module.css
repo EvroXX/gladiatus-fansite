@@ -5,31 +5,6 @@
   margin-bottom: 16px;
 }
 
-.costumeAnimation {
-  margin-top: 0;
-  width: 168px;
-  height: 194px;
-  background-color: #000000;
-  background-repeat: no-repeat;
-  background-size: auto 194px;
-  animation: costumeSpriteAnimation 1.5s steps(11) infinite;
-}
-
-.costumeStatic {
-  margin-top: 0;
-  width: 168px;
-  height: 194px;
-  background-color: #000000;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-@keyframes costumeSpriteAnimation {
-  0% { background-position: 0px 0px; }
-  100% { background-position: -1848px 0px; }
-}
-
 .genderSelector {
   display: flex;
   gap: 16px;
@@ -56,14 +31,6 @@
   accent-color: #8b6914;
 }
 
-.faceImage {
-  margin-top: 0;
-  width: 168px;
-  height: 194px;
-  border: 2px solid #8b7355;
-  border-radius: 4px;
-}
-
 /* Dark Theme */
 [data-theme='dark'] .genderSelector {
   background: linear-gradient(135deg, #2c2416 0%, #1a1410 100%);
@@ -76,8 +43,4 @@
 
 [data-theme='dark'] .genderLabel input[type="radio"] {
   accent-color: #d4af37;
-}
-
-[data-theme='dark'] .faceImage {
-  border-color: #8b7355;
 }

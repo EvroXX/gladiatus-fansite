@@ -168,6 +168,16 @@ const config: Config = {
               label: 'Forge Simulator',
               className: 'navbar-item--beta',
             },
+            {
+              to: '/expedition-simulator',
+              label: 'Expedition Simulator',
+              className: 'navbar-item--new',
+            },
+            {
+              to: '/arena-simulator',
+              label: 'Arena Simulator',
+              className: 'navbar-item--new',
+            },
           ],
         },
         {

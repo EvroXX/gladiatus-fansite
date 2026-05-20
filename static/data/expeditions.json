@@ -2033,7 +2033,7 @@
     "overviewImage": "Expeditions/Africa/Africa_Overview.png",
     "expeditions": [
       {
-        "name": "\"Voodoo Temple\"",
+        "name": "Voodoo Temple",
         "slug": "africa-expeditions/voodoo-temple",
         "description": "It is the generous gift made by the Empire for the Umpokta. After the foundation walls and the building material were delivered, the Umpokta banished all Roman architects and finished constructing the building themselves. Religious reasons were pushed forward. Certainly the temple probably holds many secrets and treasures, which are protected by force of arms.",
         "additionalInfo": "The expedition is ready as soon as you are able to travel to Africa at the level of 20. However, enemies are level 30+ so fighting here on 20 is mission impossible. Perhaps if you are good geared you could pull it off on 25. The dungeon is as well too strong for a level 20 so in general don't bother coming at level 20 unless you know what you are doing. Interesting fact is that all of the enemies here are with very low HP and Constitution. Seth Priest is godly and practically unbeatable while you are on relevant level. Great rewards from him but Charisma is comparable to a level 50+ creature.",
@@ -2320,7 +2320,7 @@
         ]
       },
       {
-        "name": "\"Bridge\"",
+        "name": "Bridge",
         "slug": "africa-expeditions/bridge",
         "description": "In the face of the climate and the local geology, wooden bridge constructions are not practical. For this reason the Empire built this unique piece of Roman engineering here in Africa. The Umpokta consider it a passage, which connects the world of life and the world of the dead. Numerous misunderstandings arise, due to this. Gladiators that guard the bridge are seen as guardians, who watch over the access to the afterlife.",
         "additionalInfo": "Funny how strong Man Eater is. You better stay with Tax Collector. Bone Shaman is really strong. Best if you farm Tax Collector until next expedition is available.",
@@ -2607,7 +2607,7 @@
         ]
       },
       {
-        "name": "\"Blood Cave\"",
+        "name": "Blood Cave",
         "slug": "africa-expeditions/blood-cave",
         "description": "There\\`s a rumour amongst the superstitious natives that magical rituals are held here. The historiography of the empire writes of no such events taking place there. The fact is though, that the cave`s cooling shadows attracts deadly animals.",
         "additionalInfo": "Blood Wolf is pretty beatable. However Giant Beetle is really hard with an armour of 5-6k your attacks would not pierce with a lot of damage. Fire Dancer is not as strong as other 3rd expedition enemies compared to other expeditions. Same could be said for the Fire Demon. By far the strongest in the expedition but not as strong as other bosses compared to their expeditions.",
@@ -2894,7 +2894,7 @@
         ]
       },
       {
-        "name": "\"Lost Harbour\"",
+        "name": "Lost Harbour",
         "slug": "africa-expeditions/lost-harbour",
         "description": "Once a thriving Viking outpost, it has in the meantime become a shadow of its former self. A textbook example of the empire and its allies. The strange power of voodoo forced the blonde giants to their knees. It apparently still holds findings from the houses and ships of the Vikings, that aren`t of any interest to the Umpokta.",
         "additionalInfo": "Crocodile is pretty weak so it can be attacked easily at lower level. Undead Holder is not as strong as well because he has very low Dexterity which means that he won't be hitting you a lot. Giant Water Snake is strong but beatable as well. Mokele Mbembe is a special case. Can spawn as low as Level 48 and stats are good but not impossible. There is one problem however. Its non-penetrable armor makes him a though opponent. At 7-9.5k it consumes almost all the damage a level ~40 gladiator can do.",
@@ -3181,7 +3181,7 @@
         ]
       },
       {
-        "name": "\"Umpokta Tribe\"",
+        "name": "Umpokta Tribe",
         "slug": "africa-expeditions/umpokta-tribe",
         "description": "As far as the Empire is concerned, it is the high-point of civilisation amongst the savages of the savannah and deserts. Primitive house construction and religious superstition are very prevalent in everyday Umpokta life. With their masks and threatening songs they frighten the tenderly strung amongst our citizens.",
         "additionalInfo": "Now there are strange things about this expedition. Tribal Warrior and Tribal Magician are pretty doable. However Spirit Warrior has the 3rd biggest Armor in the game. Seth High Priest is one good example of a high end boss. His stats and rewards and treasures are so high that in terms of gold, experience and honour he is among the 110+ bosses. There is something weird about the expedition in my encounters. I did not encounter any item drops while there.",
@@ -3468,7 +3468,7 @@
         ]
       },
       {
-        "name": "\"Caravan\"",
+        "name": "Caravan",
         "slug": "africa-expeditions/caravan",
         "description": "A small shadow over the relationship between the Umpokta tribe and the Empire is this hijacked caravan. There are still plenty of goods in the desert belonging to our citizens. The negotiations are being drawn out because of communication problems.",
         "additionalInfo": "They are not wearing a lot of armor as clothing and this is reflected in their Armour stat - it is low. Spy and Caravan Guard are pretty weak, while Elite Guard is strong but not unbeatable. Slave Merchant is generous and if you could manage to beat him without loosing too many battles, go for him.",
@@ -3755,7 +3755,7 @@
         ]
       },
       {
-        "name": "\"Mesoai Oasis\"",
+        "name": "Mesoai Oasis",
         "slug": "africa-expeditions/mesoai-oasis",
         "description": "Fruitfully it lies in the desert and fearful are its dangers. As one of the few oases here in this region it is a place of refuge for many animals looking to quench their thirst. The shady trees offer shelter from the sun and offer predators the possibility of getting some food.",
         "additionalInfo": "Just like Caravan this is a pleasant and on the spot expedition. Not to mention that the animals are really good looking. Nothing out of the ordinary. Weak 1 and 2 and strong 3rd in the face of Demon Lion. Demon Elephant is a jewel in terms of treasures. It can reach item level of 108 which is on the maximum frontier of your gear at this point and it will be a lot of purples. He can drop Ichorus so he might surprise you with a new weapon, especially if it rolls **Purple** or **Orange** quality.",
@@ -4042,7 +4042,7 @@
         ]
       },
       {
-        "name": "\"Cliff Jumper\"",
+        "name": "Cliff Jumper",
         "slug": "africa-expeditions/cliff-jumper",
         "description": "In the religious life of the Umpokta a surreal ritual has become tradition. On every third new moon the villages` priests meet and choose someone especially gifted. This person is accompanied by a procession to Cliffjumper Mountain. On arrival the chosen ones throw themselves jubilantly off the cliff to their deaths, it is said that it is a gift to the spirits. Aside from the spirits the numerous wild animals that have settled in this area also get some satisfaction from it.",
         "additionalInfo": "This is the third of the pleasant high level African expeditions. Same as Mesoai-Oasis it is very standard. Weak Cursed Antelope and Giant Spider and very strong Shaman and High Shaman. High Shaman is considered one of the high end bosses in the game and is the highest creature in Africa. It's another question whether you will be able to effectively farm him until you leave this place on level 102 and to depart for Germania for good. Cursed Antelope has unnaturally low drop rate for items and Shaman seems to be drop really high item level, just like High Shaman. In your early 90s, try to farm Shaman or go back to Mesoai and try farming Demon Elephant. Mid 90's around level 95 you might be able to farm High Shaman more effectively. Do not farm him unless you win 9 out of 10 battles. It's just not worth it experience wise.",
@@ -6938,7 +6938,7 @@
     "overviewImage": "Expeditions/Britannia/Britannia_Overview.png",
     "expeditions": [
       {
-        "name": "\"Bank of the Thames\"",
+        "name": "Bank of the Thames",
         "slug": "britannia-expeditions/bank-of-the-thames",
         "description": "Galerius Senecianus\\` Diary: DCXCIX a.u.c. We`ve finally found a suitable landing point! The journey through the night was difficult and I have not experienced such an uncomfortable climate in all my travels in the empire. Whilst sailing we have already been greeted with spears flung from the coastline. The local tribes, as it appears, will not be giving up without any resistance. Hopefully our large war barges will provide us with some covering fire as we land...",
         "additionalInfo": null,
@@ -7225,7 +7225,7 @@
         ]
       },
       {
-        "name": "\"Forest Fortress\"",
+        "name": "Forest Fortress",
         "slug": "britannia-expeditions/forest-fortress",
         "description": "Galerius Senecianus` Diary: DCXCIX a.u.c. After the initial skirmishes, these barbaric Britons withdrew to the forest. Caesar pursued them with the intent of running them down and setting up an inland camp. To be honest, I am a little concerned. I heard things on the route here of mystical beings that are roaming and rampaging in the local woods. I pray that these are merely tales to frighten the young... and us Romans.",
         "additionalInfo": null,
@@ -7503,7 +7503,7 @@
         ]
       },
       {
-        "name": "\"The Moor\"",
+        "name": "The Moor",
         "slug": "britannia-expeditions/the-moor",
         "description": "Galerius Senecianus` Diary: DCXCIX a.u.c. We were able to subdue the domestic tribes with ease. As an offering of peace, each of them presented us with hostages, who then revealed the leader of the resistance. He goes by the name of Cassivellaunus and he has an encampment to the north-east of us inland. We immediately headed out and even made good progress. That was, until the sole route led us into and through this most eerie moor...",
         "additionalInfo": null,
@@ -7778,7 +7778,7 @@
         ]
       },
       {
-        "name": "\"Camp Cassivellaunus\"",
+        "name": "Camp Cassivellaunus",
         "slug": "britannia-expeditions/camp-cassivellaunus",
         "description": "Galerius Senecianus\\` Diary: DCXCIX a.u.c. We managed to put the moor behind us. My shoes and those of my companions are soaked to the core from sinking in the quagmire. Our commander Gaius Trebonius... not so much. To be quite honest, there is something about him that seems off to me. Caesar gave him the order to press forward into Cassivellaunus` camp, which is protected by both a wall and a ditch. Cassivellaunus also realised his inferiority in open battle and has released the majority of his armies. All that remain are his agile chariot riders and a few mercenaries who lie in wait and then ambush us...",
         "additionalInfo": null,
@@ -8053,7 +8053,7 @@
         ]
       },
       {
-        "name": "\"Kent\"",
+        "name": "Kent",
         "slug": "britannia-expeditions/kent",
         "description": "Galerius Senecianus` Diary: DCXCIX a.u.c. The camp fell, Cassivellaunus fled! He however managed to send a message to the Kings of Kent, to mobilise them against us. They intend to attack our camp on the coast, hoping to make us retreat. They know the land and its intricacies much better than we do, but if we plan on staying here long term, we have to defeat them...",
         "additionalInfo": null,
@@ -8328,7 +8328,7 @@
         ]
       },
       {
-        "name": "\"The Ford\"",
+        "name": "The Ford",
         "slug": "britannia-expeditions/the-ford",
         "description": "Flavius Eunapius` Diary: DCCXCVI a.u.c: Britannia... what did I do to deserve this. A long way from my wife, child and my beloved Rome. Slowly, memories of the stories my grandfather told me come to the fore of my mind: his grandfather assisted Julius Caesar in the subjugation of this barbaric people! And today? After the retreat and the initiation of kings approved by Rome, these barbarians returned to their uncivilised lives... until one of them came and implored help from Emperor Claudius.\nThe local troops were being led by two brothers, who had barricaded themselves up in northern Camulodunum. We were able to emerge victorious from the initial skirmishes after our landing. Now on our way north, we need to cross this river...",
         "additionalInfo": null,
@@ -8887,7 +8887,7 @@
         ]
       },
       {
-        "name": "\"Cambria\"",
+        "name": "Cambria",
         "slug": "britannia-expeditions/cambria",
         "description": "Flavius Eunapius` Diary: DCCCIV a.u.c: We have been in Britannia just about 10 years now, even though my wife first refused to come. In the meantime we have it pretty good here. We can call a nice estate with servants aplenty our own and for the most part, our lives are much better here than they were in Italy. Just... it is almost impossible to stop complaining about the weather...\nDespite all this luxury, I have decided to head back into battle as an Officer. As Camulodunum fell after 16 days, the leader of the resistance was once again able to flee and since then has become somewhat of an icon in the resistance against us Romans. Now our spies have been able to locate him in Cambria, the kingdom of the Silures. I see it as my duty to stand against them in battle, as a duty to my fallen comrades, to finally bring this man to justice...",
         "additionalInfo": null,
@@ -9162,7 +9162,7 @@
         ]
       },
       {
-        "name": "\"Mona Isle\"",
+        "name": "Mona Isle",
         "slug": "britannia-expeditions/mona-isle",
         "description": "Flavius Eunapius` Diary: DCCCX a.u.c: I feel my time drawing to a close. My children have followed my invitation and now accompany me through my final days. Looking back over my life, I made the right choice in lingering in Britannia. In my final battle I personally captured Caratacus and dispatched him to Rome, where Emperor Nero then princely rewarded us. My oldest son strove to follow my lead after some time and has already managed to attain a high standing within the military. Now he has the task of taking care of the final point of retreat for the Druids: Mona Isle. Even when I think highly of his ability, the power of the Druids makes me worry...",
         "additionalInfo": null,

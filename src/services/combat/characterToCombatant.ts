@@ -21,6 +21,8 @@ export function characterToCombatant(args: {
       level,
       gender: identity.gender,
     }),
+    costume: identity.costume,
+    gender: identity.gender,
     level,
     hp: stats.totalHealth,
     maxHp: stats.totalHealth,

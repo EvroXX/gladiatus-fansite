@@ -1,0 +1,36 @@
+.costumeAnimation {
+  margin-top: 0;
+  width: 168px;
+  height: 194px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: auto 194px;
+  animation: costumeSpriteAnimation 1.5s steps(11) infinite;
+}
+
+.costumeStatic {
+  margin-top: 0;
+  width: 168px;
+  height: 194px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@keyframes costumeSpriteAnimation {
+  0% { background-position: 0px 0px; }
+  100% { background-position: -1848px 0px; }
+}
+
+.faceImage {
+  margin-top: 0;
+  width: 168px;
+  height: 194px;
+  border: 2px solid #8b7355;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .faceImage {
+  border-color: #8b7355;
+}

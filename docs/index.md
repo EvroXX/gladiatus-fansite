@@ -220,6 +220,11 @@ From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server ti
 
 ## Latest website news
 
+### 20.05.2025
+
+- Standalone Expedition Simulator
+- New Arena (PvP) Simulator
+
 ### 19.05.2025
 
 - A lot has been going on, hard to keep track of it here but notable mentions are:

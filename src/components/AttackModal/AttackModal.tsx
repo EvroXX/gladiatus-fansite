@@ -9,25 +9,35 @@ import {
 import { simulateBattle } from '@site/src/services/combat/simulateBattle';
 import { characterToCombatant } from '@site/src/services/combat/characterToCombatant';
 import { rollEnemyAsCombatant } from '@site/src/services/combat/enemyToCombatant';
-import type { BattleLog } from '@site/src/services/combat/types';
+import type { BattleLog, Combatant } from '@site/src/services/combat/types';
 import BattleReport from '@site/src/components/BattleReport/BattleReport';
 import styles from './AttackModal.module.css';
 
-type Props = {
+export type Rewards = { gold: number; experience: number; honour: number };
+
+type PveProps = {
+  mode: 'pve';
   enemy: Enemy;
   character: ActiveCharacterRecord;
   bonuses: Set<BonusId>;
   onClose: () => void;
 };
 
-export type Rewards = { gold: number; experience: number; honour: number };
+type PvpProps = {
+  mode: 'pvp';
+  attacker: Combatant;
+  defender: Combatant;
+  onClose: () => void;
+};
+
+type Props = PveProps | PvpProps;
 
 function rollInRange(range: { min: number; max: number }): number {
   if (range.max <= range.min) return range.min;
   return Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
 }
 
-function useBattleResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses: Set<BonusId>): {
+function usePveResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses: Set<BonusId>): {
   log: BattleLog | null;
   rewards: Rewards | null;
   error: string | null;
@@ -48,7 +58,7 @@ function useBattleResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses
       decoded.items,
       decoded.level,
       decoded.baseStats,
-      decoded.pacts
+      decoded.pacts,
     );
     const playerCombatant = characterToCombatant({
       identity: decoded.identity,
@@ -63,13 +73,6 @@ function useBattleResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses
 
     const log = simulateBattle(playerCombatant, rolled.combatant);
 
-    // Rewards: only on a player win (KO or damage tiebreak). Each reward
-    // type rolls uniformly within the enemy's JSON range, then active
-    // expedition bonuses multiply the rolled value:
-    //   Disembowler       → gold × 1.30
-    //   Analytical Battle → experience × 1.30
-    //   Storyteller       → honour × 1.20
-    //   Sixth sense for loot → affects item drops (not simulated; no effect on these three numbers)
     const rewards: Rewards | null = log.outcome === 'attacker_wins'
       ? (() => {
           const goldMult = bonuses.has('gold') ? 1.3 : 1.0;
@@ -84,38 +87,83 @@ function useBattleResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses
       : null;
 
     return { log, rewards, error: null };
-    // bonuses is a Set; useMemo's identity check is fine since the parent
-    // creates a new Set per modal open.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [enemy, character, bonuses]);
 }
 
-export default function AttackModal({ enemy, character, bonuses, onClose }: Props): React.ReactElement {
-  const { log, rewards, error } = useBattleResult(enemy, character, bonuses);
+function usePvpResult(attacker: Combatant, defender: Combatant): {
+  log: BattleLog | null;
+  rewards: Rewards | null;
+  error: string | null;
+} {
+  return useMemo(() => {
+    const log = simulateBattle(attacker, defender, {
+      maxRounds: 15,
+      firstAttacker: 'coinflip',
+    });
+    return { log, rewards: null, error: null };
+  }, [attacker, defender]);
+}
+
+export default function AttackModal(props: Props): React.ReactElement {
   const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === 'Escape') {
         setClosing(true);
-        onClose();
+        props.onClose();
       }
     }
     globalThis.addEventListener('keydown', onKey);
     return () => globalThis.removeEventListener('keydown', onKey);
-  }, [onClose]);
+  }, [props]);
+
+  // Stable placeholders so we can always call both hooks (Rules of Hooks).
+  const placeholderEnemy = useMemo<Enemy>(() => ({
+    name: '', image: '', isBoss: false,
+    level: { min: 0, max: 0 }, gold: { min: 0, max: 0 }, experience: { min: 0, max: 0 }, honour: { min: 0, max: 0 },
+    strength: { min: 0, max: 0 }, dexterity: { min: 0, max: 0 }, agility: { min: 0, max: 0 },
+    constitution: { min: 0, max: 0 }, charisma: { min: 0, max: 0 }, intelligence: { min: 0, max: 0 },
+    armour: { min: 0, max: 0 }, damage: { min: { min: 0, max: 0 }, max: { min: 0, max: 0 } },
+    itemLevelDrop: null, life: 0, critRaw: null, blockRaw: null, avoidCritRaw: null,
+  }), []);
+  const placeholderCharacter = useMemo<ActiveCharacterRecord>(() => ({
+    v: 1, encoded: '', identity: { name: '', gender: 'male' }, level: 1, savedAt: 0,
+  }), []);
+  const placeholderCombatant = useMemo<Combatant>(() => ({
+    name: '', level: 1, hp: 0, maxHp: 0, damageMin: 0, damageMax: 0,
+    armour: 0, armourAbsorbMin: 0, armourAbsorbMax: 0,
+    strength: 0, dexterity: 0, agility: 0, constitution: 0, charisma: 0, intelligence: 0,
+    critChance: 0, blockChance: 0, critAvoidChance: 0,
+  }), []);
+
+  const pve = usePveResult(
+    props.mode === 'pve' ? props.enemy : placeholderEnemy,
+    props.mode === 'pve' ? props.character : placeholderCharacter,
+    props.mode === 'pve' ? props.bonuses : new Set<BonusId>(),
+  );
+  const pvp = usePvpResult(
+    props.mode === 'pvp' ? props.attacker : placeholderCombatant,
+    props.mode === 'pvp' ? props.defender : placeholderCombatant,
+  );
+
+  const { log, rewards, error } = props.mode === 'pve' ? pve : pvp;
+  const title = props.mode === 'pve'
+    ? `Attacking ${props.enemy.name}`
+    : `Attacking ${props.defender.name}`;
 
   if (closing) return <></>;
 
   return (
     <div
       className={styles.backdrop}
-      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      onClick={(e) => { if (e.target === e.currentTarget) props.onClose(); }}
     >
       <div className={styles.dialog} role="dialog" aria-modal="true">
         <div className={styles.header}>
-          <span>Attacking {enemy.name}</span>
-          <button className={styles.closeButton} onClick={onClose} aria-label="Close">×</button>
+          <span>{title}</span>
+          <button className={styles.closeButton} onClick={props.onClose} aria-label="Close">×</button>
         </div>
         <div className={styles.body}>
           {error && <div className={styles.error}>{error}</div>}

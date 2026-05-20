@@ -1,6 +1,8 @@
 export type Combatant = {
   name: string;
-  image?: string;              // optional CDN-relative image path for the report avatar
+  image?: string;              // flat URL for the small report avatar
+  costume?: string;            // raw costume sprite URL (drives animation in large portraits)
+  gender?: 'male' | 'female';  // used for the face-image fallback when costume is absent
   level: number;
   hp: number;                  // current HP, mutated by the engine
   maxHp: number;

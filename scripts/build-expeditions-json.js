@@ -517,8 +517,20 @@ function main() {
       return normalised === newForm;
     });
     if (candidates.length === 0) return null;
-    // Normalise the slug to the new form so the output JSON is consistent.
-    return { ...candidates[0], slug: newForm };
+    // Carry the previous JSON entry forward, but re-read the canonical name
+    // from the current MDX frontmatter so renames and old quoting bugs in the
+    // stored JSON get cleaned up automatically. Falls back to the previous
+    // name if the MDX can't be read.
+    let refreshedName = candidates[0].name;
+    const mdxPath = path.join(EXPEDITIONS_DIR, COUNTRY_META[country].folder, `${slug}.mdx`);
+    try {
+      const md = fs.readFileSync(mdxPath, 'utf8');
+      const fm = parseFrontmatter(md);
+      if (fm.title) refreshedName = fm.title;
+    } catch {
+      // keep previous name
+    }
+    return { ...candidates[0], name: refreshedName, slug: newForm };
   }
 
   const data = {};

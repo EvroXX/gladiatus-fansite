@@ -283,6 +283,7 @@ export default function Expedition({ slug }: ExpeditionProps) {
       </table>
       {attackEnemy && activeCharacter && (
         <AttackModal
+          mode="pve"
           enemy={attackEnemy.enemy}
           bonuses={attackEnemy.bonuses}
           character={activeCharacter}
