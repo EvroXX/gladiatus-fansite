@@ -302,8 +302,9 @@ function calculateUpgradeBonus(upgrade: Upgrade, level: number): number {
     // Powders: level field contains the direct bonus amount
     return level;
   } else if (upgrade.stat === 'damage' || upgrade.stat === 'armour') {
-    // Grindstone and Protective gear: level / 5, round up
-    return Math.ceil(level / 5);
+    // Grindstone and Protective gear: level / 5, round up, with a floor of 1
+    // so a level-3 grindstone still contributes +1 instead of rounding to 0.
+    return Math.max(1, Math.ceil(level / 5));
   }
   return 0;
 }
@@ -342,11 +343,15 @@ export function calculateCharacterStats(
       totalArmor += itemStats.prefixArmor;
     }
 
-    if (equippedItem.enchantValue) {
+    if (equippedItem.enchantValue !== undefined) {
+      // Grindstones and protective gear always contribute at least +1, even
+      // when imported with a value of 0 (Gladiatus floors low-level enchant
+      // bonuses to 0; we treat the presence of the enchant as a minimum of 1).
+      const enchantContribution = Math.max(1, equippedItem.enchantValue);
       if (slot === 'mainHand') {
-        enchantDamageBonus += equippedItem.enchantValue;
+        enchantDamageBonus += enchantContribution;
       } else if (slot === 'helmet' || slot === 'chest' || slot === 'gloves' || slot === 'shoes' || slot === 'offHand') {
-        enchantArmorBonus += equippedItem.enchantValue;
+        enchantArmorBonus += enchantContribution;
       }
     }
 
