@@ -25,7 +25,7 @@ An evil cult has gathered around the enticing promise of power and riches, allyi
 
 - There is no cooldown between attacks. You can keep attacking until you run out of event points. Depending on the battle, it may take around 3 seconds until you can start the next encounter.
 
-- You can refill your event points by spending 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies"). Each purchase increases the cost by 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies") for every subsequent top-up. The price increase applies until the Participation Boost has expired (max. 30 minutes), after which time the cost is reset to 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies").
+- You can refill your event points by spending 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies"). Each purchase increases the cost by 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies") for every subsequent top-up. The price increase applies until the Participation Boost has expired (max. 30 minutes), after which time the cost is reset to 5 ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies"). This is the most important different and aspect of the event. It can provide exceptional amounts of XP for relatively low ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies") count.
 
 - Leveling up does not refill your points
 
@@ -53,14 +53,35 @@ An evil cult has gathered around the enticing promise of power and riches, allyi
 
 ### Wave 1 (4 days)
 
+An evil cult has gathered around the enticing promise of power and riches, allying themselves with evil. They betrayed their brothers and sisters, and now fight alongside the creatures from the deep, refusing to acknowledge that, like them, they are nothing more than cannon fodder for their dark master. But now the day of judgement is upon them!
+
 <div className="player_name_bg"><div className="playername">Cult of the Depths</div></div>
 ![Cult of the Depths](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/cult-of-the-depths.png "Cult of the Depths")
 
 ![Wave 1](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/overview.jpg "Wave 1")
 
-## Event Rewards (during the event)
+### Wave 2 (4 days)
+
+The souls of the dead were never meant to be dragged back across the river Styx, to be chained once more to living bodies. But the Tormentor of Souls banished his failed experiments, together with all those who proved too weak or unworthy to join the legions of his army. Driven by hatred and the burning desire to prove themselves, these tortured souls are nevertheless formidable warriors who should not be underestimated, lest you wish to end your days in their ranks...
+
+<div className="player_name_bg"><div className="playername">The Defiled Exiles</div></div>
+![The Defiled Exiles](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/the-defiled-exiles.png "The Defiled Exiles")
+
+![Wave 2](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/overview-2.jpg "Wave 2")
 
 ## Event Costume
+
+The event unlocks the costume **Defender of the Empire**. This is a new type of costume called "Temporary Costume", which means it can be worn immediately and during the event that unlocks it, contrary to the other events where an event unlocks the costume but it can only be worn after the event that unlocks it.
+
+![Defender of the Empire male costume](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/defender-of-the-empire-male.gif "Defender of the Empire male costume")
+![Defender of the Empire female costume](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/defender-of-the-empire-female.gif "Defender of the Empire female costume")
+
+- (2) Reduces quest waiting time by 30%. Reduces cooldown for new expeditions 30%.
+- (3) 100% quicker regeneration of expedition points
+- (4) 20% experience points in dungeons. 20% experience points in expeditions
+- (5) Strength +3%, Dexterity +3%, Agility +3%, Constitution +3%, Charisma +3%, Intelligence +3%
+
+## Event Rewards (during the event)
 
 The following buffs will be unlocked server-wide if the respective wave is defeated during the event.
 

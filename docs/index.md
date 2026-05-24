@@ -212,7 +212,6 @@ From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server ti
 ## To Do List
 
 - Find what the formula for materials is when prefix and suffix are mixed together. So far we hardcode them through a file that has all possible variations. Taken from [gladiatus-tools](https://gitlab.com/gladiatus-tools-ng/website/-/raw/master/src/data/prefixes_suffixes_recipes.json?ref_type=heads "gladiatus tools")
-- Make Expeditions come from data files and not just plain text
 - Character planner partial costumes do not render well
 - Find what the formula is for gold, durability and conditiong is when prefix/suffix or both are applied to an item
 
