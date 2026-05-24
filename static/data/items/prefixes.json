@@ -5101,7 +5101,7 @@
     "id": 189
   },
   {
-    "name": "Elegatius`",
+    "name": "Elegarius`",
     "level": 155,
     "new": true,
     "stats": {
@@ -5477,7 +5477,13 @@
         "percent": 0
       }
     },
-    "materials": {"Hydra Scales": 12, "Sphinx Feather": 3, "Resin": 13, "Mead": 5, "Lead Ore": 60},
+    "materials": {
+      "Hydra Scales": 12,
+      "Sphinx Feather": 3,
+      "Resin": 13,
+      "Mead": 5,
+      "Lead Ore": 60
+    },
     "id": 9987
   },
   {
@@ -5506,7 +5512,13 @@
         "percent": 0
       }
     },
-    "materials": {"Almandin": 5, "Soul Essence": 7, "Boar Tusk": 19, "Mead": 47, "Lead Ore": 16},
+    "materials": {
+      "Almandin": 5,
+      "Soul Essence": 7,
+      "Boar Tusk": 19,
+      "Mead": 47,
+      "Lead Ore": 16
+    },
     "id": 9999
   },
   {
@@ -5793,7 +5805,11 @@
         "percent": 0
       }
     },
-    "materials": {"Sphinx Feather": 1, "Resin": 48, "Tin Ore": 49},
+    "materials": {
+      "Sphinx Feather": 1,
+      "Resin": 48,
+      "Tin Ore": 49
+    },
     "id": 9979
   },
   {
@@ -5860,7 +5876,12 @@
         "percent": 0
       }
     },
-    "materials": {"Resin": 6, "Boar Tusk": 14, "Mead": 11, "Lead Ore": 69},
+    "materials": {
+      "Resin": 6,
+      "Boar Tusk": 14,
+      "Mead": 11,
+      "Lead Ore": 69
+    },
     "id": 9977
   },
   {
@@ -6067,7 +6088,12 @@
         "percent": 0
       }
     },
-    "materials": {"Typhon Leather": 18, "Resin": 18, "Tin Ore": 64, "Lead Ore": 5},
+    "materials": {
+      "Typhon Leather": 18,
+      "Resin": 18,
+      "Tin Ore": 64,
+      "Lead Ore": 5
+    },
     "id": 214
   },
   {
@@ -6234,7 +6260,12 @@
         "percent": 0
       }
     },
-    "materials": {"Typhon Leather": 29, "Mead": 6, "Tin Ore": 19, "Lead Ore": 53},
+    "materials": {
+      "Typhon Leather": 29,
+      "Mead": 6,
+      "Tin Ore": 19,
+      "Lead Ore": 53
+    },
     "id": 218
   },
   {
@@ -6271,7 +6302,11 @@
         "percent": -25
       }
     },
-    "materials": {"Soul Essence": 58, "Blood Garnet": 13, "Lead Ore": 36},
+    "materials": {
+      "Soul Essence": 58,
+      "Blood Garnet": 13,
+      "Lead Ore": 36
+    },
     "id": 9967
   },
   {
@@ -6308,7 +6343,13 @@
         "percent": 0
       }
     },
-    "materials": {"Hydra Scales": 16, "Resin": 5, "Boar Tusk": 15, "Mead": 10, "Tin Ore": 64},
+    "materials": {
+      "Hydra Scales": 16,
+      "Resin": 5,
+      "Boar Tusk": 15,
+      "Mead": 10,
+      "Tin Ore": 64
+    },
     "id": 9966
   },
   {
@@ -6456,7 +6497,12 @@
         "percent": 0
       }
     },
-    "materials": {"Almandin": 13, "Resin": 10, "Boar Tusk": 31, "Blood Garnet": 59},
+    "materials": {
+      "Almandin": 13,
+      "Resin": 10,
+      "Boar Tusk": 31,
+      "Blood Garnet": 59
+    },
     "id": 224
   },
   {
@@ -6620,7 +6666,14 @@
         "percent": 0
       }
     },
-    "materials": {"Almandin": 5, "Resin": 10, "Boar Tusk": 19, "Blood Garnet": 55, "Mead": 5, "Tin Ore": 23},
+    "materials": {
+      "Almandin": 5,
+      "Resin": 10,
+      "Boar Tusk": 19,
+      "Blood Garnet": 55,
+      "Mead": 5,
+      "Tin Ore": 23
+    },
     "id": 229
   },
   {
@@ -6700,7 +6753,14 @@
         "percent": 0
       }
     },
-    "materials": {"Almandin": 6, "Soul Essence": 7, "Sugilite": 59, "Boar Tusk": 22, "Blood Garnet": 21, "Tin Ore": 4},
+    "materials": {
+      "Almandin": 6,
+      "Soul Essence": 7,
+      "Sugilite": 59,
+      "Boar Tusk": 22,
+      "Blood Garnet": 21,
+      "Tin Ore": 4
+    },
     "id": 9955
   },
   {
@@ -6797,7 +6857,12 @@
         "percent": 0
       }
     },
-    "materials": {"Almandin": 8, "Sphinx Feather": 8, "Blood Garnet": 94, "Mead": 11},
+    "materials": {
+      "Almandin": 8,
+      "Sphinx Feather": 8,
+      "Blood Garnet": 94,
+      "Mead": 11
+    },
     "id": 232
   },
   {
@@ -6830,7 +6895,13 @@
         "percent": 0
       }
     },
-    "materials": {"Sphinx Feather": 6, "Resin": 28, "Boar Tusk": 59, "Blood Garnet": 21, "Tin Ore": 9},
+    "materials": {
+      "Sphinx Feather": 6,
+      "Resin": 28,
+      "Boar Tusk": 59,
+      "Blood Garnet": 21,
+      "Tin Ore": 9
+    },
     "id": 234
   },
   {
@@ -7044,12 +7115,12 @@
       }
     },
     "materials": {
-        "Hydra Scale": 15,
-        "Sphinx Feather": 3,
-        "Resin": 44,
-        "Boar Tusk": 6,
-        "Tin Ore": 50,
-        "Lead Ore": 12
+      "Hydra Scale": 15,
+      "Sphinx Feather": 3,
+      "Resin": 44,
+      "Boar Tusk": 6,
+      "Tin Ore": 50,
+      "Lead Ore": 12
     },
     "id": 239
   },
