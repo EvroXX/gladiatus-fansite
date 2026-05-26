@@ -3116,7 +3116,7 @@
             "name": "Mokele Mbembe",
             "image": "Expeditions/Africa/Lost_Harbour/Mokele_Mbembe.jpg",
             "level": {
-              "min": 48,
+              "min": 51,
               "max": 53
             },
             "gold": {
@@ -3336,7 +3336,7 @@
             "name": "Spirit Warrior",
             "image": "Expeditions/Africa/Umpokta_Tribe/Spirit_Warrior.jpg",
             "level": {
-              "min": 89,
+              "min": 88,
               "max": 92
             },
             "gold": {
@@ -4497,7 +4497,7 @@
             "name": "Centurion",
             "image": "Expeditions/Germania/Cave_Temple/Centurion.jpg",
             "level": {
-              "min": 54,
+              "min": 53,
               "max": 57
             },
             "gold": {
@@ -4651,7 +4651,7 @@
             "image": "Expeditions/Germania/Green_Forest/Giant_Wild_Boar.jpg",
             "level": {
               "min": 55,
-              "max": 55
+              "max": 56
             },
             "gold": {
               "min": 2091,
@@ -5426,7 +5426,7 @@
             "image": "Expeditions/Germania/Death_Hill/Necromancer_Prince.jpg",
             "level": {
               "min": 71,
-              "max": 72
+              "max": 73
             },
             "gold": {
               "min": 3238,
@@ -6959,7 +6959,7 @@
             "name": "Bibroci",
             "image": "Expeditions/Britannia/Bank_of_the_Thames/Bibroci.jpg",
             "level": {
-              "min": 134,
+              "min": 130,
               "max": 134
             },
             "gold": {
@@ -7026,7 +7026,7 @@
             "name": "Ancalite",
             "image": "Expeditions/Britannia/Bank_of_the_Thames/Ancalite.jpg",
             "level": {
-              "min": 136,
+              "min": 132,
               "max": 136
             },
             "gold": {
@@ -7093,8 +7093,8 @@
             "name": "Cenimagni",
             "image": "Expeditions/Britannia/Bank_of_the_Thames/Cenimagni.jpg",
             "level": {
-              "min": 137,
-              "max": 137
+              "min": 134,
+              "max": 138
             },
             "gold": {
               "min": 11680,
@@ -7160,8 +7160,8 @@
             "name": "Cassi",
             "image": "Expeditions/Britannia/Bank_of_the_Thames/Cassi.jpg",
             "level": {
-              "min": 137,
-              "max": 137
+              "min": 136,
+              "max": 140
             },
             "gold": {
               "min": 14560,
