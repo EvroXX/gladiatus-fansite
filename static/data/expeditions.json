@@ -2330,10 +2330,10 @@
           "max": 43
         },
         "realLevelToEngage": 32,
-        "dungeon": "**Abducted**",
-        "dungeonSlug": "dungeons/africa-dungeons",
-        "advancedDungeon": "**Under a Blood-red Sky**",
-        "advancedDungeonSlug": "dungeons/africa-dungeons",
+        "dungeon": "Abducted",
+        "dungeonSlug": "dungeons/africa-dungeons/abducted",
+        "advancedDungeon": "Under a Blood-red Sky",
+        "advancedDungeonSlug": "dungeons/africa-dungeons/under-a-blood-red-sky",
         "heroImage": "Expeditions/Africa/Bridge/Bone_Shaman.jpg",
         "enemies": [
           {
