@@ -89,7 +89,10 @@
               "min": 1,
               "max": 2
             },
-            "life": 122,
+            "life": {
+              "min": 122,
+              "max": 122
+            },
             "critRaw": 15,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -156,7 +159,10 @@
               "min": 2,
               "max": 6
             },
-            "life": 248,
+            "life": {
+              "min": 248,
+              "max": 248
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -223,7 +229,10 @@
               "min": 4,
               "max": 9
             },
-            "life": 469,
+            "life": {
+              "min": 469,
+              "max": 469
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -290,7 +299,10 @@
               "min": 8,
               "max": 11
             },
-            "life": 577,
+            "life": {
+              "min": 577,
+              "max": 577
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -376,7 +388,10 @@
               "min": 8,
               "max": 9
             },
-            "life": 549,
+            "life": {
+              "min": 549,
+              "max": 549
+            },
             "critRaw": 8,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -443,7 +458,10 @@
               "min": 13,
               "max": 13
             },
-            "life": 728,
+            "life": {
+              "min": 728,
+              "max": 728
+            },
             "critRaw": 6,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -510,7 +528,10 @@
               "min": 11,
               "max": 18
             },
-            "life": 929,
+            "life": {
+              "min": 929,
+              "max": 929
+            },
             "critRaw": 12,
             "blockRaw": 6,
             "avoidCritRaw": 0
@@ -577,7 +598,10 @@
               "min": 17,
               "max": 20
             },
-            "life": 1016,
+            "life": {
+              "min": 1016,
+              "max": 1016
+            },
             "critRaw": 10,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -663,7 +687,10 @@
               "min": 13,
               "max": 19
             },
-            "life": 972,
+            "life": {
+              "min": 972,
+              "max": 972
+            },
             "critRaw": 5,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -730,7 +757,10 @@
               "min": 15,
               "max": 19
             },
-            "life": 1134,
+            "life": {
+              "min": 1134,
+              "max": 1134
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -797,7 +827,10 @@
               "min": 16,
               "max": 25
             },
-            "life": 1363,
+            "life": {
+              "min": 1363,
+              "max": 1363
+            },
             "critRaw": 18,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -864,7 +897,10 @@
               "min": 18,
               "max": 27
             },
-            "life": 1417,
+            "life": {
+              "min": 1417,
+              "max": 1417
+            },
             "critRaw": 15,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -950,7 +986,10 @@
               "min": 19,
               "max": 27
             },
-            "life": 1402,
+            "life": {
+              "min": 1402,
+              "max": 1402
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -1017,7 +1056,10 @@
               "min": 27,
               "max": 28
             },
-            "life": 1792,
+            "life": {
+              "min": 1792,
+              "max": 1792
+            },
             "critRaw": 20,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -1084,7 +1126,10 @@
               "min": 26,
               "max": 32
             },
-            "life": 1678,
+            "life": {
+              "min": 1678,
+              "max": 1678
+            },
             "critRaw": 20,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -1151,7 +1196,10 @@
               "min": 28,
               "max": 37
             },
-            "life": 1850,
+            "life": {
+              "min": 1850,
+              "max": 1850
+            },
             "critRaw": 18,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -1237,7 +1285,10 @@
               "min": 62,
               "max": 77
             },
-            "life": 4613,
+            "life": {
+              "min": 4613,
+              "max": 4613
+            },
             "critRaw": 8,
             "blockRaw": 7,
             "avoidCritRaw": 0
@@ -1304,7 +1355,10 @@
               "min": 65,
               "max": 80
             },
-            "life": 4396,
+            "life": {
+              "min": 4396,
+              "max": 4396
+            },
             "critRaw": 17,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -1371,7 +1425,10 @@
               "min": 68,
               "max": 84
             },
-            "life": 4425,
+            "life": {
+              "min": 4425,
+              "max": 4425
+            },
             "critRaw": 12,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -1438,7 +1495,10 @@
               "min": 67,
               "max": 86
             },
-            "life": 4761,
+            "life": {
+              "min": 4761,
+              "max": 4761
+            },
             "critRaw": 18,
             "blockRaw": 12,
             "avoidCritRaw": 0
@@ -1524,7 +1584,10 @@
               "min": 67,
               "max": 79
             },
-            "life": 5192,
+            "life": {
+              "min": 5192,
+              "max": 5192
+            },
             "critRaw": 6,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -1591,7 +1654,10 @@
               "min": 67,
               "max": 82
             },
-            "life": 5081,
+            "life": {
+              "min": 5081,
+              "max": 5081
+            },
             "critRaw": 8,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -1658,7 +1724,10 @@
               "min": 70,
               "max": 89
             },
-            "life": 5543,
+            "life": {
+              "min": 5543,
+              "max": 5543
+            },
             "critRaw": 15,
             "blockRaw": 7,
             "avoidCritRaw": 0
@@ -1725,7 +1794,10 @@
               "min": 74,
               "max": 84
             },
-            "life": 5592,
+            "life": {
+              "min": 5592,
+              "max": 5592
+            },
             "critRaw": 15,
             "blockRaw": 10,
             "avoidCritRaw": 0
@@ -1811,7 +1883,10 @@
               "min": 73,
               "max": 88
             },
-            "life": 5571,
+            "life": {
+              "min": 5571,
+              "max": 5571
+            },
             "critRaw": 10,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -1878,7 +1953,10 @@
               "min": 73,
               "max": 89
             },
-            "life": 5570,
+            "life": {
+              "min": 5570,
+              "max": 5570
+            },
             "critRaw": 8,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -1945,7 +2023,10 @@
               "min": 77,
               "max": 89
             },
-            "life": 5664,
+            "life": {
+              "min": 5664,
+              "max": 5664
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2012,7 +2093,10 @@
               "min": 77,
               "max": 93
             },
-            "life": 5596,
+            "life": {
+              "min": 5596,
+              "max": 5596
+            },
             "critRaw": 12,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -2111,7 +2195,10 @@
               "min": 25,
               "max": 36
             },
-            "life": 2049,
+            "life": {
+              "min": 2049,
+              "max": 2049
+            },
             "critRaw": 15,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2178,7 +2265,10 @@
               "min": 28,
               "max": 39
             },
-            "life": 1914,
+            "life": {
+              "min": 1914,
+              "max": 1914
+            },
             "critRaw": 15,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2245,7 +2335,10 @@
               "min": 29,
               "max": 43
             },
-            "life": 2235,
+            "life": {
+              "min": 2235,
+              "max": 2235
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2312,7 +2405,10 @@
               "min": 36,
               "max": 44
             },
-            "life": 2619,
+            "life": {
+              "min": 2619,
+              "max": 2619
+            },
             "critRaw": 13,
             "blockRaw": 7,
             "avoidCritRaw": 0
@@ -2398,7 +2494,10 @@
               "min": 28,
               "max": 43
             },
-            "life": 2520,
+            "life": {
+              "min": 2520,
+              "max": 2520
+            },
             "critRaw": 8,
             "blockRaw": 2,
             "avoidCritRaw": 0
@@ -2465,7 +2564,10 @@
               "min": 36,
               "max": 46
             },
-            "life": 2659,
+            "life": {
+              "min": 2659,
+              "max": 2659
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2532,7 +2634,10 @@
               "min": 34,
               "max": 45
             },
-            "life": 2725,
+            "life": {
+              "min": 2725,
+              "max": 2725
+            },
             "critRaw": 11,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -2599,7 +2704,10 @@
               "min": 37,
               "max": 50
             },
-            "life": 2810,
+            "life": {
+              "min": 2810,
+              "max": 2810
+            },
             "critRaw": 11,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -2685,7 +2793,10 @@
               "min": 38,
               "max": 48
             },
-            "life": 2463,
+            "life": {
+              "min": 2463,
+              "max": 2463
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2752,7 +2863,10 @@
               "min": 34,
               "max": 49
             },
-            "life": 2791,
+            "life": {
+              "min": 2791,
+              "max": 2791
+            },
             "critRaw": 8,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2819,7 +2933,10 @@
               "min": 43,
               "max": 51
             },
-            "life": 2820,
+            "life": {
+              "min": 2820,
+              "max": 2820
+            },
             "critRaw": 20,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2886,7 +3003,10 @@
               "min": 40,
               "max": 56
             },
-            "life": 2861,
+            "life": {
+              "min": 2861,
+              "max": 2861
+            },
             "critRaw": 17,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -2897,7 +3017,7 @@
         "name": "Lost Harbour",
         "slug": "africa-expeditions/lost-harbour",
         "description": "Once a thriving Viking outpost, it has in the meantime become a shadow of its former self. A textbook example of the empire and its allies. The strange power of voodoo forced the blonde giants to their knees. It apparently still holds findings from the houses and ships of the Vikings, that aren`t of any interest to the Umpokta.",
-        "additionalInfo": "Crocodile is pretty weak so it can be attacked easily at lower level. Undead Holder is not as strong as well because he has very low Dexterity which means that he won't be hitting you a lot. Giant Water Snake is strong but beatable as well. Mokele Mbembe is a special case. Can spawn as low as Level 48 and stats are good but not impossible. There is one problem however. Its non-penetrable armor makes him a though opponent. At 7-9.5k it consumes almost all the damage a level ~40 gladiator can do.",
+        "additionalInfo": "Crocodile is pretty weak so it can be attacked easily at lower level. Undead Holder is not as strong as well because he has very low Dexterity which means that he won't be hitting you a lot. Giant Water Snake is strong but beatable as well. Mokele Mbembe is a special case. It's non-penetrable armor makes him a though opponent. At 7-9.5k it consumes almost all the damage a level ~40 gladiator can do.",
         "entryLevel": 35,
         "enemyLevels": {
           "min": 45,
@@ -2919,7 +3039,7 @@
               "max": 46
             },
             "gold": {
-              "min": 1585,
+              "min": 1280,
               "max": 2690
             },
             "experience": {
@@ -2927,7 +3047,7 @@
               "max": 5
             },
             "honour": {
-              "min": 155,
+              "min": 140,
               "max": 229
             },
             "strength": {
@@ -2972,7 +3092,10 @@
               "min": 39,
               "max": 54
             },
-            "life": 3057,
+            "life": {
+              "min": 3057,
+              "max": 3057
+            },
             "critRaw": 11,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -3039,7 +3162,10 @@
               "min": 38,
               "max": 55
             },
-            "life": 3027,
+            "life": {
+              "min": 3027,
+              "max": 3027
+            },
             "critRaw": 8,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -3058,7 +3184,7 @@
             },
             "experience": {
               "min": 4,
-              "max": 5
+              "max": 6
             },
             "honour": {
               "min": 172,
@@ -3106,7 +3232,10 @@
               "min": 43,
               "max": 60
             },
-            "life": 3234,
+            "life": {
+              "min": 3234,
+              "max": 3234
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -3173,7 +3302,10 @@
               "min": 43,
               "max": 48
             },
-            "life": 3333,
+            "life": {
+              "min": 3333,
+              "max": 3333
+            },
             "critRaw": 14,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -3259,7 +3391,10 @@
               "min": 0,
               "max": 0
             },
-            "life": 5206,
+            "life": {
+              "min": 5206,
+              "max": 5206
+            },
             "critRaw": 7,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -3326,7 +3461,10 @@
               "min": 80,
               "max": 80
             },
-            "life": 5342,
+            "life": {
+              "min": 5342,
+              "max": 5342
+            },
             "critRaw": 15,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -3393,7 +3531,10 @@
               "min": 0,
               "max": 0
             },
-            "life": 5656,
+            "life": {
+              "min": 5656,
+              "max": 5656
+            },
             "critRaw": 17,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -3460,7 +3601,10 @@
               "min": 0,
               "max": 0
             },
-            "life": 6185,
+            "life": {
+              "min": 6185,
+              "max": 6185
+            },
             "critRaw": 14,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -3546,7 +3690,10 @@
               "min": 84,
               "max": 99
             },
-            "life": 6074,
+            "life": {
+              "min": 6074,
+              "max": 6074
+            },
             "critRaw": 10,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -3613,7 +3760,10 @@
               "min": 84,
               "max": 101
             },
-            "life": 5754,
+            "life": {
+              "min": 5754,
+              "max": 5754
+            },
             "critRaw": 8,
             "blockRaw": 12,
             "avoidCritRaw": 0
@@ -3680,7 +3830,10 @@
               "min": 91,
               "max": 100
             },
-            "life": 6017,
+            "life": {
+              "min": 6017,
+              "max": 6017
+            },
             "critRaw": 10,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -3747,7 +3900,10 @@
               "min": 103,
               "max": 103
             },
-            "life": 6538,
+            "life": {
+              "min": 6538,
+              "max": 6538
+            },
             "critRaw": 12,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -3833,7 +3989,10 @@
               "min": 86,
               "max": 103
             },
-            "life": 6353,
+            "life": {
+              "min": 6353,
+              "max": 6353
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -3900,7 +4059,10 @@
               "min": 86,
               "max": 103
             },
-            "life": 6026,
+            "life": {
+              "min": 6026,
+              "max": 6026
+            },
             "critRaw": 14,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -3967,7 +4129,10 @@
               "min": 87,
               "max": 104
             },
-            "life": 6722,
+            "life": {
+              "min": 6722,
+              "max": 6722
+            },
             "critRaw": 16,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4034,7 +4199,10 @@
               "min": 89,
               "max": 109
             },
-            "life": 6228,
+            "life": {
+              "min": 6228,
+              "max": 6228
+            },
             "critRaw": 11,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4120,7 +4288,10 @@
               "min": 93,
               "max": 106
             },
-            "life": 6222,
+            "life": {
+              "min": 6222,
+              "max": 6222
+            },
             "critRaw": 7,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4187,7 +4358,10 @@
               "min": 93,
               "max": 107
             },
-            "life": 6271,
+            "life": {
+              "min": 6271,
+              "max": 6271
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4254,7 +4428,10 @@
               "min": 94,
               "max": 111
             },
-            "life": 6636,
+            "life": {
+              "min": 6636,
+              "max": 6636
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4321,7 +4498,10 @@
               "min": 94,
               "max": 114
             },
-            "life": 6454,
+            "life": {
+              "min": 6454,
+              "max": 6454
+            },
             "critRaw": 14,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -4420,7 +4600,10 @@
               "min": 41,
               "max": 59
             },
-            "life": 3088,
+            "life": {
+              "min": 3088,
+              "max": 3088
+            },
             "critRaw": 7,
             "blockRaw": 13,
             "avoidCritRaw": 0
@@ -4487,7 +4670,10 @@
               "min": 43,
               "max": 61
             },
-            "life": 3685,
+            "life": {
+              "min": 3685,
+              "max": 3685
+            },
             "critRaw": 5,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -4554,7 +4740,10 @@
               "min": 46,
               "max": 65
             },
-            "life": 3551,
+            "life": {
+              "min": 3551,
+              "max": 3551
+            },
             "critRaw": 7,
             "blockRaw": 13,
             "avoidCritRaw": 0
@@ -4621,7 +4810,10 @@
               "min": 49,
               "max": 66
             },
-            "life": 3642,
+            "life": {
+              "min": 3642,
+              "max": 3642
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4707,7 +4899,10 @@
               "min": 47,
               "max": 62
             },
-            "life": 3798,
+            "life": {
+              "min": 3798,
+              "max": 3798
+            },
             "critRaw": 8,
             "blockRaw": 7,
             "avoidCritRaw": 0
@@ -4774,7 +4969,10 @@
               "min": 48,
               "max": 64
             },
-            "life": 4011,
+            "life": {
+              "min": 4011,
+              "max": 4011
+            },
             "critRaw": 5,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -4841,7 +5039,10 @@
               "min": 50,
               "max": 62
             },
-            "life": 3887,
+            "life": {
+              "min": 3887,
+              "max": 3887
+            },
             "critRaw": 13,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4908,7 +5109,10 @@
               "min": 52,
               "max": 72
             },
-            "life": 4171,
+            "life": {
+              "min": 4171,
+              "max": 4171
+            },
             "critRaw": 16,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -4994,7 +5198,10 @@
               "min": 51,
               "max": 70
             },
-            "life": 4104,
+            "life": {
+              "min": 4104,
+              "max": 4104
+            },
             "critRaw": 16,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5061,7 +5268,10 @@
               "min": 56,
               "max": 69
             },
-            "life": 4101,
+            "life": {
+              "min": 4101,
+              "max": 4101
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5128,7 +5338,10 @@
               "min": 54,
               "max": 74
             },
-            "life": 4560,
+            "life": {
+              "min": 4560,
+              "max": 4560
+            },
             "critRaw": 15,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5195,7 +5408,10 @@
               "min": 59,
               "max": 69
             },
-            "life": 4269,
+            "life": {
+              "min": 4269,
+              "max": 4269
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5281,7 +5497,10 @@
               "min": 57,
               "max": 71
             },
-            "life": 4060,
+            "life": {
+              "min": 4060,
+              "max": 4060
+            },
             "critRaw": 10,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -5348,7 +5567,10 @@
               "min": 58,
               "max": 73
             },
-            "life": 4454,
+            "life": {
+              "min": 4454,
+              "max": 4454
+            },
             "critRaw": 5,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -5415,7 +5637,10 @@
               "min": 60,
               "max": 77
             },
-            "life": 4705,
+            "life": {
+              "min": 4705,
+              "max": 4705
+            },
             "critRaw": 15,
             "blockRaw": 10,
             "avoidCritRaw": 0
@@ -5482,7 +5707,10 @@
               "min": 63,
               "max": 74
             },
-            "life": 4781,
+            "life": {
+              "min": 4781,
+              "max": 4781
+            },
             "critRaw": 10,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -5568,7 +5796,10 @@
               "min": 105,
               "max": 111
             },
-            "life": 6630,
+            "life": {
+              "min": 6630,
+              "max": 6630
+            },
             "critRaw": 5,
             "blockRaw": 10,
             "avoidCritRaw": 0
@@ -5635,7 +5866,10 @@
               "min": 101,
               "max": 113
             },
-            "life": 7455,
+            "life": {
+              "min": 7455,
+              "max": 7455
+            },
             "critRaw": 10,
             "blockRaw": 5,
             "avoidCritRaw": 0
@@ -5702,7 +5936,10 @@
               "min": 98,
               "max": 103
             },
-            "life": 6606,
+            "life": {
+              "min": 6606,
+              "max": 6606
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5769,7 +6006,10 @@
               "min": 97,
               "max": 118
             },
-            "life": 6657,
+            "life": {
+              "min": 6657,
+              "max": 6657
+            },
             "critRaw": 16,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -5855,7 +6095,10 @@
               "min": 101,
               "max": 118
             },
-            "life": 6552,
+            "life": {
+              "min": 6552,
+              "max": 6552
+            },
             "critRaw": 5,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -5922,7 +6165,10 @@
               "min": 109,
               "max": 117
             },
-            "life": 7066,
+            "life": {
+              "min": 7066,
+              "max": 7066
+            },
             "critRaw": 11,
             "blockRaw": 9,
             "avoidCritRaw": 0
@@ -5989,7 +6235,10 @@
               "min": 106,
               "max": 120
             },
-            "life": 6639,
+            "life": {
+              "min": 6639,
+              "max": 6639
+            },
             "critRaw": 8,
             "blockRaw": 8,
             "avoidCritRaw": 0
@@ -6056,7 +6305,10 @@
               "min": 102,
               "max": 123
             },
-            "life": 6890,
+            "life": {
+              "min": 6890,
+              "max": 6890
+            },
             "critRaw": 15,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6142,7 +6394,10 @@
               "min": 104,
               "max": 121
             },
-            "life": 7123,
+            "life": {
+              "min": 7123,
+              "max": 7123
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6209,7 +6464,10 @@
               "min": 106,
               "max": 120
             },
-            "life": 7644,
+            "life": {
+              "min": 7644,
+              "max": 7644
+            },
             "critRaw": 13,
             "blockRaw": 7,
             "avoidCritRaw": 0
@@ -6276,7 +6534,10 @@
               "min": 107,
               "max": 120
             },
-            "life": 7449,
+            "life": {
+              "min": 7449,
+              "max": 7449
+            },
             "critRaw": 13,
             "blockRaw": 12,
             "avoidCritRaw": 0
@@ -6343,7 +6604,10 @@
               "min": 107,
               "max": 125
             },
-            "life": 7515,
+            "life": {
+              "min": 7515,
+              "max": 7515
+            },
             "critRaw": 15,
             "blockRaw": 49,
             "avoidCritRaw": 0
@@ -6429,7 +6693,10 @@
               "min": 109,
               "max": 124
             },
-            "life": 8088,
+            "life": {
+              "min": 8088,
+              "max": 8088
+            },
             "critRaw": 9,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6496,7 +6763,10 @@
               "min": 108,
               "max": 126
             },
-            "life": 8187,
+            "life": {
+              "min": 8187,
+              "max": 8187
+            },
             "critRaw": 18,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6563,7 +6833,10 @@
               "min": 108,
               "max": 127
             },
-            "life": 7566,
+            "life": {
+              "min": 7566,
+              "max": 7566
+            },
             "critRaw": 17,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6630,7 +6903,10 @@
               "min": 109,
               "max": 133
             },
-            "life": 7678,
+            "life": {
+              "min": 7678,
+              "max": 7678
+            },
             "critRaw": 12,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6716,7 +6992,10 @@
               "min": 110,
               "max": 126
             },
-            "life": 8300,
+            "life": {
+              "min": 8300,
+              "max": 8300
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6783,7 +7062,10 @@
               "min": 111,
               "max": 129
             },
-            "life": 8500,
+            "life": {
+              "min": 8500,
+              "max": 8500
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6850,7 +7132,10 @@
               "min": 111,
               "max": 129
             },
-            "life": 8600,
+            "life": {
+              "min": 8600,
+              "max": 8600
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -6917,7 +7202,10 @@
               "min": 113,
               "max": 135
             },
-            "life": 8700,
+            "life": {
+              "min": 8700,
+              "max": 8700
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -7016,7 +7304,10 @@
               "min": 120,
               "max": 133
             },
-            "life": 10945,
+            "life": {
+              "min": 10945,
+              "max": 10945
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -7083,7 +7374,10 @@
               "min": 121,
               "max": 134
             },
-            "life": 11028,
+            "life": {
+              "min": 11028,
+              "max": 11028
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -7150,7 +7444,10 @@
               "min": 123,
               "max": 134
             },
-            "life": 11545,
+            "life": {
+              "min": 11545,
+              "max": 11545
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -7217,7 +7514,10 @@
               "min": 125,
               "max": 139
             },
-            "life": 14123,
+            "life": {
+              "min": 14123,
+              "max": 14123
+            },
             "critRaw": 0,
             "blockRaw": 0,
             "avoidCritRaw": 0
@@ -7303,7 +7603,10 @@
               "min": 146,
               "max": 146
             },
-            "life": 9443,
+            "life": {
+              "min": 9443,
+              "max": 9443
+            },
             "critRaw": 13,
             "blockRaw": 23,
             "avoidCritRaw": 0
@@ -7367,7 +7670,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 8905,
+            "life": {
+              "min": 8905,
+              "max": 8905
+            },
             "critRaw": 8,
             "blockRaw": 36,
             "avoidCritRaw": 0
@@ -7431,7 +7737,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 8948,
+            "life": {
+              "min": 8948,
+              "max": 8948
+            },
             "critRaw": 7,
             "blockRaw": 23,
             "avoidCritRaw": 0
@@ -7495,7 +7804,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 9946,
+            "life": {
+              "min": 9946,
+              "max": 9946
+            },
             "critRaw": 13,
             "blockRaw": 15,
             "avoidCritRaw": 0
@@ -7578,7 +7890,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 9991,
+            "life": {
+              "min": 9991,
+              "max": 9991
+            },
             "critRaw": 7,
             "blockRaw": 37,
             "avoidCritRaw": 0
@@ -7642,7 +7957,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10326,
+            "life": {
+              "min": 10326,
+              "max": 10326
+            },
             "critRaw": 5,
             "blockRaw": 45,
             "avoidCritRaw": 0
@@ -7706,7 +8024,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10414,
+            "life": {
+              "min": 10414,
+              "max": 10414
+            },
             "critRaw": 15,
             "blockRaw": 30,
             "avoidCritRaw": 0
@@ -7770,7 +8091,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10321,
+            "life": {
+              "min": 10321,
+              "max": 10321
+            },
             "critRaw": 10,
             "blockRaw": 47,
             "avoidCritRaw": 0
@@ -7853,7 +8177,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10166,
+            "life": {
+              "min": 10166,
+              "max": 10166
+            },
             "critRaw": 16,
             "blockRaw": 28,
             "avoidCritRaw": 0
@@ -7917,7 +8244,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 11241,
+            "life": {
+              "min": 11241,
+              "max": 11241
+            },
             "critRaw": 8,
             "blockRaw": 44,
             "avoidCritRaw": 0
@@ -7981,7 +8311,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10968,
+            "life": {
+              "min": 10968,
+              "max": 10968
+            },
             "critRaw": 12,
             "blockRaw": 44,
             "avoidCritRaw": 0
@@ -8045,7 +8378,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10838,
+            "life": {
+              "min": 10838,
+              "max": 10838
+            },
             "critRaw": 15,
             "blockRaw": 48,
             "avoidCritRaw": 0
@@ -8128,7 +8464,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 11349,
+            "life": {
+              "min": 11349,
+              "max": 11349
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8192,7 +8531,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 11103,
+            "life": {
+              "min": 11103,
+              "max": 11103
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8256,7 +8598,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12295,
+            "life": {
+              "min": 12295,
+              "max": 12295
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8320,7 +8665,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 11147,
+            "life": {
+              "min": 11147,
+              "max": 11147
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8403,7 +8751,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 10932,
+            "life": {
+              "min": 10932,
+              "max": 10932
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8470,7 +8821,10 @@
               "min": 187,
               "max": 187
             },
-            "life": 11612,
+            "life": {
+              "min": 11612,
+              "max": 11612
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8534,7 +8888,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 11267,
+            "life": {
+              "min": 11267,
+              "max": 11267
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8598,7 +8955,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12535,
+            "life": {
+              "min": 12535,
+              "max": 12535
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8681,7 +9041,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12101,
+            "life": {
+              "min": 12101,
+              "max": 12101
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8748,7 +9111,10 @@
               "min": 186,
               "max": 186
             },
-            "life": 11538,
+            "life": {
+              "min": 11538,
+              "max": 11538
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8812,7 +9178,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 13494,
+            "life": {
+              "min": 13494,
+              "max": 13494
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8879,7 +9248,10 @@
               "min": 197,
               "max": 200
             },
-            "life": 13694,
+            "life": {
+              "min": 13694,
+              "max": 13694
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -8962,7 +9334,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12754,
+            "life": {
+              "min": 12754,
+              "max": 12754
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9026,7 +9401,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12741,
+            "life": {
+              "min": 12741,
+              "max": 12741
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9090,7 +9468,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 12983,
+            "life": {
+              "min": 12983,
+              "max": 12983
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9154,7 +9535,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 13798,
+            "life": {
+              "min": 13798,
+              "max": 13798
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9237,7 +9621,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 14195,
+            "life": {
+              "min": 14195,
+              "max": 14195
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9301,7 +9688,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 13093,
+            "life": {
+              "min": 13093,
+              "max": 13093
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9365,7 +9755,10 @@
               }
             },
             "itemLevelDrop": null,
-            "life": 14918,
+            "life": {
+              "min": 14918,
+              "max": 14918
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0
@@ -9432,7 +9825,10 @@
               "min": 207,
               "max": 211
             },
-            "life": 14182,
+            "life": {
+              "min": 14182,
+              "max": 14182
+            },
             "critRaw": 5,
             "blockRaw": null,
             "avoidCritRaw": 0

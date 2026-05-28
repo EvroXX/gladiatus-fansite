@@ -445,7 +445,7 @@ function attachPhpFields(country, expeditionIndex, enemies) {
       enemies[i].blockRaw = null;
       enemies[i].avoidCritRaw = null;
     } else {
-      enemies[i].life = row[1];
+      enemies[i].life = { min: row[1], max: row[1] };
       enemies[i].critRaw = row[11];
       enemies[i].blockRaw = row[12];
       enemies[i].avoidCritRaw = row[13];

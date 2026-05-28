@@ -45,6 +45,7 @@ export function rollEnemyAsCombatant(enemy: Enemy, random: () => number = Math.r
   const charisma = lerpInt(enemy.charisma, t);
   const intelligence = lerpInt(enemy.intelligence, t);
   const armour = lerpInt(enemy.armour, t);
+  const life = lerpInt(enemy.life, t);
 
   // damage shape is { min: Range, max: Range } where the two ranges span
   // the enemy's level range. Interpolate each.
@@ -80,8 +81,8 @@ export function rollEnemyAsCombatant(enemy: Enemy, random: () => number = Math.r
     name: enemy.name,
     image: enemy.image,
     level: rolledLevel,
-    hp: enemy.life,
-    maxHp: enemy.life,
+    hp: life,
+    maxHp: life,
     damageMin,
     damageMax,
     armour,

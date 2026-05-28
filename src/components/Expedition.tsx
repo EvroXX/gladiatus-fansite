@@ -253,7 +253,7 @@ export default function Expedition({ slug }: ExpeditionProps) {
           </tr>
           <tr>
             <AttributeCell label="Life" />
-            {exp.enemies.map((e, i) => <td key={`life-${i}`}>{formatNullable(e.life)}</td>)}
+            {exp.enemies.map((e, i) => <td key={`life-${i}`}>{formatRange(e.life)}</td>)}
           </tr>
           <tr>
             <AttributeCell label="Critical" />

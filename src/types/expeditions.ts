@@ -17,7 +17,7 @@ export interface Enemy {
   armour: Range;
   damage: { min: Range; max: Range };
   itemLevelDrop: Range | null;
-  life: number | null;
+  life: Range | null;
   critRaw: number | null;
   blockRaw: number | null;
   avoidCritRaw: number | null;

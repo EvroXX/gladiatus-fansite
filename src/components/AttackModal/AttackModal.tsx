@@ -126,7 +126,7 @@ export default function AttackModal(props: Props): React.ReactElement {
     strength: { min: 0, max: 0 }, dexterity: { min: 0, max: 0 }, agility: { min: 0, max: 0 },
     constitution: { min: 0, max: 0 }, charisma: { min: 0, max: 0 }, intelligence: { min: 0, max: 0 },
     armour: { min: 0, max: 0 }, damage: { min: { min: 0, max: 0 }, max: { min: 0, max: 0 } },
-    itemLevelDrop: null, life: 0, critRaw: null, blockRaw: null, avoidCritRaw: null,
+    itemLevelDrop: null, life: { min: 0, max: 0 }, critRaw: null, blockRaw: null, avoidCritRaw: null,
   }), []);
   const placeholderCharacter = useMemo<ActiveCharacterRecord>(() => ({
     v: 1, encoded: '', identity: { name: '', gender: 'male' }, level: 1, savedAt: 0,
