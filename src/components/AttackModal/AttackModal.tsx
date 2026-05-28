@@ -79,9 +79,9 @@ function usePveResult(enemy: Enemy, character: ActiveCharacterRecord, bonuses: S
           const xpMult = bonuses.has('experience') ? 1.3 : 1.0;
           const honourMult = bonuses.has('honour') ? 1.2 : 1.0;
           return {
-            gold: Math.floor(rollInRange(enemy.gold) * goldMult),
-            experience: Math.floor(rollInRange(enemy.experience) * xpMult),
-            honour: Math.floor(rollInRange(enemy.honour) * honourMult),
+            gold: Math.ceil(rollInRange(enemy.gold) * goldMult),
+            experience: Math.ceil(rollInRange(enemy.experience) * xpMult),
+            honour: Math.ceil(rollInRange(enemy.honour) * honourMult),
           };
         })()
       : null;

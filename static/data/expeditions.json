@@ -2838,7 +2838,7 @@
             },
             "experience": {
               "min": 5,
-              "max": 5
+              "max": 6
             },
             "honour": {
               "min": 148,
