@@ -30,7 +30,7 @@ Simply drag the item you want to smelt and start smelting.
 
 - **First two smelting slots** cost ![Gold](https://gladiatusfansite.blob.core.windows.net/images/icon_gold.gif "Gold") and the **other four** cost ![Rubies](https://gladiatusfansite.blob.core.windows.net/images/icon_rubies.gif "Rubies"). Cost depends on the item level and type of the item being smelted.
 
-- **Duration** of the smelt depends on the item level, type, and quality. Orange/Red amulets at item level 100+ can take 48+ hours to smelt.
+- **Duration** of the smelt depends on the item value. On x4 server every gold in item value translates to ~0.47s of smelting time.
 
 - **Scroll Drop Chance:** There is a small chance (~5%) that the smelt will also produce a scroll with either the Prefix or the Suffix. This can be beneficial to smelt items with Prefixes/Suffixes that you don't have but need.
 
