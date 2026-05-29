@@ -33,6 +33,64 @@ From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server ti
 
 ---
 
+## Events – June 2026
+
+### 01.06.2026 0:00:00 - 02.06.2026 23:59:59
+
+- No durability loss
+- 20% gold loot on expeditions
+- 10% chance of finding ruby on expedition
+
+### 04.06.2026 0:00:00 - 05.06.2026 23:59:59
+
+- -50% Forging time (and smelting)
+- -15% Ruby costs at Malefica
+
+### 07.06.2026 0:00:00 - 08.06.2026 23:59:59
+
+- 30% gold loot on expeditions
+- 10% chance of finding an item
+- 50% expedition XP
+
+### 10.06.2026 0:00:00 - 12.06.2026 23:59:59
+
+- 100% dungeon XP
+- 200% arena XP
+- 30% expedition XP
+
+### 14.06.2026 0:00:00 - 15.06.2026 23:59:59
+
+- 100% Pantheon quest gold, experience, grace, honor
+- -50% cooldown for quests
+- 50% more expedition points
+
+### 17.06.2026 0:00:00 - 18.06.2026 23:59:59
+
+- 100% dungeon XP
+- 50% gold loot in dungeons
+- 50% more dungeon points
+- 10% chance of finding an item
+
+### 20.06.2026 0:00:00 - 21.06.2026 23:59:59
+
+- 20% forge helper drop chance
+
+### 23.06.2026 0:00:00 - 24.06.2026 23:59:59
+
+- 20% chance of a resource / scroll
+
+### 26.06.2026 0:00:00 - 27.06.2026 23:59:59
+
+- The chance to obtain additional loot on expeditions and in dungeons is increased by 20%
+- 25% faster regeneration of dungeon points
+- 25% more dungeon points
+
+### 29.06.2026 0:00:00 - 30.06.2026 23:59:59
+
+- -25% training costs
+
+---
+
 ## Events – May 2026
 
 ### 04.05.2026 0:00:00 - 05.05.2026 23:59:59
