@@ -55,6 +55,8 @@ An evil cult has gathered around the enticing promise of power and riches, allyi
 
 An evil cult has gathered around the enticing promise of power and riches, allying themselves with evil. They betrayed their brothers and sisters, and now fight alongside the creatures from the deep, refusing to acknowledge that, like them, they are nothing more than cannon fodder for their dark master. But now the day of judgement is upon them!
 
+**Enemies are your character level + 1**
+
 <div className="player_name_bg"><div className="playername">Cult of the Depths</div></div>
 ![Cult of the Depths](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/cult-of-the-depths.png "Cult of the Depths")
 
@@ -63,6 +65,8 @@ An evil cult has gathered around the enticing promise of power and riches, allyi
 ### Wave 2 (4 days)
 
 The souls of the dead were never meant to be dragged back across the river Styx, to be chained once more to living bodies. But the Tormentor of Souls banished his failed experiments, together with all those who proved too weak or unworthy to join the legions of his army. Driven by hatred and the burning desire to prove themselves, these tortured souls are nevertheless formidable warriors who should not be underestimated, lest you wish to end your days in their ranks...
+
+**Enemies are your character level + 2**
 
 <div className="player_name_bg"><div className="playername">The Defiled Exiles</div></div>
 ![The Defiled Exiles](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/the-defiled-exiles.png "The Defiled Exiles")
@@ -73,6 +77,8 @@ The souls of the dead were never meant to be dragged back across the river Styx,
 
 The souls of the dead were never meant to be dragged back across the river Styx, to be chained once more to living bodies. But the Tormentor of Souls banished his failed experiments, together with all those who proved too weak or unworthy to join the legions of his army. Driven by hatred and the burning desire to prove themselves, these tortured souls are nevertheless formidable warriors who should not be underestimated, lest you wish to end your days in their ranks...
 
+**Enemies are your character level + 5**
+
 <div className="player_name_bg"><div className="playername">The Restless Dead</div></div>
 ![The Defiled Exiles](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/the-restless-dead.png "The Restless Dead")
 
@@ -81,6 +87,8 @@ The souls of the dead were never meant to be dragged back across the river Styx,
 ### Wave 4 (boss)
 
 Rumours surround the evil ruler of the monsters from the deep like a thick fog. Some claim that he was himself once a gladiator, who lost someone dear to him and then devoted his time to finding a way to get them back. He studied forbidden rituals to prise open the gates to the Underworld, and was himself cursed for it. But whatever the reality, his brute strength makes him a formidable and deadly opponent who knows not the slightest ounce of pity.
+
+**Boss your character level + 9**
 
 <div className="player_name_bg"><div className="playername">Lord Maldark, Tormentor of Souls</div></div>
 ![Lord Maldark, Tormentor of Souls](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/lord-maldark-tormentor-of-souls.png "Lord Maldark, Tormentor of Souls")
