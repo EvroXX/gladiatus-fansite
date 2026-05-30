@@ -69,6 +69,24 @@ The souls of the dead were never meant to be dragged back across the river Styx,
 
 ![Wave 2](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/overview-2.jpg "Wave 2")
 
+### Wave 3 (4 days)
+
+The souls of the dead were never meant to be dragged back across the river Styx, to be chained once more to living bodies. But the Tormentor of Souls banished his failed experiments, together with all those who proved too weak or unworthy to join the legions of his army. Driven by hatred and the burning desire to prove themselves, these tortured souls are nevertheless formidable warriors who should not be underestimated, lest you wish to end your days in their ranks...
+
+<div className="player_name_bg"><div className="playername">The Restless Dead</div></div>
+![The Defiled Exiles](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/the-restless-dead.png "The Restless Dead")
+
+![Wave 3](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/overview-3.jpg "Wave 3")
+
+### Wave 4 (boss)
+
+Rumours surround the evil ruler of the monsters from the deep like a thick fog. Some claim that he was himself once a gladiator, who lost someone dear to him and then devoted his time to finding a way to get them back. He studied forbidden rituals to prise open the gates to the Underworld, and was himself cursed for it. But whatever the reality, his brute strength makes him a formidable and deadly opponent who knows not the slightest ounce of pity.
+
+<div className="player_name_bg"><div className="playername">Lord Maldark, Tormentor of Souls</div></div>
+![Lord Maldark, Tormentor of Souls](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/lord-maldark-tormentor-of-souls.png "Lord Maldark, Tormentor of Souls")
+
+![Boss](https://gladiatusfansite.blob.core.windows.net/images/Events/rise-of-the-forgotten/overview-4.jpg "Boss")
+
 ## Event Costume
 
 The event unlocks the costume **Defender of the Empire**. This is a new type of costume called "Temporary Costume", which means it can be worn immediately and during the event that unlocks it, contrary to the other events where an event unlocks the costume but it can only be worn after the event that unlocks it.
