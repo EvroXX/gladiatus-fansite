@@ -9,21 +9,86 @@ function slugify(value) {
     : '';
 }
 
+// Canonical in-game stat order, used for both the tooltip and the sort/filter lists
+const STAT_ORDER = [
+  'damage', 'armour', 'strength', 'dexterity', 'agility', 'constitution', 'charisma', 'intelligence',
+  'critical_hit', 'double_hit', 'avoid_critical_hit', 'avoid_double_hit',
+  'block_chance', 'healing', 'critical_healing_value', 'critical_attack_value',
+  'hardening_value', 'block_value', 'blocking_value', 'threat',
+];
+
+function statOrderIndex(key) {
+  const i = STAT_ORDER.indexOf(key);
+  return i === -1 ? STAT_ORDER.length : i;
+}
+
+// "critical_attack_value" -> "Critical Attack Value"
+function formatStatLabel(key) {
+  return key
+    .replace(/_/g, ' ')
+    .split(' ')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+// Sort/filter options encode a stat as `${statKey}|flat` or `${statKey}|percent`.
+function getSortValue(item, sortKey, type) {
+  if (sortKey === 'level') return item.level ?? 0;
+  if (sortKey === 'gold') return calcAffixGoldBase(item.level, type);
+  const [statKey, kind] = sortKey.split('|');
+  const stat = item.stats?.[statKey];
+  if (!stat) return 0;
+  return (kind === 'percent' ? stat.percent : stat.flat) ?? 0;
+}
+
+// True when the item carries a non-zero value for the given `${statKey}|flat|percent` variant.
+function itemHasStatVariant(item, variantValue) {
+  const [statKey, kind] = variantValue.split('|');
+  const stat = item.stats?.[statKey];
+  if (!stat) return false;
+  return kind === 'percent' ? Boolean(stat.percent) : Boolean(stat.flat);
+}
+
 export default function ItemAffixList({ items, type = 'prefix', showFilters = true }) {
   const [search, setSearch] = useState('');
-  const [statFilter, setStatFilter] = useState(''); // e.g., "Armor >= 600"
-  const [statFilterValue, setStatFilterValue] = useState(''); // number
-  const [sortKey, setSortKey] = useState(''); // 'name' | 'level' | 'gold'
+  const [selectedStats, setSelectedStats] = useState([]); // array of `${statKey}|flat|percent` variant values (AND filter)
+  const [sortKey, setSortKey] = useState(''); // '' | 'name' | 'level' | 'gold' | `${statKey}|flat|percent`
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' | 'desc'
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [showUWOnly, setShowUWOnly] = useState(false);
 
-  const allStats = useMemo(() => {
-    const set = new Set();
+  const toggleStat = value =>
+    setSelectedStats(prev =>
+      prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value]
+    );
+
+  // Every stat variant present in the data, in canonical order. A stat appears as a
+  // single "Strength" entry when it only ever has a flat value, or as separate
+  // "Strength (flat)" / "Strength (%)" entries when both forms occur in the dataset.
+  const statVariants = useMemo(() => {
+    const hasFlat = new Set();
+    const hasPercent = new Set();
     items.forEach(item => {
-      Object.keys(item.stats).forEach(stat => set.add(stat));
+      Object.entries(item.stats || {}).forEach(([key, v]) => {
+        if (v.flat) hasFlat.add(key);
+        if (v.percent) hasPercent.add(key);
+      });
     });
-    return Array.from(set).sort(); // optional: sort alphabetically
+    const keys = Array.from(new Set([...hasFlat, ...hasPercent]))
+      .sort((a, b) => statOrderIndex(a) - statOrderIndex(b) || a.localeCompare(b));
+
+    const variants = [];
+    keys.forEach(key => {
+      const name = formatStatLabel(key);
+      const both = hasFlat.has(key) && hasPercent.has(key);
+      if (hasFlat.has(key)) {
+        variants.push({ value: `${key}|flat`, label: both ? `${name} (flat)` : name });
+      }
+      if (hasPercent.has(key)) {
+        variants.push({ value: `${key}|percent`, label: `${name} (%)` });
+      }
+    });
+    return variants;
   }, [items]);
 
   // Filtered items
@@ -42,39 +107,27 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
       // Underworld only filter
       if (showUWOnly && !item.underworld) return false;
 
-      // Stat filter
-      if (statFilter && statFilterValue) {
-        const statKey = statFilter.toLowerCase().replace(/\s+/g, '_');
-        const values = item.stats[statKey];
-        if (!values) return false; // stat must exist
-
-        const total = (values.flat || 0) + (values.percent || 0);
-        if (total < Number(statFilterValue)) return false;
-      }
+      // Stat presence filter — must carry every selected stat variant (AND logic)
+      if (selectedStats.length && !selectedStats.every(v => itemHasStatVariant(item, v))) return false;
 
       return true;
     });
-  }, [items, search, statFilter, statFilterValue, showNewOnly, showUWOnly]);
+  }, [items, search, selectedStats, showNewOnly, showUWOnly]);
 
   const sortedItems = useMemo(() => {
     if (!sortKey) return filteredItems;
 
     return [...filteredItems].sort((a, b) => {
-      let aVal, bVal;
-
       if (sortKey === 'name') {
-        aVal = a.name.toLowerCase();
-        bVal = b.name.toLowerCase();
-        return sortOrder === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-      } else if (sortKey === 'level' || sortKey === 'gold') {
-        aVal = sortKey === 'gold' ? calcAffixGoldBase(a.level, type) : (a[sortKey] ?? 0);
-        bVal = sortKey === 'gold' ? calcAffixGoldBase(b.level, type) : (b[sortKey] ?? 0);
-        return sortOrder === 'asc' ? aVal - bVal : bVal - aVal;
+        const cmp = a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+        return sortOrder === 'asc' ? cmp : -cmp;
       }
 
-      return 0;
+      const aVal = getSortValue(a, sortKey, type);
+      const bVal = getSortValue(b, sortKey, type);
+      return sortOrder === 'asc' ? aVal - bVal : bVal - aVal;
     });
-  }, [filteredItems, sortKey, sortOrder]);
+  }, [filteredItems, sortKey, sortOrder, type]);
 
 
   return (
@@ -108,27 +161,54 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
             </label>
           </div>
 
-          {/* Stat filter */}
+          {/* Stat presence filter — toggle chips, AND logic */}
           <div style={{ marginBottom: '12px' }}>
-            <select
-              value={statFilter}
-              onChange={e => setStatFilter(e.target.value)}
-              style={{ marginRight: '4px', padding: '4px' }}
-            >
-              <option value="">-- Filter stat --</option>
-              {allStats.map(stat => (
-                <option key={stat} value={stat}>
-                  {stat.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>
-              ))}
-            </select>
-            <input
-              type="number"
-              placeholder="Min value"
-              value={statFilterValue}
-              onChange={e => setStatFilterValue(e.target.value)}
-              style={{ width: '80px', padding: '4px' }}
-            />
+            <div style={{ marginBottom: '6px', fontWeight: 'bold', fontSize: '13px' }}>
+              Filter by stats
+              {selectedStats.length > 0 &&
+                ` — showing affixes with all ${selectedStats.length} selected`}
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+              {statVariants.map(variant => {
+                const active = selectedStats.includes(variant.value);
+                return (
+                  <button
+                    key={variant.value}
+                    type="button"
+                    onClick={() => toggleStat(variant.value)}
+                    style={{
+                      padding: '3px 10px',
+                      borderRadius: '12px',
+                      border: active ? '1px solid #00aa00' : '1px solid #ccc',
+                      backgroundColor: active ? '#00ff00' : '#f5f5f5',
+                      color: active ? '#000' : '#333',
+                      fontWeight: active ? 'bold' : 'normal',
+                      cursor: 'pointer',
+                      fontSize: '12px',
+                    }}
+                  >
+                    {variant.label}
+                  </button>
+                );
+              })}
+              {selectedStats.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedStats([])}
+                  style={{
+                    padding: '3px 10px',
+                    borderRadius: '12px',
+                    border: '1px solid #cc0000',
+                    backgroundColor: '#fff',
+                    color: '#cc0000',
+                    cursor: 'pointer',
+                    fontSize: '12px',
+                  }}
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Paragraph showing number of filtered items */}
@@ -142,6 +222,9 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
               <option value="name">Name</option>
               <option value="level">Level</option>
               <option value="gold">Gold</option>
+              {statVariants.map(variant => (
+                <option key={variant.value} value={variant.value}>{variant.label}</option>
+              ))}
             </select>
 
             <button
@@ -226,26 +309,11 @@ export default function ItemAffixList({ items, type = 'prefix', showFilters = tr
             </div>
 
             {/* Stats */}
-            {(() => {
-              const statOrder = ['damage', 'armour', 'strength', 'dexterity', 'agility', 'constitution', 'charisma', 'intelligence',
-                'critical_hit', 'double_hit', 'avoid_critical_hit', 'avoid_double_hit',
-                'block_chance', 'healing', 'critical_healing_value', 'critical_attack_value', 'hardening_value', 'block_value', 'blocking_value', 'threat'];
-              const sorted = Object.entries(item.stats).sort(([a], [b]) => {
-                const ia = statOrder.indexOf(a);
-                const ib = statOrder.indexOf(b);
-                if (ia !== -1 && ib !== -1) return ia - ib;
-                if (ia !== -1) return -1;
-                if (ib !== -1) return 1;
-                return 0;
-              });
-              return sorted;
-            })().map(([stat, values]) => {
+            {Object.entries(item.stats)
+              .sort(([a], [b]) => statOrderIndex(a) - statOrderIndex(b))
+              .map(([stat, values]) => {
               const lines = [];
-              const formatKey = stat
-                .replace(/_/g, ' ')
-                .split(' ')
-                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-                .join(' ');
+              const formatKey = formatStatLabel(stat);
 
               if (values.flat !== 0) {
                 const sign = values.flat > 0 ? '+' : '';
