@@ -203,7 +203,7 @@
 
 .itemPreviewMeta {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 12px;
@@ -212,15 +212,10 @@
 .itemPreviewName {
   font-size: 15px;
   font-weight: 700;
-  color: #ff8000;
+  /* Colour is set inline from the computed item rarity. */
 }
 
 .itemPreviewLevel {
-  font-size: 13px;
-  color: var(--ifm-color-emphasis-700);
-}
-
-.itemPreviewDuration {
   font-size: 13px;
   color: var(--ifm-color-emphasis-700);
 }
@@ -659,6 +654,14 @@
   margin-top: 8px;
 }
 
+.durationPanels {
+  flex: 2 1 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-content: flex-start;
+}
+
 .durationPanel {
   flex: 1 1 140px;
   padding: 16px;
@@ -677,7 +680,7 @@
 }
 
 .durationValue {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   color: var(--ifm-color-primary-darker);

@@ -1,12 +1,13 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import styles from './ForgeSimulator.module.css';
+import { useActiveCharacter } from '@site/src/hooks/useActiveCharacter';
 import basesData from '@site/static/data/items/bases.json';
 import prefixesData from '@site/static/data/items/prefixes.json';
 import suffixesData from '@site/static/data/items/suffixes.json';
 import forgingGoodsData from '@site/static/data/items/forging-goods.json';
 import affixesRecipes from '@site/static/data/items/prefixes_suffixes_recipes.json';
 import ForgingGood from '@site/src/components/ForgingGood';
-import Item from '@site/src/components/Item';
+import Item, { calculateItemStats } from '@site/src/components/Item';
 import type { BaseItem, PrefixSuffix } from '@site/src/components/Item';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -29,6 +30,12 @@ interface SimResult {
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
+
+/** Fallback character level used until a profile is imported. */
+const DEFAULT_CHAR_LEVEL = 100;
+
+/** Server speed multipliers — a higher speed divides the smelting duration. */
+const SERVER_SPEEDS = [1, 2, 4, 5] as const;
 
 const QUALITY_ORDER: ItemQuality[] = ['green', 'blue', 'purple', 'orange', 'red'];
 
@@ -98,8 +105,20 @@ const HAMMER = {
 // Current known values: ×1.15 and ×1.25 from in-game event descriptions.
 const EVENT_OPTIONS = [
   { value: 1,    label: 'No Event' },
-  { value: 1.15, label: '×1.15 — Forging Event (standard)' },
-  { value: 1.25, label: '×1.25 — Forging Event (enhanced)' },
+  { value: 1.15, label: '×1.15 — increased success chance' },
+  { value: 1.25, label: '×1.25 — increased success chance' },
+] as const;
+
+// ── Resources event reductions ─────────────────────────────────────────────────
+// Reduces material cost, stacking additively with the Bellows and the
+// costume/mini-pumpkin reductions. Tiers run in 5% steps up to a 25% max.
+const RESOURCE_EVENT_OPTIONS = [
+  { value: 0,    label: 'No Event' },
+  { value: 0.05, label: '−5% materials' },
+  { value: 0.1,  label: '−10% materials' },
+  { value: 0.15, label: '−15% materials' },
+  { value: 0.2,  label: '−20% materials' },
+  { value: 0.25, label: '−25% materials' },
 ] as const;
 
 const TIER_COLORS: Record<ToolTier, string> = {
@@ -195,10 +214,29 @@ function calcSuccessChance(
   return clamp(base * (CLOVER.multipliers[cloverTier] + eventMult - 1), 0, 100);
 }
 
-/** Duration estimate: ~164 s per item level (calibrated to observed ~lv100 ≈ 04:32). */
-function calcDuration(itemLevel: number, timeReduction = 0): string {
-  if (!itemLevel) return '??:??:??';
-  const secs = Math.round(itemLevel * 164 * (1 - timeReduction));
+// Forging duration scales with the item's GOLD VALUE, not its level — two items
+// at the same level but different rarity/affixes smelt for very different times.
+// We use the rarity-independent (green) value, since the forge time is shown
+// before the result rarity is known.
+//
+// Real in-game rate: 3.75 s per gold at base (x1) speed (= 0.9375 s/gold on x4).
+// `serverSpeed` then divides the result. Anchored to a live data point:
+//   Lucius Ra`s Eye of Delicacy — real in-game GREEN value 30,012 gold
+//   → 30,012 × 3.75 ÷ 4 = 28,136 s = 07:48:56 on x4 (matches exactly).
+//
+// ⚠️ The estimate is only as good as the gold VALUE we feed in. Our gold-value
+// formula (see src/utils/affixGold.ts) currently undercounts for some slots
+// (this amulet: ~1.93× low → 15,563 vs real 30,012), so absolute times for
+// those slots read low until the affix-gold formula is refit against live data.
+const FORGE_SECONDS_PER_GOLD = 3.75;
+
+/**
+ * Duration estimate from item gold value.
+ * `serverSpeed` divides the result — a 4× server smelts 4× faster, etc.
+ */
+function calcDuration(goldValue: number, timeReduction = 0, serverSpeed = 1): string {
+  if (!goldValue) return '??:??:??';
+  const secs = Math.round(goldValue * FORGE_SECONDS_PER_GOLD * (1 - timeReduction) / serverSpeed);
   const h = Math.floor(secs / 3600);
   const m = Math.floor((secs % 3600) / 60);
   const s = secs % 60;
@@ -623,7 +661,17 @@ Have them wrapped into a package and delivered to you or, for a fee, store them 
 
 export default function ForgeSimulator() {
   // ── Step 1: character
-  const [charLevel, setCharLevel] = useState(100);
+  const [charLevel, setCharLevel] = useState(DEFAULT_CHAR_LEVEL);
+
+  // Prefill from an imported profile, but only while the level is still the
+  // default — never clobber a value the user has already typed in.
+  const { character } = useActiveCharacter();
+  useEffect(() => {
+    if (character && charLevel === DEFAULT_CHAR_LEVEL) {
+      setCharLevel(clamp(character.level, 1, 200));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [character]);
 
   // ── Step 2: item
   const [selectedBase, setSelectedBase] = useState('');
@@ -638,6 +686,7 @@ export default function ForgeSimulator() {
   const [hasCostume, setHasCostume] = useState(false);
   const [hasMiniPumpkin, setHasMiniPumpkin] = useState(false);
   const [eventMult, setEventMult] = useState<number>(1);
+  const [resourceEventReduction, setResourceEventReduction] = useState(0);
   const [timeEventReduction, setTimeEventReduction] = useState(0);
 
   // ── Step 4: per-material per-tier quality splits
@@ -680,13 +729,23 @@ export default function ForgeSimulator() {
   const discountedMaterials = useMemo(() => {
     const discount = BELLOWS.discounts[bellowsTier]
       + (hasCostume ? 0.2 : 0)
-      + (hasMiniPumpkin ? 0.2 : 0);
+      + (hasMiniPumpkin ? 0.2 : 0)
+      + resourceEventReduction;
     const result: Record<string, number> = {};
     for (const [mat, qty] of Object.entries(rawMaterials)) {
       result[mat] = Math.max(1, Math.floor(qty * (1 - discount)));
     }
     return result;
-  }, [rawMaterials, bellowsTier, hasCostume, hasMiniPumpkin]);
+  }, [rawMaterials, bellowsTier, hasCostume, hasMiniPumpkin, resourceEventReduction]);
+
+  const materialDiscountParts = useMemo(() => {
+    const parts: string[] = [];
+    if (bellowsTier !== 'none') parts.push(`−${BELLOWS.discounts[bellowsTier] * 100}% (bellows)`);
+    if (hasCostume) parts.push('−20% (costume)');
+    if (hasMiniPumpkin) parts.push('−20% (mini-pumpkin)');
+    if (resourceEventReduction > 0) parts.push(`−${resourceEventReduction * 100}% (resources event)`);
+    return parts;
+  }, [bellowsTier, hasCostume, hasMiniPumpkin, resourceEventReduction]);
 
   // ── Quality distribution ──────────────────────────────────────────────────
 
@@ -708,6 +767,12 @@ export default function ForgeSimulator() {
     [prefix, suffix, baseItem],
   );
 
+  // Rarity-independent (green) gold value — drives the forging duration estimate.
+  const itemValue = useMemo(
+    () => (baseItem ? calculateItemStats(baseItem, 'green', false, prefix, suffix).gold ?? 0 : 0),
+    [baseItem, prefix, suffix],
+  );
+
   const baseRate = useMemo(
     () => baseSuccessRate(charLevel, itemLevel),
     [charLevel, itemLevel],
@@ -718,8 +783,10 @@ export default function ForgeSimulator() {
     [charLevel, itemLevel, cloverTier, eventMult],
   );
 
+  // Hammer and time-event reductions stack MULTIPLICATIVELY, not additively.
+  // Verified live: base × (1−0.50 event) × (1−0.30 silver hammer) = base × 0.35.
   const timeReduction = useMemo(
-    () => Math.min(1, HAMMER.reductions[hammerTier] + timeEventReduction),
+    () => 1 - (1 - HAMMER.reductions[hammerTier]) * (1 - timeEventReduction),
     [hammerTier, timeEventReduction],
   );
 
@@ -867,7 +934,7 @@ export default function ForgeSimulator() {
               Mini-Pumpkin{' '}<span className={styles.checkDesc}>(−20% materials)</span>
             </label>
             <div className={styles.eventBonusRow}>
-              <label htmlFor="eventMult" className={styles.eventBonusLabel}>Forging Event Bonus:</label>
+              <label htmlFor="eventMult" className={styles.eventBonusLabel}>Forging Success Bonus Event:</label>
               <select
                 id="eventMult"
                 value={eventMult}
@@ -878,10 +945,9 @@ export default function ForgeSimulator() {
                   <option key={o.value} value={o.value}>{o.label}</option>
                 ))}
               </select>
-              <span className={styles.checkDesc}>multiplies success chance, same as Clover</span>
             </div>
             <div className={styles.eventBonusRow}>
-              <label htmlFor="timeEventReduction" className={styles.eventBonusLabel}>Forging Time Event:</label>
+              <label htmlFor="timeEventReduction" className={styles.eventBonusLabel}>Forging Time Bonus Event:</label>
               <select
                 id="timeEventReduction"
                 value={timeEventReduction}
@@ -891,6 +957,22 @@ export default function ForgeSimulator() {
                 <option value={0}>No Event</option>
                 <option value={0.1}>−10% forging time</option>
                 <option value={0.2}>−20% forging time</option>
+                <option value={0.3}>−30% forging time</option>
+                <option value={0.4}>−40% forging time</option>
+                <option value={0.5}>−50% forging time</option>
+              </select>
+            </div>
+            <div className={styles.eventBonusRow}>
+              <label htmlFor="resourceEventReduction" className={styles.eventBonusLabel}>Forging Resources Bonus Event:</label>
+              <select
+                id="resourceEventReduction"
+                value={resourceEventReduction}
+                onChange={e => setResourceEventReduction(Number(e.target.value))}
+                className={styles.eventBonusSelect}
+              >
+                {RESOURCE_EVENT_OPTIONS.map(o => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
               </select>
             </div>
           </div>
@@ -913,11 +995,9 @@ export default function ForgeSimulator() {
             </div>
           )}
 
-          {bellowsTier !== 'none' && (
+          {materialDiscountParts.length > 0 && (
             <div className={styles.discountNote}>
-              Bellows discount: −{BELLOWS.discounts[bellowsTier] * 100}%
-              {hasCostume && ' + −20% (costume)'}
-              {hasMiniPumpkin && ' + −20% (mini-pumpkin)'}
+              Material discount: {materialDiscountParts.join(' + ')}
             </div>
           )}
 
@@ -979,21 +1059,21 @@ export default function ForgeSimulator() {
           </div>
           <div className={styles.itemPreview}>
             <div className={styles.itemPreviewMeta}>
-              <span className={styles.itemPreviewName}>
+              {baseItem && (
+                <span className={styles.itemTooltipWrapper}>
+                  <Item baseItem={baseItem} prefix={prefix} suffix={suffix} rarity={dominantQuality(qualityUnits)} conditioned={false} />
+                </span>
+              )}
+              <span
+                className={styles.itemPreviewName}
+                style={{ color: QUALITY_COLORS[dominantQuality(qualityUnits)] }}
+              >
                 {[prefix?.name, baseItem?.name, suffix?.name].filter(Boolean).join(' ') || '—'}
               </span>
               {itemLevel > 0 && (
-                <>
-                  <span className={styles.itemPreviewLevel}>Item Level: {itemLevel}</span>
-                  <span className={styles.itemPreviewDuration}>⏱ Est. duration: {calcDuration(itemLevel, timeReduction)}</span>
-                </>
+                <span className={styles.itemPreviewLevel}>Item Level: {itemLevel}</span>
               )}
             </div>
-            {baseItem && (
-              <div className={styles.itemTooltipWrapper}>
-                <Item baseItem={baseItem} prefix={prefix} suffix={suffix} rarity={dominantQuality(qualityUnits)} conditioned={false} />
-              </div>
-            )}
           </div>
         </section>
       )}
@@ -1022,11 +1102,15 @@ export default function ForgeSimulator() {
             </div>
           </div>
 
-          {itemLevel > 0 && (
-            <div className={styles.durationPanel}>
-              <div className={styles.durationLabel}>Est. Duration</div>
-              <div className={styles.durationValue}>{calcDuration(itemLevel)}</div>
-              <div className={styles.durationNote}>Based on item level {itemLevel} (approx.)</div>
+          {itemValue > 0 && (
+            <div className={styles.durationPanels}>
+              {SERVER_SPEEDS.map(speed => (
+                <div key={speed} className={styles.durationPanel}>
+                  <div className={styles.durationLabel}>Est. Duration · {speed}× server</div>
+                  <div className={styles.durationValue}>{calcDuration(itemValue, timeReduction, speed)}</div>
+                  <div className={styles.durationNote}>Based on ~{itemValue.toLocaleString()} gold value (approx.)</div>
+                </div>
+              ))}
             </div>
           )}
 

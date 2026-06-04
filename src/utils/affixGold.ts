@@ -13,6 +13,35 @@
  */
 export const COMBINED_AFFIX_MULTIPLIER = 1.3677;
 
+/**
+ * Verified slot-specific gold law (replaces the affix-power approximation):
+ *   greenValue = coeff × itemLevel^exponent
+ * Depends ONLY on total item level (prefix/suffix split is irrelevant). Rarity
+ * multiplies the whole value; conditioning does NOT affect gold.
+ *
+ * Confirmed live to the gold:
+ *   amulets 27.5   (3 points, incl. a blue item and a suffix-heavy split)
+ *   rings   19.25  (= 0.700 × amulets;  Lucius Triskele of Delicacy, L106 → 21,009)
+ *   weapons 17.875 (= 0.650 × amulets;  Zombers Gladius of Death, L99 → 17,608)
+ *   shields 12.925 (= 0.470 × amulets;  Shivas Round shield of Apprenticeship, L99 → 12,732)
+ *   armour  11.55  (= 0.420 × amulets;  Appius Crocodile Plate Armour of Pride, L101 → 11,724)
+ *   shoes   11     (= 0.400 × amulets;  Granks Hunting boots of Legend, L121 → 14,641)
+ *   helmets 10.175 (= 0.370 × amulets;  Marcellus Spike helmet of Boost, L125 → 14,220)
+ *   gloves  7.425  (= 0.270 × amulets;  Ichorus Copper gloves of Harmony, L103 → 7,762)
+ * All 8 slots verified live to the gold.
+ */
+export const GOLD_VALUE_LEVEL_EXPONENT = 1.5;
+export const GOLD_VALUE_COEFF: Record<string, number> = {
+  amulets: 27.5,
+  rings: 19.25,
+  weapons: 17.875,
+  shields: 12.925,
+  armour: 11.55,
+  shoes: 11,
+  helmets: 10.175,
+  gloves: 7.425,
+};
+
 export const AFFIX_GOLD_ITEM_TYPE_WEIGHTS: Record<string, number> = {
   weapons:  1,
   shields:  0.7,

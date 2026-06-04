@@ -5,9 +5,9 @@ import prefixesData from '@site/static/data/items/prefixes.json';
 import suffixesData from '@site/static/data/items/suffixes.json';
 import eventItemsData from '@site/static/data/items/event-items.json';
 import type { Upgrade, AppliedUpgrade } from './CharacterPlanner/useCharacterState';
-import { calcAffixGoldBase, COMBINED_AFFIX_MULTIPLIER } from '@site/src/utils/affixGold';
+import { GOLD_VALUE_COEFF, GOLD_VALUE_LEVEL_EXPONENT } from '@site/src/utils/affixGold';
 import { maxUsableItemLevel } from '@site/src/utils/itemLevelLimits';
-import { getRarityMultiplier } from '@site/src/utils/rarity';
+import { getRarityMultiplier, RARITY_MULTIPLIERS } from '@site/src/utils/rarity';
 
 // Base item type from bases.json
 export interface BaseItem {
@@ -382,17 +382,16 @@ export function calculateItemStats(
   });
 
   // Calculate total gold value.
-  // Affix gold scales with each affix's own JSON level (not finalLevel).
-  // When both prefix AND suffix are present, their combined gold is multiplied by COMBINED_AFFIX_MULTIPLIER.
-  // Rarity then multiplies the entire total (base + affixes).
-  const rarityMultiplier = getRarityMultiplier(rarity, conditioned);
-  const rawBaseGold = baseItem.gold ?? 0;
-  const rawPrefixGold = prefix ? calcAffixGoldBase(prefix.level, 'prefix', baseItem.type) : 0;
-  const rawSuffixGold = suffix ? calcAffixGoldBase(suffix.level, 'suffix', baseItem.type) : 0;
-  const rawAffixGold = (prefix && suffix)
-    ? (rawPrefixGold + rawSuffixGold) * COMBINED_AFFIX_MULTIPLIER
-    : (rawPrefixGold + rawSuffixGold);
-  const totalGold = Math.ceil((rawBaseGold + rawAffixGold) * rarityMultiplier);
+  // Verified slot-specific law (all 8 slots confirmed live to the gold):
+  //   greenValue = coeff × itemLevel^1.5  — depends ONLY on total item level,
+  //   the prefix/suffix split is irrelevant; holds for the bare base too
+  //   (level 1 → coeff ≈ base gold). Rarity multiplies the WHOLE value, and
+  //   conditioning does NOT affect gold (a conditioned blue item shows ×1.15,
+  //   not the ×1.30 promotion). Coefficients live in affixGold.ts.
+  const goldCoeff = GOLD_VALUE_COEFF[baseItem.type];
+  const totalGold = goldCoeff !== undefined
+    ? Math.ceil(goldCoeff * Math.pow(finalLevel, GOLD_VALUE_LEVEL_EXPONENT) * RARITY_MULTIPLIERS[rarity])
+    : Math.ceil((baseItem.gold ?? 0) * RARITY_MULTIPLIERS[rarity]); // fallback for any unmapped item type
 
   return {
     name: fullName,
