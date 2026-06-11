@@ -6344,7 +6344,7 @@
       }
     },
     "materials": {
-      "Hydra Scales": 16,
+      "Hydra Scale": 16,
       "Resin": 5,
       "Boar Tusk": 15,
       "Mead": 10,
@@ -6429,7 +6429,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Typhon Leather": 17,
+      "Boar Tusk": 20,
+      "Blood Garnet": 74
+    },
     "id": 222
   },
   {
@@ -6531,7 +6535,11 @@
         "percent": 0
       }
     },
-    "materials": {},
+    "materials": {
+      "Blood Garnet": 29,
+      "Tin Ore": 72,
+      "Lead Ore": 13
+    },
     "id": 9961
   },
   {
@@ -6806,10 +6814,10 @@
       }
     },
     "materials": {
+      "Soul Essence": 9,
       "Resin": 5,
       "Boar Tusk": 19,
       "Blood Garnet": 53,
-      "Soul Essence": 9,
       "Mead": 7,
       "Lead Ore": 28
     },
@@ -7077,7 +7085,7 @@
     },
     "materials": {
       "Almandin": 1,
-      "Hydra Scales": 4,
+      "Hydra Scale": 4,
       "Resin": 1,
       "Boar Tusk": 3,
       "Blood Garnet": 121
