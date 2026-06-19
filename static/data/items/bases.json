@@ -8,7 +8,7 @@
     "conditioning": 269,
     "gold": 14,
     "materials": {
-      "Wood": 1
+      "Wood": 2
     },
     "type": "weapons",
     "id": "1-1"
@@ -54,7 +54,7 @@
     "gold": 42,
     "materials": {
       "Wood": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "weapons",
     "id": "1-4"
@@ -69,7 +69,7 @@
     "gold": 79,
     "materials": {
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-5"
@@ -84,7 +84,7 @@
     "gold": 42,
     "materials": {
       "Leather": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "weapons",
     "id": "1-13"
@@ -98,8 +98,8 @@
     "conditioning": 1110,
     "gold": 80,
     "materials": {
-      "Leather": 1,
-      "Iron": 1
+      "Leather": 2,
+      "Iron": 2
     },
     "type": "weapons",
     "id": "1-6"
@@ -113,9 +113,9 @@
     "conditioning": 1480,
     "gold": 126,
     "materials": {
-      "Copper": 1,
+      "Copper": 2,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-7"
@@ -131,7 +131,7 @@
     "materials": {
       "Copper": 1,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-8"
@@ -145,9 +145,9 @@
     "conditioning": 1480,
     "gold": 130,
     "materials": {
-      "Wood": 2,
+      "Wood": 3,
       "Leather": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "weapons",
     "id": "1-9"
@@ -162,9 +162,9 @@
     "gold": 185,
     "materials": {
       "Wood": 1,
-      "Copper": 1,
+      "Copper": 2,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-10"
@@ -178,8 +178,8 @@
     "conditioning": 1850,
     "gold": 185,
     "materials": {
-      "Wood": 2,
-      "Iron": 3
+      "Wood": 3,
+      "Iron": 4
     },
     "type": "weapons",
     "id": "1-19"
@@ -193,9 +193,9 @@
     "conditioning": 2219,
     "gold": 247,
     "materials": {
-      "Wood": 2,
+      "Wood": 3,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-11"
@@ -209,9 +209,9 @@
     "conditioning": 2219,
     "gold": 251,
     "materials": {
-      "Wood": 3,
+      "Wood": 4,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-12"
@@ -225,10 +225,10 @@
     "conditioning": 2589,
     "gold": 321,
     "materials": {
-      "Wood": 1,
-      "Copper": 1,
+      "Wood": 2,
+      "Copper": 2,
       "Leather": 1,
-      "Iron": 3
+      "Iron": 4
     },
     "type": "weapons",
     "id": "1-14"
@@ -242,8 +242,8 @@
     "conditioning": 2589,
     "gold": 331,
     "materials": {
-      "Wood": 4,
-      "Iron": 3
+      "Wood": 5,
+      "Iron": 4
     },
     "type": "weapons",
     "id": "1-20"
@@ -257,8 +257,8 @@
     "conditioning": 2959,
     "gold": 399,
     "materials": {
-      "Copper": 2,
-      "Iron": 6
+      "Copper": 3,
+      "Iron": 7
     },
     "type": "weapons",
     "id": "1-15"
@@ -272,8 +272,8 @@
     "conditioning": 2959,
     "gold": 411,
     "materials": {
-      "Copper": 4,
-      "Iron": 4
+      "Copper": 5,
+      "Iron": 5
     },
     "type": "weapons",
     "id": "1-17"
@@ -287,9 +287,9 @@
     "conditioning": 3329,
     "gold": 483,
     "materials": {
-      "Copper": 2,
+      "Copper": 3,
       "Leather": 1,
-      "Iron": 6
+      "Iron": 7
     },
     "type": "weapons",
     "id": "1-16"
@@ -303,9 +303,9 @@
     "conditioning": 3329,
     "gold": 498,
     "materials": {
-      "Wood": 6,
+      "Wood": 7,
       "Leather": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "weapons",
     "id": "1-18"
@@ -318,7 +318,7 @@
     "conditioning": 233,
     "gold": 13,
     "materials": {
-      "Wood": 1
+      "Wood": 2
     },
     "type": "shields",
     "id": "2-1"
@@ -331,7 +331,7 @@
     "conditioning": 600,
     "gold": 36,
     "materials": {
-      "Wood": 1,
+      "Wood": 2,
       "Iron": 1
     },
     "type": "shields",
@@ -345,8 +345,8 @@
     "conditioning": 986,
     "gold": 68,
     "materials": {
-      "Wood": 1,
-      "Iron": 1
+      "Wood": 2,
+      "Iron": 2
     },
     "type": "shields",
     "id": "2-3"
@@ -359,8 +359,8 @@
     "conditioning": 1273,
     "gold": 69,
     "materials": {
-      "Wood": 1,
-      "Iron": 1
+      "Wood": 2,
+      "Iron": 2
     },
     "type": "shields",
     "id": "2-11"
@@ -373,7 +373,7 @@
     "conditioning": 1420,
     "gold": 106,
     "materials": {
-      "Leather": 4
+      "Leather": 5
     },
     "type": "shields",
     "id": "2-4"
@@ -386,8 +386,8 @@
     "conditioning": 2122,
     "gold": 151,
     "materials": {
-      "Copper": 2,
-      "Iron": 3
+      "Copper": 3,
+      "Iron": 4
     },
     "type": "shields",
     "id": "2-5"
@@ -400,8 +400,8 @@
     "conditioning": 2122,
     "gold": 154,
     "materials": {
-      "Wood": 3,
-      "Iron": 1
+      "Wood": 4,
+      "Iron": 2
     },
     "type": "shields",
     "id": "2-12"
@@ -414,8 +414,8 @@
     "conditioning": 2546,
     "gold": 202,
     "materials": {
-      "Copper": 2,
-      "Iron": 3
+      "Copper": 3,
+      "Iron": 4
     },
     "type": "shields",
     "id": "2-6"
@@ -428,9 +428,9 @@
     "conditioning": 2970,
     "gold": 260,
     "materials": {
-      "Copper": 1,
-      "Leather": 1,
-      "Iron": 4
+      "Copper": 2,
+      "Leather": 2,
+      "Iron": 5
     },
     "type": "shields",
     "id": "2-7"
@@ -443,9 +443,9 @@
     "conditioning": 3394,
     "gold": 324,
     "materials": {
-      "Copper": 1,
-      "Leather": 1,
-      "Iron": 5
+      "Copper": 2,
+      "Leather": 2,
+      "Iron": 6
     },
     "type": "shields",
     "id": "2-8"
@@ -458,9 +458,9 @@
     "conditioning": 3819,
     "gold": 394,
     "materials": {
-      "Copper": 2,
-      "Leather": 2,
-      "Iron": 5
+      "Copper": 3,
+      "Leather": 3,
+      "Iron": 6
     },
     "type": "shields",
     "id": "2-9"
@@ -473,7 +473,7 @@
     "conditioning": 4243,
     "gold": 470,
     "materials": {
-      "Iron": 10
+      "Iron": 12
     },
     "type": "shields",
     "id": "2-10"
@@ -486,7 +486,7 @@
     "conditioning": 269,
     "gold": 11,
     "materials": {
-      "Leather": 1
+      "Leather": 2
     },
     "type": "armour",
     "id": "3-1"
@@ -514,7 +514,7 @@
     "gold": 32,
     "materials": {
       "Copper": 1,
-      "Leather": 1
+      "Leather": 2
     },
     "type": "armour",
     "id": "3-3"
@@ -527,9 +527,9 @@
     "conditioning": 1208,
     "gold": 60,
     "materials": {
-      "Copper": 1,
+      "Copper": 2,
       "Leather": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "armour",
     "id": "3-4"
@@ -542,7 +542,7 @@
     "conditioning": 1859,
     "gold": 95,
     "materials": {
-      "Iron": 4
+      "Iron": 5
     },
     "type": "armour",
     "id": "3-5"
@@ -555,8 +555,8 @@
     "conditioning": 1859,
     "gold": 93,
     "materials": {
-      "Leather": 2,
-      "Iron": 1
+      "Leather": 3,
+      "Iron": 2
     },
     "type": "armour",
     "id": "3-12"
@@ -569,8 +569,8 @@
     "conditioning": 2324,
     "gold": 136,
     "materials": {
-      "Copper": 4,
-      "Iron": 1
+      "Copper": 5,
+      "Iron": 2
     },
     "type": "armour",
     "id": "3-6"
@@ -583,8 +583,8 @@
     "conditioning": 2789,
     "gold": 182,
     "materials": {
-      "Copper": 2,
-      "Iron": 4
+      "Copper": 3,
+      "Iron": 5
     },
     "type": "armour",
     "id": "3-7"
@@ -597,8 +597,8 @@
     "conditioning": 3254,
     "gold": 235,
     "materials": {
-      "Copper": 2,
-      "Iron": 5
+      "Copper": 3,
+      "Iron": 6
     },
     "type": "armour",
     "id": "3-8"
@@ -611,9 +611,9 @@
     "conditioning": 3718,
     "gold": 293,
     "materials": {
-      "Copper": 1,
-      "Leather": 1,
-      "Iron": 6
+      "Copper": 2,
+      "Leather": 2,
+      "Iron": 7
     },
     "type": "armour",
     "id": "3-9"
@@ -626,9 +626,9 @@
     "conditioning": 4183,
     "gold": null,
     "materials": {
-      "Copper": 1,
-      "Leather": 1,
-      "Iron": 6
+      "Copper": 2,
+      "Leather": 2,
+      "Iron": 7
     },
     "type": "armour",
     "id": "3-10"
@@ -641,7 +641,7 @@
     "conditioning": 4648,
     "gold": 426,
     "materials": {
-      "Leather": 10
+      "Leather": 12
     },
     "type": "armour",
     "id": "3-11"
@@ -654,7 +654,7 @@
     "conditioning": 269,
     "gold": 9,
     "materials": {
-      "Leather": 1
+      "Leather": 2
     },
     "type": "helmets",
     "id": "4-1"
@@ -667,7 +667,7 @@
     "conditioning": 329,
     "gold": 9,
     "materials": {
-      "Iron": 1
+      "Iron": 2
     },
     "type": "helmets",
     "id": "4-2"
@@ -681,7 +681,7 @@
     "gold": 24,
     "materials": {
       "Copper": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "helmets",
     "id": "4-3"
@@ -695,7 +695,7 @@
     "gold": 24,
     "materials": {
       "Copper": 1,
-      "Iron": 1
+      "Iron": 2
     },
     "type": "helmets",
     "id": "4-4"
@@ -709,7 +709,7 @@
     "gold": 24,
     "materials": {
       "Copper": 1,
-      "Iron": 2
+      "Iron": 3
     },
     "type": "helmets",
     "id": "4-5"
@@ -722,8 +722,8 @@
     "conditioning": 1780,
     "gold": 73,
     "materials": {
-      "Copper": 2,
-      "Iron": 2
+      "Copper": 3,
+      "Iron": 3
     },
     "type": "helmets",
     "id": "4-6"
@@ -736,7 +736,7 @@
     "conditioning": 2225,
     "gold": 105,
     "materials": {
-      "Copper": 4,
+      "Copper": 5,
       "Leather": 1
     },
     "type": "helmets",
@@ -750,8 +750,8 @@
     "conditioning": 2670,
     "gold": 142,
     "materials": {
-      "Leather": 2,
-      "Iron": 3
+      "Leather": 3,
+      "Iron": 4
     },
     "type": "helmets",
     "id": "4-7"
@@ -764,8 +764,8 @@
     "conditioning": 3115,
     "gold": 184,
     "materials": {
-      "Copper": 5,
-      "Iron": 2
+      "Copper": 6,
+      "Iron": 3
     },
     "type": "helmets",
     "id": "4-8"
@@ -778,8 +778,8 @@
     "conditioning": 3560,
     "gold": 231,
     "materials": {
-      "Copper": 6,
-      "Iron": 2
+      "Copper": 7,
+      "Iron": 3
     },
     "type": "helmets",
     "id": "4-12"
@@ -792,7 +792,7 @@
     "conditioning": 3115,
     "gold": 179,
     "materials": {
-      "Iron": 8
+      "Iron": 9
     },
     "type": "helmets",
     "id": "4-13"
@@ -805,8 +805,8 @@
     "conditioning": 4005,
     "gold": 283,
     "materials": {
-      "Copper": 6,
-      "Iron": 4
+      "Copper": 7,
+      "Iron": 5
     },
     "type": "helmets",
     "id": "4-9"
@@ -819,9 +819,9 @@
     "conditioning": 4450,
     "gold": 340,
     "materials": {
-      "Copper": 6,
+      "Copper": 7,
       "Leather": 1,
-      "Iron": 3
+      "Iron": 4
     },
     "type": "helmets",
     "id": "4-10"
@@ -834,7 +834,7 @@
     "conditioning": 445,
     "gold": 7,
     "materials": {
-      "Leather": 1
+      "Leather": 2
     },
     "type": "gloves",
     "id": "5-1"
@@ -847,7 +847,7 @@
     "conditioning": 890,
     "gold": 21,
     "materials": {
-      "Copper": 1,
+      "Copper": 2,
       "Leather": 1
     },
     "type": "gloves",
@@ -861,8 +861,8 @@
     "conditioning": 1335,
     "gold": 39,
     "materials": {
-      "Copper": 1,
-      "Leather": 1
+      "Copper": 2,
+      "Leather": 2
     },
     "type": "gloves",
     "id": "5-3"
@@ -875,7 +875,7 @@
     "conditioning": 1780,
     "gold": 60,
     "materials": {
-      "Leather": 4
+      "Leather": 5
     },
     "type": "gloves",
     "id": "5-4"
@@ -888,8 +888,8 @@
     "conditioning": 2225,
     "gold": 90,
     "materials": {
-      "Copper": 2,
-      "Leather": 3
+      "Copper": 3,
+      "Leather": 4
     },
     "type": "gloves",
     "id": "5-5"
@@ -902,8 +902,8 @@
     "conditioning": 2670,
     "gold": 122,
     "materials": {
-      "Leather": 4,
-      "Iron": 2
+      "Leather": 5,
+      "Iron": 3
     },
     "type": "gloves",
     "id": "5-6"
@@ -917,8 +917,8 @@
     "gold": 158,
     "materials": {
       "Copper": 1,
-      "Leather": 4,
-      "Iron": 2
+      "Leather": 5,
+      "Iron": 3
     },
     "type": "gloves",
     "id": "5-7"
@@ -931,8 +931,8 @@
     "conditioning": 3560,
     "gold": 199,
     "materials": {
-      "Leather": 5,
-      "Iron": 3
+      "Leather": 6,
+      "Iron": 4
     },
     "type": "gloves",
     "id": "5-8"
@@ -945,8 +945,8 @@
     "conditioning": 4005,
     "gold": 245,
     "materials": {
-      "Leather": 6,
-      "Iron": 4
+      "Leather": 7,
+      "Iron": 5
     },
     "type": "gloves",
     "id": "5-9"
@@ -973,7 +973,7 @@
     "conditioning": 890,
     "gold": 28,
     "materials": {
-      "Leather": 2
+      "Leather": 3
     },
     "type": "shoes",
     "id": "8-2"
@@ -986,7 +986,7 @@
     "conditioning": 1335,
     "gold": 53,
     "materials": {
-      "Leather": 3
+      "Leather": 4
     },
     "type": "shoes",
     "id": "8-3"
@@ -1000,7 +1000,7 @@
     "gold": 84,
     "materials": {
       "Copper": 1,
-      "Leather": 3
+      "Leather": 4
     },
     "type": "shoes",
     "id": "8-4"
@@ -1013,8 +1013,8 @@
     "conditioning": 2225,
     "gold": 120,
     "materials": {
-      "Copper": 2,
-      "Leather": 2
+      "Copper": 3,
+      "Leather": 3
     },
     "type": "shoes",
     "id": "8-5"
@@ -1027,8 +1027,8 @@
     "conditioning": 2670,
     "gold": 162,
     "materials": {
-      "Copper": 2,
-      "Leather": 3
+      "Copper": 3,
+      "Leather": 4
     },
     "type": "shoes",
     "id": "8-6"
@@ -1041,7 +1041,7 @@
     "conditioning": 3115,
     "gold": 209,
     "materials": {
-      "Leather": 8
+      "Leather": 9
     },
     "type": "shoes",
     "id": "8-7"
@@ -1054,9 +1054,9 @@
     "conditioning": 3560,
     "gold": 262,
     "materials": {
-      "Wood": 1,
-      "Leather": 4,
-      "Iron": 2
+      "Wood": 2,
+      "Leather": 5,
+      "Iron": 3
     },
     "type": "shoes",
     "id": "8-8"
@@ -1069,8 +1069,8 @@
     "conditioning": 4005,
     "gold": 320,
     "materials": {
-      "Copper": 4,
-      "Leather": 5,
+      "Copper": 5,
+      "Leather": 6,
       "Iron": 1
     },
     "type": "shoes",
@@ -1084,8 +1084,8 @@
     "conditioning": 4450,
     "gold": 383,
     "materials": {
-      "Leather": 6,
-      "Iron": 5
+      "Leather": 7,
+      "Iron": 6
     },
     "type": "shoes",
     "id": "8-10"
@@ -1098,7 +1098,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-1"
@@ -1111,7 +1111,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-2"
@@ -1124,7 +1124,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-3"
@@ -1137,7 +1137,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-4"
@@ -1150,7 +1150,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-5"
@@ -1163,7 +1163,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-6"
@@ -1176,7 +1176,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-7"
@@ -1189,7 +1189,7 @@
     "conditioning": 60,
     "gold": 20,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "rings",
     "id": "6-8"
@@ -1202,7 +1202,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-1"
@@ -1215,7 +1215,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-2"
@@ -1228,7 +1228,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-3"
@@ -1241,7 +1241,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-4"
@@ -1254,7 +1254,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-5"
@@ -1267,7 +1267,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-6"
@@ -1280,7 +1280,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-7"
@@ -1293,7 +1293,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-8"
@@ -1306,7 +1306,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-9"
@@ -1319,7 +1319,7 @@
     "conditioning": 60,
     "gold": 28,
     "materials": {
-      "Copper": 1
+      "Copper": 2
     },
     "type": "amulets",
     "id": "9-10"
