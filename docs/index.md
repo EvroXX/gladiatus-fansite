@@ -33,6 +33,61 @@ From Monday, 18.05.2026 at 00:00h until Tuesday, 02.06.2026 at 23:59h (server ti
 
 ---
 
+## Events – July 2026
+
+### 02.07.2026 0:00:00 - 04.07.2026 23:59:59
+
+- 100% dungeon XP
+- 200% arena XP
+- 50% expedition XP
+- 50% more expedition points
+- 50% more dungeon points
+
+### 06.07.2026 0:00:00 - 07.07.2026 23:59:59
+
+- 50% more expedition points
+- 50% faster regeneration of expedition points
+- 10% chance of finding ruby on expedition
+- -50% cooldown for quests
+- 50% more dungeon points
+
+### 09.07.2026 0:00:00 - 11.07.2026 23:59:59
+
+- 30% chance of finding an item
+- 25% forging success
+- -10% forge duration
+- 10% chance of a resource / scroll
+
+### 13.07.2026 0:00:00 - 14.07.2026 23:59:59
+
+- The chance to obtain additional loot on expeditions and in dungeons is increased by 20%
+- 25% faster regeneration of dungeon points
+- 25% more dungeon points
+
+### 16.07.2026 0:00:00 - 17.07.2026 23:59:59
+
+- No durability loss
+- 20% gold loot on expeditions
+- 20% gold loot in dungeons
+
+### 19.07.2026 0:00:00 - 20.07.2026 23:59:59
+
+- 100% Pantheon quest gold, experience, grace, honor
+- -50% cooldown for quests
+- 50% more expedition points
+
+### 22.07.2026 0:00:00 - 23.07.2026 23:59:59
+
+- -20% training costs
+
+### 28.07.2026 0:00:00 - 30.07.2026 23:59:59
+
+- 30% gold loot on expeditions
+- 10% chance of finding an item
+- 50% expedition XP
+
+---
+
 ## Events – June 2026
 
 ### 01.06.2026 0:00:00 - 02.06.2026 23:59:59
