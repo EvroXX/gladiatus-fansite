@@ -6838,7 +6838,7 @@
               "max": 7566
             },
             "critRaw": 17,
-            "blockRaw": 0,
+            "blockRaw": 5,
             "avoidCritRaw": 0
           },
           {
@@ -6908,7 +6908,7 @@
               "max": 7678
             },
             "critRaw": 12,
-            "blockRaw": 0,
+            "blockRaw": 5,
             "avoidCritRaw": 0
           }
         ]
@@ -6996,8 +6996,8 @@
               "min": 8300,
               "max": 8300
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7066,8 +7066,8 @@
               "min": 8500,
               "max": 8500
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7136,8 +7136,8 @@
               "min": 8600,
               "max": 8600
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7206,8 +7206,8 @@
               "min": 8700,
               "max": 8700
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           }
         ]
@@ -7308,8 +7308,8 @@
               "min": 10945,
               "max": 10945
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7378,8 +7378,8 @@
               "min": 11028,
               "max": 11028
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7448,8 +7448,8 @@
               "min": 11545,
               "max": 11545
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           },
           {
@@ -7518,8 +7518,8 @@
               "min": 14123,
               "max": 14123
             },
-            "critRaw": 0,
-            "blockRaw": 0,
+            "critRaw": 15,
+            "blockRaw": 13,
             "avoidCritRaw": 0
           }
         ]
